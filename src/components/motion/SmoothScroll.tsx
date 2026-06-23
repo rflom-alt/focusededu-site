@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -12,6 +13,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
  * Also upgrades in-page anchor clicks to eased scrolls with a header offset.
  */
 export function SmoothScroll({ children }: { children: React.ReactNode }) {
+  const lenisRef = useRef<Lenis | null>(null);
+  const pathname = usePathname();
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -19,6 +23,7 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
     if (reduce) return; // native scroll, no Lenis
 
     const lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
+    lenisRef.current = lenis;
 
     lenis.on("scroll", ScrollTrigger.update);
     const onTick = (time: number) => lenis.raf(time * 1000);
@@ -43,8 +48,22 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
       document.removeEventListener("click", onClick);
       gsap.ticker.remove(onTick);
       lenis.destroy();
+      lenisRef.current = null;
     };
   }, []);
+
+  // On route change, start the new page at the top — Lenis otherwise keeps the
+  // previous scroll position and defeats Next's default scroll-to-top. Honor
+  // in-page anchors (e.g. /our-impact#connect) by leaving the hash scroll alone.
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.location.hash) return;
+    const lenis = lenisRef.current;
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: true, force: true });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname]);
 
   return <>{children}</>;
 }

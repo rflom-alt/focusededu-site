@@ -46,6 +46,7 @@ export function Header({
   }, [open]);
 
   return (
+    <>
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500 ease-out-quart",
@@ -98,11 +99,15 @@ export function Header({
           {open ? <X className="size-6" /> : <Menu className="size-6" />}
         </button>
       </div>
+      </header>
 
-      {/* Mobile overlay */}
+      {/* Mobile overlay — rendered as a SIBLING of <header>, not a child: when
+          the header scrolls it gains backdrop-blur, and a backdrop-filter makes
+          that element the containing block for any fixed descendant — which
+          trapped this full-screen layer in the header's box and collapsed it. */}
       <div
         className={cn(
-          "fixed inset-0 top-18 z-40 origin-top bg-navy-950 px-6 pb-10 pt-6 transition-all duration-300 lg:hidden",
+          "fixed inset-0 z-40 flex flex-col overflow-y-auto bg-navy-950 px-6 pb-10 pt-24 transition-opacity duration-300 lg:hidden",
           open ? "visible opacity-100" : "pointer-events-none invisible opacity-0"
         )}
       >
@@ -133,6 +138,6 @@ export function Header({
           </Button>
         </div>
       </div>
-    </header>
+    </>
   );
 }

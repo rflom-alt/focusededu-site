@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Focused Staffing Group — Design System
+   Brand-themeable tokens. The Behavioral sibling overrides the
+   --brand-* aliases; everything else stays identical.
+   ============================================================ */
+
+@theme {
+  /* --- Navy: cool enterprise anchor --- */
+  --color-navy-950: #060a1f;
+  --color-navy-900: #0a1130;
+  --color-navy-800: #111a4d;
+  --color-navy-700: #182466;
+  --color-navy-600: #20307f;
+  --color-navy-500: #2a3da0;
+  --color-navy-400: #4d5fc0;
+  --color-navy-300: #8e9adb;
+
+  /* --- Teal / green: the single primary accent --- */
+  --color-teal-300: #6ee7b7;
+  --color-teal-400: #3ddca0;
+  --color-teal-500: #24cb8c;
+  --color-teal-600: #14a673;
+  --color-teal-700: #0d8a5f;
+  --color-teal-800: #0a6b4a;
+
+  /* --- Gold: reserved EXCLUSIVELY for community/impact --- */
+  --color-gold-300: #f0d28a;
+  --color-gold-400: #e9c46a;
+  --color-gold-500: #d9a441;
+  --color-gold-600: #bd8a2e;
+
+  /* --- Neutrals --- */
+  --color-paper: #ffffff;
+  --color-mist: #f4f7f8;
+  --color-cloud: #e9eef1;
+  --color-slate-ink: #5a6478;
+  --color-ink: #0b1020;
+
+  /* --- Type --- */
+  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* --- Motion --- */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+
+  /* --- Radius --- */
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.75rem;
+}
+
+/* Brand aliases — Behavioral overrides these on <html data-brand="..."> */
+:root {
+  --background: var(--color-paper);
+  --foreground: var(--color-ink);
+}
+
+* {
+  border-color: var(--color-cloud);
+}
+
+html {
+  scroll-behavior: smooth; /* fallback for reduced-motion (no Lenis) */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Lenis smooth scroll — when active it owns the smoothness */
+html.lenis,
+html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-feature-settings: "cv11", "ss01";
+}
+
+::selection {
+  background: var(--color-teal-500);
+  color: var(--color-navy-950);
+}
+
+/* Display headings: tight, confident, large-scale */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.04;
+  text-wrap: balance;
+}
+
+p { text-wrap: pretty; }
+
+/* Keep anchored section titles clear of the fixed header */
+section[id] { scroll-margin-top: 5.5rem; }
+
+/* Long-form article body (migrated blog HTML) */
+.article-prose {
+  color: var(--color-slate-ink);
+  font-size: 1.125rem;
+  line-height: 1.78;
+}
+.article-prose > * + * { margin-top: 1.25rem; }
+.article-prose h2 {
+  font-family: var(--font-display);
+  color: var(--color-navy-950);
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-top: 2.75rem;
+  margin-bottom: 0.25rem;
+}
+.article-prose h3 {
+  font-family: var(--font-display);
+  color: var(--color-navy-950);
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 0.25rem;
+}
+.article-prose p { color: var(--color-slate-ink); }
+.article-prose a {
+  color: var(--color-teal-700);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 500;
+}
+.article-prose a:hover { color: var(--color-teal-800); }
+.article-prose strong { color: var(--color-navy-950); font-weight: 600; }
+.article-prose ul { list-style: disc; padding-left: 1.4rem; }
+.article-prose ol { list-style: decimal; padding-left: 1.4rem; }
+.article-prose li { margin-top: 0.5rem; padding-left: 0.25rem; }
+.article-prose li::marker { color: var(--color-teal-600); font-weight: 600; }
+.article-prose blockquote {
+  border-left: 2px solid var(--color-teal-500);
+  padding-left: 1.25rem;
+  margin: 2rem 0;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--color-navy-900);
+}
+.article-prose img { border-radius: 1rem; margin: 1.75rem 0; height: auto; }
+.article-prose h2:first-child,
+.article-prose h3:first-child,
+.article-prose p:first-child { margin-top: 0; }
+
+/* Reusable layout + accents -------------------------------------------- */
+@utility container-x {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 80rem; /* 1280px */
+  padding-inline: 1.5rem;
+  @media (min-width: 1024px) {
+    padding-inline: 2.5rem;
+  }
+}
+
+/* Eyebrow / kicker label */
+@utility eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Subtle grain/elevation for premium surfaces */
+@utility surface-line {
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.04) inset,
+    0 30px 60px -30px rgba(6, 10, 31, 0.35);
+}
+
+/* Seamless logo marquee (Phenom BrandsTape pattern): track holds the list twice,
+   translateX(-50%) loops one full copy. */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Respect reduced motion globally */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

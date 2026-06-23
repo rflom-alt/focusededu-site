@@ -5,6 +5,7 @@ import { posts as blogPosts } from "@/lib/posts";
 import { PageHero } from "@/components/ui/PageHero";
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/motion/Reveal";
 import { ScrubHighlight } from "@/components/motion/ScrubHighlight";
 import { VideoGallery, type VideoItem } from "@/components/sections/VideoGallery";
@@ -79,6 +80,21 @@ const blogCards = blogPosts.slice(0, 6).map((p) => ({
   href: `/blog/${p.slug}`,
 }));
 
+const infographics = [
+  {
+    title: "Traditional hiring vs. FocusedEDU",
+    src: "/infographics/edu-traditional-vs-focusededu.svg",
+  },
+  {
+    title: "The true cost of an empty classroom",
+    src: "/infographics/edu-true-cost-vacancy.svg",
+  },
+  {
+    title: "One client per region",
+    src: "/infographics/edu-one-client-per-region.svg",
+  },
+];
+
 export default function ResourcesPage() {
   return (
     <>
@@ -130,12 +146,46 @@ export default function ResourcesPage() {
         bg="bg-mist"
       />
 
+      {/* Infographics */}
+      <section className="bg-white py-24 lg:py-32">
+        <div className="container-x">
+          <SectionHeading
+            center
+            eyebrow="Infographics"
+            title="The model, at a glance."
+            intro="Share-ready visuals that make the case for a focused, exclusive staffing partner."
+          />
+          <div className="mx-auto mt-14 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {infographics.map((g, i) => (
+              <Reveal key={g.title} delay={i * 0.06}>
+                <a
+                  href={g.src}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block overflow-hidden rounded-2xl border border-cloud bg-navy-950 transition-all duration-300 hover:-translate-y-1 hover:border-teal-500/40 hover:shadow-[0_30px_60px_-30px_rgba(6,10,31,0.3)]"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={g.src} alt={g.title} loading="lazy" className="block w-full" />
+                  <div className="flex items-center justify-between gap-3 bg-white px-5 py-4">
+                    <span className="text-sm font-semibold text-navy-950">{g.title}</span>
+                    <span className="inline-flex items-center gap-1 text-xs font-semibold text-teal-700">
+                      View full size
+                      <ArrowRight className="size-3.5" aria-hidden />
+                    </span>
+                  </div>
+                </a>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <BlogGrid
         posts={blogCards}
         eyebrow="From the blog"
         title="Insight for schools and educators."
         intro="Practical articles on hiring, retention, compliance, and building stronger school teams."
-        bg="bg-white"
+        bg="bg-mist"
         cta={{ label: "View all articles", href: "/blog" }}
       />
 

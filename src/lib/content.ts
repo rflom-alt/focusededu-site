@@ -77,8 +77,7 @@ export const edu: SiteContent = {
     instagram: "https://www.instagram.com/focusededustaffing.group/",
     linkedin: "https://www.linkedin.com/company/focused-staffing-group",
   },
-  jobBoard:
-    "https://recruiterflow.com/db_7a60112fb3c6a15b381182cba01d74be/jobs?department=FSG-%20EDUCATION",
+  jobBoard: "https://focusedu-staffing.floot.app/jobs",
   nav: [
     { label: "For Schools", href: "/for-schools" },
     { label: "For Job Seekers", href: "/candidates" },

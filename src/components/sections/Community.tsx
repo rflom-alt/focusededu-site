@@ -45,6 +45,15 @@ export function Community({
               ))}
             </ul>
           </Reveal>
+          <Reveal delay={0.24}>
+            <div className="mt-9 flex items-center gap-5 rounded-2xl border border-gold-500/25 bg-gold-500/[0.06] p-6">
+              <span className="font-display text-5xl font-bold leading-none text-gold-400">1,000+</span>
+              <span className="text-sm leading-relaxed text-white/80">
+                supply-filled backpacks donated to school partners across Delaware, New
+                Jersey &amp; Pennsylvania
+              </span>
+            </div>
+          </Reveal>
           {cta && (
             <Reveal delay={0.26}>
               <div className="mt-9">

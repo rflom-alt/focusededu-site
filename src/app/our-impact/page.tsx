@@ -76,6 +76,15 @@ export default function OurImpactPage() {
                 ))}
               </ul>
             </Reveal>
+            <Reveal delay={0.26}>
+              <div className="mt-8 flex items-center gap-5 rounded-2xl border border-gold-500/30 bg-gold-500/[0.07] p-6">
+                <span className="font-display text-5xl font-bold leading-none text-gold-600">1,000+</span>
+                <span className="text-sm leading-relaxed text-navy-900">
+                  supply-filled backpacks donated to school partners across Delaware, New
+                  Jersey &amp; Pennsylvania
+                </span>
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>

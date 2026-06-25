@@ -69,14 +69,14 @@ export function Hero({
       className="relative h-screen overflow-hidden bg-navy-950"
     >
       {/* Photographic background (zooms on scrub) */}
-      <div ref={img} className="absolute inset-0 will-change-transform">
+      <div ref={img} className="absolute inset-0 origin-top will-change-transform">
         <Image
           src={hero.photo}
           alt={hero.photoAlt}
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover object-[center_top]"
         />
       </div>
 

@@ -30,7 +30,7 @@ export function PageHero({
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center opacity-40"
+            className="object-cover object-[center_top] opacity-40"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/70 to-navy-950/45" />
         </>

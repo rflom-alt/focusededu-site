@@ -46,6 +46,13 @@ const resources = [
     cta: "Book a call",
     href: "/our-impact#connect",
   },
+  {
+    icon: "Award",
+    title: "Case studies",
+    body: "Real partner schools, real numbers — see how we filled the roles other agencies couldn't.",
+    cta: "Read case studies",
+    href: "/case-studies",
+  },
 ];
 
 const videos: VideoItem[] = [

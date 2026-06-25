@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Check } from "lucide-react";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/motion/Reveal";
+import { ClipReveal } from "@/components/motion/ClipReveal";
 import { Button } from "@/components/ui/Button";
 import type { SiteContent, CtaItem } from "@/lib/content";
 
@@ -65,7 +66,7 @@ export function Community({
           )}
         </div>
 
-        <Reveal delay={0.1} className="order-1 lg:order-2">
+        <ClipReveal delay={0.1} className="order-1 lg:order-2">
           <div className="relative aspect-[5/4] overflow-hidden rounded-2xl ring-1 ring-white/10">
             <Image
               src={community.photo}
@@ -77,7 +78,7 @@ export function Community({
             {/* gold corner accent */}
             <div className="absolute inset-x-0 bottom-0 h-1 bg-gold-500" aria-hidden />
           </div>
-        </Reveal>
+        </ClipReveal>
       </div>
     </section>
   );

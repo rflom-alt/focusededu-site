@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Magnetic } from "@/components/motion/Magnetic";
 import { useIsoLayoutEffect } from "@/components/motion/useIsoLayoutEffect";
 import type { SiteContent } from "@/lib/content";
 
@@ -43,19 +44,27 @@ export function Hero({
           scrollTrigger: {
             trigger: root.current,
             start: "top top",
-            end: "+=90%",
+            end: "+=110%",
             pin: true,
             scrub: 1,
           },
         });
-        tl.fromTo(img.current, { scale: 1.05 }, { scale: 1.22, ease: "none" }, 0)
-          .fromTo(scrim.current, { opacity: 0 }, { opacity: 0.55, ease: "none" }, 0)
-          .to(content.current, { yPercent: -16, autoAlpha: 0, ease: "none" }, 0)
+        // Layered parallax: the photo zooms + drifts down slowly, the scrim
+        // deepens, and the headline rises faster and fades — three rates of
+        // motion give the first screen real cinematic depth.
+        tl.fromTo(
+          img.current,
+          { scale: 1.06, yPercent: 0 },
+          { scale: 1.26, yPercent: 8, ease: "none" },
+          0
+        )
+          .fromTo(scrim.current, { opacity: 0 }, { opacity: 0.62, ease: "none" }, 0)
+          .to(content.current, { yPercent: -32, autoAlpha: 0, ease: "none" }, 0)
           .fromTo(
             chips.current?.children ?? [],
-            { autoAlpha: 0, y: 28 },
+            { autoAlpha: 0, y: 32 },
             { autoAlpha: 1, y: 0, stagger: 0.12, ease: "none" },
-            0.35
+            0.3
           );
       });
     }, root);
@@ -97,9 +106,11 @@ export function Hero({
             {hero.subtitle}
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Button href={cta.primary.href} variant="primary" size="lg">
-              {cta.primary.label}
-            </Button>
+            <Magnetic>
+              <Button href={cta.primary.href} variant="primary" size="lg">
+                {cta.primary.label}
+              </Button>
+            </Magnetic>
             <Button
               href={cta.secondary.href}
               variant="ghost"

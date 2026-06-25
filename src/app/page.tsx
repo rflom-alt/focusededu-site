@@ -2,7 +2,7 @@ import { edu } from "@/lib/content";
 import { Hero } from "@/components/sections/Hero";
 import { LogoWall } from "@/components/sections/LogoWall";
 import { DualPath } from "@/components/sections/DualPath";
-import { Differentiators } from "@/components/sections/Differentiators";
+import { PinnedHorizontal } from "@/components/sections/PinnedHorizontal";
 import { RegionScarcity } from "@/components/sections/RegionScarcity";
 import { StatBand } from "@/components/sections/StatBand";
 import { Community } from "@/components/sections/Community";
@@ -16,10 +16,7 @@ export default function Home() {
       <LogoWall clients={edu.clients} />
       <DualPath />
       <StatBand stats={edu.stats} />
-      <Differentiators
-        items={edu.differentiators}
-        cta={{ label: "Explore working with us", href: "/for-schools" }}
-      />
+      <PinnedHorizontal items={edu.differentiators} />
       <RegionScarcity />
       <Testimonials testimonials={edu.testimonials} />
       <Community

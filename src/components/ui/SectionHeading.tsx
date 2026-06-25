@@ -1,5 +1,6 @@
 import { cn } from "@/lib/cn";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { MaskReveal } from "@/components/motion/MaskReveal";
 
 export function SectionHeading({
   eyebrow,
@@ -27,7 +28,7 @@ export function SectionHeading({
           dark ? "text-white" : "text-navy-950"
         )}
       >
-        {title}
+        <MaskReveal text={title} />
       </h2>
       {intro && (
         <p

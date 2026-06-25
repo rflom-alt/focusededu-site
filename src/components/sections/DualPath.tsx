@@ -3,6 +3,7 @@ import { Check } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/motion/Reveal";
+import { ClipReveal } from "@/components/motion/ClipReveal";
 
 const paths = [
   {
@@ -47,19 +48,21 @@ export function DualPath() {
           {paths.map((p, i) => (
             <Reveal key={p.label} delay={i * 0.08}>
               <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-cloud bg-white transition-all duration-300 hover:-translate-y-1 hover:border-teal-500/40 hover:shadow-[0_40px_80px_-50px_rgba(6,10,31,0.4)]">
-                <div className="relative aspect-[16/9] overflow-hidden">
-                  <Image
-                    src={p.photo}
-                    alt={p.alt}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-950/20 to-transparent" />
-                  <span className="absolute left-6 top-6 text-xs font-semibold uppercase tracking-[0.14em] text-teal-300">
-                    {p.label}
-                  </span>
-                </div>
+                <ClipReveal>
+                  <div className="relative aspect-[16/9] overflow-hidden">
+                    <Image
+                      src={p.photo}
+                      alt={p.alt}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-950/20 to-transparent" />
+                    <span className="absolute left-6 top-6 text-xs font-semibold uppercase tracking-[0.14em] text-teal-300">
+                      {p.label}
+                    </span>
+                  </div>
+                </ClipReveal>
                 <div className="flex flex-1 flex-col p-7 lg:p-8">
                   <h3 className="text-2xl font-semibold text-navy-950">{p.title}</h3>
                   <p className="mt-3 leading-relaxed text-slate-ink">{p.body}</p>

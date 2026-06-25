@@ -2,8 +2,14 @@ import Image from "next/image";
 import type { SiteContent } from "@/lib/content";
 
 export function LogoWall({ clients }: { clients: SiteContent["clients"] }) {
-  // Double the list so translateX(-50%) loops seamlessly.
-  const track = [...clients, ...clients];
+  // translateX(-50%) loops seamlessly only when ONE copy of the list is wider
+  // than the viewport — otherwise a blank gap scrolls through. With few logos
+  // (or on ultrawide screens) one copy is too narrow, so first repeat the list
+  // until a single group comfortably exceeds any viewport, THEN double it.
+  const MIN_GROUP = 16;
+  const reps = Math.max(1, Math.ceil(MIN_GROUP / clients.length));
+  const group = Array.from({ length: reps }, () => clients).flat();
+  const track = [...group, ...group];
   return (
     <section className="overflow-hidden border-b border-cloud bg-white py-12 lg:py-14">
       <div className="container-x">

@@ -101,8 +101,8 @@ export const edu: SiteContent = {
   differentiators: [
     {
       icon: "ShieldCheck",
-      title: "One client per region",
-      body: "A pipeline that's yours alone. We partner with a single school or district per region, so your talent pool is never shared with a competitor down the road.",
+      title: "One partner per market",
+      body: "Your talent pipeline is yours alone. We won't take on a directly competing school or district in your area — so the educators we recruit and develop for you are never shared with a rival down the road.",
     },
     {
       icon: "GraduationCap",
@@ -122,7 +122,7 @@ export const edu: SiteContent = {
   ] as Differentiator[],
   stats: [
     { value: "12 yrs", label: "Partnering with K-12 schools" },
-    { value: "1", label: "Client per region — always exclusive" },
+    { value: "0", label: "Of your direct competitors we'll staff" },
     { value: "<10%", label: "Vacancy rate a partner reached — down from 35%" },
     { value: "+25%", label: "Substitute fill-rate lift for a partner district" },
   ] as Stat[],

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/motion/Reveal";
 
-/** Honest scarcity: one client per region creates real urgency. */
+/** Honest scarcity: we won't staff your direct competitor, so a rival can lock you out. */
 export function RegionScarcity() {
   return (
     <section className="relative overflow-hidden bg-navy-900 py-20 lg:py-24">
@@ -19,17 +19,17 @@ export function RegionScarcity() {
               <Eyebrow tone="light">A genuinely scarce advantage</Eyebrow>
               <h2 className="mt-5 flex items-start gap-3 text-3xl font-semibold text-white sm:text-4xl lg:text-[2.85rem]">
                 <MapPin className="mt-1 hidden size-9 shrink-0 text-teal-400 sm:block" strokeWidth={1.6} />
-                Only one partner per region.
+                Your competitor can lock you out.
               </h2>
               <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/75">
-                We dedicate our team to a single school or district per region — so your talent
-                pipeline is exclusive, never shared with a competitor down the road. Once a
-                region is taken, it&apos;s taken.
+                Once we&apos;re staffing your school, we won&apos;t take on a directly competing
+                school or district nearby — your pipeline stays exclusively yours. So if a rival
+                signs first, we may have to turn you away.
               </p>
             </div>
             <div className="flex flex-col gap-3 lg:items-end">
               <Button href="/book-a-call" variant="primary" size="lg">
-                Check if your region is open
+                See if your area is still open
               </Button>
               <p className="text-sm text-white/55">
                 Free 30-minute call · No cost · No obligation

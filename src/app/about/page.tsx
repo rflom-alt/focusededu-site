@@ -13,14 +13,14 @@ import { CtaBand } from "@/components/sections/CtaBand";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "K-12 education experts. We've earned the trust of the industry, our talent, and our customers — by dedicating our focus to one select partner per region.",
+    "K-12 education experts. We've earned the trust of the industry, our talent, and our customers — by giving each partner our undivided focus and never working their direct competitor.",
 };
 
 const values: Feature[] = [
   {
     icon: "Target",
     title: "Focus",
-    body: "One client per region, our full attention — never spread thin across competitors.",
+    body: "Your partner, never your rival's. You get our full attention — never split between direct competitors.",
   },
   {
     icon: "Settings",
@@ -101,7 +101,7 @@ export default function AboutPage() {
             <p className="mt-5 text-lg leading-relaxed text-slate-ink">
               Unlike other staffing agencies, we dedicate our staff, resources, and attention
               to{" "}
-              <span className="font-medium text-navy-950">one select partner per region</span>{" "}
+              <span className="font-medium text-navy-950">one partner per market — never their rival</span>{" "}
               — ensuring a focused result you can feel from the very first placement.
             </p>
           </Reveal>

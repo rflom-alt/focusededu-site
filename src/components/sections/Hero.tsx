@@ -11,7 +11,7 @@ import { useIsoLayoutEffect } from "@/components/motion/useIsoLayoutEffect";
 import type { SiteContent } from "@/lib/content";
 
 const PROOF_CHIPS = [
-  "One client per region",
+  "One partner per market",
   "Built by a teacher",
   "Credentialing in half the time",
 ];

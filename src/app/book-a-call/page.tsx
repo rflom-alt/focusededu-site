@@ -28,7 +28,7 @@ const expect = [
   },
   {
     title: "You'll see the model",
-    body: "How one client per region gives you a dedicated, exclusive pipeline, and how automated credentialing halves your time-to-hire.",
+    body: "How an exclusive pipeline — one we never share with your competitors — gives you first pick of talent, and how automated credentialing halves your time-to-hire.",
   },
   {
     title: "A clear next step",

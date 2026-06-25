@@ -13,7 +13,7 @@ const paths = [
     title: "Build the team your students deserve.",
     body: "A dedicated, exclusive talent pipeline — vetted, credentialed, and ready when you are.",
     points: [
-      "One client per region — never shared",
+      "One partner per market — never shared",
       "Credentialing in half the time",
       "Temp-to-perm at no cost",
     ],

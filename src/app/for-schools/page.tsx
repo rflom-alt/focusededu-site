@@ -33,7 +33,7 @@ const whyChooseUs: Feature[] = [
   {
     icon: "Users",
     title: "A dedicated talent pool",
-    body: "Because we focus on only one client per region, you're guaranteed a pool of talent that is never shared with a competing school.",
+    body: "Because we won't take on a directly competing school in your area, you're guaranteed a pool of talent that's never shared with a rival.",
   },
   {
     icon: "Zap",
@@ -95,8 +95,8 @@ const employerFaqs: QA[] = [
     a: "Engagements are billed simply — typically a markup on contract placements or a flat fee on direct hires, depending on the role. There are no surprises, and temp-to-perm conversions come at no additional cost.",
   },
   {
-    q: "What does “one client per region” actually mean?",
-    a: "We partner with a single school or district per region, so the talent pipeline we build is exclusively yours — never shared with a competing school down the road. It's our strongest commitment to you.",
+    q: "Will you also staff my competitors?",
+    a: "No. Once we're staffing your school or district, we won't take on a directly competing school in your area — the talent pipeline we build is exclusively yours, never shared with a rival down the road. It's our strongest commitment to you.",
   },
   {
     q: "Do you handle credentialing and compliance?",

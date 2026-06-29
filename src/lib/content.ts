@@ -79,8 +79,7 @@ export const edu: SiteContent = {
     linkedin: "https://www.linkedin.com/company/focused-staffing-group",
   },
   jobBoard: "https://focusedu-staffing.floot.app/jobs",
-  // TODO: point at the Floot "general application / talent network" URL when available.
-  submitResume: "/our-impact#connect",
+  submitResume: "https://focusedu-staffing.floot.app/talent-network",
   nav: [
     { label: "For Schools", href: "/for-schools" },
     { label: "Services", href: "/services" },

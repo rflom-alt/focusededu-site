@@ -10,12 +10,14 @@ export function Footer({
   nav,
   social,
   jobBoard,
+  submitResume,
 }: {
   brand: SiteContent["brand"];
   contact: SiteContent["contact"];
   nav: SiteContent["nav"];
   social: SiteContent["social"];
   jobBoard: string;
+  submitResume: string;
 }) {
   const year = 2026;
   const socials = [
@@ -80,6 +82,11 @@ export function Footer({
                 className="transition-colors hover:text-white"
               >
                 Job Board
+              </a>
+            </li>
+            <li>
+              <a href={submitResume} className="transition-colors hover:text-white">
+                Submit your résumé
               </a>
             </li>
             <li>

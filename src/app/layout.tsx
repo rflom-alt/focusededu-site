@@ -4,7 +4,32 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SmoothScroll } from "@/components/motion/SmoothScroll";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { edu } from "@/lib/content";
+
+const ORG_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": ["EmploymentAgency", "Organization"],
+  name: edu.brand.name,
+  legalName: edu.brand.parent,
+  url: "https://www.focusedu-staffing.com",
+  logo: "https://www.focusedu-staffing.com" + edu.brand.logoWhite,
+  description:
+    "Premium K-12 education staffing — a dedicated, exclusive talent pipeline founded by a former teacher. Substitute and certified teachers, special education, paraprofessionals, and support staff.",
+  telephone: edu.contact.phoneHref.replace("tel:", ""),
+  email: edu.contact.email,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "175 Strafford Avenue, Suite One #208",
+    addressLocality: "Wayne",
+    addressRegion: "PA",
+    postalCode: "19087",
+    addressCountry: "US",
+  },
+  areaServed: "US",
+  sameAs: [edu.social.facebook, edu.social.instagram, edu.social.linkedin],
+  founder: { "@type": "Person", name: "Robert Flom", jobTitle: "Founder" },
+};
 
 const display = Bricolage_Grotesque({
   variable: "--font-bricolage",
@@ -45,6 +70,7 @@ export default function RootLayout({
       className={`${display.variable} ${sans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">
+        <JsonLd data={ORG_SCHEMA} />
         <SmoothScroll>
           <Header
             logo={edu.brand.logoWhite}
@@ -60,6 +86,7 @@ export default function RootLayout({
             nav={edu.nav}
             social={edu.social}
             jobBoard={edu.jobBoard}
+            submitResume={edu.submitResume}
           />
         </SmoothScroll>
       </body>

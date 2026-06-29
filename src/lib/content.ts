@@ -32,6 +32,7 @@ export interface SiteContent {
   };
   social: { facebook: string; instagram: string; linkedin: string };
   jobBoard: string;
+  submitResume: string;
   nav: NavItem[];
   cta: { primary: CtaItem; secondary: CtaItem };
   hero: {
@@ -78,6 +79,8 @@ export const edu: SiteContent = {
     linkedin: "https://www.linkedin.com/company/focused-staffing-group",
   },
   jobBoard: "https://focusedu-staffing.floot.app/jobs",
+  // TODO: point at the Floot "general application / talent network" URL when available.
+  submitResume: "/our-impact#connect",
   nav: [
     { label: "For Schools", href: "/for-schools" },
     { label: "For Job Seekers", href: "/candidates" },

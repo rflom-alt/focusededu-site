@@ -12,6 +12,7 @@ import { LogoWall } from "@/components/sections/LogoWall";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { InsightVideos } from "@/components/sections/InsightVideos";
 import { FAQ, type QA } from "@/components/sections/FAQ";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { CtaBand } from "@/components/sections/CtaBand";
 
 export const metadata: Metadata = {
@@ -109,9 +110,20 @@ const employerFaqs: QA[] = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: employerFaqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export default function ForSchoolsPage() {
   return (
     <>
+      <JsonLd data={faqSchema} />
       <PageHero
         eyebrow="For K-12 Schools & Districts"
         title="Hire the right education staff — with speed and precision."

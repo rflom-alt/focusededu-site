@@ -26,6 +26,13 @@ const resources = [
     href: edu.jobBoard,
   },
   {
+    icon: "UserCheck",
+    title: "Join our talent network",
+    body: "Not ready to browse? Submit your résumé and we'll reach out when the right role opens.",
+    cta: "Submit your résumé",
+    href: edu.submitResume,
+  },
+  {
     icon: "FileText",
     title: "Free résumé feedback",
     body: "Get complimentary résumé feedback and a makeover from our team of recruiters.",

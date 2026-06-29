@@ -9,6 +9,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/motion/Reveal";
 import { BlogCard } from "@/components/blog/BlogCard";
 import { CtaBand } from "@/components/sections/CtaBand";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -23,6 +24,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: { canonical: `/blog/${slug}` },
     openGraph: {
       title: post.title,
       description: post.excerpt,
@@ -36,6 +38,25 @@ export default async function BlogPostPage({ params }: Params) {
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) notFound();
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    image: `https://www.focusedu-staffing.com${post.img}`,
+    datePublished: post.iso,
+    author: { "@type": "Organization", name: "FocusedEDU" },
+    publisher: {
+      "@type": "Organization",
+      name: "FocusedEDU",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.focusedu-staffing.com/logos/focusededu-white.png",
+      },
+    },
+    mainEntityOfPage: `https://www.focusedu-staffing.com/blog/${post.slug}`,
+  };
 
   // Related: same category first, topped up with the most recent others.
   const sameCat = posts.filter((p) => p.slug !== post.slug && p.category === post.category);
@@ -52,6 +73,7 @@ export default async function BlogPostPage({ params }: Params) {
 
   return (
     <>
+      <JsonLd data={articleSchema} />
       {/* Header */}
       <section className="relative overflow-hidden bg-navy-950 pt-32 pb-28 lg:pt-40 lg:pb-36">
         <div

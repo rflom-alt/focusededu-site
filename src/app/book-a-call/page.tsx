@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Clock, ShieldCheck, GraduationCap, Phone, Mail } from "lucide-react";
 import { edu } from "@/lib/content";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/motion/Reveal";
 import { LogoWall } from "@/components/sections/LogoWall";
 import { ScrubParallax } from "@/components/motion/ScrubParallax";
@@ -95,6 +96,13 @@ export default function BookACallPage() {
                 ))}
               </ul>
             </Reveal>
+            <Reveal delay={0.26}>
+              <div className="mt-9">
+                <Button href="#book" variant="primary" size="lg">
+                  Pick your time ↓
+                </Button>
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -137,7 +145,7 @@ export default function BookACallPage() {
           </div>
 
           {/* Right: scheduler */}
-          <div>
+          <div id="book" className="scroll-mt-28">
             <div className="overflow-hidden rounded-2xl border border-cloud bg-white shadow-[0_30px_60px_-40px_rgba(6,10,31,0.3)]">
               <HubSpotMeetings url={edu.contact.scheduler} className="w-full" />
             </div>

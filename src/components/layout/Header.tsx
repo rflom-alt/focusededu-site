@@ -88,16 +88,23 @@ export function Header({
           </Button>
         </div>
 
-        {/* Mobile toggle */}
-        <button
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          className="inline-flex size-11 items-center justify-center rounded-full text-white lg:hidden"
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
-        >
-          {open ? <X className="size-6" /> : <Menu className="size-6" />}
-        </button>
+        {/* Mobile actions: persistent CTA + toggle */}
+        <div className="flex items-center gap-2 lg:hidden">
+          {!open && (
+            <Button href={activeCta.href} variant="primary" size="sm" className="px-4">
+              {isCandidateContext ? "Open roles" : "Book a call"}
+            </Button>
+          )}
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            className="inline-flex size-11 items-center justify-center rounded-full text-white"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+          >
+            {open ? <X className="size-6" /> : <Menu className="size-6" />}
+          </button>
+        </div>
       </div>
       </header>
 

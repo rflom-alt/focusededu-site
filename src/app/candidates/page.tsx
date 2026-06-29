@@ -90,12 +90,12 @@ export default function CandidatesPage() {
           View open roles
         </Button>
         <Button
-          href="#how"
+          href={edu.submitResume}
           variant="ghost"
           size="lg"
           className="border border-white/25 hover:bg-white/5"
         >
-          How it works
+          Submit your résumé
         </Button>
       </PageHero>
 

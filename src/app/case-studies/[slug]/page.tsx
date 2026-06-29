@@ -9,6 +9,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/motion/Reveal";
 import { CtaBand } from "@/components/sections/CtaBand";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -23,6 +24,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   return {
     title: `${cs.school} — Case Study`,
     description: cs.subhead,
+    alternates: { canonical: `/case-studies/${slug}` },
     openGraph: {
       title: `${cs.school} — FocusedEDU Case Study`,
       description: cs.subhead,
@@ -37,11 +39,31 @@ export default async function CaseStudyPage({ params }: Params) {
   const cs = getCaseStudy(slug);
   if (!cs) notFound();
 
+  const csSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: cs.headline,
+    description: cs.subhead,
+    image: `https://www.focusedu-staffing.com${cs.photo}`,
+    about: cs.school,
+    author: { "@type": "Organization", name: "FocusedEDU" },
+    publisher: {
+      "@type": "Organization",
+      name: "FocusedEDU",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.focusedu-staffing.com/logos/focusededu-white.png",
+      },
+    },
+    mainEntityOfPage: `https://www.focusedu-staffing.com/case-studies/${cs.slug}`,
+  };
+
   const related = caseStudies.filter((c) => c.slug !== cs.slug).slice(0, 3);
   const statCols = cs.stats.length === 4 ? "lg:grid-cols-4" : "lg:grid-cols-3";
 
   return (
     <>
+      <JsonLd data={csSchema} />
       {/* Header */}
       <section className="relative overflow-hidden bg-navy-950 pt-32 pb-28 lg:pt-40 lg:pb-36">
         <div

@@ -91,7 +91,7 @@ export function Header({
         {/* Mobile actions: persistent CTA + toggle */}
         <div className="flex items-center gap-2 lg:hidden">
           {!open && (
-            <Button href={activeCta.href} variant="primary" size="sm" className="px-4">
+            <Button href={activeCta.href} variant="primary" size="md" className="px-4 py-2 text-sm">
               {isCandidateContext ? "Open roles" : "Book a call"}
             </Button>
           )}

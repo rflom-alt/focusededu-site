@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { posts } from "@/lib/posts";
 import { caseStudies } from "@/lib/case-studies";
+import { servicePages } from "@/lib/service-pages";
 
 const BASE = "https://www.focusedu-staffing.com";
 
@@ -13,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/our-impact",
     "/resources",
     "/case-studies",
+    "/services",
     "/book-a-call",
     "/blog",
     "/resources/2026-k12-staffing-report",
@@ -35,5 +37,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...cases, ...blog];
+  const services = servicePages.map((p) => ({
+    url: `${BASE}/${p.slug}`,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  return [...staticRoutes, ...services, ...cases, ...blog];
 }

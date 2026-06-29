@@ -83,6 +83,7 @@ export const edu: SiteContent = {
   submitResume: "/our-impact#connect",
   nav: [
     { label: "For Schools", href: "/for-schools" },
+    { label: "Services", href: "/services" },
     { label: "For Job Seekers", href: "/candidates" },
     { label: "About", href: "/about" },
     { label: "Our Impact", href: "/our-impact" },

@@ -1,6 +1,7 @@
 import { cn } from "@/lib/cn";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/motion/Reveal";
+import { Button } from "@/components/ui/Button";
 import type { Step } from "@/lib/content";
 
 const colMap: Record<number, string> = {
@@ -15,6 +16,10 @@ export function Steps({
   steps,
   dark = false,
   id,
+  ctaLabel,
+  ctaHref,
+  ctaSecondaryLabel,
+  ctaSecondaryHref,
 }: {
   eyebrow?: string;
   title: string;
@@ -22,6 +27,10 @@ export function Steps({
   steps: Step[];
   dark?: boolean;
   id?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  ctaSecondaryLabel?: string;
+  ctaSecondaryHref?: string;
 }) {
   const cols = colMap[steps.length] ?? "lg:grid-cols-3";
   return (
@@ -61,6 +70,18 @@ export function Steps({
             </Reveal>
           ))}
         </div>
+        {ctaHref && ctaLabel && (
+          <div className="mt-14 flex flex-wrap items-center justify-center gap-4">
+            <Button href={ctaHref} variant="primary" size="lg">
+              {ctaLabel}
+            </Button>
+            {ctaSecondaryHref && ctaSecondaryLabel && (
+              <Button href={ctaSecondaryHref} variant="outline" size="lg">
+                {ctaSecondaryLabel}
+              </Button>
+            )}
+          </div>
+        )}
       </div>
     </section>
   );

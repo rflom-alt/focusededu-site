@@ -2,6 +2,7 @@ import { cn } from "@/lib/cn";
 import { Icon } from "@/components/ui/Icon";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/motion/Reveal";
+import { Button } from "@/components/ui/Button";
 
 export type Feature = { icon?: string; title: string; body: string };
 
@@ -21,6 +22,10 @@ export function FeatureGrid({
   dark = false,
   bg,
   center = false,
+  ctaLabel,
+  ctaHref,
+  ctaSecondaryLabel,
+  ctaSecondaryHref,
 }: {
   eyebrow?: string;
   eyebrowTone?: "teal" | "gold" | "light";
@@ -31,6 +36,10 @@ export function FeatureGrid({
   dark?: boolean;
   bg?: string;
   center?: boolean;
+  ctaLabel?: string;
+  ctaHref?: string;
+  ctaSecondaryLabel?: string;
+  ctaSecondaryHref?: string;
 }) {
   return (
     <section className={cn(bg ?? (dark ? "bg-navy-950" : "bg-white"), "py-24 lg:py-32")}>
@@ -79,6 +88,22 @@ export function FeatureGrid({
             </Reveal>
           ))}
         </div>
+        {ctaHref && ctaLabel && (
+          <div className="mt-14 flex flex-wrap items-center justify-center gap-4">
+            <Button href={ctaHref} variant="primary" size="lg">
+              {ctaLabel}
+            </Button>
+            {ctaSecondaryHref && ctaSecondaryLabel && (
+              <Button
+                href={ctaSecondaryHref}
+                variant={dark ? "light" : "outline"}
+                size="lg"
+              >
+                {ctaSecondaryLabel}
+              </Button>
+            )}
+          </div>
+        )}
       </div>
     </section>
   );

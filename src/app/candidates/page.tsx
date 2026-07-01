@@ -113,6 +113,10 @@ export default function CandidatesPage() {
         title="From sign-up to payday in four steps."
         intro="A simple, supported path into your next role — most of it from your phone."
         steps={journey}
+        ctaLabel="View open roles"
+        ctaHref={edu.jobBoard}
+        ctaSecondaryLabel="Submit your résumé"
+        ctaSecondaryHref={edu.submitResume}
       />
 
       <FeatureGrid
@@ -121,9 +125,18 @@ export default function CandidatesPage() {
         intro="Being part of the FocusedEDU network comes with real benefits beyond the placement."
         items={perks}
         columns={3}
+        ctaLabel="View open roles"
+        ctaHref={edu.jobBoard}
+        ctaSecondaryLabel="Submit your résumé"
+        ctaSecondaryHref={edu.submitResume}
       />
 
-      <VideoTestimonials />
+      <VideoTestimonials
+        ctaLabel="View open roles"
+        ctaHref={edu.jobBoard}
+        ctaSecondaryLabel="Submit your résumé"
+        ctaSecondaryHref={edu.submitResume}
+      />
 
       <FAQ title="Questions, answered." items={faqs} />
 

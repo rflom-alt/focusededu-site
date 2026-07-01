@@ -1,5 +1,6 @@
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/motion/Reveal";
+import { Button } from "@/components/ui/Button";
 import { YouTubeEmbed } from "@/components/sections/YouTubeEmbed";
 
 const items = [
@@ -19,7 +20,17 @@ const items = [
   },
 ];
 
-export function VideoTestimonials() {
+export function VideoTestimonials({
+  ctaLabel,
+  ctaHref,
+  ctaSecondaryLabel,
+  ctaSecondaryHref,
+}: {
+  ctaLabel?: string;
+  ctaHref?: string;
+  ctaSecondaryLabel?: string;
+  ctaSecondaryHref?: string;
+} = {}) {
   return (
     <section className="bg-white py-24 lg:py-32">
       <div className="container-x">
@@ -44,6 +55,18 @@ export function VideoTestimonials() {
             </Reveal>
           ))}
         </div>
+        {ctaHref && ctaLabel && (
+          <div className="mt-14 flex flex-wrap items-center justify-center gap-4">
+            <Button href={ctaHref} variant="primary" size="lg">
+              {ctaLabel}
+            </Button>
+            {ctaSecondaryHref && ctaSecondaryLabel && (
+              <Button href={ctaSecondaryHref} variant="outline" size="lg">
+                {ctaSecondaryLabel}
+              </Button>
+            )}
+          </div>
+        )}
       </div>
     </section>
   );

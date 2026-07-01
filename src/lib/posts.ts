@@ -19,6 +19,7 @@ export type BlogPost = {
   keyTakeaways?: string[];
   faqs?: { q: string; a: string }[];
   comparison?: { title: string; columns: string[]; rows: string[][] };
+  howto?: boolean; // step-structured guide → emit HowTo schema
 };
 
 export const posts: BlogPost[] = data as BlogPost[];

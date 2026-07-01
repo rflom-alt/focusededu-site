@@ -139,6 +139,28 @@ export default async function BlogPostPage({ params }: Params) {
         }
       : null;
 
+  const JUNK_HEADING =
+    /^(introduction|intro|conclusion|summary|final thoughts?|in (conclusion|summary)|wrapping up|takeaways?|key takeaways?|faq|frequently|about |why |what is|resources)/i;
+  const howToSteps = post.howto
+    ? headings.filter((h) => !JUNK_HEADING.test(h.text.trim()))
+    : [];
+  const howToSchema =
+    post.howto && howToSteps.length >= 3
+      ? {
+          "@context": "https://schema.org",
+          "@type": "HowTo",
+          name: post.title,
+          description: post.excerpt,
+          step: howToSteps.map((h, i) => ({
+            "@type": "HowToStep",
+            position: i + 1,
+            name: h.text,
+            text: h.text,
+            url: `${SITE}/blog/${post.slug}#${h.id}`,
+          })),
+        }
+      : null;
+
   // Related: same category first, topped up with the most recent others.
   const sameCat = posts.filter((p) => p.slug !== post.slug && p.category === post.category);
   const others = posts.filter((p) => p.slug !== post.slug && p.category !== post.category);
@@ -155,6 +177,7 @@ export default async function BlogPostPage({ params }: Params) {
       <JsonLd data={articleSchema} />
       <JsonLd data={breadcrumbSchema} />
       {faqSchema && <JsonLd data={faqSchema} />}
+      {howToSchema && <JsonLd data={howToSchema} />}
 
       {/* Header */}
       <section className="relative overflow-hidden bg-navy-950 pt-32 pb-28 lg:pt-40 lg:pb-36">

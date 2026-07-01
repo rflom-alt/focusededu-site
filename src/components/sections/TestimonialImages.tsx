@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/motion/Reveal";
+import { Button } from "@/components/ui/Button";
 
 export type TestimonialImage = { src: string; alt: string };
 
@@ -10,11 +11,15 @@ export function TestimonialImages({
   eyebrow = "In their words",
   title = "Trusted by the people who run schools.",
   intro,
+  ctaLabel,
+  ctaHref,
 }: {
   items: TestimonialImage[];
   eyebrow?: string;
   title?: string;
   intro?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
 }) {
   return (
     <section className="bg-white py-24 lg:py-32">
@@ -35,6 +40,13 @@ export function TestimonialImages({
             </Reveal>
           ))}
         </div>
+        {ctaHref && ctaLabel && (
+          <div className="mt-12 text-center">
+            <Button href={ctaHref} variant="primary" size="lg">
+              {ctaLabel}
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );

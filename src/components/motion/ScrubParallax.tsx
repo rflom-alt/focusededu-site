@@ -5,6 +5,7 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Button } from "@/components/ui/Button";
 import { useIsoLayoutEffect } from "@/components/motion/useIsoLayoutEffect";
 
 /**
@@ -18,12 +19,16 @@ export function ScrubParallax({
   eyebrow,
   eyebrowTone = "light",
   quote,
+  ctaLabel,
+  ctaHref,
 }: {
   photo: string;
   alt: string;
   eyebrow?: string;
   eyebrowTone?: "teal" | "gold" | "light";
   quote: string;
+  ctaLabel?: string;
+  ctaHref?: string;
 }) {
   const root = useRef<HTMLElement>(null);
   const img = useRef<HTMLDivElement>(null);
@@ -64,6 +69,13 @@ export function ScrubParallax({
         <p className="mx-auto mt-6 max-w-3xl text-balance font-display text-2xl font-medium leading-snug text-white sm:text-3xl lg:text-[2.5rem]">
           {quote}
         </p>
+        {ctaHref && ctaLabel && (
+          <div className="mt-9">
+            <Button href={ctaHref} variant="primary" size="lg">
+              {ctaLabel}
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );

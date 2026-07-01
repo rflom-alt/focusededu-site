@@ -168,12 +168,16 @@ export default function BookACallPage() {
         src="/video/founder-message.mp4"
         poster="/video/founder-poster.jpg"
         intro="A quick hello from our founder on what a discovery call looks like — and why we do this work."
+        ctaLabel="Book your discovery call"
+        ctaHref="#book"
       />
 
       {/* Proof */}
       <TestimonialImages
         items={testimonialImages}
         intro="Superintendents, CEOs, and HR directors on what it's like to partner with us."
+        ctaLabel="Book your discovery call"
+        ctaHref="#book"
       />
 
       <LogoWall clients={edu.clients} />
@@ -184,6 +188,8 @@ export default function BookACallPage() {
         alt="A teacher supporting a student one-on-one at a desk"
         eyebrow="Ready when you are"
         quote="The right team for your students is one conversation away."
+        ctaLabel="Book your discovery call"
+        ctaHref="#book"
       />
     </>
   );

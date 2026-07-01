@@ -1,5 +1,6 @@
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/motion/Reveal";
+import { Button } from "@/components/ui/Button";
 
 /** Founder message video — loads only on play (preload="none" + poster). */
 export function FounderVideo({
@@ -8,12 +9,16 @@ export function FounderVideo({
   eyebrow = "From our founder",
   title = "Hear from Rob.",
   intro,
+  ctaLabel,
+  ctaHref,
 }: {
   src: string;
   poster: string;
   eyebrow?: string;
   title?: string;
   intro?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
 }) {
   return (
     <section className="bg-mist py-20 lg:py-28">
@@ -33,6 +38,13 @@ export function FounderVideo({
             </video>
           </div>
         </Reveal>
+        {ctaHref && ctaLabel && (
+          <div className="mt-10 text-center">
+            <Button href={ctaHref} variant="primary" size="lg">
+              {ctaLabel}
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );

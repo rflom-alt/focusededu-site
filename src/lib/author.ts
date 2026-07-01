@@ -18,6 +18,6 @@ export const author = {
   profileUrl: "https://www.linkedin.com/in/rflom/",
   links: [
     { label: "LinkedIn", href: "https://www.linkedin.com/in/rflom/", kind: "linkedin" },
-    { label: "Email", href: "mailto:hello@focused-staffing.com", kind: "email" },
+    { label: "Email", href: "mailto:rflom@focused-staffing.com", kind: "email" },
   ] as AuthorLink[],
 };

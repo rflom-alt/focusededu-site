@@ -26,9 +26,26 @@ const ORG_SCHEMA = {
     postalCode: "19087",
     addressCountry: "US",
   },
-  areaServed: "US",
+  areaServed: "United States",
+  foundingDate: "2014",
+  knowsAbout: [
+    "K-12 education staffing",
+    "Special education staffing",
+    "Substitute teacher staffing",
+    "Paraprofessional staffing",
+    "Related services staffing",
+    "School-based behavioral health staffing",
+  ],
   sameAs: [edu.social.facebook, edu.social.instagram, edu.social.linkedin],
   founder: { "@type": "Person", name: "Robert Flom", jobTitle: "Founder" },
+};
+
+const WEBSITE_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: edu.brand.name,
+  url: "https://www.focusedu-staffing.com",
+  publisher: { "@type": "Organization", name: edu.brand.name },
 };
 
 const display = Bricolage_Grotesque({
@@ -71,6 +88,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">
         <JsonLd data={ORG_SCHEMA} />
+        <JsonLd data={WEBSITE_SCHEMA} />
         <SmoothScroll>
           <Header
             logo={edu.brand.logoWhite}

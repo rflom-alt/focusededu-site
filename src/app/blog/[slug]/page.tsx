@@ -2,14 +2,20 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Check, ChevronDown } from "lucide-react";
 import { posts, getPost, categoryLabel } from "@/lib/posts";
 import { edu } from "@/lib/content";
+import { author } from "@/lib/author";
+import { processArticle, type Heading } from "@/lib/article";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/motion/Reveal";
 import { BlogCard } from "@/components/blog/BlogCard";
+import { AuthorBio } from "@/components/blog/AuthorBio";
+import { FAQ } from "@/components/sections/FAQ";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { JsonLd } from "@/components/seo/JsonLd";
+
+const SITE = "https://www.focusedu-staffing.com";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -34,35 +40,106 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   };
 }
 
+function KeyTakeaways({ items }: { items: string[] }) {
+  return (
+    <div className="mb-10 rounded-2xl border border-teal-500/20 bg-teal-500/[0.06] p-6 sm:p-7">
+      <p className="text-xs font-semibold uppercase tracking-[0.14em] text-teal-700">
+        Key takeaways
+      </p>
+      <ul className="mt-4 space-y-2.5">
+        {items.map((t, i) => (
+          <li key={i} className="flex items-start gap-3 text-navy-900">
+            <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-teal-500/20">
+              <Check className="size-3 text-teal-700" strokeWidth={3} />
+            </span>
+            <span className="leading-relaxed">{t}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function TableOfContents({ headings }: { headings: Heading[] }) {
+  return (
+    <details className="group mb-10 rounded-2xl border border-cloud bg-mist p-6" open>
+      <summary className="flex cursor-pointer list-none items-center justify-between text-xs font-semibold uppercase tracking-[0.14em] text-slate-ink [&::-webkit-details-marker]:hidden">
+        In this article
+        <ChevronDown className="size-4 transition-transform duration-300 group-open:rotate-180" />
+      </summary>
+      <ol className="mt-4 space-y-2.5">
+        {headings.map((h) => (
+          <li key={h.id}>
+            <a
+              href={`#${h.id}`}
+              className="text-sm leading-snug text-slate-ink transition hover:text-teal-700"
+            >
+              {h.text}
+            </a>
+          </li>
+        ))}
+      </ol>
+    </details>
+  );
+}
+
 export default async function BlogPostPage({ params }: Params) {
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) notFound();
+
+  const { html: processedHtml, headings } = processArticle(post.contentHtml);
+  const socialSameAs = author.links.filter((l) => l.kind !== "email").map((l) => l.href);
 
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
-    image: `https://www.focusedu-staffing.com${post.img}`,
+    image: `${SITE}${post.img}`,
     datePublished: post.iso,
-    author: { "@type": "Organization", name: "FocusedEDU" },
+    dateModified: post.iso,
+    author: {
+      "@type": "Person",
+      name: author.name,
+      jobTitle: "Founder",
+      url: author.profileUrl,
+      sameAs: socialSameAs,
+    },
     publisher: {
       "@type": "Organization",
       name: "FocusedEDU",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://www.focusedu-staffing.com/logos/focusededu-white.png",
-      },
+      logo: { "@type": "ImageObject", url: `${SITE}/logos/focusededu-white.png` },
     },
-    mainEntityOfPage: `https://www.focusedu-staffing.com/blog/${post.slug}`,
+    mainEntityOfPage: `${SITE}/blog/${post.slug}`,
   };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
+      { "@type": "ListItem", position: 2, name: "Resources", item: `${SITE}/resources` },
+      { "@type": "ListItem", position: 3, name: post.title, item: `${SITE}/blog/${post.slug}` },
+    ],
+  };
+
+  const faqSchema =
+    post.faqs && post.faqs.length
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: post.faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }
+      : null;
 
   // Related: same category first, topped up with the most recent others.
   const sameCat = posts.filter((p) => p.slug !== post.slug && p.category === post.category);
-  const others = posts.filter(
-    (p) => p.slug !== post.slug && p.category !== post.category
-  );
+  const others = posts.filter((p) => p.slug !== post.slug && p.category !== post.category);
   const related = [...sameCat, ...others].slice(0, 3).map((p) => ({
     title: p.title,
     date: p.date,
@@ -74,6 +151,9 @@ export default async function BlogPostPage({ params }: Params) {
   return (
     <>
       <JsonLd data={articleSchema} />
+      <JsonLd data={breadcrumbSchema} />
+      {faqSchema && <JsonLd data={faqSchema} />}
+
       {/* Header */}
       <section className="relative overflow-hidden bg-navy-950 pt-32 pb-28 lg:pt-40 lg:pb-36">
         <div
@@ -98,6 +178,7 @@ export default async function BlogPostPage({ params }: Params) {
             </h1>
             <p className="mt-5 text-sm text-white/55">
               {post.date} · {post.readMinutes} min read
+              {post.updated ? <> · Updated {post.updated}</> : null}
             </p>
           </div>
         </div>
@@ -122,12 +203,23 @@ export default async function BlogPostPage({ params }: Params) {
       {/* Body */}
       <article className="bg-white py-16 lg:py-20">
         <div className="container-x">
-          <div
-            className="article-prose mx-auto max-w-2xl"
-            dangerouslySetInnerHTML={{ __html: post.contentHtml }}
-          />
+          <div className="mx-auto max-w-2xl">
+            {post.keyTakeaways && post.keyTakeaways.length > 0 && (
+              <KeyTakeaways items={post.keyTakeaways} />
+            )}
+            {headings.length > 2 && <TableOfContents headings={headings} />}
+            <div
+              className="article-prose"
+              dangerouslySetInnerHTML={{ __html: processedHtml }}
+            />
+            <AuthorBio />
+          </div>
         </div>
       </article>
+
+      {post.faqs && post.faqs.length > 0 && (
+        <FAQ eyebrow="FAQ" title="Frequently asked questions." items={post.faqs} />
+      )}
 
       {/* Related articles */}
       <section className="bg-mist py-20 lg:py-24">

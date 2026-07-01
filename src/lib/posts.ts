@@ -15,6 +15,9 @@ export type BlogPost = {
   excerpt: string;
   img: string;
   contentHtml: string;
+  updated?: string; // display date, e.g. "Jun 26, 2026"
+  keyTakeaways?: string[];
+  faqs?: { q: string; a: string }[];
 };
 
 export const posts: BlogPost[] = data as BlogPost[];

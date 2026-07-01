@@ -58,12 +58,23 @@ export default async function CaseStudyPage({ params }: Params) {
     mainEntityOfPage: `https://www.focusedu-staffing.com/case-studies/${cs.slug}`,
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.focusedu-staffing.com/" },
+      { "@type": "ListItem", position: 2, name: "Case Studies", item: "https://www.focusedu-staffing.com/case-studies" },
+      { "@type": "ListItem", position: 3, name: cs.school, item: `https://www.focusedu-staffing.com/case-studies/${cs.slug}` },
+    ],
+  };
+
   const related = caseStudies.filter((c) => c.slug !== cs.slug).slice(0, 3);
   const statCols = cs.stats.length === 4 ? "lg:grid-cols-4" : "lg:grid-cols-3";
 
   return (
     <>
       <JsonLd data={csSchema} />
+      <JsonLd data={breadcrumbSchema} />
       {/* Header */}
       <section className="relative overflow-hidden bg-navy-950 pt-32 pb-28 lg:pt-40 lg:pb-36">
         <div

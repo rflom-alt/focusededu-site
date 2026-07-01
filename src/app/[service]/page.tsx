@@ -75,10 +75,21 @@ export default async function ServicePageRoute({ params }: Params) {
     },
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.focusedu-staffing.com/" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://www.focusedu-staffing.com/services" },
+      { "@type": "ListItem", position: 3, name: page.h1, item: `https://www.focusedu-staffing.com/${page.slug}` },
+    ],
+  };
+
   return (
     <>
       <JsonLd data={faqSchema} />
       <JsonLd data={serviceSchema} />
+      <JsonLd data={breadcrumbSchema} />
 
       <PageHero
         eyebrow={page.eyebrow}

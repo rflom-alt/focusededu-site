@@ -12,6 +12,7 @@ import { Reveal } from "@/components/motion/Reveal";
 import { BlogCard } from "@/components/blog/BlogCard";
 import { AuthorBio } from "@/components/blog/AuthorBio";
 import { ShareButtons } from "@/components/blog/ShareButtons";
+import { ComparisonTable } from "@/components/blog/ComparisonTable";
 import { FAQ } from "@/components/sections/FAQ";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -213,6 +214,7 @@ export default async function BlogPostPage({ params }: Params) {
               className="article-prose"
               dangerouslySetInnerHTML={{ __html: processedHtml }}
             />
+            {post.comparison && <ComparisonTable data={post.comparison} />}
             <ShareButtons url={`${SITE}/blog/${post.slug}`} title={post.title} />
             <AuthorBio />
           </div>

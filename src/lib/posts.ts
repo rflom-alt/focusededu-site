@@ -18,6 +18,7 @@ export type BlogPost = {
   updated?: string; // display date, e.g. "Jun 26, 2026"
   keyTakeaways?: string[];
   faqs?: { q: string; a: string }[];
+  comparison?: { title: string; columns: string[]; rows: string[][] };
 };
 
 export const posts: BlogPost[] = data as BlogPost[];

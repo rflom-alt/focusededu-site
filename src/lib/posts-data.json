@@ -28,7 +28,42 @@
         "a": "We present pre-vetted, credentialed educators, cut onboarding time roughly in half with automated credentialing, and offer temp-to-perm conversion at no cost — so coverage is stable, not a revolving door."
       }
     ],
-    "updated": "Jun 26, 2026"
+    "updated": "Jun 26, 2026",
+    "comparison": {
+      "title": "Revolving-door substitute vs. vetted placement",
+      "columns": [
+        "Consideration",
+        "Long-term substitute",
+        "Vetted placement"
+      ],
+      "rows": [
+        [
+          "What the bill rate shows",
+          "A low sticker price that hides the real cost",
+          "Priced for the lowest total cost of the right person"
+        ],
+        [
+          "Instructional continuity",
+          "Handoffs reset pacing, relationships, and routines",
+          "One steady, qualified person stays in the room"
+        ],
+        [
+          "Qualification",
+          "Often supervises the curriculum rather than teaches it",
+          "Qualified to actually teach, not just cover"
+        ],
+        [
+          "Administrator time",
+          "A vacancy that keeps reopening drains principal and HR hours",
+          "Seat filled fast via credentialing, freeing staff time"
+        ],
+        [
+          "Path to permanent",
+          "None — rotates out every few weeks",
+          "Temp-to-perm converts a strong fit at no added cost"
+        ]
+      ]
+    }
   },
   {
     "slug": "7-questions-that-reveal-a-great-k12-staffing-partner",
@@ -121,7 +156,37 @@
         "a": "No. FocusedEDU offers temp-to-perm placement at no additional cost to your school — you evaluate a pre-vetted, credentialed professional in your building before any permanent commitment."
       }
     ],
-    "updated": "Jun 26, 2026"
+    "updated": "Jun 26, 2026",
+    "comparison": {
+      "title": "Temp-to-perm vs. direct hire",
+      "columns": [
+        "Consideration",
+        "Temp-to-perm",
+        "Direct hire"
+      ],
+      "rows": [
+        [
+          "How fit is judged",
+          "Real performance with your students in your building",
+          "A résumé, references, and a short interview"
+        ],
+        [
+          "Risk of a mis-hire",
+          "Low — a mismatch ends cleanly before it converts",
+          "Higher — you commit before seeing the classroom reality"
+        ],
+        [
+          "Budget commitment",
+          "No permanent salary until the fit is confirmed",
+          "Permanent salary committed up front"
+        ],
+        [
+          "Best-fit roles",
+          "Fit-critical roles: special ed, behavioral support, hard-to-staff subjects",
+          "Some senior or specialized hires where a straight placement fits"
+        ]
+      ]
+    }
   },
   {
     "slug": "ai-in-k-12-hiring-what-actually-helps-and-what-to-avoid",
@@ -245,7 +310,42 @@
         "a": "All three depend on fast, reliable credentialing and verification, which can otherwise stall momentum and lose good people. FocusedEDU helps districts build these durable pipelines with automated credentialing and no-cost temp-to-perm placements, working with one district per region."
       }
     ],
-    "updated": "Jun 26, 2026"
+    "updated": "Jun 26, 2026",
+    "comparison": {
+      "title": "Three long-term talent pipelines",
+      "columns": [
+        "Consideration",
+        "Grow-your-own",
+        "Teacher residencies",
+        "International pipeline"
+      ],
+      "rows": [
+        [
+          "Where talent comes from",
+          "Aides, subs, career-changers already in your community",
+          "Aspiring teachers mentored in your classrooms",
+          "Credentialed educators from abroad via J-1 exchange"
+        ],
+        [
+          "Best-fit need",
+          "Building long-term, rooted local staff",
+          "Supported entry that avoids sink-or-swim",
+          "Persistent shortage areas: math, science, special ed, world languages"
+        ],
+        [
+          "Why they stay",
+          "Local candidates put down roots where they already have them",
+          "Supported entry means residents tend to stay longer",
+          "Relocation and onboarding support turns a placement into years"
+        ],
+        [
+          "Key requirement",
+          "Tuition and certification support to remove the barrier",
+          "Extended paid apprenticeship with an experienced mentor",
+          "Clean visa sponsorship and credentialing to avoid friction"
+        ]
+      ]
+    }
   },
   {
     "slug": "cultural-fit-in-education-fostering-cohesion-and-success",
@@ -400,7 +500,42 @@
         "a": "Clearly communicate your school's needs, treat the agency as a strategic partner rather than a vendor, use its expertise for both short- and long-term planning, and take advantage of extra services like professional development for placed educators. FocusedEDU offers tailored solutions, a pre-screened educator network, transparent pricing, and ongoing support to keep placements successful."
       }
     ],
-    "updated": "Jun 26, 2026"
+    "updated": "Jun 26, 2026",
+    "comparison": {
+      "title": "In-house recruiting vs. staffing partner",
+      "columns": [
+        "Consideration",
+        "In-house recruiting",
+        "Staffing partner"
+      ],
+      "rows": [
+        [
+          "Administrator time",
+          "Countless hours pulled from other critical work",
+          "Reduced administrative burden and associated costs"
+        ],
+        [
+          "Talent reach",
+          "Limited to the school's own network",
+          "Access to a wider, pre-vetted, more diverse talent pool"
+        ],
+        [
+          "Time-to-hire",
+          "Slower, especially for urgent or sudden vacancies",
+          "Candidates in 24-48 hours for urgent needs, 4-5 days for larger orders"
+        ],
+        [
+          "Turnover and retention",
+          "Higher turnover risk without proper vetting",
+          "Better matches; some agencies report up to 60% retention"
+        ],
+        [
+          "Compliance",
+          "Falls on the school to verify certification",
+          "Agency ensures placements meet certification requirements"
+        ]
+      ]
+    }
   },
   {
     "slug": "revolutionizing-k-12-recruitment-the-power-of-multi-channel-strategies",
@@ -431,7 +566,37 @@
         "a": "Yes. It expands reach, improves candidate quality, boosts a school's employer brand, and streamlines hiring. One FocusedEDU partner school grew its qualified applicant pool by 40% after implementing this approach, and FocusedEDU offers guidance and a downloadable how-to guide to help schools do the same."
       }
     ],
-    "updated": "Jun 26, 2026"
+    "updated": "Jun 26, 2026",
+    "comparison": {
+      "title": "Traditional channels vs. multi-channel recruiting",
+      "columns": [
+        "Consideration",
+        "Traditional channels",
+        "Multi-channel strategy"
+      ],
+      "rows": [
+        [
+          "Channels used",
+          "Job boards and local networks",
+          "Specialized platforms, social media, professional networks, referrals, virtual fairs"
+        ],
+        [
+          "Candidate pool",
+          "Narrow; misses passive and specialized candidates",
+          "Broader, more diverse, including passive job seekers"
+        ],
+        [
+          "Reach for top talent",
+          "Falls short when the best aren't actively searching",
+          "Casts a wider net to reach passive talent"
+        ],
+        [
+          "Reported impact",
+          "Status quo outcomes",
+          "One partner school grew its qualified applicant pool by 40%"
+        ]
+      ]
+    }
   },
   {
     "slug": "mastering-compliance-the-key-to-successful-k-12-staffing",
@@ -741,7 +906,37 @@
         "a": "A centralized scheduling platform lets schools oversee and coordinate staffing needs across various departments and locations. FocusedEDU pairs this with an all-in-one app and efficient open-shift management to ensure the right coverage when it is needed."
       }
     ],
-    "updated": "Jun 26, 2026"
+    "updated": "Jun 26, 2026",
+    "comparison": {
+      "title": "Traditional vs. technology-enabled recruiting",
+      "columns": [
+        "Consideration",
+        "Traditional recruiting",
+        "Technology-enabled recruiting"
+      ],
+      "rows": [
+        [
+          "Screening and tracking",
+          "Manual posting, resume review, and scheduling",
+          "ATS automates postings, resume screening, and interview scheduling"
+        ],
+        [
+          "Candidate matching",
+          "Judgment-based, slower selection",
+          "AI analyzes resumes and predicts candidate success for faster, more accurate matches"
+        ],
+        [
+          "Interview reach",
+          "Limited by in-person scheduling",
+          "Video platforms connect with candidates anywhere, broadening the pool"
+        ],
+        [
+          "Scheduling and coverage",
+          "Managed ad hoc across locations",
+          "Centralized platform and open-shift management coordinate coverage"
+        ]
+      ]
+    }
   },
   {
     "slug": "navigating-the-challenges-of-hiring-in-the-education-sector-solutions-for-success",

@@ -13,6 +13,10 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  images: {
+    formats: ["image/avif", "image/webp"],
+    minimumCacheTTL: 604800,
+  },
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },

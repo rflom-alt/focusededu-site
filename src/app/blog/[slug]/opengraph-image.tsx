@@ -21,7 +21,7 @@ function clampTitle(title: string, max = 120) {
 export default async function Image({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
   const post = getPost(slug);

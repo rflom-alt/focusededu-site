@@ -96,7 +96,7 @@ export default async function ServicePageRoute({ params }: Params) {
         title={page.h1}
         subtitle={page.hero}
         photo={page.photo}
-        photoAlt={page.h1}
+        photoAlt=""
       >
         <Button href={edu.cta.primary.href} variant="primary" size="lg">
           Book a discovery call

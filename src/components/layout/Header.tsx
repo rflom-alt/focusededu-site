@@ -61,8 +61,8 @@ export function Header({
           <Image
             src={logo}
             alt={brandName}
-            width={6870}
-            height={2243}
+            width={800}
+            height={261}
             priority
             className="h-8 w-auto lg:h-9"
           />

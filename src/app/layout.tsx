@@ -87,6 +87,10 @@ export default function RootLayout({
       className={`${display.variable} ${sans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">
+        <link rel="preconnect" href="https://static.hsappstatic.net" />
+        <link rel="preconnect" href="https://meetings.hubspot.com" />
+        <link rel="preconnect" href="https://i.ytimg.com" />
+        <link rel="preconnect" href="https://www.youtube.com" />
         <JsonLd data={ORG_SCHEMA} />
         <JsonLd data={WEBSITE_SCHEMA} />
         <SmoothScroll>

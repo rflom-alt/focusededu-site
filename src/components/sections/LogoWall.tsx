@@ -27,7 +27,7 @@ export function LogoWall({ clients }: { clients: SiteContent["clients"] }) {
                 alt={c.name}
                 width={250}
                 height={100}
-                aria-hidden={i >= clients.length}
+                aria-hidden={i >= group.length}
                 className="h-10 w-auto object-contain opacity-70 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
               />
             </div>

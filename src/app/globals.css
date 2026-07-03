@@ -63,6 +63,7 @@
 
 html {
   scroll-behavior: smooth; /* fallback for reduced-motion (no Lenis) */
+  scroll-padding-top: 5.5rem; /* clear the fixed header for native anchor jumps */
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }

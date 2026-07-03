@@ -100,7 +100,7 @@ export default async function BlogPostPage({ params }: Params) {
     description: post.excerpt,
     image: `${SITE}${post.img}`,
     datePublished: post.iso,
-    dateModified: post.iso,
+    dateModified: post.updated ? new Date(post.updated).toISOString() : post.iso,
     author: {
       "@type": "Person",
       name: author.name,
@@ -121,7 +121,7 @@ export default async function BlogPostPage({ params }: Params) {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
-      { "@type": "ListItem", position: 2, name: "Resources", item: `${SITE}/resources` },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE}/blog` },
       { "@type": "ListItem", position: 3, name: post.title, item: `${SITE}/blog/${post.slug}` },
     ],
   };

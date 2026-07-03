@@ -85,7 +85,12 @@ export function Footer({
               </a>
             </li>
             <li>
-              <a href={submitResume} className="transition-colors hover:text-white">
+              <a
+                href={submitResume}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-white"
+              >
                 Submit your résumé
               </a>
             </li>

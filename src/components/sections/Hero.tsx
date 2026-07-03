@@ -131,7 +131,7 @@ export function Hero({
         {PROOF_CHIPS.map((c) => (
           <span
             key={c}
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.06] px-4 py-2 text-sm font-medium text-white/90 opacity-0 backdrop-blur-sm"
+            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.06] px-4 py-2 text-sm font-medium text-white/90 backdrop-blur-sm"
           >
             <span className="size-1.5 rounded-full bg-teal-400" aria-hidden />
             {c}

@@ -30,6 +30,13 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
     gsap.ticker.add(onTick);
     gsap.ticker.lagSmoothing(0);
 
+    // Recompute pinned/scrubbed trigger positions once fonts + images settle —
+    // they change layout heights and would otherwise leave pins misaligned.
+    const refresh = () => ScrollTrigger.refresh();
+    if (document.readyState === "complete") refresh();
+    else window.addEventListener("load", refresh, { once: true });
+    document.fonts?.ready.then(refresh);
+
     // Eased anchor navigation, clearing the fixed header.
     const onClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement | null;

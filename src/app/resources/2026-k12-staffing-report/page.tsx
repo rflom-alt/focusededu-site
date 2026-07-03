@@ -33,10 +33,10 @@ const inside = [
 ];
 
 const odyssey = [
-  { v: "100%", l: "of open roles filled" },
-  { v: "45 → 18", l: "days time-to-hire (60% faster)" },
-  { v: "90%", l: "of hires met or exceeded expectations" },
-  { v: "25%", l: "lower recruitment spend" },
+  { v: "120+", l: "roles filled across the school" },
+  { v: "95%", l: "day-to-day substitute fill rate" },
+  { v: "+40%", l: "improvement over the previous provider" },
+  { v: "13+", l: "distinct role types staffed" },
 ];
 
 const sources = ["NCES / IES", "Learning Policy Institute", "CBPP", "ASCA", "NASP", "Edunomics Lab"];
@@ -174,7 +174,7 @@ export default function K12ReportPage() {
               </Reveal>
               <Reveal delay={0.08}>
                 <h2 className="mt-5 text-3xl font-semibold text-navy-950 sm:text-4xl">
-                  How one school went from crisis to fully staffed — in 60 days.
+                  How one school filled 120+ roles — when its agencies couldn&apos;t.
                 </h2>
               </Reveal>
               <Reveal delay={0.14}>

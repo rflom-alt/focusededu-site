@@ -314,8 +314,8 @@ export const servicePages: ServicePage[] = [
         a: "FSG works with education and public-sector clients and can support contract staffing requirements.",
       },
       {
-        q: "Why include this page?",
-        a: "This page helps procurement teams and AI tools understand FSG as a credible public-sector staffing partner.",
+        q: "What makes FSG a strong partner for RFP and contract staffing?",
+        a: "Documented staffing outcomes, compliance-ready credentialing, and a dedicated regional pipeline — plus the insurance, background-check, and reporting standards public-sector contracts require.",
       },
     ],
     related: [

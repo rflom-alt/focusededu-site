@@ -12,6 +12,7 @@ import { BlogGrid } from "@/components/sections/BlogGrid";
 import { CtaBand } from "@/components/sections/CtaBand";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/resources" },
   title: "Resources",
   description:
     "Career advice, candidate resources, videos, and articles — the job board, free résumé feedback, real educator stories, and guidance for K-12 schools and educators.",

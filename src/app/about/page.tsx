@@ -11,6 +11,7 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { CtaBand } from "@/components/sections/CtaBand";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/about" },
   title: "About",
   description:
     "K-12 education experts. We've earned the trust of the industry, our talent, and our customers — by giving each partner our undivided focus and never working their direct competitor.",

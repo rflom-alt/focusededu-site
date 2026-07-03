@@ -9,6 +9,7 @@ import { ScrubParallax } from "@/components/motion/ScrubParallax";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/our-impact" },
   title: "Our Impact",
   description:
     "Focused on community. Through school-supply and backpack donation drives, FocusedEDU invests back into the students, classrooms, and neighborhoods our schools serve.",

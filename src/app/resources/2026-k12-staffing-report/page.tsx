@@ -7,6 +7,7 @@ import { Icon } from "@/components/ui/Icon";
 import { ReportSignup } from "@/components/sections/ReportSignup";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/resources/2026-k12-staffing-report" },
   title: "The 2026 State of K-12 Staffing — Report",
   description:
     "A 2026 research report on where K-12 staffing actually stands: the real, cited numbers behind the teacher, substitute, paraprofessional, and mental-health gaps — and what districts can do. Free download from FocusedEDU.",

@@ -6,6 +6,7 @@ import { BlogExplorer } from "@/components/blog/BlogExplorer";
 import { CtaBand } from "@/components/sections/CtaBand";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog" },
   title: "Blog",
   description:
     "Articles on K-12 hiring, retention, compliance, interview prep, and building stronger school teams — from the FocusedEDU team.",

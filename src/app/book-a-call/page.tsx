@@ -11,6 +11,7 @@ import { FounderVideo } from "@/components/sections/FounderVideo";
 import { TestimonialImages } from "@/components/sections/TestimonialImages";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/book-a-call" },
   title: "Book a Discovery Call",
   description:
     "Book a free 30-minute discovery call with FocusedEDU. Tell us your staffing challenge and see how a dedicated, exclusive talent pipeline — built by a former teacher — works. No cost, no obligation.",

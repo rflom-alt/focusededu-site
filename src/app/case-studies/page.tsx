@@ -10,6 +10,7 @@ import { Reveal } from "@/components/motion/Reveal";
 import { CtaBand } from "@/components/sections/CtaBand";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/case-studies" },
   title: "Case Studies",
   description:
     "Real FocusedEDU partner outcomes — from staffing an entire school where incumbent agencies failed, to filling 100% of certified special-education roles in two weeks.",

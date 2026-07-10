@@ -5,6 +5,8 @@ import { Reveal } from "@/components/motion/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/Icon";
 import { ReportSignup } from "@/components/sections/ReportSignup";
+import { CopyChip } from "@/components/sections/CiteReport";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/resources/2026-k12-staffing-report" },
@@ -14,13 +16,47 @@ export const metadata: Metadata = {
 };
 
 const PDF = "/reports/focusededu-2026-k12-staffing-report.pdf";
+const REPORT_URL = "https://www.focusedu-staffing.com/resources/2026-k12-staffing-report";
+const CITATION =
+  "Focused Staffing Group (FocusedEDU). “The 2026 State of K-12 Staffing.” 2026. " + REPORT_URL;
 
 const keyFindings = [
-  { stat: "74%", label: "of public schools struggled to hire fully certified teachers for 2024-25", src: "NCES" },
-  { stat: "1 in 8", label: "teaching positions nationwide are unfilled or held by an uncertified teacher", src: "Learning Policy Institute" },
-  { stat: "~$190B", label: "in federal ESSER relief — about half of it funding staff — has now expired", src: "CBPP" },
-  { stat: "372:1", label: "students per school counselor, far above the recommended 250:1", src: "ASCA" },
+  { id: "certified-teacher-hiring", stat: "74%", label: "of public schools struggled to hire fully certified teachers for 2024-25", src: "NCES" },
+  { id: "unfilled-positions", stat: "1 in 8", label: "teaching positions nationwide are unfilled or held by an uncertified teacher", src: "Learning Policy Institute" },
+  { id: "esser-expiration", stat: "~$190B", label: "in federal ESSER relief — about half of it funding staff — has now expired", src: "CBPP" },
+  { id: "counselor-ratio", stat: "372:1", label: "students per school counselor, far above the recommended 250:1", src: "ASCA" },
 ];
+
+const REPORT_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "Report",
+  name: "The 2026 State of K-12 Staffing",
+  headline: "The 2026 State of K-12 Staffing",
+  description:
+    "A 2026 research report on where K-12 staffing stands: the cited numbers behind the teacher, substitute, paraprofessional, and mental-health gaps — and what districts can do.",
+  url: REPORT_URL,
+  datePublished: "2026-06-15",
+  inLanguage: "en-US",
+  isAccessibleForFree: true,
+  author: {
+    "@type": "Organization",
+    name: "FocusedEDU",
+    legalName: "Focused Staffing Group",
+    url: "https://www.focusedu-staffing.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "FocusedEDU",
+    url: "https://www.focusedu-staffing.com",
+  },
+  about: [
+    "K-12 teacher shortage",
+    "Substitute teacher staffing",
+    "Paraprofessional staffing",
+    "School mental-health staffing",
+    "ESSER funding expiration",
+  ],
+};
 
 const inside = [
   { n: "01", t: "The shortage is the norm — and it's a supply problem", d: "Why 74% of schools still can't fill roles, and what's really driving it." },
@@ -44,6 +80,7 @@ const sources = ["NCES / IES", "Learning Policy Institute", "CBPP", "ASCA", "NAS
 export default function K12ReportPage() {
   return (
     <>
+      <JsonLd data={REPORT_SCHEMA} />
       {/* Hero */}
       <section className="relative overflow-hidden bg-navy-950 pt-36 pb-20 lg:pt-44 lg:pb-28">
         <div
@@ -115,12 +152,18 @@ export default function K12ReportPage() {
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {keyFindings.map((k, i) => (
               <Reveal key={k.stat} delay={i * 0.06}>
-                <div className="flex h-full flex-col rounded-2xl border border-cloud bg-mist p-7">
+                <div
+                  id={k.id}
+                  className="flex h-full scroll-mt-28 flex-col rounded-2xl border border-cloud bg-mist p-7"
+                >
                   <span className="font-display text-5xl font-bold tracking-tight text-teal-600">{k.stat}</span>
                   <p className="mt-4 flex-1 text-sm leading-relaxed text-navy-900">{k.label}</p>
                   <span className="mt-5 text-xs font-semibold uppercase tracking-wide text-slate-ink">
                     Source: {k.src}
                   </span>
+                  <div className="mt-4">
+                    <CopyChip text={`${REPORT_URL}#${k.id}`} label="Copy link" />
+                  </div>
                 </div>
               </Reveal>
             ))}
@@ -204,6 +247,45 @@ export default function K12ReportPage() {
                 ))}
               </div>
             </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Cite this report — invitation for journalists, researchers, and bloggers */}
+      <section id="cite" className="scroll-mt-24 bg-white py-20 lg:py-24">
+        <div className="container-x">
+          <div className="mx-auto max-w-3xl rounded-2xl border border-cloud bg-mist p-8 lg:p-10">
+            <Eyebrow>Cite this report</Eyebrow>
+            <h2 className="mt-4 text-2xl font-semibold text-navy-950 sm:text-3xl">
+              Writing about K-12 staffing? Use our data.
+            </h2>
+            <p className="mt-4 leading-relaxed text-slate-ink">
+              Journalists, researchers, and bloggers are welcome to cite or republish any
+              statistic or chart from this report, free of charge — just attribute it to
+              FocusedEDU with a link back to this page. Each stat card above has a copy-link
+              button so you can reference a specific figure.
+            </p>
+            <div className="mt-6 rounded-xl border border-cloud bg-white p-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-teal-700">
+                Suggested citation
+              </p>
+              <p className="mt-2 font-mono text-sm leading-relaxed text-navy-900">{CITATION}</p>
+            </div>
+            <div className="mt-5 flex flex-wrap items-center gap-3">
+              <CopyChip text={CITATION} label="Copy citation" />
+              <CopyChip text={REPORT_URL} label="Copy link" />
+            </div>
+            <p className="mt-6 text-sm leading-relaxed text-slate-ink">
+              Press inquiries, interview requests, or custom cuts of the data:{" "}
+              <a
+                href="mailto:rflom@focused-staffing.com"
+                className="font-medium text-teal-700 hover:underline"
+              >
+                rflom@focused-staffing.com
+              </a>{" "}
+              — Robert Flom, founder (a former K-12 teacher) is available for comment on
+              teacher shortages, substitute coverage, and school staffing.
+            </p>
           </div>
         </div>
       </section>

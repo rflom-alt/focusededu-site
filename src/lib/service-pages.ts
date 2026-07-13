@@ -97,11 +97,6 @@ export const servicePages: ServicePage[] = [
       "Reference checks with prior schools and supervisors",
       "Role-specific skills screening",
     ],
-    quote: {
-      text: "The difference wasn't just speed — it was the quality of every person who walked through the door.",
-      name: "School leadership",
-      role: "Odyssey Public Charter School · Partner since 2021",
-    },
     sections: [
       {
         heading: "What special education staff actually do in a building",
@@ -158,6 +153,11 @@ export const servicePages: ServicePage[] = [
         a: "A large share of the role is caseload management: writing and revising IEPs, collecting progress-monitoring data, running and attending IEP meetings, coordinating paraprofessionals and related service providers, and keeping documentation compliant with IDEA timelines. That is why we screen for those skills specifically, not just classroom instruction.",
       },
     ],
+    quote: {
+      text: "They have consistently provided us with high-quality special education teachers, paraprofessionals, and related service providers who demonstrate professionalism, expertise, and a genuine commitment to the education and well-being of our students.",
+      name: "David Weathington, MSW, LSW, Ed.D",
+      role: "CEO, Buttonwood Farms / Delta School",
+    },
     related: [
       { label: "Paraprofessional Staffing", slug: "paraprofessional-staffing" },
       { label: "Related Services Staffing", slug: "related-services-staffing" },
@@ -276,6 +276,11 @@ export const servicePages: ServicePage[] = [
         a: "A 1:1 aide is a paraprofessional assigned to a single student, usually because the student's IEP requires dedicated adult support. A classroom para supports the whole room — small groups, transitions, duty coverage — under the teacher's direction. Same title family, different jobs, which is why we screen candidates against the specific assignment.",
       },
     ],
+    quote: {
+      text: "The difference wasn't just speed — it was the quality of every person who walked through the door.",
+      name: "School leadership",
+      role: "Odyssey Public Charter School · Partner since 2021",
+    },
     related: [
       { label: "Special Education Staffing", slug: "special-education-staffing" },
       { label: "K-12 Education Staffing", slug: "k12-education-staffing" },
@@ -328,11 +333,6 @@ export const servicePages: ServicePage[] = [
       "Reference checks with prior schools and supervisors",
       "Role-specific skills screening",
     ],
-    quote: {
-      text: "The difference wasn't just speed — it was the quality of every person who walked through the door.",
-      name: "School leadership",
-      role: "Odyssey Public Charter School · Partner since 2021",
-    },
     sections: [
       {
         heading: "What districts actually evaluate in a staffing vendor",
@@ -389,6 +389,11 @@ export const servicePages: ServicePage[] = [
         a: "It means the vendor defines what counts as a filled role, reports the rate on a regular cadence, and accepts consequences when it slips — not just a number quoted in the sales meeting. Ask any vendor how they measured the fill rates they advertise; ours come from the Odyssey engagement documented at /case-studies.",
       },
     ],
+    quote: {
+      text: "Their innovative temp-to-perm clause has allowed us to assess the suitability of referred professionals before making permanent hiring decisions, all at no cost to the school. This flexibility has been instrumental in ensuring our staffing needs are met with the highest level of quality.",
+      name: "Elias Pappas",
+      role: "CEO, Delaware Public School District",
+    },
     related: [
       { label: "Education Staffing RFP Experience", slug: "education-staffing-rfp-experience" },
       { label: "Special Education Staffing", slug: "special-education-staffing" },
@@ -504,6 +509,11 @@ export const servicePages: ServicePage[] = [
         a: "A day-to-day sub covers single absences, executing the teacher's plans and returning the room intact. A long-term sub carries a classroom through an extended absence — planning, teaching, and grading as the teacher of record — and depending on the state and the length of the assignment, may need certification a daily sub does not. We screen the two pools differently for exactly that reason.",
       },
     ],
+    quote: {
+      text: "Focused Staffing Group has consistently matched us with exceptional talent who have made a significant impact on our student learning experience. The quality of the candidates they have sourced for us has been nothing short of exceptional.",
+      name: "Erin D. Murphy-Richardson",
+      role: "Superintendent, The Barack Obama Green Public Schools",
+    },
     related: [
       { label: "Special Education Staffing", slug: "special-education-staffing" },
       { label: "Paraprofessional Staffing", slug: "paraprofessional-staffing" },
@@ -948,6 +958,11 @@ export const servicePages: ServicePage[] = [
         a: "Three: the Act 34 Pennsylvania State Police criminal history check, the Act 151 child abuse clearance, and the Act 114 FBI fingerprint-based background check. They apply to everyone working in a school — teachers, paras, substitutes, support staff — and must be renewed on the state's required cycle, which is why our credentialing system tracks expiration dates continuously.",
       },
     ],
+    quote: {
+      text: "One of the key strengths of Focused Staffing Group is their responsiveness and flexibility. They have always been quick to respond to our staffing needs, often providing suitable candidates at short notice.",
+      name: "Zavia Herring",
+      role: "Director of HR, Renaissance Academy Charter School",
+    },
     related: [
       { label: "Special Education Staffing", slug: "special-education-staffing" },
       { label: "New Jersey Education Staffing", slug: "new-jersey-education-staffing" },

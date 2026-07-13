@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check, Quote } from "lucide-react";
 import { servicePages, getServicePage } from "@/lib/service-pages";
 import { edu } from "@/lib/content";
 import { PageHero } from "@/components/ui/PageHero";
@@ -111,6 +111,24 @@ export default async function ServicePageRoute({ params }: Params) {
         </Button>
       </PageHero>
 
+      {/* Proof band — real, attested numbers */}
+      {page.stats && page.stats.length > 0 && (
+        <section className="bg-navy-950 py-14 lg:py-16">
+          <div className="container-x">
+            <dl className={`grid grid-cols-2 gap-y-10 ${page.stats.length === 4 ? "lg:grid-cols-4" : "lg:grid-cols-3"}`}>
+              {page.stats.map((s) => (
+                <div key={s.label} className="border-l border-white/15 pl-5">
+                  <dt className="font-display text-4xl font-semibold tracking-tight text-teal-400 lg:text-5xl">
+                    {s.value}
+                  </dt>
+                  <dd className="mt-2 text-sm leading-snug text-white/70">{s.label}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </section>
+      )}
+
       <section className="bg-white py-20 lg:py-28">
         <div className="container-x mx-auto max-w-3xl">
           {page.roles && page.roles.length > 0 && (
@@ -139,13 +157,73 @@ export default async function ServicePageRoute({ params }: Params) {
                   <h2 className="text-2xl font-semibold text-navy-950 sm:text-3xl">
                     {s.heading}
                   </h2>
-                  <p className="mt-4 text-lg leading-relaxed text-slate-ink">{s.body}</p>
+                  {s.body.split("\n\n").map((para, j) => (
+                    <p key={j} className="mt-4 text-lg leading-relaxed text-slate-ink">
+                      {para}
+                    </p>
+                  ))}
                 </div>
               </Reveal>
             ))}
           </div>
+
+          {/* What we verify — concrete vetting checklist */}
+          {page.verify && page.verify.length > 0 && (
+            <Reveal>
+              <div className="mt-14 rounded-2xl border border-cloud bg-mist p-7 lg:p-8">
+                <h2 className="text-xl font-semibold text-navy-950 sm:text-2xl">
+                  What we verify before you meet a candidate
+                </h2>
+                <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+                  {page.verify.map((v) => (
+                    <li key={v} className="flex items-start gap-3 text-navy-900">
+                      <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-teal-500/15">
+                        <Check className="size-3.5 text-teal-600" strokeWidth={2.5} />
+                      </span>
+                      <span className="text-sm leading-relaxed">{v}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+          )}
+
+          {/* Real client quote */}
+          {page.quote && (
+            <Reveal>
+              <figure className="mt-14 border-l-2 border-teal-500 pl-6">
+                <Quote className="size-7 text-teal-500" strokeWidth={1.5} aria-hidden />
+                <blockquote className="mt-3 text-lg leading-relaxed text-navy-900">
+                  “{page.quote.text}”
+                </blockquote>
+                <figcaption className="mt-4 text-sm font-semibold text-slate-ink">
+                  {page.quote.name} · {page.quote.role}
+                </figcaption>
+              </figure>
+            </Reveal>
+          )}
         </div>
       </section>
+
+      {/* How an engagement works — concrete steps */}
+      {page.steps && page.steps.length > 0 && (
+        <section className="bg-mist py-20 lg:py-24">
+          <div className="container-x">
+            <h2 className="text-2xl font-semibold text-navy-950 sm:text-3xl">
+              How an engagement works
+            </h2>
+            <div className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-cloud bg-cloud sm:grid-cols-2 lg:grid-cols-4">
+              {page.steps.map((st) => (
+                <div key={st.n} className="flex h-full flex-col bg-white p-7">
+                  <span className="font-display text-4xl font-semibold text-teal-500/25">{st.n}</span>
+                  <h3 className="mt-4 font-semibold text-navy-950">{st.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-ink">{st.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <FAQ eyebrow="FAQ" title="Common questions." items={page.faqs} />
 

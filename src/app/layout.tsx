@@ -6,6 +6,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SmoothScroll } from "@/components/motion/SmoothScroll";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { AnalyticsEvents } from "@/components/seo/AnalyticsEvents";
 import { edu } from "@/lib/content";
 
 const ORG_SCHEMA = {
@@ -107,6 +108,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.youtube.com" />
         <JsonLd data={ORG_SCHEMA} />
         <JsonLd data={WEBSITE_SCHEMA} />
+        <AnalyticsEvents />
         <SmoothScroll>
           <Header
             logo={edu.brand.logoWhite}

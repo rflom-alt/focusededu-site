@@ -162,7 +162,7 @@ export const servicePages: ServicePage[] = [
       { label: "Paraprofessional Staffing", slug: "paraprofessional-staffing" },
       { label: "Related Services Staffing", slug: "related-services-staffing" },
       { label: "School District Staffing Vendor", slug: "school-district-staffing-vendor" },
-      { label: "Pennsylvania Education Staffing", slug: "pennsylvania-education-staffing" },
+      { label: "Philadelphia Education Staffing", slug: "philadelphia-education-staffing" },
     ],
   },
   {
@@ -283,6 +283,7 @@ export const servicePages: ServicePage[] = [
     },
     related: [
       { label: "Special Education Staffing", slug: "special-education-staffing" },
+      { label: "Substitute Teacher Staffing", slug: "substitute-teacher-staffing" },
       { label: "K-12 Education Staffing", slug: "k12-education-staffing" },
       { label: "School-Based Behavioral Health Staffing", slug: "school-based-behavioral-health-staffing" },
     ],
@@ -396,7 +397,8 @@ export const servicePages: ServicePage[] = [
     },
     related: [
       { label: "Education Staffing RFP Experience", slug: "education-staffing-rfp-experience" },
-      { label: "Special Education Staffing", slug: "special-education-staffing" },
+      { label: "Education Staffing Agency Cost", slug: "education-staffing-agency-cost" },
+      { label: "Delaware Education Staffing", slug: "delaware-education-staffing" },
       { label: "K-12 Education Staffing", slug: "k12-education-staffing" },
     ],
   },
@@ -516,8 +518,9 @@ export const servicePages: ServicePage[] = [
     },
     related: [
       { label: "Special Education Staffing", slug: "special-education-staffing" },
+      { label: "Substitute Teacher Staffing", slug: "substitute-teacher-staffing" },
       { label: "Paraprofessional Staffing", slug: "paraprofessional-staffing" },
-      { label: "Related Services Staffing", slug: "related-services-staffing" },
+      { label: "Education Staffing Agency Cost", slug: "education-staffing-agency-cost" },
     ],
   },
   {
@@ -840,6 +843,7 @@ export const servicePages: ServicePage[] = [
     ],
     related: [
       { label: "School District Staffing Vendor", slug: "school-district-staffing-vendor" },
+      { label: "Education Staffing Agency Cost", slug: "education-staffing-agency-cost" },
       { label: "Special Education Staffing", slug: "special-education-staffing" },
       { label: "Pennsylvania Education Staffing", slug: "pennsylvania-education-staffing" },
     ],
@@ -964,7 +968,8 @@ export const servicePages: ServicePage[] = [
       role: "Director of HR, Renaissance Academy Charter School",
     },
     related: [
-      { label: "Special Education Staffing", slug: "special-education-staffing" },
+      { label: "Philadelphia Education Staffing", slug: "philadelphia-education-staffing" },
+      { label: "Delaware Education Staffing", slug: "delaware-education-staffing" },
       { label: "New Jersey Education Staffing", slug: "new-jersey-education-staffing" },
       { label: "Maryland Special Education Staffing", slug: "maryland-special-education-staffing" },
     ],
@@ -1206,6 +1211,475 @@ export const servicePages: ServicePage[] = [
       { label: "Special Education Staffing", slug: "special-education-staffing" },
       { label: "Pennsylvania Education Staffing", slug: "pennsylvania-education-staffing" },
       { label: "New Jersey Education Staffing", slug: "new-jersey-education-staffing" },
+    ],
+  },
+  {
+    slug: "substitute-teacher-staffing",
+    eyebrow: "Education staffing",
+    h1: "Substitute Teacher Staffing for K-12 Schools",
+    metaTitle: "Substitute Teacher Staffing Agency for K-12 Schools",
+    metaDescription:
+      "Focused Staffing Group staffs day-to-day and long-term substitutes with weekly Friday pay and a shift app — the model behind a 95% daily fill rate at Odyssey Public Charter School.",
+    hero: "Day-to-day and long-term substitutes who actually show up: weekly Friday pay, a mobile app instead of a 5 a.m. phone chain, and a 95% daily fill rate at Odyssey Public Charter School — 40% better than the provider before us.",
+    photo: PHOTOS[2],
+    roles: [
+      "Day-to-day substitute teachers",
+      "Long-term substitute teachers",
+      "Building substitutes",
+      "Substitute paraprofessionals",
+      "Leave-coverage substitutes",
+      "Emergency daily coverage",
+    ],
+    stats: [
+      { value: "95%", label: "Day-to-day substitute fill rate at Odyssey Public Charter School" },
+      { value: "+40%", label: "Improvement over the school's previous staffing provider" },
+      { value: "1,000+", label: "K-8 students at the Wilmington, DE school where that rate holds" },
+      { value: "$0", label: "Fee to hire a long-term sub as your permanent teacher" },
+    ],
+    steps: [
+      {
+        n: "01",
+        title: "Free 30-minute discovery call",
+        body: "We map your absence patterns, buildings, bell schedules, and substitute requirements — day-to-day volume, standing long-term leaves, and what your current fill rate actually is. No cost, no obligation.",
+      },
+      {
+        n: "02",
+        title: "We source, screen, and credential",
+        body: "We build a substitute pool against your buildings specifically. Every sub is interviewed by us, cleared, reference-checked with prior schools, and screened for classroom management before their first assignment.",
+      },
+      {
+        n: "03",
+        title: "You choose from a vetted shortlist",
+        body: "For long-term and building-sub roles, your principals interview fully credentialed candidates and make the call. For daily coverage, only subs who have passed the full screen can see your shifts in the app.",
+      },
+      {
+        n: "04",
+        title: "We stay through the placement",
+        body: "We monitor fill rates, rotate out subs your buildings flag, and stay involved for the life of the engagement. Hire any long-term sub permanently at no conversion fee.",
+      },
+    ],
+    verify: [
+      "Full criminal background check",
+      "PA Act 34 criminal history clearance (or the equivalent in DE, NJ, and MD)",
+      "PA Act 151 child abuse clearance (or state equivalent)",
+      "PA Act 114 FBI fingerprinting (or state equivalent)",
+      "Substitute certification or permit verified for the state and role",
+      "TB test and vaccination documentation",
+      "Reference checks with prior schools, including a morning-of reliability history",
+      "Classroom-management skills screening before the first assignment",
+    ],
+    sections: [
+      {
+        heading: "What substitute coverage actually involves",
+        body: "A day-to-day substitute walks into an unfamiliar building before first bell, finds the classroom, decodes a lesson plan of highly variable quality, and holds a room of students who registered within ninety seconds that a stranger is in charge. The job is executed in real time with no prep period and no relationships to lean on: take accurate attendance, keep the lesson moving, follow the behavior plans and health notes that matter legally, and leave a note the returning teacher can actually use. A long-term substitute is a different job wearing the same title — covering a parental or medical leave for weeks or months, they teach the curriculum rather than supervise it, grade student work, communicate with parents, sit in team meetings, and for special education assignments, keep IEP services and data collection running. One is coverage; the other is a teacher of record in everything but the payroll code.\n\nMost schools do not have a substitute problem so much as a morning problem. The teacher calls out at 5:45. A coordinator starts down a call list, and most of those calls go to voicemail because the reliable subs committed to other schools the night before. By 7:15 the absence is unfilled, and the cost cascades through the building: teachers lose their prep periods to cover, classes get split across other rooms, and paraprofessionals get pulled off the IEP-mandated assignments they are legally supposed to be on. The absence was one person; the disruption is the whole floor.\n\nThat is why fill rate is the only substitute metric that matters, and why it has to be measured honestly — as a percentage of absences actually covered, every day, including the Fridays and the days after holidays when the system is under real load.",
+      },
+      {
+        heading: "What separates a real substitute from a warm body",
+        body: "The warm body takes attendance, plays the video, and surrenders the room to whatever happens next. The teacher returns to a day of lost instruction and a behavior mess that takes another day to clean up — coverage on paper, damage in practice.\n\nA real substitute reads the lesson plan before the students arrive and asks the front office what the plan does not say. They run the room on their own authority instead of sending a stream of students to the office. They follow the behavior plans and accommodations in the sub folder because they know those documents are not suggestions. They keep the special education student's aide assignment intact instead of treating every adult as interchangeable. And they leave a specific, usable note — who did the work, what got skipped, what happened with the student the plan warned about.\n\nReliability compounds. Students test a rotating stranger every single time; a substitute who returns to the same building learns names, routines, and which teacher leaves real plans — and the building learns to trust them back. A stable pool of known subs is worth more than a deep pool of unknown ones, which is why we build ours around retention, not volume.",
+      },
+      {
+        heading: "What we screen for in substitute candidates",
+        body: "Our substitute screen probes the parts of the job that predict whether an assignment holds: classroom management under ambiguity — what the candidate actually did the last time a room started to slide, not what a handbook says; a morning-of reliability record we verify by calling prior schools, because a sub who accepts and no-shows is worse than an unfilled absence; honest comfort across grade bands, since a strong middle-school sub can be a weak kindergarten one; and judgment about when a situation belongs to the office and when it belongs to the adult in the room. Candidates open to long-term assignments are screened further, on curriculum delivery and parent communication, because a leave coverage that fails in week three costs a semester.\n\nThe screen was built by our founder, Robert Flom, a former K-12 teacher who worked with substitutes from the other side of the plan book and knows exactly what a bad morning looks like.",
+      },
+      {
+        heading: "Why our substitute pool shows up: weekly pay and a shift app",
+        body: "Substitute staffing fails at the level of logistics, so that is where we built. Our substitutes are paid weekly, every Friday, by direct deposit or Cash App — not on a month-delayed cycle that pushes them toward whichever agency pays fastest. And they pick up and swap shifts through a mobile app, so open assignments in your buildings are visible to the whole pool the moment they exist, instead of traveling one voicemail at a time down a 5 a.m. phone chain. Fast pay keeps subs in the pool; the app gets them matched to your absence before first bell.\n\nThe result is measurable. At Odyssey Public Charter School in Wilmington, Delaware — a school serving 1,000+ K-8 students drawn from five districts — that model holds a 95% day-to-day substitute fill rate, a 40% improvement over the school's previous provider. Across the engagement we have filled 120+ roles at that one school. The full case study is at /case-studies.",
+      },
+      {
+        heading: "One client per region, and subs you can keep",
+        body: "The structural reason substitute pools feel shallow is that agencies rent the same pool to every school in the area — on a flu-season morning, your absence competes with every other client's. FSG works with one client per region: sign with us for your area and the substitute pool we build there serves your buildings alone. We will not supply a competing school or district with the subs recruited for you.\n\nEvery placement is also temp-to-perm at no cost. A long-term sub who proves out over a semester can become your permanent teacher with no conversion fee and no buyout — which matters, because a leave coverage is the best teaching interview a school ever gets. We have staffed K-12 schools this way for 12 years from Wayne, Pennsylvania, under a screening standard set by a founder who taught in the classroom himself.",
+      },
+    ],
+    faqs: [
+      {
+        q: "What fill rate can we actually expect?",
+        a: "We will not promise a universal number, because fill rates depend on your absence volume and region. What we can point to: at Odyssey Public Charter School, a 1,000+ student K-8 school, our model sustains a 95% day-to-day fill rate — a 40% improvement over the previous provider — and we report the rate to you on a regular cadence rather than quoting it once in a sales meeting.",
+      },
+      {
+        q: "How do your substitutes get paid?",
+        a: "Weekly, every Friday, by direct deposit or Cash App. We are specific about this because pay speed is the main reason substitute pools go stale — subs work for the agency that pays reliably, and a paid, active pool is what keeps your fill rate high in January, not just September.",
+      },
+      {
+        q: "How do subs find out about our open shifts?",
+        a: "Through a mobile app where they pick up and swap shifts directly. Your morning absence is visible to the entire vetted pool the moment it posts, instead of moving one phone call at a time down a call list while first period gets closer.",
+      },
+      {
+        q: "Do you place long-term substitutes as well as daily subs?",
+        a: "Yes, both. Daily coverage runs on the app-based pool model. Long-term subs — leave coverages, semester vacancies — run through our vetted-shortlist process, because that job is closer to teacher of record: your principal interviews the candidates and makes the call.",
+      },
+      {
+        q: "What does it cost to hire one of your subs permanently?",
+        a: "Nothing extra. Every placement is temp-to-perm at no cost — if a long-term sub earns a permanent contract in your building, there is no conversion fee and no buyout. Engagement pricing overall is covered openly on the free 30-minute discovery call.",
+      },
+      {
+        q: "Will your sub pool also serve the school down the road?",
+        a: "No. We work with one client per region, so the substitute pool we recruit in your area serves only your buildings. Your flu-season morning never competes with a neighboring client's, because there isn't one.",
+      },
+      {
+        q: "What qualifications does a substitute teacher need?",
+        a: "It varies by state. In Pennsylvania, substitutes must hold a PA teaching certificate or a district-sponsored emergency permit from PDE, and everyone needs the Act 34, Act 151, and Act 114 clearances; neighboring states run their own substitute-permit and clearance regimes. We verify the specific credential for the state and role before a sub ever sees your shifts.",
+      },
+    ],
+    quote: {
+      text: "One of the key strengths of Focused Staffing Group is their responsiveness and flexibility. They have always been quick to respond to our staffing needs, often providing suitable candidates at short notice.",
+      name: "Zavia Herring",
+      role: "Director of HR, Renaissance Academy Charter School",
+    },
+    related: [
+      { label: "Paraprofessional Staffing", slug: "paraprofessional-staffing" },
+      { label: "K-12 Education Staffing", slug: "k12-education-staffing" },
+      { label: "Delaware Education Staffing", slug: "delaware-education-staffing" },
+      { label: "Pennsylvania Education Staffing", slug: "pennsylvania-education-staffing" },
+    ],
+  },
+  {
+    slug: "delaware-education-staffing",
+    eyebrow: "Education staffing · Delaware",
+    h1: "Delaware Education Staffing",
+    metaTitle: "Delaware Education Staffing Agency",
+    metaDescription:
+      "Focused Staffing Group's strongest attested record is in Delaware: 120+ roles filled at Odyssey Public Charter School in Wilmington, a 95% substitute fill rate, and Christina School District as a client.",
+    hero: "Our strongest record on the map is in Delaware: 120+ roles across 13+ role types at Odyssey Public Charter School in Wilmington, a 95% daily substitute fill rate, and Christina School District on the client list.",
+    photo: PHOTOS[3],
+    roles: [
+      "Special education teachers",
+      "Paraprofessionals",
+      "Day-to-day and long-term substitutes",
+      "School psychologists",
+      "SLPs",
+      "OTs",
+      "PTs",
+      "BCBAs",
+      "RBTs",
+      "Education support staff",
+    ],
+    stats: [
+      { value: "120+", label: "Roles filled at Odyssey Public Charter School in Wilmington" },
+      { value: "13+", label: "Distinct role types staffed at that one Delaware school" },
+      { value: "95%", label: "Day-to-day substitute fill rate there — +40% over the previous provider" },
+      { value: "12 yrs", label: "Staffing schools across the PA/DE/NJ/MD region" },
+    ],
+    steps: [
+      {
+        n: "01",
+        title: "Free 30-minute discovery call",
+        body: "We map your Delaware openings, buildings, and certification requirements. Wayne, PA is our headquarters — your school is a drive down I-95, not a dot on a national territory map.",
+      },
+      {
+        n: "02",
+        title: "We source, screen, and credential",
+        body: "We recruit against your roles, interview every candidate ourselves, and complete Delaware's state-required background checks and child-protection clearances, certification verification, TB tests, and references.",
+      },
+      {
+        n: "03",
+        title: "You choose from a vetted shortlist",
+        body: "Your administrators interview fully credentialed candidates and make the final call on every hire.",
+      },
+      {
+        n: "04",
+        title: "We stay through the placement",
+        body: "We stay involved through onboarding and the life of the placement, and any temp converts to your permanent hire at no fee.",
+      },
+    ],
+    verify: [
+      "Delaware's state-required background checks and child-protection clearances",
+      "Full criminal background check",
+      "Delaware certification verified for teaching and licensed roles",
+      "TB test and vaccination documentation",
+      "Reference checks with prior schools and supervisors",
+      "Role-specific skills screening",
+      "Every clearance tracked and expiration-flagged in our credentialing system",
+    ],
+    sections: [
+      {
+        heading: "What staffing a Delaware school actually involves",
+        body: "Delaware gates school employment the way its neighbors do: state-required background checks and child-protection clearances must be complete before anyone works around students, certificated roles need Delaware Department of Education certification matched to the position, and licensed clinicians — SLPs, OTs, PTs, school psychologists — need Delaware licensure in their discipline on top of it. The file is several documents deep per person, and assembling it after the vacancy opens is how schools lose a marking period.\n\nThe state's size shapes everything about its talent market. Delaware is three counties producing a small number of education graduates each year, and it sits between two much larger job markets — Philadelphia to the north, Baltimore and Washington to the south — that recruit from the same pool. A certified special education teacher in New Castle County can add commuting options in two other states without moving. The pool is not just tight; it leaks across state lines in both directions.\n\nDelaware is also one of the most charter-dense landscapes in the region, with Wilmington at the center of it. Charters recruit against traditional districts and against each other, often without a district HR apparatus behind them, and many draw students from multiple districts at once — which multiplies the transportation, para, and support roles they have to fill. The categories that run shortest are the familiar ones, sharpened by the small pool: special education certifications, related-services clinicians, and day-to-day substitutes.",
+      },
+      {
+        heading: "What we screen for in Delaware candidates",
+        body: "Clearances get a Delaware candidate to the starting line; the screen decides who reaches your shortlist. It is matched to the role: special education teachers on IEP writing, meeting experience, and behavior-plan implementation; paraprofessionals on de-escalation, personal-care comfort, and IEP data collection; substitutes on classroom management under ambiguity and a morning-of reliability record we verify with prior schools; clinicians on Delaware licensure and multi-building caseload management. Certification is verified with the state for the specific role, not read off the résumé.\n\nThe methodology was built by our founder, Robert Flom, a former K-12 teacher — which is why the interview sounds like a case review of the job, not a personality screen.",
+      },
+      {
+        heading: "The record is in Delaware: what happened at Odyssey",
+        body: "Odyssey Public Charter School in Wilmington serves 1,000+ K-8 students drawn from five districts. The school had staffing agencies under contract, and those agencies could not fill the openings. FSG stepped in, and the engagement became the strongest attested record we hold anywhere: 120+ roles filled across 13+ distinct role types, from bus drivers to certified teachers, with day-to-day substitute coverage sustained at a 95% fill rate — a 40% improvement over the previous provider. The full case study, in the school's own words, is at /case-studies.\n\nOdyssey is not our only Delaware proof. Christina School District — one of the state's largest — is a client, and Delaware sits inside the four-state footprint we have staffed for 12 years from our headquarters in Wayne, Pennsylvania, close enough that a site visit is a short drive down I-95, not a flight.",
+      },
+      {
+        heading: "Delaware clearances, completed before the interview",
+        body: "Our automated credentialing system completes Delaware's state-required background checks and child-protection clearances up front, verifies certification with the state for the specific role, and tracks every document — TB tests and vaccination records included — flagging anything that approaches expiration. Files stay audit-ready for the life of the placement, which matters to charter boards and district compliance offices alike.\n\nThat system is the mechanism behind the speed: typical time-to-hire runs roughly half the norm because candidates reach your interview with complete files, and in past engagements we have placed certified special education teachers within two weeks.",
+      },
+      {
+        heading: "One Delaware client per region, and subs who show up",
+        body: "In a state this small, the agency staffing your school is almost certainly shopping the same candidates to the school competing with you for the same students. FSG removed that conflict: one client per region. Sign with us for your part of Delaware and we will not supply a competing school or district — the teachers, paras, and clinicians we recruit in your area are presented only to you.\n\nDaily coverage runs on the model proven at Odyssey: substitutes paid weekly on Fridays by direct deposit or Cash App, picking up and swapping shifts through a mobile app instead of a morning phone chain. And every placement is temp-to-perm at no cost — evaluate a professional in your building, then hire them permanently with no conversion fee. We also run school-supply and backpack drives for partner schools, because we staff the communities we work in, not just the payrolls.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Does FSG staff Delaware schools?",
+        a: "Yes — Delaware is where our strongest attested record sits. We filled 120+ roles across 13+ role types at Odyssey Public Charter School in Wilmington, sustain a 95% daily substitute fill rate there, and count Christina School District among our clients. Our Wayne, PA headquarters is a short drive away.",
+      },
+      {
+        q: "Do you work with Delaware charter schools?",
+        a: "Yes. Our flagship engagement is a Wilmington charter — Odyssey Public Charter School, a 1,000+ student K-8 drawing from five districts — and we understand the charter reality of recruiting without a district HR office behind you. We staff traditional districts as well, including Christina School District.",
+      },
+      {
+        q: "Do candidates arrive with Delaware clearances complete?",
+        a: "Yes. Our credentialing system completes and tracks Delaware's state-required background checks and child-protection clearances, plus certification verification for the specific role, TB test, and vaccination documentation, before any candidate reaches your shortlist.",
+      },
+      {
+        q: "Will you also staff the school competing with ours?",
+        a: "No. We work with one client per region, so the candidates we recruit in your area of Delaware are presented only to you. In a state where every school fishes the same small pool, that exclusivity is most of the point.",
+      },
+      {
+        q: "How fast can you fill Delaware openings?",
+        a: "Automated credentialing cuts typical time-to-hire roughly in half because the paperwork is done before interviews begin, and certified special education teachers have been placed within two weeks in past engagements. We quote realistic per-role timelines on the free 30-minute discovery call.",
+      },
+      {
+        q: "How does your substitute coverage work in Delaware?",
+        a: "On the model proven at Odyssey: subs are paid weekly on Fridays via direct deposit or Cash App and pick up or swap shifts through a mobile app. That model holds a 95% day-to-day fill rate there — a 40% improvement over the previous provider.",
+      },
+      {
+        q: "Why is education hiring so hard in a small state like Delaware?",
+        a: "Three reasons compound: the state produces a small number of certified educators each year; the pool leaks toward the larger Philadelphia and Baltimore-Washington job markets on either side; and a charter-dense landscape means more employers recruiting from the same shallow water. The shortage categories — special education, related services, daily subs — are the same as everywhere, but the margin for error is thinner.",
+      },
+    ],
+    quote: {
+      text: "One of the hallmarks of our collaboration with Focused Staffing Group is their innovative temp-to-perm clause, which has allowed us to assess the suitability of referred professionals before making permanent hiring decisions, all at no cost to the school.",
+      name: "Elias Pappas",
+      role: "CEO, Delaware Public School District",
+    },
+    related: [
+      { label: "Pennsylvania Education Staffing", slug: "pennsylvania-education-staffing" },
+      { label: "Substitute Teacher Staffing", slug: "substitute-teacher-staffing" },
+      { label: "School District Staffing Vendor", slug: "school-district-staffing-vendor" },
+      { label: "Special Education Staffing", slug: "special-education-staffing" },
+    ],
+  },
+  {
+    slug: "philadelphia-education-staffing",
+    eyebrow: "Education staffing · Philadelphia",
+    h1: "Philadelphia Education Staffing",
+    metaTitle: "Education Staffing Agency for Philadelphia Schools",
+    metaDescription:
+      "Focused Staffing Group staffs Philadelphia-area schools from its Main Line headquarters, 30 minutes away — Act 34/151/114-cleared teachers, paras, and clinicians, one client per region.",
+    hero: "An education staffing partner 30 minutes from your building: headquartered on the Main Line in Wayne, PA, staffing Philadelphia-area schools with Act 34, 151, and 114-cleared teachers, paras, and clinicians for 12 years.",
+    photo: PHOTOS[0],
+    roles: [
+      "Special education teachers",
+      "Paraprofessionals",
+      "1:1 aides",
+      "Day-to-day and long-term substitutes",
+      "School psychologists",
+      "SLPs",
+      "OTs",
+      "PTs",
+      "BCBAs",
+      "RBTs",
+    ],
+    stats: [
+      { value: "30 min", label: "From our Wayne, PA headquarters to Philadelphia schools" },
+      { value: "3", label: "PA-required clearances (Acts 34, 151, 114) tracked per candidate" },
+      { value: "½", label: "Automated credentialing cuts typical time-to-hire roughly in half" },
+      { value: "12 yrs", label: "Staffing schools from the Main Line" },
+    ],
+    steps: [
+      {
+        n: "01",
+        title: "Free 30-minute discovery call",
+        body: "We map your openings, buildings, and PA certification requirements. We are 30 minutes away, so the follow-up can be a site visit, not a video call.",
+      },
+      {
+        n: "02",
+        title: "We source, screen, and credential",
+        body: "We recruit Philadelphia-area candidates against your roles, interview each one, and complete Act 34, 151, and 114 clearances, certification verification, TB tests, and references.",
+      },
+      {
+        n: "03",
+        title: "You choose from a vetted shortlist",
+        body: "Your principals and directors interview fully cleared candidates and make the final call on every hire.",
+      },
+      {
+        n: "04",
+        title: "We stay through the placement",
+        body: "We stay involved through onboarding and the life of the placement, and any temp converts to your permanent hire at no fee.",
+      },
+    ],
+    verify: [
+      "Act 34 Pennsylvania criminal history clearance",
+      "Act 151 Pennsylvania child abuse clearance",
+      "Act 114 FBI fingerprint-based background check",
+      "PA certification verified for teaching and licensed roles",
+      "TB test and vaccination documentation",
+      "Reference checks with prior schools and supervisors",
+      "Role-specific skills screening",
+      "Every clearance tracked and expiration-flagged in our credentialing system",
+    ],
+    sections: [
+      {
+        heading: "What staffing a Philadelphia school actually involves",
+        body: "Philadelphia is one of the most charter-dense cities in the country: a large district, dozens of charter operators, cyber charters, and private special education schools, all hiring from the same pool of certified educators at the same time of year. The pool looks deep — the region produces a steady stream of education graduates from its universities — but every one of those graduates fields multiple offers without extending their commute, so for any single school the market behaves like a shortage. A candidate who interviews with you on Tuesday has two other offers by Friday, and the school that moves slowest loses.\n\nBefore anyone starts, Pennsylvania's clearance regime applies in full: the Act 34 state criminal history check, the Act 151 child abuse clearance, and the Act 114 FBI fingerprint check — required for teachers, paras, substitutes, and support staff alike, and subject to the state's renewal cycle. Teaching roles need PDE certification matched to subject and grade band, and substitutes need a PA certificate or a district-sponsored emergency permit. Three clearances per person, assembled while the candidate is being courted by two other schools, is precisely where Philadelphia hires die.\n\nThe hardest seats to fill are the ones the city has the most of. Special education roles — certified SPED teachers, 1:1 paraprofessionals, personal care assistants — dominate vacancy lists across the district, the charters, and the private special education schools, and related-services clinicians are stretched across buildings everywhere. Those categories are the real test of a Philadelphia staffing partner.",
+      },
+      {
+        heading: "What we screen for in Philadelphia candidates",
+        body: "Every Philadelphia-area candidate passes a role-matched screen after the clearance file is complete. Special education teachers are probed on IEP writing and meeting experience, behavior-plan implementation, and the data-collection habits that survive an audit; paraprofessionals and personal care assistants on de-escalation, honest comfort with personal-care duties, and reliability history we verify with prior schools; substitutes on classroom management under ambiguity; clinicians on PA licensure and caseload management across buildings. PDE certification is verified with the state for the specific role.\n\nThe screen was designed by our founder, Robert Flom, a former K-12 teacher — so candidates are evaluated on how they operate inside a school building, not on how they interview.",
+      },
+      {
+        heading: "Thirty minutes away, with clients across the metro",
+        body: "FSG is headquartered at 175 Strafford Avenue in Wayne, Pennsylvania — on the Main Line, about 30 minutes from Philadelphia schools. That proximity is operational, not decorative: a placement issue gets an in-person visit, a discovery call can end with us walking your building, and the candidates we recruit actually live in the neighborhoods your students do.\n\nThe metro track record is specific and checkable. Chester Community Charter — one of the largest charter schools in Pennsylvania, in Delaware County — is a client. So is First PA. And The Delta School in Philadelphia is where David Weathington, its CEO, attested to the quality of the special education teachers, paraprofessionals, personal care assistants, and related service providers we placed; his words are on this page. We have staffed schools from Wayne for 12 years, under a vetting standard set by a founder who taught in K-12 classrooms himself.",
+      },
+      {
+        heading: "Acts 34, 151, and 114, handled before you meet anyone",
+        body: "Pennsylvania requires three clearances for anyone working in a school: the Act 34 Pennsylvania State Police criminal history check, the Act 151 child abuse clearance, and the Act 114 FBI fingerprint-based background check. Our automated credentialing system completes all three for every candidate up front, verifies PDE certification for the specific role, tracks TB tests and vaccination documentation, and flags any clearance approaching its renewal date — so files stay audit-ready for the life of the placement.\n\nIn a market where candidates hold multiple offers, that system is the difference between winning and losing the hire: typical time-to-hire runs roughly half the norm because the paperwork is finished before your interview, and in past engagements we have placed certified special education teachers within two weeks.",
+      },
+      {
+        heading: "One client per region in a city full of competitors",
+        body: "In a charter-dense city, the agency staffing your school is very often staffing the school recruiting your students — and shopping the same certified SPED teacher to both. FSG works with one client per region: sign with us for your part of the metro and we will not supply a competing school, and the candidates we recruit in your area are presented only to you. In Philadelphia's market, exclusivity is not a nice-to-have; it is the only structure under which a pipeline stays yours.\n\nEvery placement is temp-to-perm at no cost — evaluate a teacher or para in your building, then hire them permanently with no conversion fee. Daily coverage runs on our substitute model: weekly Friday pay by direct deposit or Cash App and a mobile app for picking up and swapping shifts, the same model that holds a 95% daily fill rate at Odyssey Public Charter School, 30 minutes down I-95 (case study at /case-studies). We also run school-supply and backpack drives for partner schools each year.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Where around Philadelphia does FSG staff schools?",
+        a: "Across the metro: Philadelphia itself, Delaware County, the Main Line, Montgomery County, Chester County, and Bucks County. Our headquarters in Wayne is about 30 minutes from Philadelphia schools, and metro clients include Chester Community Charter, First PA, and The Delta School in Philadelphia.",
+      },
+      {
+        q: "Do you work with Philadelphia charter schools?",
+        a: "Yes. Chester Community Charter, one of the largest charters in Pennsylvania, is a client, and our flagship engagement is at a charter school — Odyssey Public Charter in Wilmington, 30 minutes down I-95, where we filled 120+ roles. We understand hiring without a district HR apparatus behind you.",
+      },
+      {
+        q: "Do candidates arrive with PA clearances complete?",
+        a: "Yes. Every candidate we present has the Act 34 criminal history clearance, Act 151 child abuse clearance, and Act 114 FBI fingerprinting complete and tracked in our credentialing system, along with PDE certification verification, TB test, and vaccination documentation.",
+      },
+      {
+        q: "Can you fill special education and paraprofessional roles?",
+        a: "That is the deepest part of our practice. The Delta School's CEO has attested to the quality of the special education teachers, paraprofessionals, personal care assistants, and related service providers we placed, and in past engagements we have placed certified special education teachers within two weeks.",
+      },
+      {
+        q: "Will you also staff the school competing with ours?",
+        a: "No. We work with one client per region — in a city this dense with schools, that is the whole point. The candidates we recruit in your part of the metro are presented only to you.",
+      },
+      {
+        q: "What does temp-to-perm cost?",
+        a: "Nothing beyond the placement. Evaluate a teacher, para, or clinician in your building for as long as you need; if you hire them permanently, there is no conversion fee and no buyout. Engagement pricing is covered openly on the free 30-minute discovery call.",
+      },
+      {
+        q: "What clearances do Philadelphia school staff need?",
+        a: "The same three Pennsylvania requires statewide: the Act 34 state criminal history check, the Act 151 child abuse clearance, and the Act 114 FBI fingerprint check, renewed on the state's cycle. Teaching roles additionally need PDE certification for the subject and grade band. Our credentialing system completes and tracks all of it before you meet a candidate.",
+      },
+    ],
+    quote: {
+      text: "Focused Staffing Group has consistently provided us with high quality special education teachers, paraprofessionals, personal care assistants, and related service providers who have demonstrated professionalism, expertise, and a genuine commitment to the education and well-being of our students.",
+      name: "David Weathington, MSW, LSW, Ed.D",
+      role: "CEO, Buttonwood Farms / Delta School (Philadelphia)",
+    },
+    related: [
+      { label: "Pennsylvania Education Staffing", slug: "pennsylvania-education-staffing" },
+      { label: "Special Education Staffing", slug: "special-education-staffing" },
+      { label: "Paraprofessional Staffing", slug: "paraprofessional-staffing" },
+      { label: "Substitute Teacher Staffing", slug: "substitute-teacher-staffing" },
+    ],
+  },
+  {
+    slug: "education-staffing-agency-cost",
+    eyebrow: "Education staffing",
+    h1: "How Much Does a Teacher Staffing Agency Cost?",
+    metaTitle: "How Much Does a Teacher Staffing Agency Cost?",
+    metaDescription:
+      "An honest breakdown of how education staffing pricing works — what a bill rate covers, where hidden fees live, and what FSG attests: $0 temp-to-perm conversion, no candidate fees, free discovery call.",
+    hero: "An honest answer instead of a rate card: how education staffing pricing actually works, which contract terms quietly move the total, and the parts of our own model we can state flatly — $0 to convert a temp to your permanent hire, and candidates are never charged.",
+    photo: PHOTOS[1],
+    stats: [
+      { value: "$0", label: "Fee to convert any FSG temp to your permanent hire — no buyout" },
+      { value: "Free", label: "30-minute discovery call, where we quote real rates for your roles" },
+      { value: "1", label: "Client per region — the pipeline you fund is never resold to a competitor" },
+      { value: "½", label: "Automated credentialing cuts typical time-to-hire roughly in half" },
+    ],
+    steps: [
+      {
+        n: "01",
+        title: "Free 30-minute discovery call",
+        body: "We map your roles, buildings, and requirements, and quote real rates for your specific situation — role by role, in plain terms. No cost, no obligation, and no rate games later.",
+      },
+      {
+        n: "02",
+        title: "We source, screen, and credential",
+        body: "The screening, clearances, certification verification, and references your bill rate pays for all happen before you meet a candidate — you are never billed for our recruiting process itself.",
+      },
+      {
+        n: "03",
+        title: "You choose from a vetted shortlist",
+        body: "You pay for people who work in your buildings, not for résumés. Your team interviews fully credentialed candidates and makes every final call.",
+      },
+      {
+        n: "04",
+        title: "We stay through the placement",
+        body: "Onboarding, coverage questions, replacements — included in the engagement. And when you want to hire a placement permanently, the conversion costs nothing.",
+      },
+    ],
+    verify: [
+      "Full criminal background check — a real cost inside any honest bill rate",
+      "State-required clearances — in PA, Act 34 criminal history, Act 151 child abuse, Act 114 FBI fingerprinting",
+      "Equivalent clearances for DE, NJ, and MD placements",
+      "State certification verified for every certificated role",
+      "TB test and vaccination documentation",
+      "Reference checks with prior schools and supervisors",
+      "Role-specific skills screening",
+    ],
+    sections: [
+      {
+        heading: "How education staffing pricing actually works",
+        body: "Most education staffing runs on an hourly bill rate: the school pays the agency an hourly figure for each hour a placed educator works. That rate is not the educator's wage — it is the wage plus everything it costs to employ them legally and well. Inside a typical bill rate sit the educator's pay; employer payroll taxes; workers' compensation and liability insurance, since the agency is usually the employer of record; the cost of screening, clearances, and credentialing; and the agency's operating margin. When a school compares a bill rate to a teacher's hourly salary and concludes the agency is expensive, it is usually comparing the full cost of employment to a number that excludes most of it.\n\nLong-term and permanent-track placements are sometimes priced differently — a flat placement fee, or a rate structured against the role's salary rather than hours worked — and direct-hire searches in education typically work that way. Both models are legitimate; what matters is that the structure is stated plainly, in writing, before the engagement starts.\n\nWe are not going to publish a rate card on this page, and you should be suspicious of any agency that does: real rates depend on the role, the certification it requires, the region's market, and the length of the assignment. What we will do is quote your actual roles, at real numbers, on a free 30-minute discovery call.",
+      },
+      {
+        heading: "What moves the rate up or down",
+        body: "Bill rates track scarcity. A certified special education teacher costs more than a general day-to-day substitute for the same reason they are harder to hire directly: fewer people hold the credential, and every school in the region wants them. Licensed clinicians — SLPs, OTs, school psychologists — sit at the top of the range in most markets because the license is the bottleneck. Region matters too: the same role prices differently in a metro market than a rural one, because the educator's wage expectations and the depth of the pool differ. Assignment length cuts the other way — a semester-long commitment is generally more efficient than day-to-day coverage, because the recruiting cost amortizes over more hours.\n\nClearance and compliance costs are the part schools most often forget. Every person an agency places has been background-checked, cleared, TB-tested, certification-verified, and reference-checked before day one — in Pennsylvania that means the Act 34, 151, and 114 clearances per person — and those costs exist whether the candidate ultimately works one day or one year. An agency quoting a rate that could not possibly cover real screening is telling you what it skips.",
+      },
+      {
+        heading: "The costs that hide in the contract",
+        body: "The hourly rate is the visible number; the contract terms are where totals quietly move. The largest hidden cost in education staffing is the conversion fee — the buyout an agency charges when a school wants to hire a placed educator permanently. Buyouts commonly run to thousands of dollars per hire, and they invert the school's incentives: the better the placement, the more it costs to keep them. Other terms worth reading twice: replacement provisions when a placement fails early, minimum-hour guarantees, and who pays when a clearance or credential needs renewing mid-year.\n\nThere is also a structural cost that never appears on an invoice. Most agencies serve multiple schools in the same region — so the recruiting pipeline your contract funds is simultaneously serving the school competing with you, and when a strong candidate surfaces, you may be bidding against another client of your own vendor. You pay the rate either way; whether the pipeline is actually yours depends on the agency's model.",
+      },
+      {
+        heading: "What FSG attests about its own pricing",
+        body: "Here is what we can state flatly, because each is how our engagements are structured. The discovery call is free — 30 minutes, no obligation, and you leave with real rates for your actual roles. Candidates are never charged: educators pay nothing to be recruited, screened, or placed by FSG, ever. Temp-to-perm conversion costs nothing — evaluate a teacher, para, or clinician in your building for as long as you need, and if you hire them permanently there is no conversion fee and no buyout, a term attested publicly by the CEO of a Delaware public school district we serve. And we work with one client per region, which means the pipeline your engagement funds is never resold to the school down the road.\n\nSchools pay for hours worked and placements made — not for searches, shortlists, or the screening behind them. If we present ten candidates and you hire one, you pay for the one who works in your building.",
+      },
+      {
+        heading: "How to compare agency quotes honestly",
+        body: "When you have quotes in hand, compare totals, not hourly rates. Ask each vendor: what is inside the bill rate — who is the employer of record, and who carries payroll taxes, workers' comp, and liability insurance? What does it cost to hire a placement permanently, in writing? What are the replacement terms when a placement fails in week three? How is fill rate defined and reported? A vendor with a low hourly rate and a five-figure buyout is frequently the expensive option over a school year; a vendor who cannot answer the employer-of-record question is offloading risk onto you.\n\nWe built this page because the question in its title deserves a straight answer, and most of the industry answers it with a contact form. FSG has staffed K-12 schools for 12 years from Wayne, Pennsylvania, under a founder who taught in the classroom; the record — 120+ roles filled at one school, a 95% substitute fill rate, certified special education teachers placed within two weeks — is on this site and checkable. The rates are one call away.",
+      },
+    ],
+    faqs: [
+      {
+        q: "What does temp-to-perm conversion cost with FSG?",
+        a: "Zero dollars. Every FSG placement is temp-to-perm at no cost: evaluate the educator in your building, and if you hire them permanently there is no conversion fee and no buyout. This is the single largest pricing difference between us and agencies that charge thousands per conversion.",
+      },
+      {
+        q: "Do you charge schools a search fee?",
+        a: "No. You pay only for hours worked and placements made — never for the search, the shortlist, or the screening behind it. Exact rates depend on the role and region, and we quote them plainly on the free 30-minute discovery call.",
+      },
+      {
+        q: "Are candidates ever charged?",
+        a: "Never. Educators pay nothing to be recruited, screened, credentialed, or placed by FSG. Any staffing firm charging candidates a fee for placement is one you and your educators should walk away from.",
+      },
+      {
+        q: "What does an education staffing bill rate actually include?",
+        a: "Typically the educator's wage, employer payroll taxes, workers' compensation and liability insurance (the agency is usually the employer of record), the cost of screening and clearances, and the agency's margin. Comparing a bill rate to a salary figure alone understates what direct employment actually costs a district.",
+      },
+      {
+        q: "Why won't you publish your rates on this page?",
+        a: "Because a published number would either mislead you or pad our margin. Real rates depend on the role, the certification it requires, the region, and the assignment length — a certified SPED teacher and a day-to-day sub are different markets. We quote your actual roles at real numbers on the discovery call, free, in 30 minutes.",
+      },
+      {
+        q: "Is a staffing agency more expensive than hiring directly?",
+        a: "Per hour, usually — the bill rate covers employment costs a salary figure hides, plus the agency's margin. Per vacancy, often not: an unfilled special education seat generates compensatory-services exposure, substitute churn, and administrator hours that rarely get costed. The honest comparison is agency cost versus the full cost of the seat staying empty, and it depends on how hard the role is to fill.",
+      },
+      {
+        q: "How does one client per region affect what we pay?",
+        a: "It changes what your money buys. With a shared-pipeline agency, the recruiting your contract funds also serves your competitors, and strong candidates get shopped to whoever pays more. With FSG, the pipeline built in your region serves only you — so the same engagement spend produces a deeper, exclusive pool instead of a bidding war.",
+      },
+    ],
+    related: [
+      { label: "School District Staffing Vendor", slug: "school-district-staffing-vendor" },
+      { label: "Education Staffing RFP Experience", slug: "education-staffing-rfp-experience" },
+      { label: "K-12 Education Staffing", slug: "k12-education-staffing" },
+      { label: "Substitute Teacher Staffing", slug: "substitute-teacher-staffing" },
     ],
   },
 ];

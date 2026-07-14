@@ -625,6 +625,11 @@ export const servicePages: ServicePage[] = [
         a: "Push-in means the clinician delivers services inside the classroom, working with the student in the context of regular instruction. Pull-out means the student leaves class for a therapy space for their session. The IEP team chooses the model per student; many caseloads mix both, which is part of why school-based scheduling is its own skill.",
       },
     ],
+    quote: {
+      text: "Each one of these professionals is a pleasure to work with. They are always professional, friendly, and have our students' best interests at the forefront of their work.",
+      name: "Tracy H. Foedisch",
+      role: "Hiring & Support Manager, Hope Community Charter School (Camden, NJ)",
+    },
     related: [
       { label: "Special Education Staffing", slug: "special-education-staffing" },
       { label: "School-Based Behavioral Health Staffing", slug: "school-based-behavioral-health-staffing" },
@@ -839,6 +844,10 @@ export const servicePages: ServicePage[] = [
       {
         q: "What documentation should an RFP require from staffing vendors?",
         a: "At minimum: current certificates of insurance, a description of the clearance and background-check process with how records are maintained and audited, certification-verification procedures, named references from comparable contracts, fill-rate definitions with reporting cadence, and the vendor's replacement and conversion terms in writing.",
+      },
+      {
+        q: "Can FSG provide references?",
+        a: "Yes. Eight letters of recommendation from superintendents, principals, and HR directors at partner schools are published and readable in full at /references, and direct reference contacts are available on request for evaluators who want to speak with a school leader themselves.",
       },
     ],
     related: [
@@ -1088,6 +1097,11 @@ export const servicePages: ServicePage[] = [
         a: "The same three categories that dominate vacancy lists across the region: certified special education teachers, related-services clinicians like SLPs and OTs, and day-to-day substitutes. New Jersey's density of small districts sharpens the competition — the school recruiting against you is often within walking distance — which is exactly the problem our one-client-per-region model addresses.",
       },
     ],
+    quote: {
+      text: "I recommend Focused Staffing Group without reservation. They have demonstrated a consistent level of professionalism, reliability, and responsiveness in addressing our staffing needs.",
+      name: "Lennita Porter-Linen",
+      role: "Director of HR Recruitment & Retention, Bridgeton Public Schools (NJ)",
+    },
     related: [
       { label: "Pennsylvania Education Staffing", slug: "pennsylvania-education-staffing" },
       { label: "Special Education Staffing", slug: "special-education-staffing" },
@@ -1443,9 +1457,9 @@ export const servicePages: ServicePage[] = [
       },
     ],
     quote: {
-      text: "One of the hallmarks of our collaboration with Focused Staffing Group is their innovative temp-to-perm clause, which has allowed us to assess the suitability of referred professionals before making permanent hiring decisions, all at no cost to the school.",
-      name: "Elias Pappas",
-      role: "CEO, Delaware Public School District",
+      text: "I would highly recommend Focused Staffing Group to any school or organization seeking reliable, professional, and efficient staffing services.",
+      name: "Dr. Heather Brooks",
+      role: "Principal, Serviam Girls Academy (New Castle, DE)",
     },
     related: [
       { label: "Pennsylvania Education Staffing", slug: "pennsylvania-education-staffing" },
@@ -1675,6 +1689,11 @@ export const servicePages: ServicePage[] = [
         a: "It changes what your money buys. With a shared-pipeline agency, the recruiting your contract funds also serves your competitors, and strong candidates get shopped to whoever pays more. With FSG, the pipeline built in your region serves only you — so the same engagement spend produces a deeper, exclusive pool instead of a bidding war.",
       },
     ],
+    quote: {
+      text: "We are thrilled that we can transition our contract employee to permanent status without a buyout fee. The experience has been outstanding.",
+      name: "Kelly Hamm",
+      role: "HR Director, Lotus School for Excellence (Aurora, CO)",
+    },
     related: [
       { label: "School District Staffing Vendor", slug: "school-district-staffing-vendor" },
       { label: "Education Staffing RFP Experience", slug: "education-staffing-rfp-experience" },

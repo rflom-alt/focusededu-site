@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/our-impact",
     "/resources",
     "/case-studies",
+    "/references",
     "/services",
     "/book-a-call",
     "/blog",

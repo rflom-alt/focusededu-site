@@ -62,7 +62,11 @@
       "Bash(echo \"bridgeton: $\\(curl -s -o /dev/null -w '%{http_code} %{size_download}b %{content_type}' http://localhost:3100/clients/Bridgeton-Public-Schools.png\\)\")",
       "Bash(curl -s -o /dev/null -w '%{http_code} %{size_download}b %{content_type}' http://localhost:3100/clients/Frederick-County-Public-Schools.png)",
       "Bash(echo \"frederick: $\\(curl -s -o /dev/null -w '%{http_code} %{size_download}b %{content_type}' http://localhost:3100/clients/Frederick-County-Public-Schools.png\\)\")",
-      "Bash(curl -s -o /dev/null -w '%{http_code} %{content_type}' 'http://localhost:3100/_next/image?url=%2Fclients%2FBridgeton-Public-Schools.png&w=256&q=75')"
+      "Bash(curl -s -o /dev/null -w '%{http_code} %{content_type}' 'http://localhost:3100/_next/image?url=%2Fclients%2FBridgeton-Public-Schools.png&w=256&q=75')",
+      "Bash(curl -s \"https://getautoseo.com/feeds/60677/vOt9EWeS_LPTbpu_6u0_IR_e2S_LS9HrnvNpEk75_Uk.json\" -o /private/tmp/claude-501/-Users-robertflom-Desktop-Focused-Sites/2d3adae4-2ca4-42b4-ac74-3edea6a2756f/scratchpad/feed.json -w \"HTTP %{http_code}\\\\n\")",
+      "Bash(python3 -c ' *)",
+      "Bash(curl -s \"https://getautoseo.com/feeds/60677/vOt9EWeS_LPTbpu_6u0_IR_e2S_LS9HrnvNpEk75_Uk.json\" -o /private/tmp/claude-501/-Users-robertflom-Desktop-Focused-Sites/3768f458-65b1-49f4-bb67-58bf9d52db2f/scratchpad/feed.json)",
+      "Bash(echo \"exit=$?\")"
     ]
   }
 }

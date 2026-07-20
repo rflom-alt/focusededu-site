@@ -21,7 +21,7 @@ export function AnalyticsEvents() {
     const onClick = (e: MouseEvent) => {
       const a = (e.target as HTMLElement | null)?.closest("a");
       const href = a?.href ?? "";
-      if (!href.includes("apply.focused-staffing.com") && !href.includes("verifai.floot.app")) return;
+      if (!href.includes("apply.focused-staffing.com")) return;
       if (href.includes("/jobs")) {
         gtag("event", "job_board_click", { link_url: href });
       } else if (href.includes("talent-network")) {

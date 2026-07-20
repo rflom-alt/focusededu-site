@@ -79,7 +79,7 @@ export const edu: SiteContent = {
     linkedin: "https://www.linkedin.com/company/focused-staffing-group",
   },
   jobBoard: "https://apply.focused-staffing.com/jobs",
-  submitResume: "https://verifai.floot.app/talent-network",
+  submitResume: "https://apply.focused-staffing.com/talent-network",
   nav: [
     { label: "For Schools", href: "/for-schools" },
     { label: "Services", href: "/services" },

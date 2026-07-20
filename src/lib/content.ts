@@ -78,7 +78,7 @@ export const edu: SiteContent = {
     instagram: "https://www.instagram.com/focusededustaffing.group/",
     linkedin: "https://www.linkedin.com/company/focused-staffing-group",
   },
-  jobBoard: "https://verifai.floot.app/jobs",
+  jobBoard: "https://apply.focused-staffing.com/jobs",
   submitResume: "https://verifai.floot.app/talent-network",
   nav: [
     { label: "For Schools", href: "/for-schools" },

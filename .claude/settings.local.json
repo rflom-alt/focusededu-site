@@ -78,7 +78,8 @@
       "Bash(find *)",
       "Read",
       "Write(/Users/robertflom/Desktop/Focused-Sites/**)",
-      "Edit(/Users/robertflom/Desktop/Focused-Sites/**)"
+      "Edit(/Users/robertflom/Desktop/Focused-Sites/**)",
+      "Bash(echo \"exit: $?\")"
     ]
   }
 }

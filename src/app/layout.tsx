@@ -67,6 +67,11 @@ const ORG_SCHEMA = {
       },
       telephone: "+14844828223",
       email: "hello@focused-staffing.com",
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 40.04571,
+        longitude: -75.39851,
+      },
       areaServed: ["PA", "NJ", "DE", "MD", "DC", "NY", "NC", "VA"],
       sameAs: [
         "https://www.facebook.com/FocusedStaffing",

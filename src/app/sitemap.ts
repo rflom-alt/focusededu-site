@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/for-schools",
     "/candidates",
     "/about",
+    "/about/robert-flom",
     "/our-impact",
     "/resources",
     "/case-studies",
@@ -19,6 +20,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/book-a-call",
     "/blog",
     "/resources/2026-k12-staffing-report",
+    "/privacy",
+    "/terms",
+    "/cookies",
   ].map((p) => ({
     url: `${BASE}${p}`,
     changeFrequency: "weekly" as const,

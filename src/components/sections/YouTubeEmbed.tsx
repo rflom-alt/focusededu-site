@@ -44,7 +44,9 @@ export function YouTubeEmbed({
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`}
-            alt=""
+            alt={`Play video: ${title}`}
+            width={1280}
+            height={720}
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
             loading="lazy"
           />

@@ -1,4 +1,4 @@
-import { Quote } from "lucide-react";
+import { Quote, Star } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/motion/Reveal";
 import type { SiteContent } from "@/lib/content";
@@ -35,6 +35,28 @@ export function Testimonials({
             </Reveal>
           ))}
         </div>
+
+        <Reveal>
+          <div className="mt-12 flex justify-center">
+            <a
+              href="https://www.glassdoor.com/Overview/Working-at-Focused-Staffing-Group-EI_IE7644579.11,33.htm"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Focused Staffing Group is rated 4.4 out of 5 on Glassdoor — read reviews"
+              className="inline-flex items-center gap-4 rounded-full border border-cloud bg-white px-6 py-3.5 shadow-sm transition hover:border-teal-500/40 hover:shadow-md"
+            >
+              <span className="flex items-center gap-1.5">
+                <span className="text-2xl font-bold leading-none text-navy-950">4.4</span>
+                <Star className="size-5 fill-[#f5b800] text-[#f5b800]" strokeWidth={0} aria-hidden />
+              </span>
+              <span className="h-9 w-px bg-cloud" aria-hidden />
+              <span className="text-left text-sm leading-tight text-slate-ink">
+                <span className="block font-semibold text-navy-950">Rated on Glassdoor</span>
+                86% would recommend · 100% CEO approval
+              </span>
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -45,6 +45,17 @@ export function Footer({
             A {brand.parent} company — a premium, mission-driven workforce partner for
             K-12 schools.
           </p>
+          <p className="mt-4 text-sm leading-relaxed text-white/55">
+            FocusedEDU is a division of {brand.parent}.{" "}
+            <a
+              href="https://www.focused-staffing.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-white/80 transition-colors hover:text-white"
+            >
+              Visit Focused Staffing Group →
+            </a>
+          </p>
           <div className="mt-6 flex items-center gap-3">
             {socials.map(({ href, Icon, label }) => (
               <a
@@ -135,9 +146,22 @@ export function Footer({
       </div>
 
       <div className="border-t border-white/10">
-        <div className="container-x flex flex-col items-center justify-between gap-3 py-6 text-xs text-white/45 sm:flex-row">
+        <div className="container-x flex flex-col items-center justify-between gap-4 py-6 text-xs text-white/45 sm:flex-row">
           <p>© {year} {brand.parent}. All rights reserved.</p>
-          <p>{brand.tagline}</p>
+          <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+            <Link href="/about/robert-flom" className="transition-colors hover:text-white/80">
+              Meet the founder
+            </Link>
+            <Link href="/privacy" className="transition-colors hover:text-white/80">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="transition-colors hover:text-white/80">
+              Terms &amp; Conditions
+            </Link>
+            <Link href="/cookies" className="transition-colors hover:text-white/80">
+              Cookie Policy
+            </Link>
+          </nav>
         </div>
       </div>
     </footer>

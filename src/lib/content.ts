@@ -30,7 +30,7 @@ export interface SiteContent {
     scheduler: string; // HubSpot Meetings booking link
     address: string;
   };
-  social: { facebook: string; instagram: string; linkedin: string };
+  social: { facebook: string; instagram: string; linkedin: string; tiktok: string };
   jobBoard: string;
   submitResume: string;
   nav: NavItem[];
@@ -76,7 +76,8 @@ export const edu: SiteContent = {
   social: {
     facebook: "https://www.facebook.com/FocusedStaffing",
     instagram: "https://www.instagram.com/focusededustaffing.group/",
-    linkedin: "https://www.linkedin.com/company/focused-staffing-group",
+    linkedin: "https://www.linkedin.com/company/focusededu-staffing-group/",
+    tiktok: "https://www.tiktok.com/@focusedstaffinggroup",
   },
   jobBoard: "https://apply.focused-staffing.com/jobs",
   submitResume: "https://apply.focused-staffing.com/talent-network",

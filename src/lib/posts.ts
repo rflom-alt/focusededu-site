@@ -8,6 +8,7 @@ import data from "./posts-data.json";
 export type BlogPost = {
   slug: string;
   title: string;
+  metaTitle?: string; // SEO <title> override when title+suffix exceeds 60 chars
   date: string; // display, e.g. "Jun 9, 2025"
   iso: string; // sortable
   category: string;

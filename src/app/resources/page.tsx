@@ -13,9 +13,9 @@ import { CtaBand } from "@/components/sections/CtaBand";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/resources" },
-  title: "Resources",
+  title: "K-12 Staffing Resources & Job Board",
   description:
-    "Career advice, candidate resources, videos, and articles — the job board, free résumé feedback, real educator stories, and guidance for K-12 schools and educators.",
+    "Career advice, candidate resources, and articles — the job board, free résumé feedback, educator stories, and guidance for K-12 schools and educators.",
 };
 
 const resources = [
@@ -129,7 +129,7 @@ export default function ResourcesPage() {
                   <div className="mb-5 flex size-12 items-center justify-center rounded-xl bg-teal-500/10 text-teal-700">
                     <Icon name={r.icon} className="size-6" strokeWidth={1.7} />
                   </div>
-                  <h3 className="text-xl font-semibold text-navy-950">{r.title}</h3>
+                  <h2 className="text-xl font-semibold text-navy-950">{r.title}</h2>
                   <p className="mt-2.5 flex-1 leading-relaxed text-slate-ink">{r.body}</p>
                   <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-teal-700">
                     {r.cta}

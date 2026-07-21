@@ -20,6 +20,7 @@ export type ServicePage = {
   metaDescription: string;
   hero: string;
   photo: string;
+  photoAlt?: string;
   roles?: string[];
   stats?: { value: string; label: string }[];
   steps?: { n: string; title: string; body: string }[];
@@ -44,7 +45,7 @@ export const servicePages: ServicePage[] = [
     h1: "Special Education Staffing for School Districts",
     metaTitle: "Special Education Staffing for School Districts",
     metaDescription:
-      "Focused Staffing Group places certified special education teachers, paraprofessionals, and related service providers. Founded by a former K-12 teacher; certified SPED teachers have been placed within two weeks.",
+      "Certified special education teachers, paraprofessionals, and related service providers, vetted by a former K-12 teacher. SPED teachers placed in two weeks.",
     hero: "Certified special education teachers, paraprofessionals, and related service providers — sourced, credentialed, and reference-checked by a firm founded by a former K-12 teacher. In past engagements we have placed certified special education teachers within two weeks.",
     photo: PHOTOS[0],
     roles: [
@@ -169,9 +170,9 @@ export const servicePages: ServicePage[] = [
     slug: "paraprofessional-staffing",
     eyebrow: "Education staffing",
     h1: "Paraprofessional Staffing for K-12 Schools",
-    metaTitle: "Paraprofessional Staffing Agency for K-12 Schools",
+    metaTitle: "Paraprofessional Staffing for K-12 Schools",
     metaDescription:
-      "Focused Staffing Group recruits and places paraprofessionals, 1:1 aides, and classroom support staff for K-12 schools — with weekly pay and a shift app that kept one partner school at a 95% daily fill rate.",
+      "Paraprofessionals, 1:1 aides, and classroom support for K-12 schools — weekly pay and a shift app that held a 95% daily fill rate at one partner school.",
     hero: "Paraprofessionals, 1:1 aides, and classroom support staff — recruited, cleared, and reference-checked before you meet them. The same model that holds a 95% day-to-day fill rate at Odyssey Public Charter School.",
     photo: PHOTOS[1],
     roles: [
@@ -294,7 +295,7 @@ export const servicePages: ServicePage[] = [
     h1: "School District Staffing Vendor",
     metaTitle: "School District Staffing Vendor",
     metaDescription:
-      "Focused Staffing Group is the education staffing vendor schools call when the incumbent can't fill. 120+ roles filled at one school, 13+ role types, one client per region.",
+      "The education staffing vendor schools call when the incumbent can't fill: 120+ roles filled at one school, 13+ role types, one client per region.",
     hero: "When Odyssey Public Charter School's contracted agencies couldn't fill their openings, FSG stepped in and filled 120+ roles across 13+ role types. That is the standard we are hired against.",
     photo: PHOTOS[2],
     stats: [
@@ -408,7 +409,7 @@ export const servicePages: ServicePage[] = [
     h1: "K-12 Education Staffing",
     metaTitle: "K-12 Education Staffing Agency",
     metaDescription:
-      "Focused Staffing Group staffs the whole K-12 building — 13+ role types at a single school, from bus drivers to certified teachers. Founded by a former teacher, 12 years in.",
+      "K-12 staffing for the whole building — 13+ role types at a single school, from bus drivers to certified teachers. Founded by a former teacher, 12 years in.",
     hero: "One partner for the whole building: at a single school we have staffed 13+ distinct role types, from bus drivers to certified teachers, and filled 120+ roles along the way.",
     photo: PHOTOS[3],
     roles: [
@@ -529,7 +530,7 @@ export const servicePages: ServicePage[] = [
     h1: "Related Services Staffing for Schools",
     metaTitle: "Related Services Staffing for Schools",
     metaDescription:
-      "Focused Staffing Group recruits SLPs, OTs, PTs, school psychologists, and BCBAs for schools — license-verified, clearance-complete, and never shared with a competing district.",
+      "SLPs, OTs, PTs, school psychologists, and BCBAs for schools — license-verified, clearance-complete, and never shared with a competing district.",
     hero: "SLPs, OTs, PTs, school psychologists, and BCBAs — license-verified and clearance-complete before you meet them, recruited into a pipeline we build for one client per region.",
     photo: PHOTOS[0],
     roles: ["SLPs", "OTs", "PTs", "School psychologists", "BCBAs", "RBTs", "Behavior support staff"],
@@ -642,7 +643,7 @@ export const servicePages: ServicePage[] = [
     h1: "School-Based Behavioral Health Staffing",
     metaTitle: "School-Based Behavioral Health Staffing",
     metaDescription:
-      "Focused Staffing Group places BCBAs, RBTs, and behavior technicians in schools — certification-verified, clearance-complete, and recruited into an exclusive one-client-per-region pipeline.",
+      "BCBAs, RBTs, and behavior technicians for schools — certification-verified, fully cleared, and recruited into an exclusive one-client-per-region pipeline.",
     hero: "BCBAs, RBTs, and behavior technicians for schools — certification-verified and fully cleared before you meet them, recruited into a pipeline reserved for one client per region.",
     photo: PHOTOS[1],
     roles: ["BCBAs", "RBTs", "Behavior technicians", "Behavioral support staff", "Paraprofessionals", "Related student-support roles"],
@@ -750,7 +751,7 @@ export const servicePages: ServicePage[] = [
     h1: "Education Staffing RFP Experience",
     metaTitle: "Education Staffing RFP & Contract Experience",
     metaDescription:
-      "Evaluating education staffing vendors? FSG replaced incumbent agencies at Odyssey Public Charter School and filled 120+ roles — verifiable outcomes, named references, one client per region.",
+      "Evaluating education staffing vendors? FSG replaced the incumbents at Odyssey Charter and filled 120+ roles — verifiable outcomes, one client per region.",
     hero: "If you are scoring staffing vendors, score us on the record: 120+ roles filled at Odyssey Public Charter School after the agencies under contract could not deliver, with named districts as references.",
     photo: PHOTOS[2],
     stats: [
@@ -863,7 +864,7 @@ export const servicePages: ServicePage[] = [
     h1: "Pennsylvania Education Staffing",
     metaTitle: "Pennsylvania Education Staffing Agency",
     metaDescription:
-      "Focused Staffing Group is headquartered in Wayne, PA and staffs Pennsylvania schools with Act 34/151/114-cleared teachers, paras, and clinicians. One client per region.",
+      "Pennsylvania schools staffed from our Wayne, PA headquarters with Act 34/151/114-cleared teachers, paras, and clinicians. One client per region.",
     hero: "Headquartered in Wayne, Pennsylvania — drivable to districts across the Philadelphia region and beyond — with every candidate's Act 34, 151, and 114 clearances tracked before you meet them.",
     photo: PHOTOS[3],
     roles: [
@@ -989,7 +990,7 @@ export const servicePages: ServicePage[] = [
     h1: "New Jersey Education Staffing",
     metaTitle: "New Jersey Education Staffing Agency",
     metaDescription:
-      "Focused Staffing Group staffs New Jersey schools with cleared, certification-verified teachers, paraprofessionals, and clinicians from its Wayne, PA headquarters — one client per region.",
+      "New Jersey schools staffed with cleared, certification-verified teachers, paraprofessionals, and clinicians — one client per region.",
     hero: "New Jersey schools staffed from just across the river: cleared, certification-verified teachers, paras, and clinicians, recruited into a pipeline we reserve for one client per region.",
     photo: PHOTOS[0],
     roles: [
@@ -1114,7 +1115,7 @@ export const servicePages: ServicePage[] = [
     h1: "Maryland Special Education Staffing",
     metaTitle: "Maryland Special Education Staffing",
     metaDescription:
-      "Focused Staffing Group staffs Maryland schools with cleared, certification-verified special education teachers, paraprofessionals, and clinicians — one client per region, temp-to-perm at no cost.",
+      "Maryland schools staffed with cleared, certification-verified special education teachers, paraprofessionals, and clinicians — one client per region.",
     hero: "Special education teachers, paraprofessionals, and clinicians for Maryland schools — certification-verified, clearance-complete, and recruited into a pipeline we reserve for one client per region.",
     photo: PHOTOS[1],
     roles: [
@@ -1231,9 +1232,9 @@ export const servicePages: ServicePage[] = [
     slug: "substitute-teacher-staffing",
     eyebrow: "Education staffing",
     h1: "Substitute Teacher Staffing for K-12 Schools",
-    metaTitle: "Substitute Teacher Staffing Agency for K-12 Schools",
+    metaTitle: "Substitute Teacher Staffing for K-12 Schools",
     metaDescription:
-      "Focused Staffing Group staffs day-to-day and long-term substitutes with weekly Friday pay and a shift app — the model behind a 95% daily fill rate at Odyssey Public Charter School.",
+      "Day-to-day and long-term substitute teachers with weekly Friday pay and a shift app — the model behind a 95% daily fill rate at Odyssey Charter.",
     hero: "Day-to-day and long-term substitutes who actually show up: weekly Friday pay, a mobile app instead of a 5 a.m. phone chain, and a 95% daily fill rate at Odyssey Public Charter School — 40% better than the provider before us.",
     photo: PHOTOS[2],
     roles: [
@@ -1352,7 +1353,7 @@ export const servicePages: ServicePage[] = [
     h1: "Delaware Education Staffing",
     metaTitle: "Delaware Education Staffing Agency",
     metaDescription:
-      "Focused Staffing Group's strongest attested record is in Delaware: 120+ roles filled at Odyssey Public Charter School in Wilmington, a 95% substitute fill rate, and Christina School District as a client.",
+      "Our strongest record is in Delaware: 120+ roles filled at Odyssey Charter in Wilmington, a 95% substitute fill rate, and Christina School District.",
     hero: "Our strongest record on the map is in Delaware: 120+ roles across 13+ role types at Odyssey Public Charter School in Wilmington, a 95% daily substitute fill rate, and Christina School District on the client list.",
     photo: PHOTOS[3],
     roles: [
@@ -1472,9 +1473,9 @@ export const servicePages: ServicePage[] = [
     slug: "philadelphia-education-staffing",
     eyebrow: "Education staffing · Philadelphia",
     h1: "Philadelphia Education Staffing",
-    metaTitle: "Education Staffing Agency for Philadelphia Schools",
+    metaTitle: "Philadelphia Education Staffing Agency",
     metaDescription:
-      "Focused Staffing Group staffs Philadelphia-area schools from its Main Line headquarters, 30 minutes away — Act 34/151/114-cleared teachers, paras, and clinicians, one client per region.",
+      "Philadelphia-area schools staffed from our Main Line headquarters — Act 34/151/114-cleared teachers, paras, and clinicians, one client per region.",
     hero: "An education staffing partner 30 minutes from your building: headquartered on the Main Line in Wayne, PA, staffing Philadelphia-area schools with Act 34, 151, and 114-cleared teachers, paras, and clinicians for 12 years.",
     photo: PHOTOS[0],
     roles: [
@@ -1597,7 +1598,7 @@ export const servicePages: ServicePage[] = [
     h1: "How Much Does a Teacher Staffing Agency Cost?",
     metaTitle: "How Much Does a Teacher Staffing Agency Cost?",
     metaDescription:
-      "An honest breakdown of how education staffing pricing works — what a bill rate covers, where hidden fees live, and what FSG attests: $0 temp-to-perm conversion, no candidate fees, free discovery call.",
+      "How education staffing pricing works — what a bill rate covers, where fees hide, and what FSG attests: $0 temp-to-perm conversion, free discovery call.",
     hero: "An honest answer instead of a rate card: how education staffing pricing actually works, which contract terms quietly move the total, and the parts of our own model we can state flatly — $0 to convert a temp to your permanent hire, and candidates are never charged.",
     photo: PHOTOS[1],
     stats: [

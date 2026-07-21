@@ -12,9 +12,9 @@ import { CtaBand } from "@/components/sections/CtaBand";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/about" },
-  title: "About",
+  title: { absolute: "About FocusedEDU — K-12 Staffing Built by Educators" },
   description:
-    "K-12 education experts. We've earned the trust of the industry, our talent, and our customers — by giving each partner our undivided focus and never working their direct competitor.",
+    "K-12 education staffing experts who give each partner undivided focus — and never work their direct competitor. Trusted by schools and educators.",
 };
 
 const values: Feature[] = [

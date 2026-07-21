@@ -12,7 +12,7 @@ import type { Step } from "@/lib/content";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/candidates" },
-  title: "For Job Seekers",
+  title: "K-12 Education Jobs for Job Seekers",
   description:
     "Educators — join your dream team. Work with vetted K-12 schools across the U.S., when and where you want. Flexible roles, premium perks, weekly pay.",
 };

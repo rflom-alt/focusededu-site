@@ -11,43 +11,89 @@ import { edu } from "@/lib/content";
 
 const ORG_SCHEMA = {
   "@context": "https://schema.org",
-  "@type": ["EmploymentAgency", "Organization"],
-  name: edu.brand.name,
-  legalName: edu.brand.parent,
-  url: "https://www.focusedu-staffing.com",
-  logo: "https://www.focusedu-staffing.com" + edu.brand.logoWhite,
-  description:
-    "Premium K-12 education staffing — a dedicated, exclusive talent pipeline founded by a former teacher. Substitute and certified teachers, special education, paraprofessionals, and support staff.",
-  telephone: edu.contact.phoneHref.replace("tel:", ""),
-  email: edu.contact.email,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "175 Strafford Avenue, Suite One #208",
-    addressLocality: "Wayne",
-    addressRegion: "PA",
-    postalCode: "19087",
-    addressCountry: "US",
-  },
-  areaServed: "United States",
-  foundingDate: "2014",
-  knowsAbout: [
-    "K-12 education staffing",
-    "Special education staffing",
-    "Substitute teacher staffing",
-    "Paraprofessional staffing",
-    "Related services staffing",
-    "School-based behavioral health staffing",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.focused-staffing.com/#organization",
+      name: "Focused Staffing Group",
+      legalName: "Focused Staffing Group, LLC",
+      url: "https://www.focused-staffing.com",
+      logo: "https://www.focused-staffing.com/logos/focused-staffing-group.png",
+      description:
+        "Focused Staffing Group is a mission-driven workforce partner placing behavioral health and K-12 education professionals across the Mid-Atlantic and beyond through its Focused Behavioral and FocusedEDU divisions.",
+      foundingDate: "2014",
+      founder: {
+        "@id": "https://www.focused-staffing.com/about/robert-flom#person",
+      },
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "175 Strafford Avenue, Suite One #208",
+        addressLocality: "Wayne",
+        addressRegion: "PA",
+        postalCode: "19087",
+        addressCountry: "US",
+      },
+      telephone: "+14844828223",
+      email: "hello@focused-staffing.com",
+      sameAs: [
+        "https://www.linkedin.com/company/focusedstaffinggroup/",
+        "https://www.tiktok.com/@focusedstaffinggroup",
+      ],
+      subOrganization: [
+        { "@id": "https://www.focused-staffing.com/#behavioral" },
+        { "@id": "https://www.focusedu-staffing.com/#organization" },
+      ],
+    },
+    {
+      "@type": ["EmploymentAgency", "LocalBusiness"],
+      "@id": "https://www.focusedu-staffing.com/#organization",
+      name: "FocusedEDU",
+      legalName: "Focused Staffing Group, LLC",
+      url: "https://www.focusedu-staffing.com",
+      logo: "https://www.focusedu-staffing.com/logos/focusededu-white.png",
+      image: "https://www.focusedu-staffing.com/logos/focusededu-white.png",
+      parentOrganization: {
+        "@id": "https://www.focused-staffing.com/#organization",
+      },
+      description:
+        "FocusedEDU is the K-12 education staffing division of Focused Staffing Group, placing special education teachers, paraprofessionals, substitute teachers, school nurses, and related-service providers for schools and districts.",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "175 Strafford Avenue, Suite One #208",
+        addressLocality: "Wayne",
+        addressRegion: "PA",
+        postalCode: "19087",
+        addressCountry: "US",
+      },
+      telephone: "+14844828223",
+      email: "hello@focused-staffing.com",
+      areaServed: ["PA", "NJ", "DE", "MD", "DC", "NY", "NC", "VA"],
+      sameAs: [
+        "https://www.facebook.com/FocusedStaffing",
+        "https://www.instagram.com/focusededustaffing.group/",
+        "https://www.linkedin.com/company/focusededu-staffing-group/",
+        "https://www.tiktok.com/@focusedstaffinggroup",
+      ],
+      knowsAbout: [
+        "Special education staffing",
+        "Paraprofessional staffing",
+        "Substitute teacher staffing",
+        "School nursing staffing",
+        "Related services staffing",
+        "K-12 education staffing",
+        "School district staffing",
+      ],
+    },
   ],
-  sameAs: [edu.social.facebook, edu.social.instagram, edu.social.linkedin],
-  founder: { "@type": "Person", name: "Robert Flom", jobTitle: "Founder" },
 };
 
 const WEBSITE_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": "https://www.focusedu-staffing.com/#website",
   name: edu.brand.name,
   url: "https://www.focusedu-staffing.com",
-  publisher: { "@type": "Organization", name: edu.brand.name },
+  publisher: { "@id": "https://www.focused-staffing.com/#organization" },
 };
 
 const display = Bricolage_Grotesque({
@@ -70,7 +116,7 @@ export const metadata: Metadata = {
     template: "%s · FocusedEDU",
   },
   description:
-    "A dedicated, exclusive talent pipeline for K-12 schools. Built by a former teacher. Automated credentialing cuts hiring time in half, temp-to-perm at no cost. Our focus begins with you.",
+    "A dedicated, exclusive K-12 talent pipeline built by a former teacher. Automated credentialing halves hiring time; temp-to-perm at no cost.",
   openGraph: {
     title: "FocusedEDU — Premium K-12 Education Staffing",
     description:

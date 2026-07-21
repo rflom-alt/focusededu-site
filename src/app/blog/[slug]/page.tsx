@@ -30,11 +30,11 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const post = getPost(slug);
   if (!post) return { title: "Article" };
   return {
-    title: post.title,
+    title: post.metaTitle ?? post.title,
     description: post.excerpt,
     alternates: { canonical: `/blog/${slug}` },
     openGraph: {
-      title: post.title,
+      title: post.metaTitle ?? post.title,
       description: post.excerpt,
       type: "article",
       images: [post.img],
@@ -91,7 +91,6 @@ export default async function BlogPostPage({ params }: Params) {
   if (!post) notFound();
 
   const { html: processedHtml, headings } = processArticle(post.contentHtml);
-  const socialSameAs = author.links.filter((l) => l.kind !== "email").map((l) => l.href);
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -101,18 +100,8 @@ export default async function BlogPostPage({ params }: Params) {
     image: `${SITE}${post.img}`,
     datePublished: post.iso,
     dateModified: post.updated ? new Date(post.updated).toISOString() : post.iso,
-    author: {
-      "@type": "Person",
-      name: author.name,
-      jobTitle: "Founder",
-      url: author.profileUrl,
-      sameAs: socialSameAs,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "FocusedEDU",
-      logo: { "@type": "ImageObject", url: `${SITE}/logos/focusededu-white.png` },
-    },
+    author: { "@id": "https://www.focused-staffing.com/about/robert-flom#person" },
+    publisher: { "@id": "https://www.focused-staffing.com/#organization" },
     mainEntityOfPage: `${SITE}/blog/${post.slug}`,
   };
 
@@ -202,7 +191,14 @@ export default async function BlogPostPage({ params }: Params) {
               {post.title}
             </h1>
             <p className="mt-5 text-sm text-white/55">
-              {post.date} · {post.readMinutes} min read
+              By{" "}
+              <Link
+                href="/about/robert-flom"
+                className="font-medium text-white/80 underline-offset-4 transition hover:text-white hover:underline"
+              >
+                {author.name}
+              </Link>{" "}
+              · {post.date} · {post.readMinutes} min read
               {post.updated ? <> · Updated {post.updated}</> : null}
             </p>
           </div>

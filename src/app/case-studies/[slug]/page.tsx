@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const cs = getCaseStudy(slug);
   if (!cs) return { title: "Case study" };
   return {
-    title: `${cs.school} — Case Study`,
+    title: cs.metaTitle ?? `${cs.school} — Case Study`,
     description: cs.subhead,
     alternates: { canonical: `/case-studies/${slug}` },
     openGraph: {

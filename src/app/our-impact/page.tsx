@@ -10,9 +10,9 @@ import { ContactSection } from "@/components/sections/ContactSection";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/our-impact" },
-  title: "Our Impact",
+  title: "Our Impact — Community & Outcomes",
   description:
-    "Focused on community. Through school-supply and backpack donation drives, FocusedEDU invests back into the students, classrooms, and neighborhoods our schools serve.",
+    "Through school-supply and backpack donation drives, FocusedEDU invests back into the students, classrooms, and neighborhoods our partner schools serve.",
 };
 
 const points = [

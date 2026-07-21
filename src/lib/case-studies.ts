@@ -9,6 +9,7 @@ export type CaseStat = { value: string; label: string };
 export type CaseStudy = {
   slug: string;
   school: string;
+  metaTitle?: string;
   location: string;
   partnerSince: string;
   services: string;
@@ -122,6 +123,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "first-philadelphia-public-charter-school",
     school: "First Philadelphia Public Charter School",
+    metaTitle: "First Philadelphia Charter — Case Study",
     location: "Philadelphia, PA",
     partnerSince: "2021",
     services:

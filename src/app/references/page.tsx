@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/references" },
   title: "Letters of Recommendation — Client References",
   description:
-    "Eight published reference letters from superintendents, principals, and HR directors at partner schools across NJ, PA, DE, and CO — read every letter in full.",
+    "Eight published reference letters from superintendents, principals, and HR directors at partner schools across NJ, PA, DE, and CO.",
 };
 
 type Letter = {

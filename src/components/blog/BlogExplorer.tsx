@@ -21,6 +21,7 @@ export function BlogExplorer({
   return (
     <section className="bg-white pb-24 pt-10 lg:pb-32">
       <div className="container-x">
+        <h2 className="sr-only">Latest articles</h2>
         <div className="flex flex-wrap justify-center gap-2.5">
           {tabs.map((c) => (
             <button

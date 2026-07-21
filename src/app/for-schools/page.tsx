@@ -17,7 +17,7 @@ import { CtaBand } from "@/components/sections/CtaBand";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/for-schools" },
-  title: "For Schools",
+  title: "Staffing for K-12 Schools & Districts",
   description:
     "Hire the right K-12 education staff with speed and precision. A dedicated, exclusive talent pipeline, automated credentialing, and temp-to-perm at no cost.",
 };

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/book-a-call" },
   title: "Book a Discovery Call",
   description:
-    "Book a free 30-minute discovery call with FocusedEDU. Tell us your staffing challenge and see how a dedicated, exclusive talent pipeline — built by a former teacher — works. No cost, no obligation.",
+    "Book a free 30-minute discovery call with FocusedEDU. Share your staffing challenge and see how a dedicated, exclusive K-12 pipeline works.",
 };
 
 const reassurance = [

@@ -79,7 +79,8 @@
       "Read",
       "Write(/Users/robertflom/Desktop/Focused-Sites/**)",
       "Edit(/Users/robertflom/Desktop/Focused-Sites/**)",
-      "Bash(echo \"exit: $?\")"
+      "Bash(echo \"exit: $?\")",
+      "Bash(echo \"curl exit: $?\")"
     ]
   }
 }

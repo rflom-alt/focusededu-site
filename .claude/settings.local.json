@@ -80,7 +80,8 @@
       "Write(/Users/robertflom/Desktop/Focused-Sites/**)",
       "Edit(/Users/robertflom/Desktop/Focused-Sites/**)",
       "Bash(echo \"exit: $?\")",
-      "Bash(echo \"curl exit: $?\")"
+      "Bash(echo \"curl exit: $?\")",
+      "Bash(xargs -n1 basename)"
     ]
   }
 }

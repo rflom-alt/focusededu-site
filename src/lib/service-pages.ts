@@ -10,7 +10,9 @@
 
 export type ServiceFaq = { q: string; a: string };
 export type ServiceSection = { heading: string; body: string };
-export type ServiceLink = { label: string; slug: string };
+// `href` (absolute) points a card at the Focused Staffing Group umbrella site —
+// deep-dive guides live there so the two domains reinforce, never duplicate.
+export type ServiceLink = { label: string; slug: string; href?: string };
 
 export type ServicePage = {
   slug: string;
@@ -635,6 +637,31 @@ export const servicePages: ServicePage[] = [
       { label: "Special Education Staffing", slug: "special-education-staffing" },
       { label: "School-Based Behavioral Health Staffing", slug: "school-based-behavioral-health-staffing" },
       { label: "K-12 Education Staffing", slug: "k12-education-staffing" },
+      {
+        label: "School SLP Staffing — In-Depth Guide",
+        slug: "slp-guide",
+        href: "https://www.focused-staffing.com/speech-language-pathologist-staffing",
+      },
+      {
+        label: "School OT Staffing — In-Depth Guide",
+        slug: "ot-guide",
+        href: "https://www.focused-staffing.com/occupational-therapist-staffing",
+      },
+      {
+        label: "School PT Staffing — In-Depth Guide",
+        slug: "pt-guide",
+        href: "https://www.focused-staffing.com/physical-therapist-staffing",
+      },
+      {
+        label: "School Psychologist Staffing — In-Depth Guide",
+        slug: "school-psych-guide",
+        href: "https://www.focused-staffing.com/school-psychologist-staffing",
+      },
+      {
+        label: "Allied Health & Related Services Hub",
+        slug: "allied-health-hub",
+        href: "https://www.focused-staffing.com/allied-health-staffing",
+      },
     ],
   },
   {
@@ -743,6 +770,11 @@ export const servicePages: ServicePage[] = [
       { label: "Related Services Staffing", slug: "related-services-staffing" },
       { label: "Special Education Staffing", slug: "special-education-staffing" },
       { label: "Paraprofessional Staffing", slug: "paraprofessional-staffing" },
+      {
+        label: "Allied Health & Related Services Hub",
+        slug: "allied-health-hub",
+        href: "https://www.focused-staffing.com/allied-health-staffing",
+      },
     ],
   },
   {

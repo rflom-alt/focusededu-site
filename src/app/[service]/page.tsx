@@ -237,7 +237,7 @@ export default async function ServicePageRoute({ params }: Params) {
             {page.related.map((r) => (
               <Link
                 key={r.slug}
-                href={`/${r.slug}`}
+                href={r.href ?? `/${r.slug}`}
                 className="group flex items-center justify-between gap-3 rounded-2xl border border-cloud bg-white p-5 transition hover:-translate-y-0.5 hover:border-teal-500/40 hover:shadow-[0_20px_40px_-24px_rgba(6,10,31,0.18)]"
               >
                 <span className="font-medium text-navy-950">{r.label}</span>

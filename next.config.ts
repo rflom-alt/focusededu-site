@@ -36,6 +36,17 @@ const nextConfig: NextConfig = {
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },
+  // Legacy URLs from the WordPress migration that carried the numeric post ID
+  // as the slug. Permanent so any accumulated link equity transfers.
+  async redirects() {
+    return [
+      {
+        source: "/blog/1388",
+        destination: "/blog/american-education-on-the-brink-136000-teaching-jobs-at-risk",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

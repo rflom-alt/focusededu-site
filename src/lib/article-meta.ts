@@ -23,6 +23,11 @@ const AUTHORITY_HOSTS = [
   "tasb.org",
   "aota.org",
   "apa.org",
+  // Established news outlets — a local paper or broadcaster is a legitimate
+  // source for a claim about a specific district.
+  "kfyrtv.com",
+  "bismarcktribune.com",
+  "kxnet.com",
 ];
 
 function isAuthority(href: string): boolean {

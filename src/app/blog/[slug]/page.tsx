@@ -7,6 +7,7 @@ import { posts, getPost, categoryLabel } from "@/lib/posts";
 import { edu } from "@/lib/content";
 import { author } from "@/lib/author";
 import { processArticle, type Heading } from "@/lib/article";
+import { extractCitations, extractTopics, wordCount } from "@/lib/article-meta";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/motion/Reveal";
 import { BlogCard } from "@/components/blog/BlogCard";
@@ -93,6 +94,9 @@ export default async function BlogPostPage({ params }: Params) {
 
   const { html: processedHtml, headings } = processArticle(post.contentHtml);
 
+  const citations = extractCitations(post.contentHtml);
+  const topics = extractTopics(post.contentHtml, post.title);
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -102,8 +106,16 @@ export default async function BlogPostPage({ params }: Params) {
     datePublished: post.iso,
     dateModified: post.updated ? new Date(post.updated).toISOString() : post.iso,
     author: { "@id": "https://www.focused-staffing.com/about/robert-flom#person" },
-    publisher: { "@id": "https://www.focused-staffing.com/#organization" },
+    // FocusedEDU (the EDU sub-org) publishes this content, not the parent group.
+    publisher: { "@id": "https://www.focusedu-staffing.com/#organization" },
     mainEntityOfPage: `${SITE}/blog/${post.slug}`,
+    inLanguage: "en-US",
+    articleSection: categoryLabel(post.category),
+    wordCount: wordCount(post.contentHtml),
+    timeRequired: `PT${post.readMinutes}M`,
+    isAccessibleForFree: true,
+    ...(topics.length ? { about: topics } : {}),
+    ...(citations.length ? { citation: citations } : {}),
   };
 
   const breadcrumbSchema = {

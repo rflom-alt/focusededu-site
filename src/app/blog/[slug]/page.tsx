@@ -11,6 +11,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/motion/Reveal";
 import { BlogCard } from "@/components/blog/BlogCard";
 import { AuthorBio } from "@/components/blog/AuthorBio";
+import { PostFooterLinks } from "@/components/blog/PostFooterLinks";
 import { ShareButtons } from "@/components/blog/ShareButtons";
 import { ComparisonTable } from "@/components/blog/ComparisonTable";
 import { FAQ } from "@/components/sections/FAQ";
@@ -236,6 +237,7 @@ export default async function BlogPostPage({ params }: Params) {
             {post.comparison && <ComparisonTable data={post.comparison} />}
             <ShareButtons url={`${SITE}/blog/${post.slug}`} title={post.title} />
             <AuthorBio />
+            <PostFooterLinks />
           </div>
         </div>
       </article>

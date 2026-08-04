@@ -45,6 +45,13 @@ const nextConfig: NextConfig = {
         destination: "/blog/american-education-on-the-brink-136000-teaching-jobs-at-risk",
         permanent: true,
       },
+      // Retired: a digital-nomad travel guide that had nothing to do with K-12
+      // staffing. Indexed since 2023, so send the URL somewhere useful.
+      {
+        source: "/blog/the-top-cities-to-work-remote-from-a-guide",
+        destination: "/blog",
+        permanent: true,
+      },
     ];
   },
 };

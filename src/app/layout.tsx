@@ -128,6 +128,9 @@ export const metadata: Metadata = {
       "A dedicated, exclusive talent pipeline for K-12 schools. Built by educators, not recruiters.",
     type: "website",
   },
+  alternates: {
+    types: { "application/rss+xml": "/feed.xml" },
+  },
 };
 
 export default function RootLayout({

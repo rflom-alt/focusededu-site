@@ -1,6 +1,5 @@
 {
   "permissions": {
-    "defaultMode": "bypassPermissions",
     "allow": [
       "Bash(npm -v)",
       "Bash(pnpm -v)",
@@ -82,7 +81,13 @@
       "Edit(/Users/robertflom/Desktop/Focused-Sites/**)",
       "Bash(echo \"exit: $?\")",
       "Bash(echo \"curl exit: $?\")",
-      "Bash(xargs -n1 basename)"
-    ]
+      "Bash(xargs -n1 basename)",
+      "Bash(node clean.js 2930782 2903047 2877501)",
+      "Bash(node -e \"const p=require\\('./src/lib/posts-data.json'\\); ['automated-teacher-credentialing','definitive-guide-to-k-12-teacher-staffing','long-term-substitute','partnering-for-success','school-social-worker','education-staffing-agency-cost'].forEach\\(k=>{const m=p.filter\\(x=>x.slug.includes\\(k\\)\\); console.log\\(k,'->',m.map\\(x=>x.slug\\).join\\(' | '\\)||'NONE'\\)}\\)\")",
+      "Bash(node -e ' *)",
+      "Bash(node assemble.js)",
+      "Bash(cd /private/tmp/claude-501/-Users-robertflom-Desktop-Focused-Sites/8e1f3bbe-f8c5-484a-9d7f-c92446000c80/scratchpad && sed -i '' 's|our guide to <a href=\"/blog/the-state-of-automated-teacher-credentialing-trends-and-compliance-in-2026\">automated teacher credentialing in 2026</a>|our <a href=\"/resources/2026-k12-staffing-report\">2026 K-12 Staffing Report</a>|' final-2930782.html && grep -c \"2026-k12-staffing-report\" final-2930782.html && node assemble.js 2>&1 | grep -A1 2930782)"
+    ],
+    "defaultMode": "bypassPermissions"
   }
 }

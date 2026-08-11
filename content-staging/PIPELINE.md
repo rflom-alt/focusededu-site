@@ -13,9 +13,10 @@ AutoSEO generates exactly one article per day with no gaps. This task is daily, 
 Repo: /Users/robertflom/Desktop/Focused-Sites (Next.js; pushes to main auto-deploy on Vercel).
 Feed: https://getautoseo.com/feeds/60677/vOt9EWeS_LPTbpu_6u0_IR_e2S_LS9HrnvNpEk75_Uk.json (JSON Feed; items have id, url, title, content_html, image, _seo.meta_description).
 Staging dir: /Users/robertflom/Desktop/Focused-Sites/content-staging/ (files named pending-<feedId>.json).
+Skip list: content-staging/skipped-ids.json — feed items deliberately killed (duplicates, off-brand). Its `skipped[].id` values are permanently excluded from BOTH Part A staging and the Part C count. To kill an item: delete its pending-<id>.json and its public/blog/<slug>.jpg, then add {id, slug, reason, decidedOn} to that file.
 
 == PART A: process new feed items into staging ==
-For each feed item: slug = last path segment of its `url`. The item is NEW only if (a) no post with that slug exists in src/lib/posts-data.json AND (b) no content-staging/pending-<id>.json exists for it. For each NEW item, apply this exact cleaning checklist to content_html:
+For each feed item: slug = last path segment of its `url`. The item is NEW only if (a) no post with that slug exists in src/lib/posts-data.json AND (b) no content-staging/pending-<id>.json exists for it AND (c) its id is not in content-staging/skipped-ids.json. For each NEW item, apply this exact cleaning checklist to content_html:
 1. Remove the leading <figure class="autoseo-hero-image">…</figure> and any <figure class="autoseo-infographic">…</figure> blocks.
 2. Remove the <div class="key-takeaways">…</div> block, first extracting its bullets (plain text) as a keyTakeaways array (keep 3-5 best).
 3. Remove the table-of-contents block (site auto-builds its ToC). Covers BOTH shapes: <div class="table-of-contents">…</div> AND a bare <h2 id="table-of-contents">…</h2> followed by its <ul>…</ul>. Same for a bare <h2 id="key-takeaways"> + <ul> if the div form is absent.
@@ -53,6 +54,6 @@ Publish in ascending feedId order (oldest first). All articles published in the 
 6. Ping IndexNow ONCE for the batch: POST to https://api.indexnow.org/indexnow with a JSON body where host is "www.focusedu-staffing.com", key is "13e812b44dda67b964df4b0f8cf574a3", keyLocation is "https://www.focusedu-staffing.com/13e812b44dda67b964df4b0f8cf574a3.txt", and urlList is every published URL this run. Expect HTTP 200 or 202.
 
 == PART C: AutoSEO connection health ==
-After publishing, check how many feed item URLs are still missing from the live site: for each feed item, curl its slug at https://www.focusedu-staffing.com/blog/<slug> and count non-200s. This is the number AutoSEO's own check sees. Report it. If it is still above 3 after a catch-up run, say so explicitly — the "disconnected" warning will persist until it comes down.
+After publishing, check how many feed item URLs are still missing from the live site: for each feed item NOT in skipped-ids.json, curl its slug at https://www.focusedu-staffing.com/blog/<slug> and count non-200s. This is the number AutoSEO's own check sees (skipped items will 404 forever by design, so report them as a separate figure rather than folding them into the health count). Report it. If it is still above 3 after a catch-up run, say so explicitly — the "disconnected" warning will persist until it comes down.
 
 Report: which articles were newly staged, which were published (live URLs + commit hash), the remaining queue depth Q, and the Part C missing-URL count. If the feed is unreachable, report that and stop gracefully.

@@ -1,0 +1,11 @@
+{
+  "_comment": "Feed items deliberately NOT published. Part A must never re-stage these; Part C must exclude them from the missing-URL count. Add {id, slug, reason, decidedOn} when killing an item.",
+  "skipped": [
+    {
+      "id": 2948023,
+      "slug": "partnering-for-success-school-district-staffing-partners-2",
+      "reason": "Duplicate of feed item 2853068, published 2026-08-07 at /blog/partnering-for-success-school-district-staffing-partners. AutoSEO regenerated the same title and topic with a -2 slug.",
+      "decidedOn": "2026-08-11"
+    }
+  ]
+}

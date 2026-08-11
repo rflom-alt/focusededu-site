@@ -50,7 +50,19 @@ Publish in ascending feedId order (oldest first). All articles published in the 
 2. Insert the object at the TOP of the array in src/lib/posts-data.json; delete the pending file. When publishing several, insert them so the LOWEST feedId ends up nearest the top is NOT required — just keep them contiguous at the top in ascending feedId order.
 3. Run `pnpm build`. If it fails: git checkout -- src/lib/posts-data.json, restore ALL pending files removed this run, commit only Part A work, and report the failure. Do NOT push a broken build.
 4. Commit all changes and push to main. For one article: "Publish: <title> (AutoSEO pipeline)". For a batch: "Publish <n> articles (AutoSEO pipeline catch-up)" with the titles listed in the body. End the message with "Co-Authored-By: Claude <noreply@anthropic.com>".
-5. Verify live — local DNS for this domain is unreliable, use forced IP: poll `curl -s -o /dev/null -w "%{http_code}" --resolve www.focusedu-staffing.com:443:216.198.79.1 https://www.focusedu-staffing.com/blog/<slug>` every ~20s up to 5 min for HTTP 200. Check EVERY slug published this run. If any never reaches 200, push one empty retrigger commit ("Retrigger Vercel deploy") and poll again up to 5 min.
+5. Verify live — check EVERY slug published this run for HTTP 200, re-running every ~20s until they all pass (Vercel usually needs 1-3 min, allow up to 5). Local DNS for this domain is unreliable, so force the IP.
+   SHELL WARNING — the run shell is zsh, which does NOT word-split unquoted variables. `S="a b c"; for s in $S` iterates ONCE with all three joined, so curl receives a URL containing spaces and returns 000 for every attempt. That looks identical to a dead deploy and has already caused one false "never reached 200" report (2026-08-11). Never build the slug loop from an unquoted variable: put the slugs as a literal list in the `for`, or feed them in with `while read`. Verified working form:
+     for s in slug-one slug-two slug-three; do
+       C=$(curl -s -o /dev/null -w "%{http_code}" --max-time 25 \
+         --resolve www.focusedu-staffing.com:443:216.198.79.1 \
+         "https://www.focusedu-staffing.com/blog/$s")
+       echo "$C $s"
+     done
+   Read the codes precisely — they are not interchangeable:
+   · 200 = live, done.
+   · 404 = the deploy landed but that post is missing. A real problem: check src/lib/posts-data.json before doing anything else.
+   · 000 = the request never completed (malformed URL, or transient network). This is NOT evidence the deploy failed. Sanity-check one URL by hand — `curl -sS -o /dev/null -w "%{http_code}\n" "https://.../blog/<slug>"` without --resolve, so any error prints — and fix the command before drawing conclusions.
+   Only after genuine, repeated 404s should you push one empty retrigger commit ("Retrigger Vercel deploy") and poll again up to 5 min. Never push a retrigger on the strength of 000s alone.
 6. Ping IndexNow ONCE for the batch: POST to https://api.indexnow.org/indexnow with a JSON body where host is "www.focusedu-staffing.com", key is "13e812b44dda67b964df4b0f8cf574a3", keyLocation is "https://www.focusedu-staffing.com/13e812b44dda67b964df4b0f8cf574a3.txt", and urlList is every published URL this run. Expect HTTP 200 or 202.
 
 == PART C: AutoSEO connection health ==

@@ -86,7 +86,10 @@
       "Bash(node -e \"const p=require\\('./src/lib/posts-data.json'\\); ['automated-teacher-credentialing','definitive-guide-to-k-12-teacher-staffing','long-term-substitute','partnering-for-success','school-social-worker','education-staffing-agency-cost'].forEach\\(k=>{const m=p.filter\\(x=>x.slug.includes\\(k\\)\\); console.log\\(k,'->',m.map\\(x=>x.slug\\).join\\(' | '\\)||'NONE'\\)}\\)\")",
       "Bash(node -e ' *)",
       "Bash(node assemble.js)",
-      "Bash(cd /private/tmp/claude-501/-Users-robertflom-Desktop-Focused-Sites/8e1f3bbe-f8c5-484a-9d7f-c92446000c80/scratchpad && sed -i '' 's|our guide to <a href=\"/blog/the-state-of-automated-teacher-credentialing-trends-and-compliance-in-2026\">automated teacher credentialing in 2026</a>|our <a href=\"/resources/2026-k12-staffing-report\">2026 K-12 Staffing Report</a>|' final-2930782.html && grep -c \"2026-k12-staffing-report\" final-2930782.html && node assemble.js 2>&1 | grep -A1 2930782)"
+      "Bash(cd /private/tmp/claude-501/-Users-robertflom-Desktop-Focused-Sites/8e1f3bbe-f8c5-484a-9d7f-c92446000c80/scratchpad && sed -i '' 's|our guide to <a href=\"/blog/the-state-of-automated-teacher-credentialing-trends-and-compliance-in-2026\">automated teacher credentialing in 2026</a>|our <a href=\"/resources/2026-k12-staffing-report\">2026 K-12 Staffing Report</a>|' final-2930782.html && grep -c \"2026-k12-staffing-report\" final-2930782.html && node assemble.js 2>&1 | grep -A1 2930782)",
+      "Bash(node -e \"const j=require\\('/Users/robertflom/Desktop/Focused-Sites/content-staging/pending-2930782.json'\\); console.log\\(Object.keys\\(j\\)\\); console.log\\(JSON.stringify\\({slug:j.slug,title:j.title,category:j.category,readMinutes:j.readMinutes,excerpt:j.excerpt,img:j.img,keyTakeaways:j.keyTakeaways,faqs:j.faqs?j.faqs.length:0,comparison:!!j.comparison},null,1\\)\\);\")",
+      "Bash(node -e \"const p=require\\('./src/lib/posts-data.json'\\);console.log\\(p.some\\(x=>x.slug==='the-definitive-guide-to-k-12-teacher-staffing-building-resilient-schools-in-2026'\\)\\)\")",
+      "Bash(node /private/tmp/claude-501/-Users-robertflom-Desktop-Focused-Sites/9ff2c074-b475-4b88-a45d-2f0aef0e1388/scratchpad/build.js)"
     ],
     "defaultMode": "bypassPermissions"
   }

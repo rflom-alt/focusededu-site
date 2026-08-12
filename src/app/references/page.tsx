@@ -5,6 +5,7 @@ import { PageHero } from "@/components/ui/PageHero";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/motion/Reveal";
 import { CtaBand } from "@/components/sections/CtaBand";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/references" },
@@ -104,9 +105,59 @@ const letters: Letter[] = [
   },
 ];
 
+const SITE = "https://www.focusedu-staffing.com";
+
+/**
+ * Review markup for the eight client letters.
+ *
+ * NOT aimed at star rich results — Google does not surface self-serving reviews
+ * hosted on the reviewed party's own site, and we do not claim an aggregateRating.
+ * The purpose is machine-readability: AI answer engines cite attributed, dated,
+ * named testimony far more readily than an unmarked blockquote, and each letter
+ * links to the signed PDF backing it.
+ */
+const reviewsSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Client reference letters for Focused Staffing Group",
+  numberOfItems: letters.length,
+  itemListElement: letters.map((l, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    item: {
+      "@type": "Review",
+      reviewBody: l.quote,
+      ...(l.date ? { datePublished: l.date } : {}),
+      url: `${SITE}${l.file}`,
+      author: {
+        "@type": "Person",
+        name: l.author,
+        jobTitle: l.role,
+        worksFor: { "@type": "EducationalOrganization", name: l.org },
+      },
+      itemReviewed: {
+        "@type": "ProfessionalService",
+        name: "Focused Staffing Group",
+        url: SITE,
+      },
+    },
+  })),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE },
+    { "@type": "ListItem", position: 2, name: "Client references", item: `${SITE}/references` },
+  ],
+};
+
 export default function ReferencesPage() {
   return (
     <>
+      <JsonLd data={reviewsSchema} />
+      <JsonLd data={breadcrumbSchema} />
       <PageHero
         eyebrow="Client references"
         title="Read our reference letters."

@@ -56,7 +56,10 @@ const PROFILE = `# FocusedEDU
 - Philadelphia: ${SITE}/philadelphia-education-staffing
 - New Jersey: ${SITE}/new-jersey-education-staffing
 - Delaware: ${SITE}/delaware-education-staffing
-- Maryland: ${SITE}/maryland-special-education-staffing`;
+- Maryland: ${SITE}/maryland-special-education-staffing
+- Washington, DC: ${SITE}/washington-dc-education-staffing
+- North Carolina: ${SITE}/north-carolina-education-staffing
+- Colorado: ${SITE}/colorado-education-staffing`;
 
 const CONTACT = `## Contact
 - Email: hello@focused-staffing.com

@@ -1734,6 +1734,354 @@ export const servicePages: ServicePage[] = [
       { label: "Substitute Teacher Staffing", slug: "substitute-teacher-staffing" },
     ],
   },
+  {
+    slug: "washington-dc-education-staffing",
+    eyebrow: "Education staffing · Washington, DC",
+    h1: "Washington, DC Education Staffing",
+    metaTitle: "Washington DC Education Staffing Agency",
+    metaDescription:
+      "Two DC charter partnerships since 2022: 100% of certified SPED roles filled at IDEA PCS with 100% retention, and four qualified candidates per opening at Cesar Chavez PCS.",
+    hero: "Two DC public charter schools have partnered with us since 2022. At IDEA Public Charter School we filled 100% of open certified special education roles with 100% retention, two weeks from request to filled. At Cesar Chavez Public Charter School we present four qualified candidates per opening.",
+    photo: PHOTOS[2],
+    roles: [
+      "Special education teachers",
+      "Dedicated and one-on-one aides",
+      "Paraprofessionals",
+      "Subject-certified long-term substitutes",
+      "Day-to-day substitutes",
+      "School psychologists",
+      "SLPs",
+      "OTs",
+      "BCBAs",
+      "RBTs",
+    ],
+    stats: [
+      { value: "100%", label: "Certified SPED roles filled at IDEA Public Charter School" },
+      { value: "100%", label: "Retention of the educators placed at IDEA" },
+      { value: "4", label: "Qualified candidates per opening at Cesar Chavez Public Charter School" },
+      { value: "2 wks", label: "From request to filled at IDEA" },
+    ],
+    steps: [
+      {
+        n: "01",
+        title: "Free 30-minute discovery call",
+        body: "We map your open roles, campuses, and OSSE credentialing requirements. Both of our DC partnerships started here, and you leave with a straight read on whether we can help.",
+      },
+      {
+        n: "02",
+        title: "We source, screen, and credential",
+        body: "We recruit against your roles, interview every candidate ourselves, and complete the District's required criminal background check, FBI fingerprinting, and child-protection and sex-offender registry screening, plus OSSE credential verification for the specific role.",
+      },
+      {
+        n: "03",
+        title: "You choose from a vetted shortlist",
+        body: "Your leaders interview fully credentialed candidates. At Cesar Chavez that has meant an average of four qualified people per opening — a choice, not a scramble.",
+      },
+      {
+        n: "04",
+        title: "We stay through the placement",
+        body: "We stay involved through onboarding and the life of the placement, and any temp converts to your permanent hire at no fee.",
+      },
+    ],
+    verify: [
+      "District-required criminal background check and FBI fingerprinting",
+      "Child-protection register and National Sex Offender Registry screening",
+      "OSSE credential verification for the specific teaching role",
+      "DC Health licensure verified for SLPs, OTs, PTs, and school psychologists",
+      "TB test and vaccination documentation",
+      "Reference checks with prior schools and supervisors",
+      "Every clearance tracked and expiration-flagged in our credentialing system",
+    ],
+    sections: [
+      {
+        heading: "What staffing a DC school actually involves",
+        body: "The District credentials educators through OSSE, and school employment is gated before anyone works around students: a criminal background check with FBI fingerprinting, child-protection and sex-offender registry screening, and — for certificated roles — an OSSE credential matched to the position. Licensed clinicians need DC Health licensure in their discipline on top of that. The file runs several documents deep per person, and assembling it after a vacancy opens is how a school loses a quarter.\n\nDC's labor market has a shape you do not find in a state. It is a single jurisdiction wedged between Maryland and Virginia, which means the educator living twenty minutes from your building may hold credentials in a different jurisdiction entirely, and reciprocity is the first question rather than the last. The candidate pool is genuinely regional; the credentialing is not.\n\nThe sector is also unusually charter-heavy. Roughly half of DC's public school students attend public charters, spread across dozens of independent LEAs that each recruit on their own — most without a central district HR apparatus behind them. That structure multiplies the number of employers fishing the same water and puts small schools in direct competition with DCPS for the same special education teachers, aides, and long-term subs.",
+      },
+      {
+        heading: "The record is in DC: IDEA and Cesar Chavez",
+        body: "Two of our four published case studies are DC public charter schools, both partners since 2022.\n\nIDEA Public Charter School was not only short on special education teachers, substitutes, and one-on-one aides — it was fighting an uphill reputation in the local talent market, and the agencies already under contract could not move the needle. Rather than recruit around the problem, we built a campaign around the real experiences of the contractors we had placed there, and let satisfied educators tell the story. The result: 100% of open certified special education teacher roles filled, 100% retention of the educators placed, and roles filled within two weeks of the request. The partnership has held since. The full case study is at /case-studies/idea-public-charter-school.\n\nCesar Chavez Public Charter School runs a rigorous college-prep program with a public-policy curriculum for 414 students in grades 6–12 — an environment that demands well-matched educators, not whoever is available. We built a dedicated pipeline and sourced deep enough to present, on average, four qualified candidates per opening across dedicated aides, special education teachers, and subject-certified long-term substitutes. The full case study is at /case-studies/cesar-chavez-public-charter-school.",
+      },
+      {
+        heading: "What we screen for in DC candidates",
+        body: "Clearances get a candidate to the starting line; the screen decides who reaches your shortlist. It is matched to the role: special education teachers on IEP writing, meeting experience, and behavior-plan implementation; dedicated and one-on-one aides on de-escalation, personal-care comfort, and IEP data collection; subject-certified long-term substitutes on holding a course through a full marking period rather than covering a day; clinicians on DC licensure and multi-campus caseload management.\n\nThe methodology was built by our founder, Robert Flom, a former K-12 teacher — which is why the interview sounds like a case review of the job rather than a personality screen. Credentials are verified for the specific role, not read off a résumé.",
+      },
+      {
+        heading: "One DC client per region, and a pipeline that is yours",
+        body: "In a charter sector this dense, the agency staffing your school is very likely presenting the same candidate to the school competing with you for the same families. We removed that conflict: one client per region. Sign with us for your part of the District and we will not supply a competing LEA — the teachers, aides, and clinicians we recruit there are presented to you alone.\n\nThat is the mechanism behind the Chavez number. Four qualified candidates per opening is not a sourcing trick; it is what happens when a pipeline is built for one school instead of auctioned across five. And every placement is temp-to-perm at no cost — evaluate a professional in your building, then hire them permanently with no conversion fee.",
+      },
+      {
+        heading: "Clearances completed before the interview",
+        body: "Our automated credentialing system completes the District's background check, fingerprinting, and registry screening up front, verifies the OSSE credential for the specific role, confirms DC Health licensure for clinicians, and tracks every document — TB tests and vaccination records included — flagging anything approaching expiration. Files stay audit-ready for the life of the placement, which matters to charter boards and LEA compliance officers alike.\n\nThat system is the mechanism behind the speed: typical time-to-hire runs roughly half the norm because candidates reach your interview with complete files. At IDEA, that meant two weeks from request to filled.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Does FSG staff Washington, DC schools?",
+        a: "Yes. Two DC public charter schools have been partners since 2022: IDEA Public Charter School, where we filled 100% of open certified special education roles with 100% retention and a two-week request-to-filled time, and Cesar Chavez Public Charter School, where we present an average of four qualified candidates per opening.",
+      },
+      {
+        q: "Do you work with DC public charter schools?",
+        a: "Yes — both of our published DC case studies are public charter LEAs. We understand the reality of recruiting without a central district HR office behind you, and of competing with DCPS and dozens of other charter LEAs for the same special education teachers, aides, and long-term substitutes.",
+      },
+      {
+        q: "Do candidates arrive with DC clearances complete?",
+        a: "Yes. Our credentialing system completes and tracks the District's criminal background check and FBI fingerprinting, child-protection and sex-offender registry screening, OSSE credential verification for the specific role, DC Health licensure for clinicians, and TB and vaccination documentation before any candidate reaches your shortlist.",
+      },
+      {
+        q: "Will you also staff the charter school competing with ours?",
+        a: "No. We work with one client per region, so the candidates we recruit in your part of the District are presented only to you. In a sector where roughly half of public school students attend charters and dozens of LEAs recruit independently, that exclusivity is most of the point.",
+      },
+      {
+        q: "How fast can you fill DC openings?",
+        a: "Automated credentialing cuts typical time-to-hire roughly in half because the paperwork is complete before interviews begin. At IDEA Public Charter School, roles were filled within two weeks of the request. We quote realistic per-role timelines on the free 30-minute discovery call.",
+      },
+      {
+        q: "Can you help a DC school with a reputation problem in the talent market?",
+        a: "That is precisely what happened at IDEA. The school was not only short-staffed, it was struggling to attract candidates at all. We built a recruiting campaign around the documented experiences of contractors already placed there — letting satisfied educators reframe the school — alongside digital and grassroots advertising and on-site information sessions. Every open certified special education role was filled, and every placed educator stayed.",
+      },
+      {
+        q: "Do you place educators credentialed in Maryland or Virginia?",
+        a: "The DC-area candidate pool is genuinely regional, so reciprocity is a routine part of our screen rather than an afterthought. We verify what a candidate actually holds and what the District requires for the specific role before they reach your shortlist, so a promising résumé never turns into a credentialing surprise after you have made a decision.",
+      },
+    ],
+    related: [
+      { label: "Maryland Special Education Staffing", slug: "maryland-special-education-staffing" },
+      { label: "Special Education Staffing", slug: "special-education-staffing" },
+      { label: "Paraprofessional Staffing", slug: "paraprofessional-staffing" },
+      { label: "Substitute Teacher Staffing", slug: "substitute-teacher-staffing" },
+    ],
+  },
+  {
+    slug: "colorado-education-staffing",
+    eyebrow: "Education staffing · Colorado",
+    h1: "Colorado Education Staffing",
+    metaTitle: "Colorado Education Staffing Agency",
+    metaDescription:
+      "Staffing Colorado schools with CDE-licensed teachers, paraprofessionals, and clinicians — and converting contract staff to permanent with no buyout fee. Lotus School for Excellence, Aurora.",
+    hero: "We staff Colorado schools with CDE-licensed teachers, paraprofessionals, substitutes, and clinicians — and when you want to keep one, the conversion costs nothing. Lotus School for Excellence in Aurora put that in writing.",
+    photo: PHOTOS[1],
+    roles: [
+      "Special education teachers",
+      "Paraprofessionals",
+      "Day-to-day and long-term substitutes",
+      "School psychologists",
+      "SLPs",
+      "OTs",
+      "PTs",
+      "BCBAs",
+      "RBTs",
+      "Education support staff",
+    ],
+    stats: [
+      { value: "$0", label: "Temp-to-perm conversion fee — no buyout when you keep someone" },
+      { value: "½", label: "Automated credentialing cuts typical time-to-hire roughly in half" },
+      { value: "12 yrs", label: "Staffing K-12 schools, founded by a former classroom teacher" },
+      { value: "1", label: "Client per region — your pipeline is not shared with a competing school" },
+    ],
+    steps: [
+      {
+        n: "01",
+        title: "Free 30-minute discovery call",
+        body: "We map your open roles, buildings, and Colorado licensure requirements, and you leave with a straight read on whether we can help. No cost, no obligation.",
+      },
+      {
+        n: "02",
+        title: "We source, screen, and credential",
+        body: "We recruit against your roles, interview every candidate ourselves, and complete Colorado's fingerprint-based background check, CDE licensure verification for the specific role, and clinician licensure checks before you see a name.",
+      },
+      {
+        n: "03",
+        title: "You choose from a vetted shortlist",
+        body: "Your administrators interview fully credentialed candidates and make the final call on every hire.",
+      },
+      {
+        n: "04",
+        title: "We stay through the placement",
+        body: "We stay involved through onboarding and the life of the placement — and if you want to keep someone, they convert to your permanent employee with no buyout fee.",
+      },
+    ],
+    verify: [
+      "Colorado fingerprint-based criminal background check",
+      "CDE licensure verified for the specific teaching or special services role",
+      "State licensure verified for SLPs, OTs, PTs, and school psychologists",
+      "TB test and vaccination documentation",
+      "Reference checks with prior schools and supervisors",
+      "Role-specific skills screening",
+      "Every clearance tracked and expiration-flagged in our credentialing system",
+    ],
+    sections: [
+      {
+        heading: "What staffing a Colorado school actually involves",
+        body: "Colorado licenses educators through the Department of Education, and school employment is gated before anyone works around students: a fingerprint-based criminal background check, CDE licensure or authorization matched to the specific role, and — for special services providers like school psychologists, SLPs, OTs, and PTs — the discipline-specific credential on top of it. The file runs several documents deep per person, and assembling it after the vacancy opens is how a school loses a quarter.\n\nThe Front Range concentrates most of the state's demand into a corridor where Denver, Aurora, Jefferson County, Cherry Creek, and a dense charter sector all recruit from the same metro pool — while districts on the Western Slope and the Eastern Plains compete for educators who have to be willing to relocate. It is effectively two different hiring problems inside one licensure regime, and a national vendor treating Colorado as a single territory tends to serve neither well.\n\nThe shortage categories are the familiar ones, sharpened by cost of living along the corridor: special education certifications, related-services clinicians, and reliable day-to-day substitutes.",
+      },
+      {
+        heading: "Keeping the person you want, without a buyout",
+        body: "Most staffing contracts penalize a school for wanting to keep someone. You bring in a contract educator, they work out, and converting them to staff triggers a buyout or a percentage of first-year salary. That fee is why schools hesitate to try someone at all.\n\nWe do not charge it. Every placement is temp-to-perm at no cost — evaluate a professional in your building through a real marking period, then hire them permanently with no conversion fee. Kelly Hamm, HR Director at Lotus School for Excellence in Aurora, put it plainly in a letter she wrote us in October 2024: the school was thrilled to transition a contract employee to permanent status without a buyout fee. That letter, and seven others from named school leaders, are published in full at /references.",
+      },
+      {
+        heading: "What we screen for in Colorado candidates",
+        body: "Clearances get a candidate to the starting line; the screen decides who reaches your shortlist. It is matched to the role: special education teachers on IEP writing, meeting experience, and behavior-plan implementation; paraprofessionals on de-escalation, personal-care comfort, and IEP data collection; substitutes on classroom management under ambiguity and a morning-of reliability record we verify with prior schools; clinicians on Colorado licensure and multi-building caseload management.\n\nThe methodology was built by our founder, Robert Flom, a former K-12 teacher — which is why the interview sounds like a case review of the job rather than a personality screen. Licensure is verified with the state for the specific role, not read off a résumé.",
+      },
+      {
+        heading: "One Colorado client per region",
+        body: "Along the Front Range, the agency staffing your school is very likely presenting the same candidate to the district competing with you for the same families. We removed that conflict: one client per region. Sign with us for your part of Colorado and we will not supply a competing school or district — the teachers, paras, and clinicians we recruit there are presented to you alone.\n\nWe also run school-supply and backpack drives for partner schools, because we staff the communities we work in, not just the payrolls.",
+      },
+      {
+        heading: "Clearances completed before the interview",
+        body: "Our automated credentialing system completes Colorado's fingerprint-based background check up front, verifies CDE licensure for the specific role, confirms discipline licensure for clinicians, and tracks every document — TB tests and vaccination records included — flagging anything approaching expiration. Files stay audit-ready for the life of the placement, which matters to charter boards and district compliance offices alike.\n\nThat system is the mechanism behind the speed: typical time-to-hire runs roughly half the norm because candidates reach your interview with complete files, and in past engagements we have placed certified special education teachers within two weeks.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Does FSG staff Colorado schools?",
+        a: "Yes. Lotus School for Excellence in Aurora is a Colorado client, and its HR Director wrote us a reference letter in October 2024 describing the experience as outstanding. That letter is published in full at /references.",
+      },
+      {
+        q: "What does it cost to hire one of your contract educators permanently in Colorado?",
+        a: "Nothing. Every placement is temp-to-perm at no cost — no buyout, no percentage of first-year salary. Lotus School for Excellence specifically cited that in their reference letter: they were able to transition a contract employee to permanent status without a buyout fee.",
+      },
+      {
+        q: "Do candidates arrive with Colorado clearances complete?",
+        a: "Yes. Our credentialing system completes and tracks Colorado's fingerprint-based criminal background check, CDE licensure verification for the specific role, discipline licensure for clinicians, and TB and vaccination documentation before any candidate reaches your shortlist.",
+      },
+      {
+        q: "Will you also staff the district competing with ours?",
+        a: "No. We work with one client per region, so the candidates we recruit in your part of Colorado are presented only to you. Along the Front Range, where several large districts and a dense charter sector recruit from one metro pool, that exclusivity is most of the point.",
+      },
+      {
+        q: "Do you staff outside the Denver metro?",
+        a: "Yes. Front Range hiring and Western Slope or Eastern Plains hiring are genuinely different problems — one is a crowded metro pool, the other requires candidates willing to relocate — and we scope them differently rather than treating the state as a single territory. We will tell you honestly on the discovery call what a given role looks like in your part of the state.",
+      },
+      {
+        q: "How fast can you fill Colorado openings?",
+        a: "Automated credentialing cuts typical time-to-hire roughly in half because the paperwork is complete before interviews begin, and certified special education teachers have been placed within two weeks in past engagements. We quote realistic per-role timelines on the free 30-minute discovery call.",
+      },
+    ],
+    quote: {
+      text: "We are thrilled that we can transition our contract employee to permanent status without a buyout fee. The experience has been outstanding.",
+      name: "Kelly Hamm",
+      role: "HR Director, Lotus School for Excellence (Aurora, CO)",
+    },
+    related: [
+      { label: "Special Education Staffing", slug: "special-education-staffing" },
+      { label: "Substitute Teacher Staffing", slug: "substitute-teacher-staffing" },
+      { label: "Education Staffing Agency Cost", slug: "education-staffing-agency-cost" },
+      { label: "K-12 Education Staffing", slug: "k12-education-staffing" },
+    ],
+  },
+  {
+    slug: "north-carolina-education-staffing",
+    eyebrow: "Education staffing · North Carolina",
+    h1: "North Carolina Education Staffing",
+    metaTitle: "North Carolina Education Staffing Agency",
+    metaDescription:
+      "Staffing North Carolina schools with NCDPI-licensed teachers, paraprofessionals, and clinicians. Charlotte-Mecklenburg Schools is a Focused Staffing Group client.",
+    hero: "We staff North Carolina schools with NCDPI-licensed teachers, paraprofessionals, substitutes, and clinicians — screened by a firm founded by a former K-12 teacher. Charlotte-Mecklenburg Schools, one of the largest districts in the state, is a client.",
+    photo: PHOTOS[0],
+    roles: [
+      "Special education teachers",
+      "Paraprofessionals",
+      "Day-to-day and long-term substitutes",
+      "School psychologists",
+      "SLPs",
+      "OTs",
+      "PTs",
+      "BCBAs",
+      "RBTs",
+      "Education support staff",
+    ],
+    stats: [
+      { value: "12 yrs", label: "Staffing K-12 schools, founded by a former classroom teacher" },
+      { value: "½", label: "Automated credentialing cuts typical time-to-hire roughly in half" },
+      { value: "$0", label: "Temp-to-perm conversion fee" },
+      { value: "1", label: "Client per region — your pipeline is not shared with a competing district" },
+    ],
+    steps: [
+      {
+        n: "01",
+        title: "Free 30-minute discovery call",
+        body: "We map your open roles, schools, and North Carolina licensure requirements, and you leave with a straight read on whether we can help. No cost, no obligation.",
+      },
+      {
+        n: "02",
+        title: "We source, screen, and credential",
+        body: "We recruit against your roles, interview every candidate ourselves, and complete criminal background checks, NCDPI licensure verification for the specific role, and clinician licensure checks before you see a name.",
+      },
+      {
+        n: "03",
+        title: "You choose from a vetted shortlist",
+        body: "Your administrators interview fully credentialed candidates and make the final call on every hire.",
+      },
+      {
+        n: "04",
+        title: "We stay through the placement",
+        body: "We stay involved through onboarding and the life of the placement, and any temp converts to your permanent hire at no fee.",
+      },
+    ],
+    verify: [
+      "Full criminal background check",
+      "NCDPI licensure verified for the specific teaching role",
+      "State licensure verified for SLPs, OTs, PTs, and school psychologists",
+      "TB test and vaccination documentation",
+      "Reference checks with prior schools and supervisors",
+      "Role-specific skills screening",
+      "Every clearance tracked and expiration-flagged in our credentialing system",
+    ],
+    sections: [
+      {
+        heading: "What staffing a North Carolina school actually involves",
+        body: "North Carolina licenses educators through the Department of Public Instruction, and school employment is gated before anyone works around students: a criminal background check, an NCDPI license or permit matched to the specific role, and — for school psychologists, SLPs, OTs, and PTs — the discipline-specific credential on top of it. The file runs several documents deep per person, and assembling it after a vacancy opens is how a school loses a quarter.\n\nThe state's hiring problem is really several problems. Charlotte and the Triangle are large, fast-growing metro markets where districts compete against each other and against a substantial charter sector for the same candidates. Rural districts in the east and the mountain counties face the opposite issue: a shallow local pool and candidates who would need to relocate. A vendor that treats North Carolina as one territory tends to serve the metros adequately and the rural districts not at all.\n\nThe categories that run shortest are the familiar ones: special education licensure, related-services clinicians, and reliable day-to-day substitute coverage.",
+      },
+      {
+        heading: "What we screen for in North Carolina candidates",
+        body: "Clearances get a candidate to the starting line; the screen decides who reaches your shortlist. It is matched to the role: special education teachers on IEP writing, meeting experience, and behavior-plan implementation; paraprofessionals on de-escalation, personal-care comfort, and IEP data collection; substitutes on classroom management under ambiguity and a morning-of reliability record we verify with prior schools; clinicians on North Carolina licensure and multi-building caseload management.\n\nThe methodology was built by our founder, Robert Flom, a former K-12 teacher — which is why the interview sounds like a case review of the job rather than a personality screen. Licensure is verified with the state for the specific role, not read off a résumé.",
+      },
+      {
+        heading: "One North Carolina client per region",
+        body: "In a metro like Charlotte or the Triangle, the agency staffing your schools is very likely presenting the same candidate to the district competing with you. We removed that conflict: one client per region. Sign with us for your part of North Carolina and we will not supply a competing school or district — the teachers, paras, and clinicians we recruit there are presented to you alone.\n\nCharlotte-Mecklenburg Schools, one of the largest districts in the state, is a Focused Staffing Group client. And every placement is temp-to-perm at no cost — evaluate a professional in your building, then hire them permanently with no conversion fee.",
+      },
+      {
+        heading: "Clearances completed before the interview",
+        body: "Our automated credentialing system completes background checks up front, verifies NCDPI licensure for the specific role, confirms discipline licensure for clinicians, and tracks every document — TB tests and vaccination records included — flagging anything approaching expiration. Files stay audit-ready for the life of the placement, which matters to charter boards and district compliance offices alike.\n\nThat system is the mechanism behind the speed: typical time-to-hire runs roughly half the norm because candidates reach your interview with complete files, and in past engagements we have placed certified special education teachers within two weeks.",
+      },
+      {
+        heading: "What our clients put in writing",
+        body: "We would rather show you letters than adjectives. Eight school leaders — superintendents, HR directors, principals, and CEOs — have written references for us, and we publish them in full, with names and schools attached, at /references.\n\nThe outcomes behind them are documented too: 120+ roles across 13+ role types at Odyssey Public Charter School in Delaware with a 95% day-to-day substitute fill rate; 100% of certified special education roles filled with 100% retention at IDEA Public Charter School in Washington, DC; four qualified candidates per opening at Cesar Chavez Public Charter School. Those case studies are at /case-studies.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Does FSG staff North Carolina schools?",
+        a: "Yes. Charlotte-Mecklenburg Schools, one of the largest districts in the state, is a Focused Staffing Group client. We staff special education teachers, paraprofessionals, substitutes, and related-services clinicians across the state.",
+      },
+      {
+        q: "Do candidates arrive with North Carolina clearances complete?",
+        a: "Yes. Our credentialing system completes and tracks the criminal background check, NCDPI licensure verification for the specific role, discipline licensure for clinicians, and TB and vaccination documentation before any candidate reaches your shortlist.",
+      },
+      {
+        q: "Will you also staff the district competing with ours?",
+        a: "No. We work with one client per region, so the candidates we recruit in your part of North Carolina are presented only to you. In the Charlotte and Triangle markets, where several large districts and a substantial charter sector recruit from one pool, that exclusivity is most of the point.",
+      },
+      {
+        q: "Do you staff rural North Carolina districts?",
+        a: "Yes, and we scope them differently. A shallow local pool with candidates who would need to relocate is a different problem from a crowded metro market, and pretending otherwise is how vendors overpromise. We will tell you honestly on the discovery call what a given role looks like in your county.",
+      },
+      {
+        q: "What does it cost to hire one of your contract educators permanently?",
+        a: "Nothing. Every placement is temp-to-perm at no cost — no buyout and no percentage of first-year salary — so you can evaluate a professional in your building through a real marking period before committing.",
+      },
+      {
+        q: "How fast can you fill North Carolina openings?",
+        a: "Automated credentialing cuts typical time-to-hire roughly in half because the paperwork is complete before interviews begin, and certified special education teachers have been placed within two weeks in past engagements. We quote realistic per-role timelines on the free 30-minute discovery call.",
+      },
+    ],
+    related: [
+      { label: "Special Education Staffing", slug: "special-education-staffing" },
+      { label: "Paraprofessional Staffing", slug: "paraprofessional-staffing" },
+      { label: "Substitute Teacher Staffing", slug: "substitute-teacher-staffing" },
+      { label: "School District Staffing Vendor", slug: "school-district-staffing-vendor" },
+    ],
+  },
 ];
 
 export function getServicePage(slug: string) {

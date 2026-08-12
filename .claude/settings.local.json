@@ -93,7 +93,17 @@
       "Bash(dig +short www.focusedu-staffing.com)",
       "Bash(grep -n \"NEW only\\\\|pending-\\\\|skip\" /Users/robertflom/.claude/scheduled-tasks/autoseo-process-and-publish/SKILL.md | head -20)",
       "Bash(node -e 'const p=require\\(\"./src/lib/posts-data.json\"\\);console.log\\(JSON.stringify\\({...p[0],contentHtml:p[0].contentHtml.slice\\(0,600\\)+\"...[TRUNC]\"},null,2\\)\\)')",
-      "Bash(node /private/tmp/claude-501/-Users-robertflom-Desktop-Focused-Sites/55665275-013d-49b4-bd14-9fb206c377d1/scratchpad/build.js)"
+      "Bash(node /private/tmp/claude-501/-Users-robertflom-Desktop-Focused-Sites/55665275-013d-49b4-bd14-9fb206c377d1/scratchpad/build.js)",
+      "mcp__claude-in-chrome__list_connected_browsers",
+      "mcp__claude-in-chrome__tabs_context_mcp",
+      "mcp__claude-in-chrome__navigate",
+      "mcp__claude-in-chrome__computer",
+      "mcp__claude-in-chrome__get_page_text",
+      "mcp__claude-in-chrome__find",
+      "mcp__claude-in-chrome__read_page",
+      "mcp__claude-in-chrome__tabs_close_mcp",
+      "Bash(grep -oE 'url: *`?\\\\$\\\\{[A-Za-z]+\\\\}?/[a-z0-9-]*' src/app/sitemap.ts)",
+      "Bash(grep -oE '\"[A-Z][^\"]{15,90}\"' src/app/references/page.tsx)"
     ],
     "defaultMode": "bypassPermissions"
   }

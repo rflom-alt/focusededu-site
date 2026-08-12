@@ -6,6 +6,12 @@
       "slug": "partnering-for-success-school-district-staffing-partners-2",
       "reason": "Duplicate of feed item 2853068, published 2026-08-07 at /blog/partnering-for-success-school-district-staffing-partners. AutoSEO regenerated the same title and topic with a -2 slug.",
       "decidedOn": "2026-08-11"
+    },
+    {
+      "id": "2948024",
+      "slug": "how-to-solve-teacher-shortages-strategic-district-solutions-for-2026",
+      "reason": "Third article on the same teacher-shortage topic. Duplicative of 2903047 (/blog/teacher-shortage-solutions-for-schools-2026-strategic-guide) and 2877501 (/blog/how-to-solve-teacher-shortages-in-schools-a-2026-district-guide). Published 2026-08-12 and pulled the same day at Robert's direction to thin the cluster; URL 301s to the 2903047 guide since it was briefly live and submitted to IndexNow.",
+      "decidedOn": "2026-08-12"
     }
   ]
 }

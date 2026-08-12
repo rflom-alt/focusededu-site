@@ -52,6 +52,14 @@ const nextConfig: NextConfig = {
         destination: "/blog",
         permanent: true,
       },
+      // Retired: third AutoSEO article on the same teacher-shortage topic. Was
+      // live briefly on 2026-08-12 and submitted to IndexNow, so point the URL
+      // at the guide we kept rather than letting it 404.
+      {
+        source: "/blog/how-to-solve-teacher-shortages-strategic-district-solutions-for-2026",
+        destination: "/blog/teacher-shortage-solutions-for-schools-2026-strategic-guide",
+        permanent: true,
+      },
     ];
   },
 };

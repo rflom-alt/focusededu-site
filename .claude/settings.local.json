@@ -91,7 +91,9 @@
       "Bash(node -e \"const p=require\\('./src/lib/posts-data.json'\\);console.log\\(p.some\\(x=>x.slug==='the-definitive-guide-to-k-12-teacher-staffing-building-resilient-schools-in-2026'\\)\\)\")",
       "Bash(node /private/tmp/claude-501/-Users-robertflom-Desktop-Focused-Sites/9ff2c074-b475-4b88-a45d-2f0aef0e1388/scratchpad/build.js)",
       "Bash(dig +short www.focusedu-staffing.com)",
-      "Bash(grep -n \"NEW only\\\\|pending-\\\\|skip\" /Users/robertflom/.claude/scheduled-tasks/autoseo-process-and-publish/SKILL.md | head -20)"
+      "Bash(grep -n \"NEW only\\\\|pending-\\\\|skip\" /Users/robertflom/.claude/scheduled-tasks/autoseo-process-and-publish/SKILL.md | head -20)",
+      "Bash(node -e 'const p=require\\(\"./src/lib/posts-data.json\"\\);console.log\\(JSON.stringify\\({...p[0],contentHtml:p[0].contentHtml.slice\\(0,600\\)+\"...[TRUNC]\"},null,2\\)\\)')",
+      "Bash(node /private/tmp/claude-501/-Users-robertflom-Desktop-Focused-Sites/55665275-013d-49b4-bd14-9fb206c377d1/scratchpad/build.js)"
     ],
     "defaultMode": "bypassPermissions"
   }

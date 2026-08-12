@@ -1,5 +1,6 @@
 import { Plus } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { linkifyPaths } from "@/components/seo/LinkifyPaths";
 
 export type QA = { q: string; a: string };
 
@@ -27,7 +28,8 @@ export function FAQ({
                   aria-hidden
                 />
               </summary>
-              <p className="mt-3 max-w-2xl leading-relaxed text-slate-ink">{it.a}</p>
+              {/* Raw string still feeds the FAQPage JSON-LD; only the render is linkified. */}
+              <p className="mt-3 max-w-2xl leading-relaxed text-slate-ink">{linkifyPaths(it.a)}</p>
             </details>
           ))}
         </div>

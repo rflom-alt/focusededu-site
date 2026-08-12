@@ -10,6 +10,7 @@ import { Reveal } from "@/components/motion/Reveal";
 import { FAQ } from "@/components/sections/FAQ";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { linkifyPaths } from "@/components/seo/LinkifyPaths";
 
 type Params = { params: Promise<{ service: string }> };
 
@@ -159,7 +160,7 @@ export default async function ServicePageRoute({ params }: Params) {
                   </h2>
                   {s.body.split("\n\n").map((para, j) => (
                     <p key={j} className="mt-4 text-lg leading-relaxed text-slate-ink">
-                      {para}
+                      {linkifyPaths(para)}
                     </p>
                   ))}
                 </div>

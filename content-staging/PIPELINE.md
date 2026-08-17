@@ -52,13 +52,24 @@ Publish in ascending feedId order (oldest first). All articles published in the 
 3. Run `pnpm build`. If it fails: git checkout -- src/lib/posts-data.json, restore ALL pending files removed this run, commit only Part A work, and report the failure. Do NOT push a broken build.
 4. Commit all changes and push to main. For one article: "Publish: <title> (AutoSEO pipeline)". For a batch: "Publish <n> articles (AutoSEO pipeline catch-up)" with the titles listed in the body. End the message with "Co-Authored-By: Claude <noreply@anthropic.com>".
 5. Verify live — check EVERY slug published this run for HTTP 200, re-running every ~20s until they all pass (Vercel usually needs 1-3 min, allow up to 5). Local DNS for this domain is unreliable, so force the IP.
-   SHELL WARNING — the run shell is zsh, which does NOT word-split unquoted variables. `S="a b c"; for s in $S` iterates ONCE with all three joined, so curl receives a URL containing spaces and returns 000 for every attempt. That looks identical to a dead deploy and has already caused one false "never reached 200" report (2026-08-11). Never build the slug loop from an unquoted variable: put the slugs as a literal list in the `for`, or feed them in with `while read`. Verified working form:
+   SHELL WARNING — the run shell is zsh, which does NOT word-split unquoted variables. `S="a b c"; for s in $S` iterates ONCE with all three joined, so curl receives a URL containing spaces and returns 000 for every attempt. That looks identical to a dead deploy and has already caused one false "never reached 200" report (2026-08-11). Never build the slug loop from an unquoted variable: put the slugs as a literal list in the `for`, or feed them in with `while read` using the guarded form below. Verified working form:
      for s in slug-one slug-two slug-three; do
        C=$(curl -s -o /dev/null -w "%{http_code}" --max-time 25 \
          --resolve www.focusedu-staffing.com:443:216.198.79.1 \
          "https://www.focusedu-staffing.com/blog/$s")
        echo "$C $s"
      done
+   TRAILING-NEWLINE TRAP — `while read -r s; do …; done < slugs.txt` silently DROPS the last line when the file has no final newline, which is exactly what `fs.writeFileSync(path, arr.join("\n"))` produces. The loop then reports a clean sweep over n-1 slugs and the nth is never checked — it looks like a pass, not an error. This bit on 2026-08-17 in the Part C sweep, hiding one 404 and one 308. Fix BOTH ends:
+     · write the file with a trailing newline: `arr.join("\n") + "\n"`
+     · and guard the loop so a partial last line still runs:
+         while read -r s || [ -n "$s" ]; do
+           [ -z "$s" ] && continue
+           C=$(curl -s -o /dev/null -w "%{http_code}" --max-time 25 \
+             --resolve www.focusedu-staffing.com:443:216.198.79.1 \
+             "https://www.focusedu-staffing.com/blog/$s")
+           echo "$C $s"
+         done < slugs.txt
+   After ANY file-fed loop, count the iterations and assert the count equals the expected slug count before trusting the result. An unasserted sweep is not evidence of coverage.
    Read the codes precisely — they are not interchangeable:
    · 200 = live, done.
    · 404 = the deploy landed but that post is missing. A real problem: check src/lib/posts-data.json before doing anything else.
@@ -67,6 +78,6 @@ Publish in ascending feedId order (oldest first). All articles published in the 
 6. Ping IndexNow ONCE for the batch: POST to https://api.indexnow.org/indexnow with a JSON body where host is "www.focusedu-staffing.com", key is "13e812b44dda67b964df4b0f8cf574a3", keyLocation is "https://www.focusedu-staffing.com/13e812b44dda67b964df4b0f8cf574a3.txt", and urlList is every published URL this run. Expect HTTP 200 or 202.
 
 == PART C: AutoSEO connection health ==
-After publishing, check how many feed item URLs are still missing from the live site: for each feed item NOT in skipped-ids.json, curl its slug at https://www.focusedu-staffing.com/blog/<slug> and count non-200s. This is the number AutoSEO's own check sees (skipped items will 404 forever by design, so report them as a separate figure rather than folding them into the health count). Report it. If it is still above 3 after a catch-up run, say so explicitly — the "disconnected" warning will persist until it comes down.
+After publishing, check how many feed item URLs are still missing from the live site: for each feed item NOT in skipped-ids.json, curl its slug at https://www.focusedu-staffing.com/blog/<slug> and count non-200s. Print a checked-count alongside the non-200 count and assert it equals the number of non-skipped feed items — this sweep is the one most likely to be fed from a file, so it is where the trailing-newline trap above actually bites. This is the number AutoSEO's own check sees (skipped items will 404 forever by design, so report them as a separate figure rather than folding them into the health count). Report it. If it is still above 3 after a catch-up run, say so explicitly — the "disconnected" warning will persist until it comes down.
 
 Report: which articles were newly staged, which were published (live URLs + commit hash), the remaining queue depth Q, and the Part C missing-URL count. If the feed is unreachable, report that and stop gracefully.

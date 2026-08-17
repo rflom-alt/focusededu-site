@@ -103,7 +103,20 @@
       "mcp__claude-in-chrome__read_page",
       "mcp__claude-in-chrome__tabs_close_mcp",
       "Bash(grep -oE 'url: *`?\\\\$\\\\{[A-Za-z]+\\\\}?/[a-z0-9-]*' src/app/sitemap.ts)",
-      "Bash(grep -oE '\"[A-Z][^\"]{15,90}\"' src/app/references/page.tsx)"
+      "Bash(grep -oE '\"[A-Z][^\"]{15,90}\"' src/app/references/page.tsx)",
+      "mcp__6aa37da4-2c64-4a6e-add4-49ac7dc397dc__create_label",
+      "mcp__6aa37da4-2c64-4a6e-add4-49ac7dc397dc__list_labels",
+      "mcp__6aa37da4-2c64-4a6e-add4-49ac7dc397dc__search_threads",
+      "Bash(node -e \"const f=require\\('/private/tmp/claude-501/-Users-robertflom-Desktop-Focused-Sites/7e6fb4aa-7ca8-43a7-8a99-d4b66de00b6c/scratchpad/feed.json'\\); console.log\\('items:',f.items.length\\); f.items.forEach\\(i=>console.log\\(i.id, i.url.split\\('/'\\).pop\\(\\)\\)\\)\")",
+      "Bash(node /private/tmp/claude-501/-Users-robertflom-Desktop-Focused-Sites/2f883443-065f-4eda-be78-76e9ec589e4b/scratchpad/assemble.js)",
+      "Bash(node -e \"const p=require\\('./src/lib/posts-data.json'\\).filter\\(x=>x.iso>='2026-08-03'\\);const c={};p.forEach\\(a=>c[a.iso]=\\(c[a.iso]||0\\)+1\\);Object.entries\\(c\\).sort\\(\\).forEach\\(\\([k,v]\\)=>console.log\\('  '+k+'  '+'#'.repeat\\(v\\)+' '+v\\)\\);\")",
+      "Bash(grep -rn '/blog/[a-z0-9-]\\\\{8,\\\\}' src --include='*.tsx' --include='*.ts')",
+      "Bash(grep -n \"export function\\\\|export const\" src/lib/article-meta.ts && echo \"=== extractTopics body ===\" && sed -n \"/export function extractTopics/,/^}/p\" src/lib/article-meta.ts)",
+      "Bash(cp /tmp/simrel.mjs ./simrel.mjs)",
+      "Bash(sed -i '' \"s#'./src/lib/posts.ts'#'./src/lib/posts.ts'#\" simrel.mjs)",
+      "Bash(npx tsx *)",
+      "Bash(sed -i '' 's/const mine = TAGS_BY_SLUG.get\\(post.slug\\) ?? new Set<string>\\(\\);/const mine = TAGS_BY_SLUG.get\\(post.slug\\) ?? new Map<string, number>\\(\\);/' src/lib/posts.ts)",
+      "Bash(sed -i '' 's/\\\\.filter\\(\\(c\\) => c.shared > 0\\)/.filter\\(\\(c\\) => c.score > 0\\)/' src/lib/posts.ts)"
     ],
     "defaultMode": "bypassPermissions"
   }

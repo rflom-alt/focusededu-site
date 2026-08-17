@@ -60,6 +60,27 @@ const nextConfig: NextConfig = {
         destination: "/blog/teacher-shortage-solutions-for-schools-2026-strategic-guide",
         permanent: true,
       },
+      // Consolidated 2026-08-17. AutoSEO produced several articles per topic
+      // that targeted the same search intent under different titles — not
+      // duplicate text (body similarity ~1%), but two URLs bidding for one
+      // query, which splits ranking signals. The surviving URL in each pair is
+      // the longer or better-linked one, and absorbed the other's unique FAQs.
+      {
+        source: "/blog/bcba-staffing-for-schools-the-2026-strategic-district-resource",
+        destination: "/blog/bcba-staffing-for-schools-a-strategic-guide-for-2026",
+        permanent: true,
+      },
+      {
+        source: "/blog/how-to-solve-teacher-shortages-in-schools-a-2026-district-guide",
+        destination: "/blog/teacher-shortage-solutions-for-schools-2026-strategic-guide",
+        permanent: true,
+      },
+      {
+        source: "/blog/strategic-long-term-substitute-teacher-placement-a-2026-district-guide",
+        destination:
+          "/blog/mastering-long-term-substitute-teacher-placement-a-strategic-guide-for-k-12-districts",
+        permanent: true,
+      },
     ];
   },
 };

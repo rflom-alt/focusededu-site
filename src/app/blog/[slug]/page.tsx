@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Check, ChevronDown } from "lucide-react";
-import { posts, getPost, categoryLabel } from "@/lib/posts";
+import { posts, getPost, categoryLabel, relatedPosts } from "@/lib/posts";
 import { edu } from "@/lib/content";
 import { author } from "@/lib/author";
 import { processArticle, type Heading } from "@/lib/article";
@@ -163,10 +163,8 @@ export default async function BlogPostPage({ params }: Params) {
         }
       : null;
 
-  // Related: same category first, topped up with the most recent others.
-  const sameCat = posts.filter((p) => p.slug !== post.slug && p.category === post.category);
-  const others = posts.filter((p) => p.slug !== post.slug && p.category !== post.category);
-  const related = [...sameCat, ...others].slice(0, 3).map((p) => ({
+  // Related: ranked by shared topic, biased toward posts that few others link to.
+  const related = relatedPosts(post).map((p) => ({
     title: p.title,
     date: p.date,
     excerpt: p.excerpt,

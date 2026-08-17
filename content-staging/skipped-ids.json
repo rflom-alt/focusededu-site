@@ -12,6 +12,24 @@
       "slug": "how-to-solve-teacher-shortages-strategic-district-solutions-for-2026",
       "reason": "Third article on the same teacher-shortage topic. Duplicative of 2903047 (/blog/teacher-shortage-solutions-for-schools-2026-strategic-guide) and 2877501 (/blog/how-to-solve-teacher-shortages-in-schools-a-2026-district-guide). Published 2026-08-12 and pulled the same day at Robert's direction to thin the cluster; URL 301s to the 2903047 guide since it was briefly live and submitted to IndexNow.",
       "decidedOn": "2026-08-12"
+    },
+    {
+      "id": "2853081",
+      "slug": "bcba-staffing-for-schools-the-2026-strategic-district-resource",
+      "reason": "Consolidated 2026-08-17 into /blog/bcba-staffing-for-schools-a-strategic-guide-for-2026. Same primary keyword and search intent as the surviving guide, which is longer and better linked; its unique FAQs were folded across. URL 301s to the survivor.",
+      "decidedOn": "2026-08-17"
+    },
+    {
+      "id": "2877501",
+      "slug": "how-to-solve-teacher-shortages-in-schools-a-2026-district-guide",
+      "reason": "Consolidated 2026-08-17 into /blog/teacher-shortage-solutions-for-schools-2026-strategic-guide, already the canonical target for this cluster after 2948024 was redirected there on 2026-08-12. Third article competing for the same intent. URL 301s to the survivor.",
+      "decidedOn": "2026-08-17"
+    },
+    {
+      "id": "2853070",
+      "slug": "strategic-long-term-substitute-teacher-placement-a-2026-district-guide",
+      "reason": "Consolidated 2026-08-17 into /blog/mastering-long-term-substitute-teacher-placement-a-strategic-guide-for-k-12-districts, which is older and carries more inbound links. Same long-term-substitute-placement intent. URL 301s to the survivor.",
+      "decidedOn": "2026-08-17"
     }
   ]
 }

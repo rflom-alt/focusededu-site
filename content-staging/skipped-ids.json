@@ -1,5 +1,5 @@
 {
-  "_comment": "Feed items deliberately NOT published. Part A must never re-stage these; Part C must exclude them from the missing-URL count. Add {id, slug, reason, decidedOn} when killing an item. IDs are STRINGS to match the feed's native type — compare with String(id) on both sides, never a bare Set.has(i.id).",
+  "_comment": "Feed items deliberately NOT published. Part A must never re-stage these; Part C must exclude them from the missing-URL count. Add {id, slug, reason, decidedOn} when killing an item. IDs are STRINGS to match the feed's native type \u2014 compare with String(id) on both sides, never a bare Set.has(i.id).",
   "skipped": [
     {
       "id": "2948023",
@@ -30,6 +30,42 @@
       "slug": "strategic-long-term-substitute-teacher-placement-a-2026-district-guide",
       "reason": "Consolidated 2026-08-17 into /blog/mastering-long-term-substitute-teacher-placement-a-strategic-guide-for-k-12-districts, which is older and carries more inbound links. Same long-term-substitute-placement intent. URL 301s to the survivor.",
       "decidedOn": "2026-08-17"
+    },
+    {
+      "id": "3214098",
+      "slug": "k-12-behavioral-health-staffing-agency-the-2026-strategic-guide",
+      "reason": "Duplicate intent. 100% title-topic overlap with /blog/behavioral-health-staffing-for-schools-the-2026-k-12-guide (published 2026-08-11) and with feed items 3074518 and 3102621. AutoSEO produced three near-identical behavioral-health-agency articles in one week.",
+      "decidedOn": "2026-08-23"
+    },
+    {
+      "id": "3102621",
+      "slug": "behavioral-health-professionals-2026-k-12-guide",
+      "reason": "Duplicate intent. 80% overlap with the published behavioral-health guide and with feed items 3214098/3074518. Same query, third rewrite.",
+      "decidedOn": "2026-08-23"
+    },
+    {
+      "id": "3074518",
+      "slug": "school-behavioral-health-staffing-agency-the-2026-guide",
+      "reason": "Duplicate intent. 100% overlap with feed item 3214098 and 75% with the published behavioral-health guide. Same query, second rewrite.",
+      "decidedOn": "2026-08-23"
+    },
+    {
+      "id": "3159007",
+      "slug": "school-based-clinician-staffing-2026-district-strategy-guide",
+      "reason": "Duplicate intent. Covered by the published behavioral-health guide plus /blog/bcba-staffing-for-schools-a-strategic-guide-for-2026 and the school-social-worker guide. 'Clinician staffing' is the same buyer and the same query set.",
+      "decidedOn": "2026-08-23"
+    },
+    {
+      "id": "3130842",
+      "slug": "special-education-resource-staffing-strategic-district-solutions-for-2026",
+      "reason": "Duplicate intent. 75% overlap with feed item 3048885 and 50% with /blog/recruiting-special-education-teachers-a-2026-strategic-guide. The SPED cluster already carries four articles.",
+      "decidedOn": "2026-08-23"
+    },
+    {
+      "id": "3048885",
+      "slug": "licensed-special-education-staffing-the-2026-district-guide",
+      "reason": "Duplicate intent. Overlaps feed item 3130842 and the published SPED recruiting guide plus /blog/the-2026-checklist-for-special-education-personnel-placement.",
+      "decidedOn": "2026-08-23"
     }
   ]
 }

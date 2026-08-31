@@ -1,5 +1,5 @@
 {
-  "_comment": "Feed items deliberately NOT published. Part A must never re-stage these; Part C must exclude them from the missing-URL count. Add {id, slug, reason, decidedOn} when killing an item. IDs are STRINGS to match the feed's native type \u2014 compare with String(id) on both sides, never a bare Set.has(i.id).",
+  "_comment": "Feed items deliberately NOT published. Part A must never re-stage these; Part C must exclude them from the missing-URL count. Add {id, slug, reason, decidedOn} when killing an item. IDs are STRINGS to match the feed's native type — compare with String(id) on both sides, never a bare Set.has(i.id).",
   "skipped": [
     {
       "id": "2948023",
@@ -66,6 +66,12 @@
       "slug": "licensed-special-education-staffing-the-2026-district-guide",
       "reason": "Duplicate intent. Overlaps feed item 3130842 and the published SPED recruiting guide plus /blog/the-2026-checklist-for-special-education-personnel-placement.",
       "decidedOn": "2026-08-23"
+    },
+    {
+      "id": "3523143",
+      "slug": "solve-your-evaluation-backlog-with-psychologist-staffing",
+      "reason": "Duplicate intent. Targets the same 'clear your IEP evaluation backlog' query as feed item 3523144 (/blog/managing-iep-backlogs-and-compensatory-services-guide), staged the same day — both carry a '5 steps to clear your evaluation backlog' section and both meta descriptions lead on 'evaluation backlog'. Its secondary angle, school psychologist staffing, is already covered by /blog/staffing-the-student-mental-health-crisis-counselors-psychologists-and-social-workers. Squeezed on both sides, so 3523144 was kept as the canonical backlog article.",
+      "decidedOn": "2026-08-31"
     }
   ]
 }

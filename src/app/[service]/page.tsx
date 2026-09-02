@@ -168,6 +168,15 @@ export default async function ServicePageRoute({ params }: Params) {
             ))}
           </div>
 
+          {page.richHtml && (
+            <Reveal>
+              <div
+                className="article-prose mt-14"
+                dangerouslySetInnerHTML={{ __html: page.richHtml }}
+              />
+            </Reveal>
+          )}
+
           {/* What we verify — concrete vetting checklist */}
           {page.verify && page.verify.length > 0 && (
             <Reveal>

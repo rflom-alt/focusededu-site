@@ -29,6 +29,8 @@ export type ServicePage = {
   verify?: string[];
   quote?: { text: string; name: string; role: string };
   sections: ServiceSection[];
+  /** Optional long-form, sourced body (HTML) rendered after `sections` — used by the rebuilt state pages. */
+  richHtml?: string;
   faqs: ServiceFaq[];
   related: ServiceLink[];
 };

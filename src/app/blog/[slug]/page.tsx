@@ -27,6 +27,16 @@ export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
 }
 
+// Generic candidate-advice posts that exist verbatim on the parent domain.
+// The parent (focused-staffing.com) is canonical; this copy stays live for
+// FocusedEDU readers but must not compete with it in search (Decision 8).
+const CROSS_DOMAIN_CANONICAL: Record<string, string> = {
+  "negotiating-salary-a-10-step-guide-to-getting-a-bigger-paycheck":
+    "https://www.focused-staffing.com/blog/negotiating-salary-a-10-step-guide-to-getting-a-bigger-paycheck",
+  "the-ultimate-guide-to-interview-preparation-tips-and-tricks-to-win":
+    "https://www.focused-staffing.com/blog/the-ultimate-guide-to-interview-preparation-tips-and-tricks-to-win",
+};
+
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params;
   const post = getPost(slug);
@@ -34,7 +44,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   return {
     title: post.metaTitle ?? post.title,
     description: post.excerpt,
-    alternates: { canonical: `/blog/${slug}` },
+    alternates: { canonical: CROSS_DOMAIN_CANONICAL[slug] ?? `/blog/${slug}` },
     openGraph: {
       title: post.metaTitle ?? post.title,
       description: post.excerpt,

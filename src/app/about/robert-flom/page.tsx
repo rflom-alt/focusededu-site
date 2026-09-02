@@ -8,7 +8,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { author, type AuthorLink } from "@/lib/author";
 
 export const metadata: Metadata = {
-  alternates: { canonical: "https://www.focusedu-staffing.com/about/robert-flom" },
+  alternates: { canonical: "https://www.focused-staffing.com/about/robert-flom" },
   title: "Robert Flom — Founder",
   description:
     "Meet Robert Flom, founder of Focused Staffing Group — a former K-12 teacher who built an education and behavioral-health staffing partner.",

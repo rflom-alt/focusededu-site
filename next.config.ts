@@ -81,6 +81,23 @@ const nextConfig: NextConfig = {
           "/blog/mastering-long-term-substitute-teacher-placement-a-strategic-guide-for-k-12-districts",
         permanent: true,
       },
+      // WordPress dated permalinks (/2024/01/22/<slug>/). The migration kept
+      // every slug and only dropped the date prefix, so the old URL maps to
+      // the new one by construction. Search Console reported two of these as
+      // 404s on 2026-09-06 — both posts are still live under /blog — and a
+      // pattern catches the rest of that era instead of waiting for Google to
+      // surface them one at a time.
+      {
+        source: "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/:slug",
+        destination: "/blog/:slug",
+        permanent: true,
+      },
+      // The old blog index. Its posts live at /blog now.
+      {
+        source: "/blog-resources",
+        destination: "/blog",
+        permanent: true,
+      },
     ];
   },
 };

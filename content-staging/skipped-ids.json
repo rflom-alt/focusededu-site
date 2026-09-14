@@ -72,6 +72,12 @@
       "slug": "solve-your-evaluation-backlog-with-psychologist-staffing",
       "reason": "Duplicate intent. Targets the same 'clear your IEP evaluation backlog' query as feed item 3523144 (/blog/managing-iep-backlogs-and-compensatory-services-guide), staged the same day — both carry a '5 steps to clear your evaluation backlog' section and both meta descriptions lead on 'evaluation backlog'. Its secondary angle, school psychologist staffing, is already covered by /blog/staffing-the-student-mental-health-crisis-counselors-psychologists-and-social-workers. Squeezed on both sides, so 3523144 was kept as the canonical backlog article.",
       "decidedOn": "2026-08-31"
+    },
+    {
+      "id": "3523156",
+      "slug": "how-districts-evaluate-staffing-vendors-a-checklist",
+      "reason": "Duplicate intent. Staged the same batch as feed item 3523155 (/blog/school-district-staffing-key-rfp-requirements-checklist) — both open with the identical '1 in 8 teaching positions... 425,000 positions' stat, both walk a district through vetting an RFP/vendor on the same criteria (fill rate vs. continuity, automated credentialing, one-client-per-region, insider-educator advantage), and both cite the same Odyssey Charter School case study. Also 90%+ overlaps the published /blog/choosing-the-right-k-12-teacher-recruitment-firm-in-2026-a-buyers-guide, down to a near-identical 'Insider Advantage: educator-led recruitment outperforms generalist agencies' section. Its FAQs (credential verification, temp-to-perm fee range, one-client-per-region, fill rate) restate 3523155's FAQs with no unique angle, so nothing was folded across.",
+      "decidedOn": "2026-09-14"
     }
   ]
 }

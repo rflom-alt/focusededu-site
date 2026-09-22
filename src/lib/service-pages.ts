@@ -532,7 +532,7 @@ export const servicePages: ServicePage[] = [
     slug: "staffing-a-multi-site-charter-network",
     eyebrow: "Charter networks",
     h1: "Staffing a Multi-Site Charter Network",
-    metaTitle: "Staffing a Multi-Site Charter Network | FocusedEDU",
+    metaTitle: "Staffing a Multi-Site Charter Network",
     metaDescription: "How multi-site charter networks staff special education across every campus — LEA compliance, credentialing at scale, and FocusedEDU's approach.",
     hero: "How multi-site charter networks staff special education across every campus — LEA compliance, credentialing at scale, and FocusedEDU's approach.",
     photo: PHOTOS[3],
@@ -1534,7 +1534,7 @@ export const servicePages: ServicePage[] = [
     slug: "new-york-education-staffing",
     eyebrow: "Education staffing · New York",
     h1: "Special Education Staffing for New York Districts, BOCES, and Charter Networks",
-    metaTitle: "Special Education Staffing in New York | FocusedEDU",
+    metaTitle: "Special Education Staffing in New York",
     metaDescription: "FocusedEDU staffs New York districts, BOCES, and charter networks with special-ed teachers, paraprofessionals, SLPs, OTs, PTs, and school psychologists.",
     hero: "FocusedEDU staffs New York districts, BOCES, and charter networks with special-ed teachers, paraprofessionals, SLPs, OTs, PTs, and school psychologists.",
     photo: PHOTOS[3],
@@ -1825,7 +1825,7 @@ export const servicePages: ServicePage[] = [
     h1: "Washington, DC Education Staffing",
     metaTitle: "Washington DC Education Staffing Agency",
     metaDescription:
-      "Two DC charter partnerships since 2022: 100% of certified SPED roles filled at IDEA PCS with 100% retention, and four qualified candidates per opening at Cesar Chavez PCS.",
+      "Two DC charter partnerships since 2022: every certified SPED role at IDEA PCS filled with 100% retention, and four candidates per opening at Cesar Chavez.",
     hero: "Two DC public charter schools have partnered with us since 2022. At IDEA Public Charter School we filled 100% of open certified special education roles with 100% retention, two weeks from request to filled. At Cesar Chavez Public Charter School we present four qualified candidates per opening.",
     photo: PHOTOS[2],
     roles: [
@@ -1941,7 +1941,7 @@ export const servicePages: ServicePage[] = [
     h1: "Colorado Education Staffing",
     metaTitle: "Colorado Education Staffing Agency",
     metaDescription:
-      "Staffing Colorado schools with CDE-licensed teachers, paraprofessionals, and clinicians — and converting contract staff to permanent with no buyout fee. Lotus School for Excellence, Aurora.",
+      "Staffing Colorado schools with CDE-licensed teachers, paraprofessionals, and clinicians — and converting contract staff to permanent with no buyout fee.",
     hero: "We staff Colorado schools with CDE-licensed teachers, paraprofessionals, substitutes, and clinicians — and when you want to keep one, the conversion costs nothing. Lotus School for Excellence in Aurora put that in writing.",
     photo: PHOTOS[1],
     roles: [

@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/references",
     "/services",
     "/book-a-call",
+    "/request-staff",
     "/blog",
     "/resources/2026-k12-staffing-report",
     "/privacy",
@@ -32,19 +33,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // to the parent domain are deliberately withheld (Decision 8).
     .filter((p) => !(p in CROSS_DOMAIN_CANONICAL_ROUTES))
     .map((p) => ({
-    url: `${BASE}${p}`,
-    changeFrequency: "weekly" as const,
-    priority: p === "" ? 1 : 0.7,
-  }));
+      url: `${BASE}${p}`,
+      changeFrequency: "weekly" as const,
+      priority: p === "" ? 1 : 0.7,
+    }));
 
   const blog = posts
     .filter((p) => !(p.slug in CROSS_DOMAIN_CANONICAL_POSTS))
     .map((p) => ({
-    url: `${BASE}/blog/${p.slug}`,
-    lastModified: p.iso,
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
-  }));
+      url: `${BASE}/blog/${p.slug}`,
+      lastModified: p.updated ?? p.iso,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    }));
 
   const cases = caseStudies.map((c) => ({
     url: `${BASE}/case-studies/${c.slug}`,

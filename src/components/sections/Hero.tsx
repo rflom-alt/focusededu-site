@@ -1,28 +1,10 @@
-"use client";
-
-import { useRef } from "react";
 import Image from "next/image";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { Magnetic } from "@/components/motion/Magnetic";
-import { useIsoLayoutEffect } from "@/components/motion/useIsoLayoutEffect";
 import type { SiteContent } from "@/lib/content";
 
-const PROOF_CHIPS = [
-  "One partner per market",
-  "Built by a teacher",
-  "Credentialing in half the time",
-];
-
-/**
- * Signature moment: a pinned, scroll-scrubbed hero (GSAP ScrollTrigger, scrub:1).
- * As the section pins, the photo slowly zooms, the scrim deepens, the headline
- * parallaxes up and dissolves, and three proof chips rise in — an Apple-style
- * "headline → proof" handoff. Under prefers-reduced-motion it renders static.
- * See MOTION-NOTES.md §4.
- */
+/** The whole offer is present on first render, with no pinned scroll or hidden text. */
 export function Hero({
   hero,
   cta,
@@ -30,113 +12,53 @@ export function Hero({
   hero: SiteContent["hero"];
   cta: SiteContent["cta"];
 }) {
-  const root = useRef<HTMLDivElement>(null);
-  const img = useRef<HTMLDivElement>(null);
-  const scrim = useRef<HTMLDivElement>(null);
-  const content = useRef<HTMLDivElement>(null);
-  const chips = useRef<HTMLDivElement>(null);
-
-  useIsoLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    const ctx = gsap.context(() => {
-      gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: root.current,
-            start: "top top",
-            end: "+=110%",
-            pin: true,
-            scrub: 1,
-          },
-        });
-        // Layered parallax: the photo zooms + drifts down slowly, the scrim
-        // deepens, and the headline rises faster and fades — three rates of
-        // motion give the first screen real cinematic depth.
-        tl.fromTo(
-          img.current,
-          { scale: 1.06, yPercent: 0 },
-          { scale: 1.26, yPercent: 8, ease: "none" },
-          0
-        )
-          .fromTo(scrim.current, { opacity: 0 }, { opacity: 0.62, ease: "none" }, 0)
-          .to(content.current, { yPercent: -32, autoAlpha: 0, ease: "none" }, 0)
-          .fromTo(
-            chips.current?.children ?? [],
-            { autoAlpha: 0, y: 32 },
-            { autoAlpha: 1, y: 0, stagger: 0.12, ease: "none" },
-            0.3
-          );
-      });
-    }, root);
-    return () => ctx.revert();
-  }, []);
-
   return (
     <section
-      ref={root}
       id="top"
-      className="relative h-screen overflow-hidden bg-navy-950"
+      className="relative overflow-hidden bg-navy-950 pt-32 pb-14 lg:pt-40 lg:pb-20"
     >
-      {/* Photographic background (zooms on scrub) */}
-      <div ref={img} className="absolute inset-0 origin-top will-change-transform">
-        <Image
-          src={hero.photo}
-          alt={hero.photoAlt}
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-[center_top]"
-        />
-      </div>
-
-      {/* Base scrims for legibility */}
-      <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/55 to-navy-950/25" />
-      <div className="absolute inset-0 bg-gradient-to-r from-navy-950/80 via-navy-950/20 to-transparent" />
-      {/* Deepening scrim (animates on scrub) */}
-      <div ref={scrim} className="absolute inset-0 bg-navy-950 opacity-0" />
-
-      {/* Headline group */}
-      <div className="container-x absolute inset-x-0 bottom-0 z-10 pb-24 pt-32 lg:pb-40 lg:pt-36">
-        <div ref={content} className="max-w-3xl">
+      <div className="container-x grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
+        <div>
           <Eyebrow tone="light">{hero.eyebrow}</Eyebrow>
-          <h1 className="mt-5 text-balance text-[2.05rem] font-semibold leading-[1.06] text-white sm:text-6xl sm:leading-[1.03] lg:text-[4.4rem]">
+          <h1 className="mt-5 max-w-3xl text-balance text-4xl font-semibold leading-[1.06] text-white sm:text-5xl lg:text-6xl">
             {hero.title}
           </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-white/80 sm:text-xl">
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
             {hero.subtitle}
           </p>
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Magnetic>
-              <Button href={cta.primary.href} variant="primary" size="lg">
-                {cta.primary.label}
-              </Button>
-            </Magnetic>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <Button href={cta.primary.href}>{cta.primary.label}</Button>
             <Button
               href={cta.secondary.href}
               variant="ghost"
-              size="lg"
-              className="border border-white/25 hover:bg-white/5"
+              className="border border-white/25"
             >
               {cta.secondary.label}
             </Button>
           </div>
+          <p className="mt-4 text-sm text-white/65">
+            Free 30-minute staffing call. Bring your open roles.
+          </p>
+          <p className="mt-6 text-sm text-white/70">
+            Looking for work?{" "}
+            <Link
+              href="/candidates"
+              className="font-semibold text-white underline underline-offset-4"
+            >
+              Explore opportunities
+            </Link>
+          </p>
         </div>
-      </div>
-
-      {/* Proof chips (rise in on scrub) */}
-      <div
-        ref={chips}
-        className="container-x pointer-events-none absolute inset-x-0 bottom-10 z-10 flex flex-wrap gap-3"
-      >
-        {PROOF_CHIPS.map((c) => (
-          <span
-            key={c}
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.06] px-4 py-2 text-sm font-medium text-white/90 backdrop-blur-sm"
-          >
-            <span className="size-1.5 rounded-full bg-teal-400" aria-hidden />
-            {c}
-          </span>
-        ))}
+        <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-white/15 lg:aspect-[4/5]">
+          <Image
+            src={hero.photo}
+            alt={hero.photoAlt}
+            fill
+            priority
+            sizes="(min-width: 1024px) 40vw, 100vw"
+            className="object-cover"
+          />
+        </div>
       </div>
     </section>
   );

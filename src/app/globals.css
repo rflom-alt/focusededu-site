@@ -70,11 +70,21 @@ html {
 
 /* Lenis smooth scroll — when active it owns the smoothness */
 html.lenis,
-html.lenis body { height: auto; }
-.lenis.lenis-smooth { scroll-behavior: auto !important; }
-.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
-.lenis.lenis-stopped { overflow: hidden; }
-.lenis.lenis-smooth iframe { pointer-events: none; }
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
 
 body {
   background: var(--background);
@@ -89,7 +99,10 @@ body {
 }
 
 /* Display headings: tight, confident, large-scale */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-display);
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -97,10 +110,14 @@ h1, h2, h3, h4 {
   text-wrap: balance;
 }
 
-p { text-wrap: pretty; }
+p {
+  text-wrap: pretty;
+}
 
 /* Keep anchored section titles clear of the fixed header */
-section[id] { scroll-margin-top: 5.5rem; }
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
 
 /* Long-form article body (migrated blog HTML) */
 .article-prose {
@@ -108,7 +125,9 @@ section[id] { scroll-margin-top: 5.5rem; }
   font-size: 1.125rem;
   line-height: 1.78;
 }
-.article-prose > * + * { margin-top: 1.25rem; }
+.article-prose > * + * {
+  margin-top: 1.25rem;
+}
 .article-prose h2 {
   font-family: var(--font-display);
   color: var(--color-navy-950);
@@ -127,7 +146,9 @@ section[id] { scroll-margin-top: 5.5rem; }
   margin-top: 2rem;
   margin-bottom: 0.25rem;
 }
-.article-prose p { color: var(--color-slate-ink); }
+.article-prose p {
+  color: var(--color-slate-ink);
+}
 /* Direct-answer block under an H2 — the passage AI answer engines lift as a citation.
    Kept visually quiet: a rule and slightly larger type, not a callout card. */
 .article-prose p.answer-lead {
@@ -144,12 +165,29 @@ section[id] { scroll-margin-top: 5.5rem; }
   text-underline-offset: 2px;
   font-weight: 500;
 }
-.article-prose a:hover { color: var(--color-teal-800); }
-.article-prose strong { color: var(--color-navy-950); font-weight: 600; }
-.article-prose ul { list-style: disc; padding-left: 1.4rem; }
-.article-prose ol { list-style: decimal; padding-left: 1.4rem; }
-.article-prose li { margin-top: 0.5rem; padding-left: 0.25rem; }
-.article-prose li::marker { color: var(--color-teal-600); font-weight: 600; }
+.article-prose a:hover {
+  color: var(--color-teal-800);
+}
+.article-prose strong {
+  color: var(--color-navy-950);
+  font-weight: 600;
+}
+.article-prose ul {
+  list-style: disc;
+  padding-left: 1.4rem;
+}
+.article-prose ol {
+  list-style: decimal;
+  padding-left: 1.4rem;
+}
+.article-prose li {
+  margin-top: 0.5rem;
+  padding-left: 0.25rem;
+}
+.article-prose li::marker {
+  color: var(--color-teal-600);
+  font-weight: 600;
+}
 .article-prose blockquote {
   border-left: 2px solid var(--color-teal-500);
   padding-left: 1.25rem;
@@ -160,10 +198,16 @@ section[id] { scroll-margin-top: 5.5rem; }
   font-style: italic;
   color: var(--color-navy-900);
 }
-.article-prose img { border-radius: 1rem; margin: 1.75rem 0; height: auto; }
+.article-prose img {
+  border-radius: 1rem;
+  margin: 1.75rem 0;
+  height: auto;
+}
 .article-prose h2:first-child,
 .article-prose h3:first-child,
-.article-prose p:first-child { margin-top: 0; }
+.article-prose p:first-child {
+  margin-top: 0;
+}
 
 /* Reusable layout + accents -------------------------------------------- */
 @utility container-x {
@@ -190,22 +234,35 @@ section[id] { scroll-margin-top: 5.5rem; }
 
 /* Subtle grain/elevation for premium surfaces */
 @utility surface-line {
-  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.04) inset,
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.04) inset,
     0 30px 60px -30px rgba(6, 10, 31, 0.35);
 }
 
 /* Seamless logo marquee (Phenom BrandsTape pattern): track holds the list twice,
    translateX(-50%) loops one full copy. */
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 /* Respect reduced motion globally */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.001ms !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }

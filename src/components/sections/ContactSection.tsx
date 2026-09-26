@@ -15,13 +15,20 @@ export function ContactSection({
   social: SiteContent["social"];
   id?: string;
 }) {
-  const [form, setForm] = useState({ name: "", email: "", org: "", message: "" });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    org: "",
+    message: "",
+  });
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Website inquiry — ${form.name || "FocusedEDU"}`);
+    const subject = encodeURIComponent(
+      `Website inquiry — ${form.name || "FocusedEDU"}`,
+    );
     const body = encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\nOrganization: ${form.org}\n\n${form.message}`
+      `Name: ${form.name}\nEmail: ${form.email}\nOrganization: ${form.org}\n\n${form.message}`,
     );
     // Functional with no backend: opens the visitor's mail client.
     // TODO(before launch): wire to an email service (e.g. Resend) via a route handler.
@@ -47,31 +54,40 @@ export function ContactSection({
             Let&apos;s talk about your team.
           </h2>
           <p className="mt-5 max-w-md text-lg leading-relaxed text-slate-ink">
-            Tell us about your staffing challenge and a member of our team will reach out
-            within 48 hours. Prefer to talk now? Book a 30-minute discovery call.
+            Email us about your staffing challenge to discuss your opening.
+            Prefer a meeting? Book a 30-minute staffing call.
           </p>
 
           <ul className="mt-9 space-y-4 text-navy-900">
             <li>
-              <a href={contact.phoneHref} className="flex items-center gap-3 hover:text-teal-700">
+              <a
+                href={contact.phoneHref}
+                className="flex items-center gap-3 hover:text-teal-700"
+              >
                 <Phone className="size-5 text-teal-600" strokeWidth={1.7} />
                 {contact.phone}
               </a>
             </li>
             <li>
-              <a href={`mailto:${contact.email}`} className="flex items-center gap-3 hover:text-teal-700">
+              <a
+                href={`mailto:${contact.email}`}
+                className="flex items-center gap-3 hover:text-teal-700"
+              >
                 <Mail className="size-5 text-teal-600" strokeWidth={1.7} />
                 {contact.email}
               </a>
             </li>
             <li className="flex items-start gap-3">
-              <MapPin className="mt-0.5 size-5 shrink-0 text-teal-600" strokeWidth={1.7} />
+              <MapPin
+                className="mt-0.5 size-5 shrink-0 text-teal-600"
+                strokeWidth={1.7}
+              />
               <span>{contact.address}</span>
             </li>
           </ul>
 
           <a
-            href={contact.scheduler}
+            href="/book-a-call"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-navy-950 px-6 py-3 text-sm font-semibold text-white transition hover:bg-navy-900"
@@ -105,6 +121,7 @@ export function ContactSection({
             <div className="grid gap-4 sm:grid-cols-2">
               <input
                 required
+                aria-label="Full name"
                 placeholder="Full name"
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -113,6 +130,7 @@ export function ContactSection({
               <input
                 required
                 type="email"
+                aria-label="Email"
                 placeholder="Email"
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
@@ -120,6 +138,7 @@ export function ContactSection({
               />
             </div>
             <input
+              aria-label="School / organization"
               placeholder="School / organization"
               value={form.org}
               onChange={(e) => setForm({ ...form, org: e.target.value })}
@@ -128,6 +147,7 @@ export function ContactSection({
             <textarea
               required
               rows={5}
+              aria-label="How can we help?"
               placeholder="How can we help?"
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
@@ -137,10 +157,10 @@ export function ContactSection({
               type="submit"
               className="mt-1 inline-flex h-12 items-center justify-center rounded-full bg-teal-500 px-7 font-semibold text-navy-950 transition hover:bg-teal-400"
             >
-              Send message
+              Open email message
             </button>
             <p className="text-center text-xs text-slate-ink">
-              We&apos;ll respond within 48 hours.
+              Review and send the message in your email app.
             </p>
           </div>
         </form>

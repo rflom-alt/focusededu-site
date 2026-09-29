@@ -42,8 +42,8 @@ export function Footer({
             {brand.tagline}
           </p>
           <p className="mt-3 text-sm leading-relaxed text-white/55">
-            A {brand.parent} company — a premium, mission-driven workforce partner for
-            K-12 schools.
+            A {brand.parent} company — a premium, mission-driven workforce
+            partner for K-12 schools.
           </p>
           <p className="mt-4 text-sm leading-relaxed text-white/55">
             FocusedEDU is a division of {brand.parent}.{" "}
@@ -80,7 +80,10 @@ export function Footer({
           <ul className="mt-5 space-y-3">
             {nav.map((item) => (
               <li key={item.label}>
-                <Link href={item.href} className="transition-colors hover:text-white">
+                <Link
+                  href={item.href}
+                  className="transition-colors hover:text-white"
+                >
                   {item.label}
                 </Link>
               </li>
@@ -106,7 +109,10 @@ export function Footer({
               </a>
             </li>
             <li>
-              <Link href="/our-impact#connect" className="transition-colors hover:text-white">
+              <Link
+                href="/request-staff"
+                className="transition-colors hover:text-white"
+              >
                 Contact
               </Link>
             </li>
@@ -138,7 +144,10 @@ export function Footer({
               </a>
             </li>
             <li className="flex items-start gap-3">
-              <MapPin className="mt-0.5 size-4 shrink-0 text-teal-400" strokeWidth={1.6} />
+              <MapPin
+                className="mt-0.5 size-4 shrink-0 text-teal-400"
+                strokeWidth={1.6}
+              />
               <span>{contact.address}</span>
             </li>
           </ul>
@@ -147,18 +156,32 @@ export function Footer({
 
       <div className="border-t border-white/10">
         <div className="container-x flex flex-col items-center justify-between gap-4 py-6 text-xs text-white/45 sm:flex-row">
-          <p>© {year} {brand.parent}. All rights reserved.</p>
+          <p>
+            © {year} {brand.parent}. All rights reserved.
+          </p>
           <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
-            <Link href="/about/robert-flom" className="transition-colors hover:text-white/80">
+            <Link
+              href="/about/robert-flom"
+              className="transition-colors hover:text-white/80"
+            >
               Meet the founder
             </Link>
-            <Link href="/privacy" className="transition-colors hover:text-white/80">
+            <Link
+              href="/privacy"
+              className="transition-colors hover:text-white/80"
+            >
               Privacy Policy
             </Link>
-            <Link href="/terms" className="transition-colors hover:text-white/80">
+            <Link
+              href="/terms"
+              className="transition-colors hover:text-white/80"
+            >
               Terms &amp; Conditions
             </Link>
-            <Link href="/cookies" className="transition-colors hover:text-white/80">
+            <Link
+              href="/cookies"
+              className="transition-colors hover:text-white/80"
+            >
               Cookie Policy
             </Link>
           </nav>

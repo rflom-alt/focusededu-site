@@ -98,7 +98,7 @@ const WEBSITE_SCHEMA = {
   "@id": "https://www.focusedu-staffing.com/#website",
   name: edu.brand.name,
   url: "https://www.focusedu-staffing.com",
-  publisher: { "@id": "https://www.focused-staffing.com/#organization" },
+  publisher: { "@id": "https://www.focusedu-staffing.com/#organization" },
 };
 
 const display = Bricolage_Grotesque({
@@ -117,19 +117,35 @@ const sans = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.focusedu-staffing.com"),
   title: {
-    default: "FocusedEDU — Premium K-12 Education Staffing",
-    template: "%s · FocusedEDU",
+    default: "K\u201312 Education Staffing | FocusedEDU",
+    template: "%s \u00b7 FocusedEDU",
   },
   description:
-    "A dedicated, exclusive K-12 talent pipeline built by a former teacher. Automated credentialing halves hiring time; temp-to-perm at no cost.",
+    "K\u201312 staffing for special education, paraprofessionals, substitutes, and related services. Discuss your school\u2019s open roles with FocusedEDU.",
   openGraph: {
-    title: "FocusedEDU — Premium K-12 Education Staffing",
+    title: "K\u201312 Education Staffing | FocusedEDU",
     description:
-      "A dedicated, exclusive talent pipeline for K-12 schools. Built by educators, not recruiters.",
+      "K\u201312 staffing for special education, paraprofessionals, substitutes, and related services. Discuss your school\u2019s open roles with FocusedEDU.",
     type: "website",
+    locale: "en_US",
+    siteName: "FocusedEDU",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
   alternates: {
-    types: { "application/rss+xml": "/feed.xml" },
+    types: {
+      "application/rss+xml": "/feed.xml",
+    },
   },
 };
 

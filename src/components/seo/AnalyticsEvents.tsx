@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { edu } from "@/lib/content";
 
 type Gtag = (...args: unknown[]) => void;
 const gtag = (...args: unknown[]) => {
@@ -21,7 +22,19 @@ export function AnalyticsEvents() {
     const onClick = (e: MouseEvent) => {
       const a = (e.target as HTMLElement | null)?.closest("a");
       const href = a?.href ?? "";
-      if (!href.includes("apply.focused-staffing.com")) return;
+      if (a) {
+        const url = new URL(href, window.location.origin);
+        if (
+          url.origin === window.location.origin &&
+          ["/book-a-call", "/request-staff"].includes(url.pathname)
+        ) {
+          gtag("event", "staffing_intent_click", {
+            destination: url.pathname,
+            page_path: window.location.pathname,
+          });
+        }
+      }
+      if (!href.startsWith("https://apply.focused-staffing.com/")) return;
       if (href.includes("/jobs")) {
         gtag("event", "job_board_click", { link_url: href });
       } else if (href.includes("talent-network")) {
@@ -32,7 +45,7 @@ export function AnalyticsEvents() {
     const onMessage = (e: MessageEvent) => {
       if (
         typeof e.origin === "string" &&
-        e.origin.includes("hubspot") &&
+        e.origin === new URL(edu.contact.scheduler).origin &&
         e.data &&
         typeof e.data === "object" &&
         (e.data as { meetingBookSucceeded?: boolean }).meetingBookSucceeded

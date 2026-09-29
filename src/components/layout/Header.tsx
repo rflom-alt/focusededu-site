@@ -28,7 +28,7 @@ export function Header({
 
   // Show the candidate-facing CTA on job-seeker pages; employer CTA everywhere else.
   const isCandidateContext =
-    pathname?.startsWith("/candidates") || pathname?.startsWith("/resources");
+    pathname?.startsWith("/candidates");
   const activeCta = isCandidateContext ? ctaCandidate : cta;
 
   useEffect(() => {
@@ -91,7 +91,7 @@ export function Header({
         {/* Mobile actions: persistent CTA + toggle */}
         <div className="flex items-center gap-2 lg:hidden">
           {!open && (
-            <Button href={activeCta.href} variant="primary" size="md" className="px-4 py-2 text-sm">
+            <Button href={activeCta.href} variant="primary" size="md" className="whitespace-nowrap px-4 py-2 text-sm">
               {isCandidateContext ? "Open roles" : "Book a call"}
             </Button>
           )}

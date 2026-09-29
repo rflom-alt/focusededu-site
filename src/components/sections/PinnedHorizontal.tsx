@@ -15,7 +15,7 @@ import type { Differentiator } from "@/lib/content";
  */
 export function PinnedHorizontal({
   items,
-  eyebrow = "Why Focused Behavioral",
+  eyebrow = "Why FocusedEDU",
   title = "A staffing partner built differently — on purpose.",
 }: {
   items: Differentiator[];
@@ -29,36 +29,44 @@ export function PinnedHorizontal({
   useIsoLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const ctx = gsap.context(() => {
-      gsap.matchMedia().add(
-        "(min-width: 1024px) and (prefers-reduced-motion: no-preference)",
-        () => {
-          const t = track.current!;
-          const w = wrap.current!;
-          w.style.overflow = "hidden";
-          const distance = () => t.scrollWidth - w.clientWidth;
-          gsap.to(t, {
-            x: () => -distance(),
-            ease: "none",
-            scrollTrigger: {
-              trigger: root.current,
-              start: "top top",
-              end: () => "+=" + distance(),
-              pin: true,
-              scrub: 1,
-              invalidateOnRefresh: true,
-            },
-          });
-        }
-      );
+      gsap
+        .matchMedia()
+        .add(
+          "(min-width: 1024px) and (prefers-reduced-motion: no-preference)",
+          () => {
+            const t = track.current!;
+            const w = wrap.current!;
+            w.style.overflow = "hidden";
+            const distance = () => t.scrollWidth - w.clientWidth;
+            gsap.to(t, {
+              x: () => -distance(),
+              ease: "none",
+              scrollTrigger: {
+                trigger: root.current,
+                start: "top top",
+                end: () => "+=" + distance(),
+                pin: true,
+                scrub: 1,
+                invalidateOnRefresh: true,
+              },
+            });
+          },
+        );
     }, root);
     return () => ctx.revert();
   }, []);
 
   return (
-    <section ref={root} className="relative overflow-hidden bg-navy-950 py-24 lg:py-32">
+    <section
+      ref={root}
+      className="relative overflow-hidden bg-navy-950 py-24 lg:py-32"
+    >
       <div
         className="pointer-events-none absolute -right-40 top-0 size-[40rem] rounded-full opacity-20 blur-3xl"
-        style={{ background: "radial-gradient(circle, var(--color-teal-600), transparent 60%)" }}
+        style={{
+          background:
+            "radial-gradient(circle, var(--color-teal-600), transparent 60%)",
+        }}
         aria-hidden
       />
       <div className="container-x relative">
@@ -68,8 +76,14 @@ export function PinnedHorizontal({
         </h2>
       </div>
 
-      <div ref={wrap} className="relative mt-14 overflow-x-auto lg:mt-16 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        <div ref={track} className="flex w-max gap-6 px-6 sm:px-8 lg:px-[max(2rem,calc((100vw-80rem)/2+2rem))]">
+      <div
+        ref={wrap}
+        className="relative mt-14 overflow-x-auto lg:mt-16 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      >
+        <div
+          ref={track}
+          className="flex w-max gap-6 px-6 sm:px-8 lg:px-[max(2rem,calc((100vw-80rem)/2+2rem))]"
+        >
           {items.map((item, i) => (
             <article
               key={item.title}
@@ -81,7 +95,9 @@ export function PinnedHorizontal({
               <div className="mt-6 flex size-13 items-center justify-center rounded-xl bg-teal-500/12 text-teal-300">
                 <Icon name={item.icon} className="size-6" strokeWidth={1.7} />
               </div>
-              <h3 className="mt-6 text-2xl font-semibold text-white">{item.title}</h3>
+              <h3 className="mt-6 text-2xl font-semibold text-white">
+                {item.title}
+              </h3>
               <p className="mt-3 leading-relaxed text-white/70">{item.body}</p>
             </article>
           ))}

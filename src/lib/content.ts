@@ -18,7 +18,12 @@ export type Differentiator = {
 };
 export type Step = { n: string; title: string; body: string };
 export type Stat = { value: string; label: string; provisional?: boolean };
-export type Testimonial = { quote: string; name: string; role: string; org: string };
+export type Testimonial = {
+  quote: string;
+  name: string;
+  role: string;
+  org: string;
+};
 export type Client = { name: string; file: string };
 
 export interface SiteContent {
@@ -30,7 +35,12 @@ export interface SiteContent {
     scheduler: string; // HubSpot Meetings booking link
     address: string;
   };
-  social: { facebook: string; instagram: string; linkedin: string; tiktok: string };
+  social: {
+    facebook: string;
+    instagram: string;
+    linkedin: string;
+    tiktok: string;
+  };
   jobBoard: string;
   submitResume: string;
   nav: NavItem[];
@@ -90,75 +100,97 @@ export const edu: SiteContent = {
     { label: "Resources", href: "/resources" },
   ],
   cta: {
-    primary: { label: "Book a discovery call", href: "/book-a-call" },
-    secondary: { label: "Explore open roles", href: "/candidates" },
+    primary: { label: "Discuss your staffing needs", href: "/book-a-call" },
+    secondary: { label: "Send a staffing request", href: "/request-staff" },
   },
   hero: {
-    eyebrow: "K-12 Education Staffing",
-    title: "The educators your students deserve — focused entirely on you.",
+    eyebrow: "K–12 education staffing",
+    title: "Staff the school roles your students are counting on.",
     subtitle:
-      "FocusedEDU gives every K-12 partner a dedicated, exclusive pipeline of vetted educators. Built by a former teacher. Credentialed in half the time. Never shared with a competing school.",
+      "Special education teachers, paraprofessionals, substitutes, and related-service providers. Recruiting and screening built around your school, your students, and your open roles.",
     photo: "/photography/classroom-lesson.jpg",
     photoAlt:
       "A teacher leading an engaged lesson in a bright, modern classroom of diverse students",
   },
   differentiators: [
     {
-      icon: "ShieldCheck",
-      title: "One partner per market",
-      body: "Your talent pipeline is yours alone. We won't take on a directly competing school or district in your area — so the educators we recruit and develop for you are never shared with a rival down the road.",
-    },
-    {
-      icon: "GraduationCap",
-      title: "Built by a teacher",
-      body: "Founded by a former K-12 educator who has stood at the front of the classroom — not recruiters who fell into the space. We hire the way you would.",
+      icon: "Users",
+      title: "Recruiting around your requirements",
+      body: "Your setting, schedule, and role requirements guide the search and candidate screening.",
     },
     {
       icon: "BadgeCheck",
-      title: "Credentialing, automated",
-      body: "Automated credentialing cuts hiring time in half while quietly weeding out unqualified candidates before they ever reach your desk.",
+      title: "A clear path to an approved start",
+      body: "Our team coordinates required credentials and onboarding documentation with your organization.",
     },
     {
       icon: "Handshake",
-      title: "Temp-to-perm, at no cost",
-      body: "Evaluate a professional on the job before you commit to a permanent hire — at no additional cost to your school.",
+      title: "The engagement that fits the need",
+      body: "Discuss contract staffing, temp-to-perm, and direct hire with clear terms before work begins.",
     },
-  ] as Differentiator[],
-  stats: [
-    { value: "12 yrs", label: "Partnering with K-12 schools" },
-    { value: "0", label: "Of your direct competitors we'll staff" },
-    { value: "<10%", label: "Vacancy rate a partner reached — down from 35%" },
-    { value: "+25%", label: "Substitute fill-rate lift for a partner district" },
-  ] as Stat[],
+    {
+      icon: "HeartPulse",
+      title: "A team to keep things moving",
+      body: "Get help coordinating candidate submissions, interviews, and placement support.",
+    },
+  ],
+  stats: [],
   steps: [
     {
       n: "01",
-      title: "Schedule",
-      body: "Send open roles and shifts to our team instantly. Qualified, pre-credentialed educators are matched to your needs.",
+      title: "Tell us what is open",
+      body: "Share the role, school, schedule, caseload, and qualifications you need.",
     },
     {
       n: "02",
-      title: "Review",
-      body: "Get a clear, up-to-date view of candidate availability, booked placements, and credentials in one place.",
+      title: "Review the right fit",
+      body: "We recruit and screen for your requirements, coordinate interviews, and share candidates for your decision.",
     },
     {
       n: "03",
-      title: "Hire the best",
-      body: "Whether you need contract, temp-to-perm, or direct placement, we help you bring on the right person with confidence.",
+      title: "Coordinate an approved start",
+      body: "We track required documentation and coordinate onboarding with your team. You retain the hiring decision.",
     },
-  ] as Step[],
+  ],
   clients: [
-    { name: "Christina School District", file: "/clients/Christina-School-District.png" },
-    { name: "Leadership Public Schools", file: "/clients/Leadership-Public-School.png" },
-    { name: "Charlotte-Mecklenburg Schools", file: "/clients/Charlotte-Mecklenburg-Schools.png" },
-    { name: "Chester Community Charter School", file: "/clients/Chester-Community-Charter-School.png" },
-    { name: "Brandywine School District", file: "/clients/Brandywine-School-District.png" },
-    { name: "Odyssey Charter School", file: "/clients/Odyssey-Charter-School.png" },
-    { name: "Breakthrough Public Schools", file: "/clients/Breakthrough-Public-School.png" },
+    {
+      name: "Christina School District",
+      file: "/clients/Christina-School-District.png",
+    },
+    {
+      name: "Leadership Public Schools",
+      file: "/clients/Leadership-Public-School.png",
+    },
+    {
+      name: "Charlotte-Mecklenburg Schools",
+      file: "/clients/Charlotte-Mecklenburg-Schools.png",
+    },
+    {
+      name: "Chester Community Charter School",
+      file: "/clients/Chester-Community-Charter-School.png",
+    },
+    {
+      name: "Brandywine School District",
+      file: "/clients/Brandywine-School-District.png",
+    },
+    {
+      name: "Odyssey Charter School",
+      file: "/clients/Odyssey-Charter-School.png",
+    },
+    {
+      name: "Breakthrough Public Schools",
+      file: "/clients/Breakthrough-Public-School.png",
+    },
     { name: "First PA", file: "/clients/First-PA.png" },
     { name: "TRECA", file: "/clients/Treca.png" },
-    { name: "Bridgeton Public Schools", file: "/clients/Bridgeton-Public-Schools.png" },
-    { name: "Frederick County Public Schools", file: "/clients/Frederick-County-Public-Schools.png" },
+    {
+      name: "Bridgeton Public Schools",
+      file: "/clients/Bridgeton-Public-Schools.png",
+    },
+    {
+      name: "Frederick County Public Schools",
+      file: "/clients/Frederick-County-Public-Schools.png",
+    },
   ] as Client[],
   testimonials: [
     {
@@ -166,14 +198,14 @@ export const edu: SiteContent = {
         "Focused Staffing Group has consistently matched us with exceptional talent who have made a significant impact on our student learning experience. The quality of the candidates they have sourced for us has been nothing short of exceptional.",
       name: "Erin D. Murphy-Richardson",
       role: "Superintendent",
-      org: "The Barack Obama Green Public Schools",
+      org: "The Barack Obama Green Charter Schools",
     },
     {
       quote:
         "Their innovative temp-to-perm clause has allowed us to assess the suitability of referred professionals before making permanent hiring decisions, all at no cost to the school. This flexibility has been instrumental in ensuring our staffing needs are met with the highest level of quality.",
       name: "Elias Pappas",
       role: "CEO",
-      org: "Delaware Public School District",
+      org: "Odyssey Charter School",
     },
     {
       quote:
@@ -195,7 +227,8 @@ export const edu: SiteContent = {
     title: "Staffing is our work. Communities are our why.",
     body: "Filling a role is only part of the story. Through our school-supply and backpack donation drives, FocusedEDU shows up for the students, classrooms, and neighborhoods our partner schools serve — making sure more kids start the year with the tools they need to succeed.",
     photo: "/photography/community-backpacks.jpg",
-    photoAlt: "Diverse students wearing backpacks heading up the steps into school",
+    photoAlt:
+      "Diverse students wearing backpacks heading up the steps into school",
     points: [
       "Backpack & school-supply drives for partner districts",
       "Giving back where our educators teach and live",
@@ -204,6 +237,6 @@ export const edu: SiteContent = {
   },
   finalCta: {
     title: "Let's build the team your students deserve.",
-    body: "Book a 30-minute discovery call and see how a dedicated, exclusive talent pipeline changes the way your school hires.",
+    body: "Discuss your priority roles, requirements, and the next step in a free 30-minute staffing call.",
   },
 };

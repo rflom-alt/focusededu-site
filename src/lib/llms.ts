@@ -21,45 +21,39 @@ const PILLAR_SLUGS = [
 
 const PROFILE = `# FocusedEDU
 
-> FocusedEDU is a premium K-12 education staffing agency founded by a former teacher (Robert Flom). It gives schools and districts a dedicated, exclusive talent pipeline and is part of Focused Staffing Group. Tagline: "Our focus begins with you."
+> FocusedEDU is the K–12 education staffing division of Focused Staffing Group, founded by Robert Flom and based in Wayne, Pennsylvania.
 
-## What we do
-- K-12 education staffing: substitute and certified teachers, special-education teachers, paraprofessionals, one-on-one aides, related-service providers (speech, OT, PT), psychologists, reading specialists, and school support staff.
-- Temp-to-perm placement at no cost — evaluate a professional before committing.
-- Automated credentialing that cuts time-to-hire roughly in half.
-- We will not staff a client's direct competitor — each partner's talent pipeline is exclusive to them ("one partner per market").
+## Services
+- [Special education](${SITE}/special-education-staffing): Teachers matched to grade level, setting, and caseload.
+- [Paraprofessionals](${SITE}/paraprofessional-staffing): Classroom and individual support for your students.
+- [Related services](${SITE}/related-services-staffing): Speech-language, occupational, and physical therapy professionals.
+- [Substitute teachers](${SITE}/substitute-teacher-staffing): Daily coverage and longer assignments.
+- [School-based behavioral support](${SITE}/school-based-behavioral-health-staffing): Professionals for your student support team.
+- [School staffing options](${SITE}/k12-education-staffing): Explore roles, engagement models, and regional services.
 
-## Why FocusedEDU is different
-- Founded and run by a former K-12 teacher, not recruiters who fell into the space.
-- 12 years of experience.
-- One partner per market — never their rival.
-- Community mission: school-supply and backpack donation drives for partner districts.
+## How staffing works
+Share your role, location, schedule, and required qualifications. Our team recruits and screens candidates, coordinates interviews, and works with your organization on required pre-start documentation. You make the hiring decision.
 
-## Proof (client-attested outcomes)
-- Odyssey Public Charter School (Wilmington, DE): 120+ placements across the school; 95% day-to-day substitute fill rate, a 40%+ improvement over the previous provider; partner since 2021.
-- IDEA Public Charter School (Washington, DC): 100% of open certified special-education teacher roles filled, 100% retention, filled within two weeks; reputation turnaround; partner since 2022.
-- First Philadelphia Public Charter School (Philadelphia, PA): 100% retention on certified special-education teachers, filled within two weeks; partner since 2021.
-- Cesar Chavez Public Charter School (Washington, DC): four qualified candidates presented per opening; 414 students, grades 6–12.
-- 8 published letters of recommendation from named school leaders (superintendents, principals, and HR directors across NJ, PA, DE, and CO): ${SITE}/references
+## Engagement models
+Contract staffing is billed at the agreed rate for hours worked. Temp-to-perm eligibility, worked-hour requirements, and any early-conversion fee follow the signed agreement. Direct-hire fees are agreed separately. A professional must choose to accept a permanent position.
 
 ## Key pages
 - Home: ${SITE}/
-- For Schools & Districts: ${SITE}/for-schools
-- For Job Seekers (educators): ${SITE}/candidates
-- Case studies: ${SITE}/case-studies
-- Reference letters: ${SITE}/references
-- Resources & blog: ${SITE}/resources
-- Book a discovery call: ${SITE}/book-a-call
+- Staffing request: ${SITE}/request-staff
+- Book a 30-minute staffing call: ${SITE}/book-a-call
+- Services: ${SITE}/services
+- Resources: ${SITE}/resources
+- About: ${SITE}/about
+- For professionals: ${SITE}/candidates
+- School reference letters: ${SITE}/references
+- School partnership case studies: ${SITE}/case-studies
 
-## Where we work
-- Pennsylvania: ${SITE}/pennsylvania-education-staffing
-- Philadelphia: ${SITE}/philadelphia-education-staffing
-- New Jersey: ${SITE}/new-jersey-education-staffing
-- Delaware: ${SITE}/delaware-education-staffing
-- Maryland: ${SITE}/maryland-special-education-staffing
-- Washington, DC: ${SITE}/washington-dc-education-staffing
-- North Carolina: ${SITE}/north-carolina-education-staffing
-- Colorado: ${SITE}/colorado-education-staffing`;
+## Local services
+- [Pennsylvania](${SITE}/pennsylvania-education-staffing)
+- [Philadelphia](${SITE}/philadelphia-education-staffing)
+- [New Jersey](${SITE}/new-jersey-education-staffing)
+- [Delaware](${SITE}/delaware-education-staffing)
+- [Maryland](${SITE}/maryland-special-education-staffing)`;
 
 const CONTACT = `## Contact
 - Email: hello@focused-staffing.com
@@ -88,17 +82,21 @@ function statLine(stats: { value: string; label: string }[]): string {
 
 /** Short index: profile + pillars + case studies + every article, one line each. */
 export function buildLlmsTxt(): string {
-  const pillars = PILLAR_SLUGS.map((s) => posts.find((p) => p.slug === s)).filter(
-    (p): p is NonNullable<typeof p> => Boolean(p),
-  );
+  const pillars = PILLAR_SLUGS.map((s) =>
+    posts.find((p) => p.slug === s),
+  ).filter((p): p is NonNullable<typeof p> => Boolean(p));
   const pillarSet = new Set(PILLAR_SLUGS);
-  const rest = [...posts].filter((p) => !pillarSet.has(p.slug)).sort(byDateDesc);
+  const rest = [...posts]
+    .filter((p) => !pillarSet.has(p.slug))
+    .sort(byDateDesc);
 
   return [
     PROFILE,
     "",
     "## Pillar guides (start here)",
-    ...pillars.map((p) => `- [${p.title}](${SITE}/blog/${p.slug}): ${p.excerpt}`),
+    ...pillars.map(
+      (p) => `- [${p.title}](${SITE}/blog/${p.slug}): ${p.excerpt}`,
+    ),
     "",
     "## Case studies",
     ...caseStudies.map(

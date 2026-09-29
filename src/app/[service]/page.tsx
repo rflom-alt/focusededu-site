@@ -54,35 +54,37 @@ export default async function ServicePageRoute({ params }: Params) {
 
   const serviceSchema = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "Service",
+    "@id": `https://www.focusedu-staffing.com/${page.slug}#service`,
     name: `${page.h1} — FocusedEDU`,
-    description: page.metaDescription,
+    description: page.hero,
     url: `https://www.focusedu-staffing.com/${page.slug}`,
     image: `https://www.focusedu-staffing.com${page.photo}`,
-    telephone: edu.contact.phoneHref.replace("tel:", ""),
-    areaServed: "US",
-    provider: {
-      "@type": "Organization",
-      name: edu.brand.name,
-      url: "https://www.focusedu-staffing.com",
-    },
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "175 Strafford Avenue, Suite One #208",
-      addressLocality: "Wayne",
-      addressRegion: "PA",
-      postalCode: "19087",
-      addressCountry: "US",
-    },
+    provider: { "@id": "https://www.focusedu-staffing.com/#organization" },
   };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.focusedu-staffing.com/" },
-      { "@type": "ListItem", position: 2, name: "Services", item: "https://www.focusedu-staffing.com/services" },
-      { "@type": "ListItem", position: 3, name: page.h1, item: `https://www.focusedu-staffing.com/${page.slug}` },
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.focusedu-staffing.com/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: "https://www.focusedu-staffing.com/services",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: page.h1,
+        item: `https://www.focusedu-staffing.com/${page.slug}`,
+      },
     ],
   };
 
@@ -103,12 +105,12 @@ export default async function ServicePageRoute({ params }: Params) {
           Book a discovery call
         </Button>
         <Button
-          href="/our-impact#connect"
+          href="/request-staff"
           variant="ghost"
           size="lg"
           className="border border-white/25 hover:bg-white/5"
         >
-          Contact us
+          Request staff
         </Button>
       </PageHero>
 
@@ -116,13 +118,17 @@ export default async function ServicePageRoute({ params }: Params) {
       {page.stats && page.stats.length > 0 && (
         <section className="bg-navy-950 py-14 lg:py-16">
           <div className="container-x">
-            <dl className={`grid grid-cols-2 gap-y-10 ${page.stats.length === 4 ? "lg:grid-cols-4" : "lg:grid-cols-3"}`}>
+            <dl
+              className={`grid grid-cols-2 gap-y-10 ${page.stats.length === 4 ? "lg:grid-cols-4" : "lg:grid-cols-3"}`}
+            >
               {page.stats.map((s) => (
                 <div key={s.label} className="border-l border-white/15 pl-5">
                   <dt className="font-display text-4xl font-semibold tracking-tight text-teal-400 lg:text-5xl">
                     {s.value}
                   </dt>
-                  <dd className="mt-2 text-sm leading-snug text-white/70">{s.label}</dd>
+                  <dd className="mt-2 text-sm leading-snug text-white/70">
+                    {s.label}
+                  </dd>
                 </div>
               ))}
             </dl>
@@ -159,7 +165,10 @@ export default async function ServicePageRoute({ params }: Params) {
                     {s.heading}
                   </h2>
                   {s.body.split("\n\n").map((para, j) => (
-                    <p key={j} className="mt-4 text-lg leading-relaxed text-slate-ink">
+                    <p
+                      key={j}
+                      className="mt-4 text-lg leading-relaxed text-slate-ink"
+                    >
                       {linkifyPaths(para)}
                     </p>
                   ))}
@@ -182,13 +191,23 @@ export default async function ServicePageRoute({ params }: Params) {
             <Reveal>
               <div className="mt-14 rounded-2xl border border-cloud bg-mist p-7 lg:p-8">
                 <h2 className="text-xl font-semibold text-navy-950 sm:text-2xl">
-                  What we verify before you meet a candidate
+                  Documentation we coordinate for an approved start
                 </h2>
+                <p className="mt-3 text-slate-ink">
+                  The applicable checklist depends on the role, state, and your
+                  organization’s requirements.
+                </p>
                 <ul className="mt-6 grid gap-3 sm:grid-cols-2">
                   {page.verify.map((v) => (
-                    <li key={v} className="flex items-start gap-3 text-navy-900">
+                    <li
+                      key={v}
+                      className="flex items-start gap-3 text-navy-900"
+                    >
                       <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-teal-500/15">
-                        <Check className="size-3.5 text-teal-600" strokeWidth={2.5} />
+                        <Check
+                          className="size-3.5 text-teal-600"
+                          strokeWidth={2.5}
+                        />
                       </span>
                       <span className="text-sm leading-relaxed">{v}</span>
                     </li>
@@ -202,7 +221,11 @@ export default async function ServicePageRoute({ params }: Params) {
           {page.quote && (
             <Reveal>
               <figure className="mt-14 border-l-2 border-teal-500 pl-6">
-                <Quote className="size-7 text-teal-500" strokeWidth={1.5} aria-hidden />
+                <Quote
+                  className="size-7 text-teal-500"
+                  strokeWidth={1.5}
+                  aria-hidden
+                />
                 <blockquote className="mt-3 text-lg leading-relaxed text-navy-900">
                   “{page.quote.text}”
                 </blockquote>
@@ -225,9 +248,15 @@ export default async function ServicePageRoute({ params }: Params) {
             <div className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-cloud bg-cloud sm:grid-cols-2 lg:grid-cols-4">
               {page.steps.map((st) => (
                 <div key={st.n} className="flex h-full flex-col bg-white p-7">
-                  <span className="font-display text-4xl font-semibold text-teal-500/25">{st.n}</span>
-                  <h3 className="mt-4 font-semibold text-navy-950">{st.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-ink">{st.body}</p>
+                  <span className="font-display text-4xl font-semibold text-teal-500/25">
+                    {st.n}
+                  </span>
+                  <h3 className="mt-4 font-semibold text-navy-950">
+                    {st.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-ink">
+                    {st.body}
+                  </p>
                 </div>
               ))}
             </div>
@@ -265,7 +294,7 @@ export default async function ServicePageRoute({ params }: Params) {
         title="Need staffing support for hard-to-fill roles?"
         body="Contact Focused Staffing Group to discuss your current and upcoming needs — or plan ahead and build a stronger candidate pipeline before openings become emergencies."
         primary={edu.cta.primary}
-        secondary={{ label: "View open roles", href: edu.jobBoard }}
+        secondary={{ label: "Send a staffing request", href: "/request-staff" }}
         note="Responsive · Compliance-minded · Focused on hard-to-fill roles"
       />
     </>

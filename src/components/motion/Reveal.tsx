@@ -1,18 +1,9 @@
-"use client";
-
-import { motion, useReducedMotion } from "framer-motion";
 import type { ReactNode } from "react";
-
-/**
- * Disciplined scroll reveal: a short fade + rise as the element enters the
- * viewport, once. Honors prefers-reduced-motion (renders static).
- */
+/** Content stays visible on first render. Hover/focus motion lives on interactive elements. */
 export function Reveal({
   children,
-  delay = 0,
-  y = 18,
   className,
-  as = "div",
+  as: Tag = "div",
 }: {
   children: ReactNode;
   delay?: number;
@@ -20,18 +11,5 @@ export function Reveal({
   className?: string;
   as?: "div" | "section" | "li" | "span";
 }) {
-  const reduce = useReducedMotion();
-  const MotionTag = motion[as] as typeof motion.div;
-
-  return (
-    <MotionTag
-      className={className}
-      initial={reduce ? false : { opacity: 0, y }}
-      whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1], delay }}
-    >
-      {children}
-    </MotionTag>
-  );
+  return <Tag className={className}>{children}</Tag>;
 }

@@ -3,7 +3,6 @@ import { ArrowRight, Check, Quote } from "lucide-react";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/motion/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Icon } from "@/components/ui/Icon";
 import { ReportSignup } from "@/components/sections/ReportSignup";
 import { CopyChip } from "@/components/sections/CiteReport";
 import { JsonLd } from "@/components/seo/JsonLd";

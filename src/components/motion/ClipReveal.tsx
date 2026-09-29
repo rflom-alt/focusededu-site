@@ -24,16 +24,17 @@ export function ClipReveal({
   const reduce = useReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, amount: 0.2 });
-  const [reveal, setReveal] = useState(false);
+  // The fail-safe below is the only state: `inView` already reveals on its own,
+  // so nothing is set synchronously inside the effect body.
+  const [timedOut, setTimedOut] = useState(false);
 
   useEffect(() => {
-    if (inView) {
-      setReveal(true);
-      return;
-    }
-    const t = setTimeout(() => setReveal(true), 1500);
+    if (inView) return;
+    const t = setTimeout(() => setTimedOut(true), 1500);
     return () => clearTimeout(t);
   }, [inView]);
+
+  const reveal = inView || timedOut;
 
   if (reduce) return <div className={className}>{children}</div>;
 

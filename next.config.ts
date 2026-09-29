@@ -98,6 +98,22 @@ const nextConfig: NextConfig = {
         destination: "/blog",
         permanent: true,
       },
+      // The sales team's HubSpot sequences link "Book a call below" to the
+      // WordPress-era /book-a-meeting1/, which the rebuild dropped -- every
+      // first email in every state sequence was sending districts to a 404.
+      // Temporary on purpose: once the sales team books through the CRM this
+      // should point at that page instead, and a 308 would stay cached in the
+      // browsers of everyone who already clicked.
+      {
+        source: "/book-a-meeting1",
+        destination: "/book-a-call",
+        permanent: false,
+      },
+      {
+        source: "/book-a-meeting",
+        destination: "/book-a-call",
+        permanent: false,
+      },
     ];
   },
 };

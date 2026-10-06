@@ -53,9 +53,7 @@ export default function BookACallPage() {
             <h2 className="mb-4 text-xl font-semibold text-navy-950">
               Choose your meeting time
             </h2>
-            <div className="overflow-hidden rounded-2xl border border-cloud bg-white">
-              <CrmBooking url={edu.contact.scheduler} />
-            </div>
+            <CrmBooking url={edu.contact.scheduler} />
             <p className="mt-5 text-sm leading-relaxed text-slate-ink">
               Calendar not loading?{" "}
               <a

@@ -52,10 +52,11 @@ export function CrmBooking({
 
       if (data.type === "height") {
         if (typeof data.height !== "number" || !Number.isFinite(data.height)) return;
-        // Round up so a fractional height never leaves a 1px inner scrollbar,
-        // and ignore sub-2px changes so the frame cannot oscillate.
+        // Round up and always grow, so the frame is never shorter than its
+        // content (even 1px short leaves an inner scrollbar); ignore sub-2px
+        // shrinks so the frame cannot oscillate.
         const next = Math.min(MAX_HEIGHT, Math.max(MIN_HEIGHT, Math.ceil(data.height)));
-        setHeight((prev) => (Math.abs(prev - next) < 2 ? prev : next));
+        setHeight((prev) => (next > prev || prev - next >= 2 ? next : prev));
       } else if (data.type === "booked") {
         if (booked.current) return;
         booked.current = true;
@@ -87,6 +88,10 @@ export function CrmBooking({
       ref={frame}
       src={src}
       title={title}
+      // The confirmation's "Copy link" (the manage/cancel URL) needs the
+      // Clipboard API, which Chromium blocks in a cross-origin frame unless
+      // the embedder delegates it.
+      allow="clipboard-write"
       loading="lazy"
       className={`block w-full border-0 ${className ?? ""}`}
       style={{ height }}

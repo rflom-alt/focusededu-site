@@ -1,20 +1,15 @@
 "use client";
 
 import { useEffect } from "react";
-import { edu } from "@/lib/content";
-
-type Gtag = (...args: unknown[]) => void;
-const gtag = (...args: unknown[]) => {
-  const g = (window as unknown as { gtag?: Gtag }).gtag;
-  if (g) g(...args);
-};
+import { gtag } from "@/lib/gtag";
 
 /**
  * Conversion event instrumentation (GA4):
  * - job_board_click     — any click out to the job board
  * - submit_resume_click — any click out to the talent-network / résumé flow
- * - meeting_booked      — a discovery call actually booked in the embedded
- *   HubSpot Meetings widget (its iframe posts meetingBookSucceeded).
+ * - meeting_booked      — a call actually booked in the embedded CRM booking
+ *   page; fired by CrmBooking (its iframe posts `booked`), not from here, so
+ *   it is counted once.
  * Mark these as Key Events in GA4 Admin to count them as conversions.
  */
 export function AnalyticsEvents() {
@@ -42,24 +37,8 @@ export function AnalyticsEvents() {
       }
     };
 
-    const onMessage = (e: MessageEvent) => {
-      if (
-        typeof e.origin === "string" &&
-        e.origin === new URL(edu.contact.scheduler).origin &&
-        e.data &&
-        typeof e.data === "object" &&
-        (e.data as { meetingBookSucceeded?: boolean }).meetingBookSucceeded
-      ) {
-        gtag("event", "meeting_booked", { method: "hubspot_meetings" });
-      }
-    };
-
     document.addEventListener("click", onClick, true);
-    window.addEventListener("message", onMessage);
-    return () => {
-      document.removeEventListener("click", onClick, true);
-      window.removeEventListener("message", onMessage);
-    };
+    return () => document.removeEventListener("click", onClick, true);
   }, []);
 
   return null;

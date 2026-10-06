@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { edu } from "@/lib/content";
 import { PageHero } from "@/components/ui/PageHero";
 import { Button } from "@/components/ui/Button";
-import { HubSpotMeetings } from "@/components/sections/HubSpotMeetings";
+import { CrmBooking } from "@/components/sections/CrmBooking";
 export const metadata: Metadata = {
   title: "Book a School Staffing Call",
   description:
@@ -54,7 +54,7 @@ export default function BookACallPage() {
               Choose your meeting time
             </h2>
             <div className="overflow-hidden rounded-2xl border border-cloud bg-white">
-              <HubSpotMeetings url={edu.contact.scheduler} />
+              <CrmBooking url={edu.contact.scheduler} />
             </div>
             <p className="mt-5 text-sm leading-relaxed text-slate-ink">
               Calendar not loading?{" "}

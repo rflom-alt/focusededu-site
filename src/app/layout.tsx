@@ -172,8 +172,7 @@ export default function RootLayout({
             gtag('config', 'G-0PJSJTFBQC');
           `}
         </Script>
-        <link rel="preconnect" href="https://static.hsappstatic.net" />
-        <link rel="preconnect" href="https://meetings.hubspot.com" />
+        <link rel="preconnect" href="https://crm.focused-staffing.com" />
         <link rel="preconnect" href="https://i.ytimg.com" />
         <link rel="preconnect" href="https://www.youtube.com" />
         <JsonLd data={ORG_SCHEMA} />

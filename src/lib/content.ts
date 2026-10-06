@@ -32,7 +32,7 @@ export interface SiteContent {
     phone: string;
     phoneHref: string;
     email: string;
-    scheduler: string; // HubSpot Meetings booking link
+    scheduler: string; // CRM round-robin booking page (embedded on /book-a-call)
     address: string;
   };
   social: {
@@ -79,8 +79,7 @@ export const edu: SiteContent = {
     phone: "(484) 482-8223",
     phoneHref: "tel:+14844828223",
     email: "hello@focused-staffing.com",
-    scheduler:
-      "https://meetings.hubspot.com/robert-flom/focused-staffing-group-discovery-call",
+    scheduler: "https://crm.focused-staffing.com/book/school-staffing-call",
     address: "175 Strafford Avenue, Suite One #208, Wayne, PA 19087",
   },
   social: {

@@ -23,9 +23,11 @@ First PA, TRECA. Source: live site `/wp-content/uploads/2024/10/`.
 | `public/video/founder-poster.jpg` | Frame @2s of the video | Video poster (Rob in FSG polo). |
 | `public/testimonials/*.png` | live site `/wp-content/uploads/2025/06/` | Real testimonial cards (face + org logo + 5 stars): Erin Murphy-Richardson, Elias Pappas, David Weathington, Zavia Herring. |
 
-**Scheduler:** the discovery-call booking uses the client's **HubSpot Meetings** link
-(`meetings.hubspot.com/robert-flom/...`), embedded inline on `/book-a-call`. The old Calendly
-link from the brief was dead (HubSpot replaced it). Stored as `edu.contact.scheduler`.
+**Scheduler:** the discovery-call booking is the FSG CRM's round-robin booking page
+(`crm.focused-staffing.com/book/school-staffing-call`), embedded inline on `/book-a-call` by
+`CrmBooking` (`?embed=1`; the frame posts its height and a `booked` event, which fires GA4
+`meeting_booked`). It replaced the HubSpot Meetings link, which had replaced the brief's dead
+Calendly link. Stored as `edu.contact.scheduler`.
 
 ## Photography — PLACEHOLDER (Pexels License — free commercial use, no attribution required)
 De-duplicated June 2026: each photo now appears in **one** prominent slot to avoid repetition.

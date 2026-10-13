@@ -132,12 +132,12 @@ export default function TermsPage() {
                 frequency varies. Message &amp; data rates may apply.
               </li>
               <li>
-                <strong className="text-navy-950">Opt out.</strong> Reply STOP to any
+                <strong className="text-navy-950">Opt out.</strong> Reply <strong>STOP</strong> to any
                 message to stop receiving texts. You will receive one confirmation and no
                 further messages unless you opt in again.
               </li>
               <li>
-                <strong className="text-navy-950">Help.</strong> Reply HELP, email
+                <strong className="text-navy-950">Help.</strong> Reply <strong>HELP</strong>, email
                 hello@focused-staffing.com or call (484) 482-8223.
               </li>
               <li>

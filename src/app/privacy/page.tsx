@@ -85,6 +85,13 @@ export default function PrivacyPage() {
                 confidentiality obligations.
               </li>
               <li>
+                <strong className="text-navy-950">Text messaging data is never shared.</strong>{" "}
+                All of the categories above exclude text messaging originator opt-in data
+                and consent; this information will not be shared with any third parties.
+                No mobile information will be shared with third parties or affiliates for
+                marketing or promotional purposes.
+              </li>
+              <li>
                 <strong className="text-navy-950">For legal reasons</strong> — where
                 required by law, regulation, legal process, or to protect rights, safety,
                 and property.
@@ -102,16 +109,15 @@ export default function PrivacyPage() {
               checking the text-message box when you apply or join our talent network at
               apply.focused-staffing.com), we use your mobile number to send messages about
               your application and job opportunities. Message frequency varies. Message
-              &amp; data rates may apply. Reply STOP to opt out at any time, or HELP for
-              help.
+              &amp; data rates may apply. Reply <strong>STOP</strong> to opt out at any
+              time, or <strong>HELP</strong> for help.
             </p>
             <p className="mt-4 leading-relaxed text-slate-ink">
               <strong className="text-navy-950">
-                Mobile information will not be shared with third parties or affiliates for
-                marketing or promotional purposes.
-              </strong>{" "}
-              Text-messaging opt-in data and consent are not shared with any third party,
-              except with the service providers that deliver our messages on our behalf.
+                No mobile information will be shared with third parties or affiliates for
+                marketing or promotional purposes. Text messaging originator opt-in data and
+                consent will not be shared with any third parties.
+              </strong>
             </p>
 
             <h2 className="mt-12 text-2xl font-semibold text-navy-950">Data retention</h2>

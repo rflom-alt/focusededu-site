@@ -14,7 +14,7 @@ export default function TermsPage() {
       <PageHero
         eyebrow="Legal"
         title="Terms & Conditions"
-        subtitle="Last updated: July 21, 2026"
+        subtitle="Last updated: October 13, 2026"
       />
 
       <section className="bg-white py-20 lg:py-28">
@@ -116,6 +116,36 @@ export default function TermsPage() {
               We may revise these Terms at any time. Continued use of the Site after
               changes constitutes acceptance of the revised Terms.
             </p>
+
+            <h2 id="sms" className="mt-12 text-2xl font-semibold text-navy-950">
+              Text messaging terms
+            </h2>
+            <ul className="mt-5 space-y-3 text-slate-ink">
+              <li>
+                <strong className="text-navy-950">Program.</strong> Focused Staffing Group
+                recruiting texts: messages about your application, interviews, credentials
+                and job opportunities, sent to people who opt in (for example, by checking
+                the text-message box when applying at apply.focused-staffing.com).
+              </li>
+              <li>
+                <strong className="text-navy-950">Frequency and cost.</strong> Message
+                frequency varies. Message &amp; data rates may apply.
+              </li>
+              <li>
+                <strong className="text-navy-950">Opt out.</strong> Reply STOP to any
+                message to stop receiving texts. You will receive one confirmation and no
+                further messages unless you opt in again.
+              </li>
+              <li>
+                <strong className="text-navy-950">Help.</strong> Reply HELP, email
+                hello@focused-staffing.com or call (484) 482-8223.
+              </li>
+              <li>
+                Carriers are not liable for delayed or undelivered messages. Your mobile
+                information is handled as described in our{" "}
+                <a href="/privacy#sms" className="underline">Privacy Policy</a>.
+              </li>
+            </ul>
 
             <h2 className="mt-12 text-2xl font-semibold text-navy-950">Contact</h2>
             <p className="mt-5 leading-relaxed text-slate-ink">

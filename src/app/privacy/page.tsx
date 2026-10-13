@@ -14,7 +14,7 @@ export default function PrivacyPage() {
       <PageHero
         eyebrow="Legal"
         title="Privacy Policy"
-        subtitle="Last updated: July 21, 2026"
+        subtitle="Last updated: October 13, 2026"
       />
 
       <section className="bg-white py-20 lg:py-28">
@@ -93,6 +93,26 @@ export default function PrivacyPage() {
                 <strong className="text-navy-950">We do not sell your personal information.</strong>
               </li>
             </ul>
+
+            <h2 id="sms" className="mt-12 text-2xl font-semibold text-navy-950">
+              Text messaging (SMS)
+            </h2>
+            <p className="mt-5 leading-relaxed text-slate-ink">
+              If you opt in to text messages from Focused Staffing Group (for example, by
+              checking the text-message box when you apply or join our talent network at
+              apply.focused-staffing.com), we use your mobile number to send messages about
+              your application and job opportunities. Message frequency varies. Message
+              &amp; data rates may apply. Reply STOP to opt out at any time, or HELP for
+              help.
+            </p>
+            <p className="mt-4 leading-relaxed text-slate-ink">
+              <strong className="text-navy-950">
+                Mobile information will not be shared with third parties or affiliates for
+                marketing or promotional purposes.
+              </strong>{" "}
+              Text-messaging opt-in data and consent are not shared with any third party,
+              except with the service providers that deliver our messages on our behalf.
+            </p>
 
             <h2 className="mt-12 text-2xl font-semibold text-navy-950">Data retention</h2>
             {/* ⚠️ LEGAL REVIEW: set concrete retention periods (e.g., candidate records X years after last activity). */}

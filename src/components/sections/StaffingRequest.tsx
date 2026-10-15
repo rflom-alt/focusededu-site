@@ -14,6 +14,14 @@ export function StaffingRequest() {
       "Location: " + f.get("location"),
       "Schedule and requirements: " + f.get("notes"),
     ].join("\n");
+    // The request leaves as an email the visitor sends, so GA4 never sees a form
+    // submission — only enhanced measurement's form_start. Record the moment the
+    // email is composed; no field values are sent (they can identify the sender).
+    (window as unknown as { gtag?: (...a: unknown[]) => void }).gtag?.(
+      "event",
+      "staffing_request_sent",
+      { method: "email" },
+    );
     window.location.href =
       "mailto:" +
       edu.contact.email +

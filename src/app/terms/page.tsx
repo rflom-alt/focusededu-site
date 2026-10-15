@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHero } from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
@@ -143,7 +144,7 @@ export default function TermsPage() {
               <li>
                 Carriers are not liable for delayed or undelivered messages. Your mobile
                 information is handled as described in our{" "}
-                <a href="/privacy#sms" className="underline">Privacy Policy</a>.
+                <Link href="/privacy#sms" className="underline">Privacy Policy</Link>.
               </li>
             </ul>
 

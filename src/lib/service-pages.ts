@@ -1745,7 +1745,7 @@ const corePages: ServicePage[] = [
       },
       {
         heading: "How FocusedEDU compares with other substitute staffing agencies",
-        body: "Districts comparing vendors usually shortlist a national marketplace, a large national staffing firm, and a regional specialist. We lay out how those models differ — fill-rate evidence, whether the substitute pool is shared with neighboring schools, and what it costs to hire a sub permanently — in [the best substitute teacher staffing agencies for 2026](/blog/best-substitute-teacher-staffing-agencies-2026). For the whole building, including special education and related services, see [the best K-12 staffing agencies for schools in 2026](/blog/best-k12-staffing-agencies-for-schools-2026).",
+        body: "Districts comparing vendors usually shortlist a national marketplace, a large national staffing firm, and a regional specialist. We lay out how those models differ — fill-rate evidence, whether the substitute pool is shared with neighboring schools, and what it costs to hire a sub permanently — in [the best substitute teacher staffing agencies for 2026](/blog/best-substitute-teacher-staffing-agencies-2026). For the whole building, including special education and related services, see [the best K-12 staffing agencies for schools in 2026](/blog/best-k12-staffing-agencies-for-schools-2026). Comparing specific providers? Read [FocusedEDU vs ESS](/blog/focusededu-vs-ess-2026), [FocusedEDU vs Kelly Education](/blog/focusededu-vs-kelly-education-2026), [FocusedEDU vs Soliant](/blog/focusededu-vs-soliant-k12-schools-2026), and [the best Swing Education alternatives for schools](/blog/swing-education-alternatives-for-schools-2026).",
       },
     ],
     stateLinks: {

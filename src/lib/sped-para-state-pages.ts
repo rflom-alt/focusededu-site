@@ -260,7 +260,7 @@ ${cta(
       },
       {
         q: "How fast can FocusedEDU fill a special education teacher opening in Pennsylvania?",
-        a: "It depends on the role and region, but the record is concrete: at First Philadelphia Public Charter School we filled every open special education teacher role within two weeks of the request, and our automated credentialing cuts typical time-to-hire roughly in half.",
+        a: "Fast, and the record is concrete: at First Philadelphia Public Charter School we filled every open special education teacher role within two weeks of the request, and our automated credentialing cuts typical time-to-hire roughly in half.",
       },
       {
         q: "Will FocusedEDU also staff a competing district near us?",

@@ -48,12 +48,23 @@ const ORG_SCHEMA = {
       "@type": ["EmploymentAgency", "LocalBusiness"],
       "@id": "https://www.focusedu-staffing.com/#organization",
       name: "FocusedEDU",
+      // The names people and other sites actually use for this business, so
+      // search engines resolve them to one entity rather than a lookalike.
+      alternateName: ["FocusedEDU Staffing Group", "Focused Staffing Group"],
       legalName: "Focused Staffing Group, LLC",
       url: "https://www.focusedu-staffing.com",
       logo: "https://www.focusedu-staffing.com/logos/focusededu-white.png",
       image: "https://www.focusedu-staffing.com/logos/focusededu-white.png",
       parentOrganization: {
         "@id": "https://www.focused-staffing.com/#organization",
+        name: "Focused Staffing Group, LLC",
+        url: "https://www.focused-staffing.com",
+      },
+      founder: {
+        "@type": "Person",
+        "@id": "https://www.focused-staffing.com/about/robert-flom#person",
+        name: "Robert Flom",
+        url: "https://www.focusedu-staffing.com/about/robert-flom",
       },
       description:
         "FocusedEDU is the K-12 education staffing division of Focused Staffing Group, placing special education teachers, paraprofessionals, substitute teachers, school nurses, and related-service providers for schools and districts.",
@@ -117,15 +128,15 @@ const sans = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.focusedu-staffing.com"),
   title: {
-    default: "K\u201312 Education Staffing | FocusedEDU",
+    default: "K-12 Staffing & Substitute Teachers | FocusedEDU",
     template: "%s \u00b7 FocusedEDU",
   },
   description:
-    "K\u201312 staffing for special education, paraprofessionals, substitutes, and related services. Discuss your school\u2019s open roles with FocusedEDU.",
+    "K-12 staffing for substitutes, special education, and paraprofessionals: an exclusive pipeline built by a former teacher, with temp-to-perm at no cost.",
   openGraph: {
-    title: "K\u201312 Education Staffing | FocusedEDU",
+    title: "K-12 Staffing & Substitute Teachers | FocusedEDU",
     description:
-      "K\u201312 staffing for special education, paraprofessionals, substitutes, and related services. Discuss your school\u2019s open roles with FocusedEDU.",
+      "K-12 staffing for substitutes, special education, and paraprofessionals: an exclusive pipeline built by a former teacher, with temp-to-perm at no cost.",
     type: "website",
     locale: "en_US",
     siteName: "FocusedEDU",

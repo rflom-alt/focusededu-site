@@ -103,37 +103,44 @@ export const edu: SiteContent = {
     secondary: { label: "Send a staffing request", href: "/request-staff" },
   },
   hero: {
-    eyebrow: "K–12 education staffing",
-    title: "Staff the school roles your students are counting on.",
+    eyebrow: "FocusedEDU Staffing Group · K-12 education staffing",
+    // The H1 carries the words schools search ("K-12 staffing", "substitute
+    // teachers"); the brand voice lives in the subtitle.
+    title: "K-12 staffing and substitute teachers for schools and districts.",
     subtitle:
-      "Special education teachers, paraprofessionals, substitutes, and related-service providers. Recruiting and screening built around your school, your students, and your open roles.",
+      "The educators your students deserve — focused entirely on you. FocusedEDU gives every K-12 partner a dedicated, exclusive pipeline of vetted substitutes, special education teachers, paraprofessionals, and related-service providers. Built by a former teacher. Credentialed in half the time. Never shared with a competing school.",
     photo: "/photography/classroom-lesson.jpg",
     photoAlt:
       "A teacher leading an engaged lesson in a bright, modern classroom of diverse students",
   },
   differentiators: [
     {
-      icon: "Users",
-      title: "Recruiting around your requirements",
-      body: "Your setting, schedule, and role requirements guide the search and candidate screening.",
+      icon: "ShieldCheck",
+      title: "One partner per market",
+      body: "Your talent pipeline is yours alone. We won't take on a directly competing school or district in your area — so the educators we recruit and develop for you are never shared with a rival down the road.",
+    },
+    {
+      icon: "GraduationCap",
+      title: "Built by a teacher",
+      body: "Founded by a former K-12 educator who has stood at the front of the classroom — not recruiters who fell into the space. We hire the way you would.",
     },
     {
       icon: "BadgeCheck",
-      title: "A clear path to an approved start",
-      body: "Our team coordinates required credentials and onboarding documentation with your organization.",
+      title: "Credentialing, automated",
+      body: "Automated credentialing cuts hiring time in half while quietly weeding out unqualified candidates before they ever reach your desk.",
     },
     {
       icon: "Handshake",
-      title: "The engagement that fits the need",
-      body: "Discuss contract staffing, temp-to-perm, and direct hire with clear terms before work begins.",
+      title: "Temp-to-perm, at no cost",
+      body: "Evaluate a professional on the job before you commit to a permanent hire — at no additional cost to your school.",
     },
-    {
-      icon: "HeartPulse",
-      title: "A team to keep things moving",
-      body: "Get help coordinating candidate submissions, interviews, and placement support.",
-    },
-  ],
-  stats: [],
+  ] as Differentiator[],
+  stats: [
+    { value: "12 yrs", label: "Partnering with K-12 schools" },
+    { value: "0", label: "Of your direct competitors we'll staff" },
+    { value: "<10%", label: "Vacancy rate a partner reached — down from 35%" },
+    { value: "+25%", label: "Substitute fill-rate lift for a partner district" },
+  ] as Stat[],
   steps: [
     {
       n: "01",
@@ -236,6 +243,6 @@ export const edu: SiteContent = {
   },
   finalCta: {
     title: "Let's build the team your students deserve.",
-    body: "Discuss your priority roles, requirements, and the next step in a free 30-minute staffing call.",
+    body: "Book a 30-minute discovery call and see how a dedicated, exclusive talent pipeline changes the way your school hires.",
   },
 };

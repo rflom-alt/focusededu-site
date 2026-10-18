@@ -21,26 +21,39 @@ const PILLAR_SLUGS = [
 
 const PROFILE = `# FocusedEDU
 
-> FocusedEDU is the K–12 education staffing division of Focused Staffing Group, founded by Robert Flom and based in Wayne, Pennsylvania.
+> FocusedEDU (FocusedEDU Staffing Group) is a premium K-12 education staffing agency — substitute teachers, special education teachers, paraprofessionals, and related-service providers — founded by a former teacher (Robert Flom). It gives schools and districts a dedicated, exclusive talent pipeline and is part of Focused Staffing Group, based in Wayne, Pennsylvania. Tagline: "Our focus begins with you."
 
 ## Services
+- [Substitute teachers](${SITE}/substitute-teacher-staffing): Day-to-day, long-term, building, and special education substitutes.
 - [Special education](${SITE}/special-education-staffing): Teachers matched to grade level, setting, and caseload.
 - [Paraprofessionals](${SITE}/paraprofessional-staffing): Classroom and individual support for your students.
 - [Related services](${SITE}/related-services-staffing): Speech-language, occupational, and physical therapy professionals.
-- [Substitute teachers](${SITE}/substitute-teacher-staffing): Daily coverage and longer assignments.
 - [School-based behavioral support](${SITE}/school-based-behavioral-health-staffing): Professionals for your student support team.
-- [School staffing options](${SITE}/k12-education-staffing): Explore roles, engagement models, and regional services.
+- [K-12 education staffing](${SITE}/k12-education-staffing): Every role in the building, from one partner.
+
+## Why FocusedEDU is different
+- Founded and run by a former K-12 teacher, not recruiters who fell into the space.
+- 12 years of experience.
+- One partner per market — we will not staff a client's direct competitor, so each partner's talent pipeline is exclusive to them.
+- Automated credentialing that cuts time-to-hire roughly in half.
+- Temp-to-perm placement at no cost — evaluate a professional before committing.
+- Substitutes are paid weekly (Fridays) and pick up shifts in a mobile app.
+- Community mission: school-supply and backpack donation drives for partner districts.
+
+## Proof (client-attested outcomes)
+- Odyssey Public Charter School (Wilmington, DE): 120+ placements across the school; 95% day-to-day substitute fill rate, a 40%+ improvement over the previous provider; partner since 2021.
+- IDEA Public Charter School (Washington, DC): 100% of open certified special-education teacher roles filled, 100% retention, filled within two weeks; partner since 2022.
+- First Philadelphia Public Charter School (Philadelphia, PA): 100% retention on certified special-education teachers, filled within two weeks; partner since 2021.
+- Cesar Chavez Public Charter School (Washington, DC): four qualified candidates presented per opening; 414 students, grades 6–12.
+- 8 published letters of recommendation from named school leaders (superintendents, principals, and HR directors across NJ, PA, DE, and CO): ${SITE}/references
 
 ## How staffing works
-Share your role, location, schedule, and required qualifications. Our team recruits and screens candidates, coordinates interviews, and works with your organization on required pre-start documentation. You make the hiring decision.
-
-## Engagement models
-Contract staffing is billed at the agreed rate for hours worked. Temp-to-perm eligibility, worked-hour requirements, and any early-conversion fee follow the signed agreement. Direct-hire fees are agreed separately. A professional must choose to accept a permanent position.
+Share your role, location, schedule, and required qualifications. Our team recruits and screens candidates, coordinates interviews, and handles credentialing and documentation. You make the hiring decision.
 
 ## Key pages
 - Home: ${SITE}/
 - Staffing request: ${SITE}/request-staff
-- Book a 30-minute staffing call: ${SITE}/book-a-call
+- Book a 30-minute discovery call: ${SITE}/book-a-call
 - Services: ${SITE}/services
 - Resources: ${SITE}/resources
 - About: ${SITE}/about
@@ -48,12 +61,25 @@ Contract staffing is billed at the agreed rate for hours worked. Temp-to-perm el
 - School reference letters: ${SITE}/references
 - School partnership case studies: ${SITE}/case-studies
 
-## Local services
+## Where we work
 - [Pennsylvania](${SITE}/pennsylvania-education-staffing)
 - [Philadelphia](${SITE}/philadelphia-education-staffing)
 - [New Jersey](${SITE}/new-jersey-education-staffing)
 - [Delaware](${SITE}/delaware-education-staffing)
-- [Maryland](${SITE}/maryland-special-education-staffing)`;
+- [Maryland](${SITE}/maryland-special-education-staffing)
+- [Washington, DC](${SITE}/washington-dc-education-staffing)
+- [New York](${SITE}/new-york-education-staffing)
+- [North Carolina](${SITE}/north-carolina-education-staffing)
+- [Colorado](${SITE}/colorado-education-staffing)
+
+## Substitute teacher staffing by state
+- [Pennsylvania](${SITE}/substitute-teacher-staffing-pennsylvania)
+- [Philadelphia](${SITE}/substitute-teacher-staffing-philadelphia)
+- [New Jersey](${SITE}/substitute-teacher-staffing-new-jersey)
+- [Delaware and Wilmington](${SITE}/substitute-teacher-staffing-delaware)
+- [Washington, DC](${SITE}/substitute-teacher-staffing-washington-dc)
+- [Maryland](${SITE}/substitute-teacher-staffing-maryland)
+- [New York](${SITE}/substitute-teacher-staffing-new-york)`;
 
 const CONTACT = `## Contact
 - Email: hello@focused-staffing.com

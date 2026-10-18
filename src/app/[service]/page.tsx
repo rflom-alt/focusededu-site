@@ -42,13 +42,16 @@ export default async function ServicePageRoute({ params }: Params) {
   const page = getServicePage(service);
   if (!page) notFound();
 
+  // Answers may carry [label](url) links for the rendered page; structured data
+  // gets the plain sentence.
+  const plain = (t: string) => t.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: page.faqs.map((f) => ({
       "@type": "Question",
       name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
+      acceptedAnswer: { "@type": "Answer", text: plain(f.a) },
     })),
   };
 
@@ -60,32 +63,36 @@ export default async function ServicePageRoute({ params }: Params) {
     description: page.hero,
     url: `https://www.focusedu-staffing.com/${page.slug}`,
     image: `https://www.focusedu-staffing.com${page.photo}`,
+    serviceType: page.h1,
     provider: { "@id": "https://www.focusedu-staffing.com/#organization" },
+    ...(page.areaServed?.length
+      ? {
+          areaServed: page.areaServed.map((a) => ({
+            "@type": a.type === "City" ? "City" : a.type === "Country" ? "Country" : "State",
+            name: a.name,
+          })),
+        }
+      : {}),
   };
+
+  const crumbs = [
+    { name: "Home", item: "https://www.focusedu-staffing.com/" },
+    { name: "Services", item: "https://www.focusedu-staffing.com/services" },
+    ...(page.parent
+      ? [{ name: page.parent.label, item: `https://www.focusedu-staffing.com/${page.parent.slug}` }]
+      : []),
+    { name: page.h1, item: `https://www.focusedu-staffing.com/${page.slug}` },
+  ];
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://www.focusedu-staffing.com/",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Services",
-        item: "https://www.focusedu-staffing.com/services",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: page.h1,
-        item: `https://www.focusedu-staffing.com/${page.slug}`,
-      },
-    ],
+    itemListElement: crumbs.map((c, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: c.name,
+      item: c.item,
+    })),
   };
 
   return (
@@ -176,6 +183,35 @@ export default async function ServicePageRoute({ params }: Params) {
               </Reveal>
             ))}
           </div>
+
+          {page.stateLinks && (
+            <Reveal>
+              <div className="mt-14 rounded-2xl border border-cloud bg-mist p-7 lg:p-8">
+                <h2 className="text-2xl font-semibold text-navy-950 sm:text-3xl">
+                  {page.stateLinks.heading}
+                </h2>
+                <p className="mt-3 text-lg leading-relaxed text-slate-ink">
+                  {page.stateLinks.intro}
+                </p>
+                <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+                  {page.stateLinks.links.map((l) => (
+                    <li key={l.slug}>
+                      <Link
+                        href={`/${l.slug}`}
+                        className="group flex items-center justify-between gap-3 rounded-xl border border-cloud bg-white px-5 py-4 font-medium text-navy-950 transition hover:border-teal-500/40"
+                      >
+                        <span>Substitute teachers in {l.label}</span>
+                        <ArrowRight
+                          className="size-4 shrink-0 text-teal-600 transition-transform group-hover:translate-x-0.5"
+                          aria-hidden
+                        />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+          )}
 
           {page.richHtml && (
             <Reveal>

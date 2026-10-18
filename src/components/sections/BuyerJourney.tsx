@@ -174,6 +174,21 @@ export function LocationLinks() {
             </Link>
           </li>
         </ul>
+        <h3 className="mt-8 text-lg font-semibold text-navy-950">
+          Substitute teacher staffing by state
+        </h3>
+        <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-3">
+          {b.substituteLocations.map(([name, href]) => (
+            <li key={href}>
+              <Link
+                href={href}
+                className="font-semibold text-teal-700 underline underline-offset-4"
+              >
+                Substitute teachers in {name}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

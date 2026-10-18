@@ -41,7 +41,7 @@ export function StaffingRequest() {
       </h2>
       <p className="mt-3 text-slate-ink">
         This prepares an email to our staffing team. Review it and press Send in
-        your email app.
+        your email app — we&apos;ll respond within 48 hours.
       </p>
       <div className="mt-6 grid gap-5">
         <label className="font-medium text-navy-950">
@@ -84,8 +84,8 @@ export function StaffingRequest() {
         {opened && (
           <p role="status" className="text-sm text-slate-ink">
             Your email app should open. Your request is sent only when you press
-            Send there. If it did not open, email {edu.contact.email} or book a
-            call.
+            Send there, and our team responds within 48 hours. If it did not
+            open, email {edu.contact.email} or book a call.
           </p>
         )}
       </div>

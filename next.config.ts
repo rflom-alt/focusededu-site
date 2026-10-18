@@ -114,6 +114,18 @@ const nextConfig: NextConfig = {
         destination: "/book-a-call",
         permanent: false,
       },
+      // Common paths people type or old sites link to. None of these exist as
+      // pages here, so without a redirect they 404; 308 passes any link equity
+      // to the page that actually answers the visit.
+      { source: "/home", destination: "/", permanent: true },
+      { source: "/employers", destination: "/for-schools", permanent: true },
+      { source: "/schools", destination: "/for-schools", permanent: true },
+      { source: "/contact", destination: "/book-a-call", permanent: true },
+      { source: "/contact-us", destination: "/book-a-call", permanent: true },
+      { source: "/careers", destination: "/candidates", permanent: true },
+      { source: "/job-seekers", destination: "/candidates", permanent: true },
+      { source: "/educators", destination: "/candidates", permanent: true },
+      { source: "/about-us", destination: "/about", permanent: true },
     ];
   },
 };

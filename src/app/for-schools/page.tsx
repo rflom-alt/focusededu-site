@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import { edu } from "@/lib/content";
 import { PageHero } from "@/components/ui/PageHero";
 import { Button } from "@/components/ui/Button";
+import { Differentiators } from "@/components/sections/Differentiators";
+import { StatBand } from "@/components/sections/StatBand";
+import { RegionScarcity } from "@/components/sections/RegionScarcity";
+import { Testimonials } from "@/components/sections/Testimonials";
+import { CaseStudyProof } from "@/components/sections/CaseStudyProof";
 import {
   BuyerProof,
   RoleRoutes,
@@ -11,17 +16,22 @@ import {
   LocationLinks,
   BuyerCta,
 } from "@/components/sections/BuyerJourney";
+
+const DESCRIPTION =
+  "Hire the right K-12 education staff with speed and precision. A dedicated, exclusive talent pipeline, automated credentialing, and temp-to-perm at no cost.";
+
 export const metadata: Metadata = {
-  title: "Staffing for K\u201312 Schools & Districts",
-  description:
-    "Special education teachers, paraprofessionals, substitutes, and related-service providers. Recruiting and screening built around your school, your students, and your open roles.",
+  title: "Staffing for K–12 Schools & Districts",
+  description: DESCRIPTION,
   alternates: { canonical: "/for-schools" },
   openGraph: {
-    title: "Staff the school roles your students are counting on.",
-    description:
-      "Special education teachers, paraprofessionals, substitutes, and related-service providers. Recruiting and screening built around your school, your students, and your open roles.",
+    title: "Hire the right education staff — with speed and precision.",
+    description: DESCRIPTION,
     url: "https://www.focusedu-staffing.com/for-schools",
     type: "website",
+    // Declaring openGraph replaces the inherited object, which drops the
+    // root file-based image unless it is named here.
+    images: ["/opengraph-image"],
   },
 };
 export default function BuyerPage() {
@@ -29,8 +39,8 @@ export default function BuyerPage() {
     <>
       <PageHero
         eyebrow={edu.hero.eyebrow}
-        title="Your next staffing decision starts here."
-        subtitle={edu.hero.subtitle}
+        title="Hire the right education staff — with speed and precision."
+        subtitle="Partner with FocusedEDU, a strategic partner dedicated to connecting you with high-quality, highly-skilled education talent — substitutes, special education teachers, paraprofessionals, and related-service providers — backed by a dedicated pipeline that is yours alone."
         photo={edu.hero.photo}
         photoAlt={edu.hero.photoAlt}
       >
@@ -44,9 +54,14 @@ export default function BuyerPage() {
         </Button>
       </PageHero>
       <BuyerProof />
+      <Differentiators items={edu.differentiators} />
       <RoleRoutes />
+      <StatBand stats={edu.stats} />
       <HiringProcess />
       <StaffingOptions />
+      <RegionScarcity />
+      <CaseStudyProof />
+      <Testimonials testimonials={edu.testimonials} />
       <BuyerFaq />
       <LocationLinks />
       <BuyerCta />

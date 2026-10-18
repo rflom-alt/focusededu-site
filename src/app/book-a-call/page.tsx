@@ -6,14 +6,17 @@ import { CrmBooking } from "@/components/sections/CrmBooking";
 export const metadata: Metadata = {
   title: "Book a School Staffing Call",
   description:
-    "Discuss your open roles, schedule, and staffing requirements in a free 30-minute call with FocusedEDU.",
+    "Book a free 30-minute discovery call with FocusedEDU. Share your staffing challenge and see how a dedicated, exclusive K-12 pipeline works.",
   alternates: { canonical: "/book-a-call" },
   openGraph: {
     title: "Book a School Staffing Call",
     description:
-      "Discuss your open roles, schedule, and staffing requirements in a free 30-minute call with FocusedEDU.",
+      "Book a free 30-minute discovery call with FocusedEDU. Share your staffing challenge and see how a dedicated, exclusive K-12 pipeline works.",
     url: "/book-a-call",
     type: "website",
+    // Declaring openGraph replaces the inherited object, which drops the
+    // root file-based image unless it is named here.
+    images: ["/opengraph-image"],
   },
 };
 export default function BookACallPage() {
@@ -33,7 +36,7 @@ export default function BookACallPage() {
         <div className="container-x grid items-start gap-10 lg:grid-cols-[0.7fr_1.3fr]">
           <div>
             <p className="text-sm font-semibold uppercase tracking-widest text-teal-700">
-              Free · 30 minutes
+              Free · 30 minutes · No cost, no obligation
             </p>
             <h2 className="mt-4 text-2xl font-semibold text-navy-950">
               A conversation about your hiring needs.
@@ -45,6 +48,11 @@ export default function BookACallPage() {
               </li>
               <li>Agree on requirements and the next action.</li>
             </ol>
+            <p className="mt-6 text-slate-ink">
+              You&apos;ll see the model: how an exclusive pipeline — one we never
+              share with your competitors — gives you first pick of talent, and
+              how automated credentialing halves your time-to-hire.
+            </p>
             <p className="mt-6 text-slate-ink">
               No documents to prepare. Share what you know about the opening.
             </p>

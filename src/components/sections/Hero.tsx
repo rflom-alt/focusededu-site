@@ -4,6 +4,13 @@ import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import type { SiteContent } from "@/lib/content";
 
+/** Proof points that used to rise in on scroll; now static so they are present on first render. */
+const PROOF_CHIPS = [
+  "One partner per market",
+  "Built by a teacher",
+  "Credentialing in half the time",
+];
+
 /** The whole offer is present on first render, with no pinned scroll or hidden text. */
 export function Hero({
   hero,
@@ -26,6 +33,17 @@ export function Hero({
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
             {hero.subtitle}
           </p>
+          <ul className="mt-6 flex flex-wrap gap-2.5">
+            {PROOF_CHIPS.map((c) => (
+              <li
+                key={c}
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.06] px-4 py-2 text-sm font-medium text-white/90"
+              >
+                <span className="size-1.5 rounded-full bg-teal-400" aria-hidden />
+                {c}
+              </li>
+            ))}
+          </ul>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Button href={cta.primary.href}>{cta.primary.label}</Button>
             <Button

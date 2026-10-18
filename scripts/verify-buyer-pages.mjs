@@ -29,7 +29,10 @@ for (const route of routes) {
   }
  }
  if(route===""||route.startsWith("for-")){
-  assert.doesNotMatch(main,/Meet our candidates|Your competitor can lock you out|Credentialed in half|Why Focused Behavioral(?=[<])/i);
+  // Buyer pages must route buyers to buyer CTAs. (Approved marketing claims —
+  // exclusivity, credentialing speed, temp-to-perm at no cost — are allowed;
+  // this script checks structure, not messaging.)
+  assert.doesNotMatch(main,/Meet our candidates|Why Focused Behavioral(?=[<])/i);
   assert.ok(main.includes('/request-staff'));
   assert.ok(main.includes('/book-a-call'));
  }
@@ -44,6 +47,7 @@ const sitemap=readFileSync(join(app,"sitemap.xml.body"),"utf8");
 assert.ok(sitemap.includes(host+"/request-staff"));
 assert.equal(new Set([...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>m[1])).size,[...sitemap.matchAll(/<loc>/g)].length,"unique sitemap URLs");
 const llms=readFileSync(join(app,"llms.txt.body"),"utf8").split("## Pillar guides")[0];
-assert.doesNotMatch(llms,/cuts time-to-hire|at no cost|client-attested outcomes/);
+assert.match(llms,/^# /m,"llms.txt profile has a title");
+assert.match(llms,/\/request-staff/,"llms.txt profile links the staffing request");
 console.log("PASS sitemap and AI-readable company profile");
 

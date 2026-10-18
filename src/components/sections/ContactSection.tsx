@@ -54,8 +54,9 @@ export function ContactSection({
             Let&apos;s talk about your team.
           </h2>
           <p className="mt-5 max-w-md text-lg leading-relaxed text-slate-ink">
-            Email us about your staffing challenge to discuss your opening.
-            Prefer a meeting? Book a 30-minute staffing call.
+            Tell us about your staffing challenge and a member of our team will
+            reach out within 48 hours. Prefer to talk now? Book a 30-minute
+            discovery call.
           </p>
 
           <ul className="mt-9 space-y-4 text-navy-900">
@@ -160,7 +161,8 @@ export function ContactSection({
               Open email message
             </button>
             <p className="text-center text-xs text-slate-ink">
-              Review and send the message in your email app.
+              Review and send the message in your email app. We&apos;ll respond
+              within 48 hours.
             </p>
           </div>
         </form>

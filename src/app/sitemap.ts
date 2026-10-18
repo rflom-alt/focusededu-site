@@ -26,32 +26,41 @@ function lastmod(updated: string | undefined, iso: string): string {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = [
-    "",
-    "/for-schools",
-    "/candidates",
-    "/about",
-    "/about/robert-flom",
-    "/our-impact",
-    "/resources",
-    "/case-studies",
-    "/references",
-    "/services",
-    "/book-a-call",
-    "/request-staff",
-    "/blog",
-    "/resources/2026-k12-staffing-report",
-    "/privacy",
-    "/terms",
-    "/cookies",
-  ]
+  /**
+   * Every static route carries an explicit last-modified date (YYYY-MM-DD).
+   * Set by hand on purpose: Vercel shallow-clones the repo, so git history is not
+   * available at build time, and a date stamped at build would claim every page
+   * changed on every deploy. Bump the date whenever the page's content changes.
+   */
+  const STATIC_ROUTES: { path: string; updated: string }[] = [
+    { path: "", updated: "2026-10-18" },
+    { path: "/for-schools", updated: "2026-10-18" },
+    { path: "/candidates", updated: "2026-07-21" },
+    { path: "/about", updated: "2026-10-18" },
+    { path: "/about/robert-flom", updated: "2026-09-07" },
+    { path: "/our-impact", updated: "2026-10-18" },
+    { path: "/resources", updated: "2026-10-18" },
+    { path: "/case-studies", updated: "2026-07-21" },
+    { path: "/references", updated: "2026-08-12" },
+    { path: "/services", updated: "2026-10-18" },
+    { path: "/book-a-call", updated: "2026-10-18" },
+    { path: "/request-staff", updated: "2026-10-18" },
+    { path: "/blog", updated: "2026-10-18" },
+    { path: "/resources/2026-k12-staffing-report", updated: "2026-09-29" },
+    { path: "/privacy", updated: "2026-10-13" },
+    { path: "/terms", updated: "2026-10-15" },
+    { path: "/cookies", updated: "2026-07-21" },
+  ];
+
+  const staticRoutes = STATIC_ROUTES
     // A sitemap must only advertise canonical URLs. Routes that canonicalise
     // to the parent domain are deliberately withheld (Decision 8).
-    .filter((p) => !(p in CROSS_DOMAIN_CANONICAL_ROUTES))
-    .map((p) => ({
-      url: `${BASE}${p}`,
+    .filter((r) => !(r.path in CROSS_DOMAIN_CANONICAL_ROUTES))
+    .map((r) => ({
+      url: `${BASE}${r.path}`,
+      lastModified: r.updated,
       changeFrequency: "weekly" as const,
-      priority: p === "" ? 1 : 0.7,
+      priority: r.path === "" ? 1 : 0.7,
     }));
 
   const blog = posts
@@ -71,6 +80,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const services = servicePages.map((p) => ({
     url: `${BASE}/${p.slug}`,
+    lastModified: p.updated,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));

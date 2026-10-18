@@ -15,6 +15,9 @@ export const metadata: Metadata = {
       "Practical guides to staffing roles, costs, vendor selection, and onboarding from FocusedEDU. Separate resources for hiring teams and professionals.",
     url: "/resources",
     type: "website",
+    // Declaring openGraph replaces the inherited object, which drops the
+    // root file-based image unless it is named here.
+    images: ["/opengraph-image"],
   },
 };
 const guides = [

@@ -15,6 +15,9 @@ export const metadata: Metadata = {
       "Share your open role, location, and schedule with FocusedEDU. Email the staffing team or book a 30-minute call.",
     url: "/request-staff",
     type: "website",
+    // Declaring openGraph replaces the inherited object, which drops the
+    // root file-based image unless it is named here.
+    images: ["/opengraph-image"],
   },
 };
 export default function RequestStaffPage() {

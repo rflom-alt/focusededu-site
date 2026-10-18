@@ -44,6 +44,17 @@ export const buyerContent = {
     ["New Jersey", "/new-jersey-education-staffing"],
     ["Delaware", "/delaware-education-staffing"],
     ["Maryland", "/maryland-special-education-staffing"],
+    ["Washington, DC", "/washington-dc-education-staffing"],
+    ["New York", "/new-york-education-staffing"],
+  ],
+  substituteLocations: [
+    ["Pennsylvania", "/substitute-teacher-staffing-pennsylvania"],
+    ["Philadelphia", "/substitute-teacher-staffing-philadelphia"],
+    ["New Jersey", "/substitute-teacher-staffing-new-jersey"],
+    ["Delaware & Wilmington", "/substitute-teacher-staffing-delaware"],
+    ["Washington, DC", "/substitute-teacher-staffing-washington-dc"],
+    ["Maryland", "/substitute-teacher-staffing-maryland"],
+    ["New York", "/substitute-teacher-staffing-new-york"],
   ],
   steps: [
     {
@@ -68,8 +79,8 @@ export const buyerContent = {
       body: "Bring in a professional for an assignment. The agreed bill rate applies to hours worked.",
     },
     {
-      title: "Temp-to-perm",
-      body: "Evaluate fit during an assignment. Conversion eligibility, worked-hour requirements, and any early-conversion fee follow your agreement.",
+      title: "Temp-to-perm, at no cost",
+      body: "Evaluate a professional on the job before you commit to a permanent hire — at no additional cost to your school.",
     },
     {
       title: "Direct hire",
@@ -87,19 +98,23 @@ export const buyerContent = {
     },
     {
       q: "How soon could someone start?",
-      a: "Timing depends on the role, location, candidate availability, interviews, and required approvals. We discuss those factors with you before setting expectations for a start date.",
+      a: "Because our candidates are pre-vetted and credentialing is automated, many roles are filled in a fraction of the typical time — automated credentialing cuts hiring time roughly in half. On a discovery call we'll give you a realistic timeline for your specific need.",
     },
     {
       q: "What is checked before a start?",
-      a: "Screening and pre-start clearance are separate stages. We coordinate the role-specific credentials, background checks, and documentation required for the assignment with your team. Candidate presentation does not itself mean a professional is cleared to start.",
+      a: "Automated credentialing, background checks, and documentation are handled before a candidate ever reaches you, so every professional we present is ready to work.",
     },
     {
       q: "How are staffing and conversion priced?",
-      a: "Contract assignments are billed at the agreed rate for hours worked. Temp-to-perm eligibility and any conversion fee follow your agreement. Direct-hire placement fees are agreed separately. A professional must also choose to accept a permanent position.",
+      a: "Engagements are billed simply — typically a markup on contract placements or a flat fee on direct hires, depending on the role. There are no surprises, and temp-to-perm conversions come at no additional cost.",
+    },
+    {
+      q: "Will you also staff our competitors?",
+      a: "No. Once we're staffing your school or district, we won't take on a directly competing school in your area — the talent pipeline we build is exclusively yours, never shared with a rival down the road. It's our strongest commitment to you.",
     },
     {
       q: "What if our needs change or a placement is not a fit?",
-      a: "Contact your staffing team to discuss the issue and next steps. Assignment changes, replacement support, and notice requirements follow the terms of your agreement.",
+      a: "Our temp-to-perm model lets you evaluate a professional on the job before committing — at no cost to your school. If someone isn't right, we make it right.",
     },
   ],
 };

@@ -21,6 +21,8 @@ export type BlogPost = {
   faqs?: { q: string; a: string }[];
   comparison?: { title: string; columns: string[]; rows: string[][] };
   howto?: boolean; // step-structured guide → emit HowTo schema
+  /** Ranked list ("best of") posts → emit ItemList schema, in rank order. */
+  itemList?: { name: string; url: string; description?: string }[];
 };
 
 export const posts: BlogPost[] = data as BlogPost[];

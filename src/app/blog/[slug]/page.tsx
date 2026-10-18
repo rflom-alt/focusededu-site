@@ -164,6 +164,25 @@ export default async function BlogPostPage({ params }: Params) {
         }
       : null;
 
+  // "Best of" posts: the ranking itself as structured data, in rank order.
+  const itemListSchema =
+    post.itemList && post.itemList.length
+      ? {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: post.title,
+          itemListOrder: "https://schema.org/ItemListOrderAscending",
+          numberOfItems: post.itemList.length,
+          itemListElement: post.itemList.map((it, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            name: it.name,
+            url: it.url,
+            ...(it.description ? { description: it.description } : {}),
+          })),
+        }
+      : null;
+
   // Related: ranked by shared topic, biased toward posts that few others link to.
   const related = relatedPosts(post).map((p) => ({
     title: p.title,
@@ -179,6 +198,7 @@ export default async function BlogPostPage({ params }: Params) {
       <JsonLd data={breadcrumbSchema} />
       {faqSchema && <JsonLd data={faqSchema} />}
       {howToSchema && <JsonLd data={howToSchema} />}
+      {itemListSchema && <JsonLd data={itemListSchema} />}
 
       {/* Header */}
       <section className="relative overflow-hidden bg-navy-950 pt-32 pb-28 lg:pt-40 lg:pb-36">

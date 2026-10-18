@@ -200,7 +200,7 @@ export default async function ServicePageRoute({ params }: Params) {
                         href={`/${l.slug}`}
                         className="group flex items-center justify-between gap-3 rounded-xl border border-cloud bg-white px-5 py-4 font-medium text-navy-950 transition hover:border-teal-500/40"
                       >
-                        <span>Substitute teachers in {l.label}</span>
+                        <span>{`${page.stateLinks?.linkPrefix ?? "Substitute teachers in"} ${l.label}`}</span>
                         <ArrowRight
                           className="size-4 shrink-0 text-teal-600 transition-transform group-hover:translate-x-0.5"
                           aria-hidden

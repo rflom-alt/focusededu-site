@@ -79,7 +79,23 @@ Share your role, location, schedule, and required qualifications. Our team recru
 - [Delaware and Wilmington](${SITE}/substitute-teacher-staffing-delaware)
 - [Washington, DC](${SITE}/substitute-teacher-staffing-washington-dc)
 - [Maryland](${SITE}/substitute-teacher-staffing-maryland)
-- [New York](${SITE}/substitute-teacher-staffing-new-york)`;
+- [New York](${SITE}/substitute-teacher-staffing-new-york)
+
+## Special education staffing by state
+- [Pennsylvania](${SITE}/special-education-staffing-pennsylvania)
+- [New Jersey](${SITE}/special-education-staffing-new-jersey)
+- [Delaware](${SITE}/delaware-education-staffing)
+- [Maryland](${SITE}/maryland-special-education-staffing)
+- [Washington, DC](${SITE}/special-education-staffing-washington-dc)
+- [New York](${SITE}/special-education-staffing-new-york)
+
+## Paraprofessional staffing by state
+- [Pennsylvania](${SITE}/paraprofessional-staffing-pennsylvania)
+- [New Jersey](${SITE}/paraprofessional-staffing-new-jersey)
+- [Delaware](${SITE}/paraprofessional-staffing-delaware)
+- [Maryland](${SITE}/paraprofessional-staffing-maryland)
+- [Washington, DC](${SITE}/paraprofessional-staffing-washington-dc)
+- [New York](${SITE}/paraprofessional-staffing-new-york)`;
 
 const CONTACT = `## Contact
 - Email: hello@focused-staffing.com

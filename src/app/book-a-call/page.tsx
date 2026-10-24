@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { edu } from "@/lib/content";
 import { PageHero } from "@/components/ui/PageHero";
 import { Button } from "@/components/ui/Button";
@@ -31,6 +32,12 @@ export default function BookACallPage() {
         <Button href="/request-staff" variant="ghost">
           Prefer to email your opening?
         </Button>
+        <p className="mt-2 w-full text-sm text-white/80">
+          Looking for work instead?{" "}
+          <Link href="/candidates" className="font-semibold text-white underline">
+            Start here for job seekers
+          </Link>
+        </p>
       </PageHero>
       <section className="bg-white py-14 lg:py-20">
         <div className="container-x grid items-start gap-10 lg:grid-cols-[0.7fr_1.3fr]">
@@ -61,6 +68,22 @@ export default function BookACallPage() {
             <h2 className="mb-4 text-xl font-semibold text-navy-950">
               Choose your meeting time
             </h2>
+            {/* Job seekers were booking this school sales call (Oct 2026). Point them to the applicant path first. */}
+            <div className="mb-5 rounded-lg border border-teal-200 bg-teal-50 p-4 text-sm leading-relaxed text-navy-950">
+              <p className="font-semibold">Looking for a job with us?</p>
+              <p className="mt-1 text-slate-ink">
+                This calendar is for schools and districts. To work with
+                FocusedEDU,{" "}
+                <a href={edu.jobBoard} className="font-semibold text-teal-700 underline">
+                  browse open roles
+                </a>{" "}
+                or{" "}
+                <a href={edu.submitResume} className="font-semibold text-teal-700 underline">
+                  join our talent network
+                </a>{" "}
+                and a recruiter will reach out.
+              </p>
+            </div>
             <CrmBooking url={edu.contact.scheduler} />
             <p className="mt-5 text-sm leading-relaxed text-slate-ink">
               Calendar not loading?{" "}

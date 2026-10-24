@@ -47,7 +47,7 @@ export function CrmBooking({
   useEffect(() => {
     const onMessage = (e: MessageEvent) => {
       if (e.origin !== origin || e.source !== frame.current?.contentWindow) return;
-      const data = e.data as { source?: unknown; type?: unknown; height?: unknown } | null;
+      const data = e.data as { source?: unknown; type?: unknown; height?: unknown; route?: unknown } | null;
       if (!data || typeof data !== "object" || data.source !== "fsg-crm-booking") return;
 
       if (data.type === "height") {
@@ -60,7 +60,9 @@ export function CrmBooking({
       } else if (data.type === "booked") {
         if (booked.current) return;
         booked.current = true;
-        gtag("event", "meeting_booked", { method: "crm_round_robin" });
+        // The page asks who is booking: a job seeker's recruiter call is not a school lead.
+        if (data.route === "candidate") gtag("event", "recruiter_call_booked", { method: "crm_round_robin" });
+        else gtag("event", "meeting_booked", { method: "crm_round_robin" });
         // The confirmation replaces the calendar at the top of the frame. If the
         // visitor scrolled down to reach the form, bring the frame's top back
         // into view rather than leave them looking past the end of it.

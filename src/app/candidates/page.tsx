@@ -98,6 +98,14 @@ export default function CandidatesPage() {
         >
           Submit your résumé
         </Button>
+        <Button
+          href="https://crm.focused-staffing.com/book/talk-with-a-recruiter"
+          variant="ghost"
+          size="lg"
+          className="border border-white/25 hover:bg-white/5"
+        >
+          Talk with a recruiter
+        </Button>
       </PageHero>
 
       {/* Promise — pinned, scroll-scrubbed word reveal */}

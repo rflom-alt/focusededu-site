@@ -49,7 +49,9 @@ export function linkifyPaths(text: string): ReactNode[] {
     if (m.index > last) out.push(text.slice(last, m.index));
     const [whole, label, mdHref, bare] = m;
     const href = mdHref ?? bare;
-    const key = `${href}-${m.index}`;
+    // Not `${href}-${index}`: React keys are written into the page's inline data, and Google read keys like
+    // "/case-studies-405" as links and reported them as 404s.
+    const key = `link${m.index}`;
     if (href.startsWith("http")) {
       out.push(
         <a key={key} href={href} className={linkClass} rel="noopener" target="_blank">

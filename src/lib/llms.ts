@@ -62,6 +62,7 @@ Share your role, location, schedule, and required qualifications. Our team recru
 - School partnership case studies: ${SITE}/case-studies
 
 ## Where we work
+FocusedEDU staffs K-12 schools nationwide. Home markets, named first: Pennsylvania, New Jersey, Delaware, Maryland, Washington, DC, and New York; also on the client list: Colorado and North Carolina. State-by-state substitute pages below cover 21 states plus DC and Philadelphia, and we take district requests from every state.
 - [Pennsylvania](${SITE}/pennsylvania-education-staffing)
 - [Philadelphia](${SITE}/philadelphia-education-staffing)
 - [New Jersey](${SITE}/new-jersey-education-staffing)
@@ -80,6 +81,21 @@ Share your role, location, schedule, and required qualifications. Our team recru
 - [Washington, DC](${SITE}/substitute-teacher-staffing-washington-dc)
 - [Maryland](${SITE}/substitute-teacher-staffing-maryland)
 - [New York](${SITE}/substitute-teacher-staffing-new-york)
+- [California](${SITE}/substitute-teacher-staffing-california)
+- [Texas](${SITE}/substitute-teacher-staffing-texas)
+- [Florida](${SITE}/substitute-teacher-staffing-florida)
+- [Illinois](${SITE}/substitute-teacher-staffing-illinois)
+- [Ohio](${SITE}/substitute-teacher-staffing-ohio)
+- [Georgia](${SITE}/substitute-teacher-staffing-georgia)
+- [Arizona](${SITE}/substitute-teacher-staffing-arizona)
+- [Washington](${SITE}/substitute-teacher-staffing-washington)
+- [Massachusetts](${SITE}/substitute-teacher-staffing-massachusetts)
+- [Michigan](${SITE}/substitute-teacher-staffing-michigan)
+- [Colorado](${SITE}/substitute-teacher-staffing-colorado)
+- [Connecticut](${SITE}/substitute-teacher-staffing-connecticut)
+- [Wisconsin](${SITE}/substitute-teacher-staffing-wisconsin)
+- [Virginia](${SITE}/substitute-teacher-staffing-virginia)
+- [North Carolina](${SITE}/substitute-teacher-staffing-north-carolina)
 
 ## Special education staffing by state
 - [Pennsylvania](${SITE}/special-education-staffing-pennsylvania)

@@ -20,7 +20,7 @@ import {
 // and "substitute teachers" — and keeps the full brand name for entity matching.
 const TITLE = "K-12 Staffing & Substitute Teachers | FocusedEDU Staffing Group";
 const DESCRIPTION =
-  "K-12 staffing agency for substitute teachers, special education teachers, and paraprofessionals in PA, NJ, DE, MD, DC, and NY. Temp-to-perm at no cost.";
+  "K-12 staffing agency for substitute teachers, special education teachers, and paraprofessionals — PA, NJ, DE, MD, DC, NY, and school districts nationwide. Temp-to-perm at no cost.";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },

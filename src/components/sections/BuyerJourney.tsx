@@ -151,7 +151,9 @@ export function LocationLinks() {
           Explore staffing in your area
         </h2>
         <p className="mt-3 text-slate-ink">
-          Review local services, then talk with our team about your role and
+          We staff K-12 schools nationwide. Pennsylvania, New Jersey, Delaware,
+          Maryland, Washington, DC, and New York are our home markets; review the
+          page for your state, then talk with our team about your role and
           location.
         </p>
         <ul className="mt-5 flex flex-wrap gap-x-6 gap-y-3">

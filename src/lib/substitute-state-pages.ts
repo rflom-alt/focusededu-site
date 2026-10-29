@@ -16,7 +16,7 @@
 import type { ServicePage } from "./service-pages";
 
 const UPDATED = "2026-10-18";
-const HUB = { label: "Substitute Teacher Staffing", slug: "substitute-teacher-staffing" };
+export const HUB = { label: "Substitute Teacher Staffing", slug: "substitute-teacher-staffing" };
 
 const SUB_ROLES = [
   "Day-to-day substitute teachers",
@@ -27,7 +27,7 @@ const SUB_ROLES = [
   "1:1 aides",
 ];
 
-const SUB_STEPS = [
+export const SUB_STEPS = [
   {
     n: "01",
     title: "Free 30-minute discovery call",
@@ -50,27 +50,27 @@ const SUB_STEPS = [
   },
 ];
 
-const ODYSSEY_STATS = [
+export const ODYSSEY_STATS = [
   { value: "95%", label: "Day-to-day substitute fill rate at Odyssey Public Charter School" },
   { value: "+40%", label: "Improvement over the school's previous staffing provider" },
   { value: "120+", label: "Roles filled at that one partner school since 2021" },
   { value: "$0", label: "Fee to hire a long-term sub as your permanent teacher" },
 ];
 
-const cite = (label: string, href: string) =>
+export const cite = (label: string, href: string) =>
   `<span class="cite">(source: <a href="${href}" rel="noopener" target="_blank">${label}</a>)</span>`;
 
 /** The Odyssey proof block, phrased per market so no two pages repeat it verbatim. */
-const odysseyProof = (lead: string) => `<h2 id="proof-odyssey">Proof: a 95% day-to-day substitute fill rate at Odyssey</h2>
+export const odysseyProof = (lead: string) => `<h2 id="proof-odyssey">Proof: a 95% day-to-day substitute fill rate at Odyssey</h2>
 <p class="answer-lead">${lead}</p>
 <p>Odyssey Public Charter School in Wilmington, Delaware serves more than 1,000 K-8 students drawn from five districts and protects a 12:1 student-teacher ratio. When the agencies already under contract could not fill its open roles, Odyssey brought in FocusedEDU in 2021. Since then we have made 120+ placements across 13+ distinct role types — substitute and certified teachers, SLPs, OTs, PTs, psychologists, reading specialists, one-on-one aides, paraprofessionals, bus drivers, and support staff — and day-to-day substitute coverage runs at a 95% fill rate, a 40%+ improvement over the previous provider.</p>
 <p>The mechanics behind that number are the same ones we bring to every substitute program: weekly Friday pay by direct deposit or Cash App, a mobile app where vetted subs pick up and swap shifts the moment an absence posts, and a pool recruited for one client's buildings instead of rented to every school in the county. Read the full <a href="/case-studies/odyssey-charter-school">Odyssey Public Charter School case study</a>.</p>`;
 
-const forSubs = (state: string, extra: string) => `<h2 id="for-substitutes">For substitutes looking for work in ${state}</h2>
+export const forSubs = (state: string, extra: string) => `<h2 id="for-substitutes">For substitutes looking for work in ${state}</h2>
 <p class="answer-lead">Substitutes who work with FocusedEDU in ${state} are paid weekly, every Friday, by direct deposit or Cash App, and choose their own shifts in a mobile app. One application puts you in front of the partner schools we staff, and our team walks you through every clearance and credential step.</p>
 <p>${extra} Browse current openings and apply on our <a href="/candidates">candidates page</a>. Long-term substitutes who prove out in a building can be hired permanently by the school with no conversion fee, which is why a FocusedEDU leave coverage is often the best teaching interview a substitute ever gets.</p>`;
 
-const cta = (state: string) => `<h2 id="next-step">Need substitute teachers in ${state}?</h2>
+export const cta = (state: string) => `<h2 id="next-step">Need substitute teachers in ${state}?</h2>
 <p class="answer-lead">Start with a free 30-minute discovery call or send your openings by email. Either way we map your absence volume, buildings, and requirements first, then build a substitute pool that serves your schools alone — one client per region, temp-to-perm at no cost.</p>
 <p><a href="/book-a-call">Book a discovery call</a> or <a href="/request-staff">send a staffing request</a>. Prefer to compare first? Read our breakdown of <a href="/blog/best-substitute-teacher-staffing-agencies-2026">the best substitute teacher staffing agencies for 2026</a>, or go back to <a href="/substitute-teacher-staffing">substitute teacher staffing for K-12 schools</a>.</p>`;
 

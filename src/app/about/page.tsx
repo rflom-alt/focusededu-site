@@ -98,6 +98,9 @@ export default function AboutPage() {
               For growing schools that need temporary and direct-hire professionals,
               FocusedEDU is a strategic partner that identifies, screens, and presents
               skilled professionals to fill vacancies with the right candidate the first time.
+              We staff K-12 schools nationwide from our Wayne, Pennsylvania headquarters, with
+              Pennsylvania, New Jersey, Delaware, Maryland, Washington, DC, and New York as our
+              home markets.
             </p>
             <p className="mt-5 text-lg leading-relaxed text-slate-ink">
               Unlike other staffing agencies, we dedicate our staff, resources, and attention

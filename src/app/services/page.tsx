@@ -11,7 +11,7 @@ import { CtaBand } from "@/components/sections/CtaBand";
 export const metadata: Metadata = {
   title: "Education Staffing Services",
   description:
-    "FocusedEDU staffing for K-12 schools — special education, paraprofessionals, related services, and school-based behavioral health across PA, NJ, and MD.",
+    "FocusedEDU staffing for K-12 schools nationwide — substitutes, special education, paraprofessionals, related services, and behavioral health. PA, NJ, DE, MD, DC, and NY first; state pages for 15 more.",
   alternates: { canonical: "/services" },
 };
 
@@ -43,7 +43,7 @@ export default function ServicesIndexPage() {
       <PageHero
         eyebrow="Staffing services"
         title="Education staffing, by role and region."
-        subtitle="Dedicated, compliance-minded staffing for the hard-to-fill K-12 roles that keep classrooms running — and statewide coverage where you need it."
+        subtitle="Dedicated, compliance-minded staffing for the hard-to-fill K-12 roles that keep classrooms running — nationwide, with Pennsylvania, New Jersey, Delaware, Maryland, Washington, DC, and New York as our home markets and sourced state pages for districts across the country."
       >
         <Button href={edu.cta.primary.href} variant="primary" size="lg">
           Book a discovery call

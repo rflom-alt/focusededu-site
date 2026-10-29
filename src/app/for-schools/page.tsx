@@ -40,7 +40,7 @@ export default function BuyerPage() {
       <PageHero
         eyebrow={edu.hero.eyebrow}
         title="Hire the right education staff — with speed and precision."
-        subtitle="Partner with FocusedEDU, a strategic partner dedicated to connecting you with high-quality, highly-skilled education talent — substitutes, special education teachers, paraprofessionals, and related-service providers — backed by a dedicated pipeline that is yours alone."
+        subtitle="Partner with FocusedEDU, a strategic partner dedicated to connecting you with high-quality, highly-skilled education talent — substitutes, special education teachers, paraprofessionals, and related-service providers — backed by a dedicated pipeline that is yours alone. We staff schools nationwide, with Pennsylvania, New Jersey, Delaware, Maryland, Washington, DC, and New York as our home markets."
         photo={edu.hero.photo}
         photoAlt={edu.hero.photoAlt}
       >

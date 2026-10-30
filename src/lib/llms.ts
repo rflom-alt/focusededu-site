@@ -62,7 +62,7 @@ Share your role, location, schedule, and required qualifications. Our team recru
 - School partnership case studies: ${SITE}/case-studies
 
 ## Where we work
-FocusedEDU staffs K-12 schools nationwide. Home markets, named first: Pennsylvania, New Jersey, Delaware, Maryland, Washington, DC, and New York; also on the client list: Colorado and North Carolina. State-by-state substitute pages below cover 21 states plus DC and Philadelphia, and we take district requests from every state.
+FocusedEDU staffs K-12 schools nationwide. Home markets, named first: Pennsylvania, New Jersey, Delaware, Maryland, Washington, DC, and New York; also on the client list: Colorado and North Carolina. State-by-state substitute pages below cover 35 states plus DC and Philadelphia, and we take district requests from every state.
 - [Pennsylvania](${SITE}/pennsylvania-education-staffing)
 - [Philadelphia](${SITE}/philadelphia-education-staffing)
 - [New Jersey](${SITE}/new-jersey-education-staffing)
@@ -96,6 +96,21 @@ FocusedEDU staffs K-12 schools nationwide. Home markets, named first: Pennsylvan
 - [Wisconsin](${SITE}/substitute-teacher-staffing-wisconsin)
 - [Virginia](${SITE}/substitute-teacher-staffing-virginia)
 - [North Carolina](${SITE}/substitute-teacher-staffing-north-carolina)
+- [Tennessee](${SITE}/substitute-teacher-staffing-tennessee)
+- [Indiana](${SITE}/substitute-teacher-staffing-indiana)
+- [Missouri](${SITE}/substitute-teacher-staffing-missouri)
+- [Minnesota](${SITE}/substitute-teacher-staffing-minnesota)
+- [South Carolina](${SITE}/substitute-teacher-staffing-south-carolina)
+- [Alabama](${SITE}/substitute-teacher-staffing-alabama)
+- [Louisiana](${SITE}/substitute-teacher-staffing-louisiana)
+- [Kentucky](${SITE}/substitute-teacher-staffing-kentucky)
+- [Oregon](${SITE}/substitute-teacher-staffing-oregon)
+- [Oklahoma](${SITE}/substitute-teacher-staffing-oklahoma)
+- [Nevada](${SITE}/substitute-teacher-staffing-nevada)
+- [Utah](${SITE}/substitute-teacher-staffing-utah)
+- [Iowa](${SITE}/substitute-teacher-staffing-iowa)
+- [Arkansas](${SITE}/substitute-teacher-staffing-arkansas)
+- [Kansas](${SITE}/substitute-teacher-staffing-kansas)
 
 ## Special education staffing by state
 - [Pennsylvania](${SITE}/special-education-staffing-pennsylvania)

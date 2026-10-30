@@ -46,8 +46,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
    * changed on every deploy. Bump the date whenever the page's content changes.
    */
   const STATIC_ROUTES: { path: string; updated: string }[] = [
-    { path: "", updated: "2026-10-29" },
-    { path: "/for-schools", updated: "2026-10-29" },
+    { path: "", updated: "2026-10-30" },
+    { path: "/for-schools", updated: "2026-10-30" },
     { path: "/candidates", updated: "2026-07-21" },
     { path: "/about", updated: "2026-10-29" },
     { path: "/about/robert-flom", updated: "2026-09-07" },
@@ -55,7 +55,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: "/resources", updated: "2026-10-18" },
     { path: "/case-studies", updated: "2026-07-21" },
     { path: "/references", updated: "2026-08-12" },
-    { path: "/services", updated: "2026-10-29" },
+    { path: "/services", updated: "2026-10-30" },
     { path: "/book-a-call", updated: "2026-10-18" },
     { path: "/request-staff", updated: "2026-10-18" },
     { path: "/jobs", updated: "2026-10-18" },

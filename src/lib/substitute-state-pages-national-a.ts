@@ -33,8 +33,8 @@ export const NATIONAL_ROLES = [
 ];
 
 /** Dated pointer to the live board; only used where a K-12 posting existed on that date. */
-export const openings = (state: string, places: string) =>
-  `<p><strong>Current openings in ${state}.</strong> As of October 29, 2026, Focused Staffing Group's job board lists K-12 school openings in ${places}. See <a href="/jobs">current openings in ${state} and our other markets</a>; postings leave the list the moment they are filled.</p>`;
+export const openings = (state: string, places: string, asOf = "October 29, 2026") =>
+  `<p><strong>Current openings in ${state}.</strong> As of ${asOf}, Focused Staffing Group's job board lists K-12 school openings in ${places}. See <a href="/jobs">current openings in ${state} and our other markets</a>; postings leave the list the moment they are filled.</p>`;
 
 export const whereWeStaff = (state: string, lead: string, body: string) =>
   `<h2 id="where-we-staff">Where we staff in ${state}</h2>

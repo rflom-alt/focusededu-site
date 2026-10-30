@@ -11,7 +11,7 @@ import { CtaBand } from "@/components/sections/CtaBand";
 export const metadata: Metadata = {
   title: "Education Staffing Services",
   description:
-    "FocusedEDU staffing for K-12 schools nationwide — substitutes, special education, paraprofessionals, related services, and behavioral health. PA, NJ, DE, MD, DC, and NY first; state pages for 30 more.",
+    "FocusedEDU staffing for K-12 schools nationwide — substitutes, special education, paraprofessionals, related services, and behavioral health. PA, NJ, DE, MD, DC, and NY first; state pages for the other 45.",
   alternates: { canonical: "/services" },
 };
 

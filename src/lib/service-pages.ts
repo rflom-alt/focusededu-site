@@ -18,6 +18,9 @@ import { substituteStatePagesNationalC } from "./substitute-state-pages-national
 import { substituteStatePagesNationalD } from "./substitute-state-pages-national-d";
 import { substituteStatePagesNationalE } from "./substitute-state-pages-national-e";
 import { substituteStatePagesNationalF } from "./substitute-state-pages-national-f";
+import { substituteStatePagesNationalG } from "./substitute-state-pages-national-g";
+import { substituteStatePagesNationalH } from "./substitute-state-pages-national-h";
+import { substituteStatePagesNationalI } from "./substitute-state-pages-national-i";
 import { spedParaStatePages } from "./sped-para-state-pages";
 
 export type ServiceFaq = { q: string; a: string };
@@ -156,7 +159,7 @@ const corePages: ServicePage[] = [
       },
       {
         heading: "Credentialing that halves the wait",
-        body: "The slowest part of most special education hires is not finding the person — it is the paperwork. Our automated credentialing system tracks each candidate's clearances, certifications, TB test, and vaccination documentation, flags anything approaching expiration, and keeps files audit-ready. In practice it cuts typical time-to-hire roughly in half, and in past engagements we have placed certified special education teachers within two weeks.\n\nSpeed shows up in outcomes. At Odyssey Public Charter School in Wilmington, Delaware, we filled 120+ roles across the school after the incumbent agencies under contract could not — the full case study is at /case-studies. We have also run engagements where 100% of open roles were filled with 100% candidate retention.\n\nEvery placement is temp-to-perm at no cost. Evaluate a special education teacher in your building for as long as you need; if you hire them permanently, there is no conversion fee and no buyout.\n\nWe staff special education programs nationwide, with Pennsylvania, New Jersey, Delaware, Maryland, Washington, DC, and New York as our home markets. Schools that also need substitute coverage can start with the substitute staffing page for their state: [California](/substitute-teacher-staffing-california), [Texas](/substitute-teacher-staffing-texas), [Florida](/substitute-teacher-staffing-florida), [Illinois](/substitute-teacher-staffing-illinois), [Ohio](/substitute-teacher-staffing-ohio), [Georgia](/substitute-teacher-staffing-georgia), [Arizona](/substitute-teacher-staffing-arizona), [Washington](/substitute-teacher-staffing-washington), [Massachusetts](/substitute-teacher-staffing-massachusetts), [Michigan](/substitute-teacher-staffing-michigan), [Colorado](/substitute-teacher-staffing-colorado), [Connecticut](/substitute-teacher-staffing-connecticut), [Wisconsin](/substitute-teacher-staffing-wisconsin), [Virginia](/substitute-teacher-staffing-virginia), [North Carolina](/substitute-teacher-staffing-north-carolina), [Tennessee](/substitute-teacher-staffing-tennessee), [Indiana](/substitute-teacher-staffing-indiana), [Missouri](/substitute-teacher-staffing-missouri), [Minnesota](/substitute-teacher-staffing-minnesota), [South Carolina](/substitute-teacher-staffing-south-carolina), [Alabama](/substitute-teacher-staffing-alabama), [Louisiana](/substitute-teacher-staffing-louisiana), [Kentucky](/substitute-teacher-staffing-kentucky), [Oregon](/substitute-teacher-staffing-oregon), [Oklahoma](/substitute-teacher-staffing-oklahoma), [Nevada](/substitute-teacher-staffing-nevada), [Utah](/substitute-teacher-staffing-utah), [Iowa](/substitute-teacher-staffing-iowa), [Arkansas](/substitute-teacher-staffing-arkansas), [Kansas](/substitute-teacher-staffing-kansas).",
+        body: "The slowest part of most special education hires is not finding the person — it is the paperwork. Our automated credentialing system tracks each candidate's clearances, certifications, TB test, and vaccination documentation, flags anything approaching expiration, and keeps files audit-ready. In practice it cuts typical time-to-hire roughly in half, and in past engagements we have placed certified special education teachers within two weeks.\n\nSpeed shows up in outcomes. At Odyssey Public Charter School in Wilmington, Delaware, we filled 120+ roles across the school after the incumbent agencies under contract could not — the full case study is at /case-studies. We have also run engagements where 100% of open roles were filled with 100% candidate retention.\n\nEvery placement is temp-to-perm at no cost. Evaluate a special education teacher in your building for as long as you need; if you hire them permanently, there is no conversion fee and no buyout.\n\nWe staff special education programs nationwide, with Pennsylvania, New Jersey, Delaware, Maryland, Washington, DC, and New York as our home markets. Schools that also need substitute coverage can start with the substitute staffing page for their state: [California](/substitute-teacher-staffing-california), [Texas](/substitute-teacher-staffing-texas), [Florida](/substitute-teacher-staffing-florida), [Illinois](/substitute-teacher-staffing-illinois), [Ohio](/substitute-teacher-staffing-ohio), [Georgia](/substitute-teacher-staffing-georgia), [Arizona](/substitute-teacher-staffing-arizona), [Washington](/substitute-teacher-staffing-washington), [Massachusetts](/substitute-teacher-staffing-massachusetts), [Michigan](/substitute-teacher-staffing-michigan), [Colorado](/substitute-teacher-staffing-colorado), [Connecticut](/substitute-teacher-staffing-connecticut), [Wisconsin](/substitute-teacher-staffing-wisconsin), [Virginia](/substitute-teacher-staffing-virginia), [North Carolina](/substitute-teacher-staffing-north-carolina), [Tennessee](/substitute-teacher-staffing-tennessee), [Indiana](/substitute-teacher-staffing-indiana), [Missouri](/substitute-teacher-staffing-missouri), [Minnesota](/substitute-teacher-staffing-minnesota), [South Carolina](/substitute-teacher-staffing-south-carolina), [Alabama](/substitute-teacher-staffing-alabama), [Louisiana](/substitute-teacher-staffing-louisiana), [Kentucky](/substitute-teacher-staffing-kentucky), [Oregon](/substitute-teacher-staffing-oregon), [Oklahoma](/substitute-teacher-staffing-oklahoma), [Nevada](/substitute-teacher-staffing-nevada), [Utah](/substitute-teacher-staffing-utah), [Iowa](/substitute-teacher-staffing-iowa), [Arkansas](/substitute-teacher-staffing-arkansas), [Kansas](/substitute-teacher-staffing-kansas), [Nebraska](/substitute-teacher-staffing-nebraska), [New Mexico](/substitute-teacher-staffing-new-mexico), [Idaho](/substitute-teacher-staffing-idaho), [Montana](/substitute-teacher-staffing-montana), [Wyoming](/substitute-teacher-staffing-wyoming), [North Dakota](/substitute-teacher-staffing-north-dakota), [South Dakota](/substitute-teacher-staffing-south-dakota), [New Hampshire](/substitute-teacher-staffing-new-hampshire), [Vermont](/substitute-teacher-staffing-vermont), [Maine](/substitute-teacher-staffing-maine), [Rhode Island](/substitute-teacher-staffing-rhode-island), [West Virginia](/substitute-teacher-staffing-west-virginia), [Mississippi](/substitute-teacher-staffing-mississippi), [Hawaii](/substitute-teacher-staffing-hawaii), [Alaska](/substitute-teacher-staffing-alaska).",
       },
     ],
     stateLinks: {
@@ -316,7 +319,7 @@ const corePages: ServicePage[] = [
       },
       {
         heading: "Try before you commit, and keep your pipeline to yourself",
-        body: "Every para placement is temp-to-perm at no cost. Put an aide in the classroom, watch how they work with your students and teachers, and if you want to hire them permanently, there is no conversion fee. Good paras become your employees without a buyout negotiation.\n\nWe also work with one client per region. If you sign with us for your area, we will not supply the district or charter competing with you for the same aides. In a role category where schools routinely poach from each other, an exclusive pipeline is the difference between staffing and churn.\n\nWe place paraprofessionals and aides nationwide, with Pennsylvania, New Jersey, Delaware, Maryland, Washington, DC, and New York as our home markets. Schools that also need substitute paraprofessionals and substitute teachers can start with the substitute staffing page for their state: [California](/substitute-teacher-staffing-california), [Texas](/substitute-teacher-staffing-texas), [Florida](/substitute-teacher-staffing-florida), [Illinois](/substitute-teacher-staffing-illinois), [Ohio](/substitute-teacher-staffing-ohio), [Georgia](/substitute-teacher-staffing-georgia), [Arizona](/substitute-teacher-staffing-arizona), [Washington](/substitute-teacher-staffing-washington), [Massachusetts](/substitute-teacher-staffing-massachusetts), [Michigan](/substitute-teacher-staffing-michigan), [Colorado](/substitute-teacher-staffing-colorado), [Connecticut](/substitute-teacher-staffing-connecticut), [Wisconsin](/substitute-teacher-staffing-wisconsin), [Virginia](/substitute-teacher-staffing-virginia), [North Carolina](/substitute-teacher-staffing-north-carolina), [Tennessee](/substitute-teacher-staffing-tennessee), [Indiana](/substitute-teacher-staffing-indiana), [Missouri](/substitute-teacher-staffing-missouri), [Minnesota](/substitute-teacher-staffing-minnesota), [South Carolina](/substitute-teacher-staffing-south-carolina), [Alabama](/substitute-teacher-staffing-alabama), [Louisiana](/substitute-teacher-staffing-louisiana), [Kentucky](/substitute-teacher-staffing-kentucky), [Oregon](/substitute-teacher-staffing-oregon), [Oklahoma](/substitute-teacher-staffing-oklahoma), [Nevada](/substitute-teacher-staffing-nevada), [Utah](/substitute-teacher-staffing-utah), [Iowa](/substitute-teacher-staffing-iowa), [Arkansas](/substitute-teacher-staffing-arkansas), [Kansas](/substitute-teacher-staffing-kansas).",
+        body: "Every para placement is temp-to-perm at no cost. Put an aide in the classroom, watch how they work with your students and teachers, and if you want to hire them permanently, there is no conversion fee. Good paras become your employees without a buyout negotiation.\n\nWe also work with one client per region. If you sign with us for your area, we will not supply the district or charter competing with you for the same aides. In a role category where schools routinely poach from each other, an exclusive pipeline is the difference between staffing and churn.\n\nWe place paraprofessionals and aides nationwide, with Pennsylvania, New Jersey, Delaware, Maryland, Washington, DC, and New York as our home markets. Schools that also need substitute paraprofessionals and substitute teachers can start with the substitute staffing page for their state: [California](/substitute-teacher-staffing-california), [Texas](/substitute-teacher-staffing-texas), [Florida](/substitute-teacher-staffing-florida), [Illinois](/substitute-teacher-staffing-illinois), [Ohio](/substitute-teacher-staffing-ohio), [Georgia](/substitute-teacher-staffing-georgia), [Arizona](/substitute-teacher-staffing-arizona), [Washington](/substitute-teacher-staffing-washington), [Massachusetts](/substitute-teacher-staffing-massachusetts), [Michigan](/substitute-teacher-staffing-michigan), [Colorado](/substitute-teacher-staffing-colorado), [Connecticut](/substitute-teacher-staffing-connecticut), [Wisconsin](/substitute-teacher-staffing-wisconsin), [Virginia](/substitute-teacher-staffing-virginia), [North Carolina](/substitute-teacher-staffing-north-carolina), [Tennessee](/substitute-teacher-staffing-tennessee), [Indiana](/substitute-teacher-staffing-indiana), [Missouri](/substitute-teacher-staffing-missouri), [Minnesota](/substitute-teacher-staffing-minnesota), [South Carolina](/substitute-teacher-staffing-south-carolina), [Alabama](/substitute-teacher-staffing-alabama), [Louisiana](/substitute-teacher-staffing-louisiana), [Kentucky](/substitute-teacher-staffing-kentucky), [Oregon](/substitute-teacher-staffing-oregon), [Oklahoma](/substitute-teacher-staffing-oklahoma), [Nevada](/substitute-teacher-staffing-nevada), [Utah](/substitute-teacher-staffing-utah), [Iowa](/substitute-teacher-staffing-iowa), [Arkansas](/substitute-teacher-staffing-arkansas), [Kansas](/substitute-teacher-staffing-kansas), [Nebraska](/substitute-teacher-staffing-nebraska), [New Mexico](/substitute-teacher-staffing-new-mexico), [Idaho](/substitute-teacher-staffing-idaho), [Montana](/substitute-teacher-staffing-montana), [Wyoming](/substitute-teacher-staffing-wyoming), [North Dakota](/substitute-teacher-staffing-north-dakota), [South Dakota](/substitute-teacher-staffing-south-dakota), [New Hampshire](/substitute-teacher-staffing-new-hampshire), [Vermont](/substitute-teacher-staffing-vermont), [Maine](/substitute-teacher-staffing-maine), [Rhode Island](/substitute-teacher-staffing-rhode-island), [West Virginia](/substitute-teacher-staffing-west-virginia), [Mississippi](/substitute-teacher-staffing-mississippi), [Hawaii](/substitute-teacher-staffing-hawaii), [Alaska](/substitute-teacher-staffing-alaska).",
       },
     ],
     stateLinks: {
@@ -1906,6 +1909,66 @@ const corePages: ServicePage[] = [
           label: "Kansas",
           slug: "substitute-teacher-staffing-kansas",
         },
+        {
+          label: "Nebraska",
+          slug: "substitute-teacher-staffing-nebraska",
+        },
+        {
+          label: "New Mexico",
+          slug: "substitute-teacher-staffing-new-mexico",
+        },
+        {
+          label: "Idaho",
+          slug: "substitute-teacher-staffing-idaho",
+        },
+        {
+          label: "Montana",
+          slug: "substitute-teacher-staffing-montana",
+        },
+        {
+          label: "Wyoming",
+          slug: "substitute-teacher-staffing-wyoming",
+        },
+        {
+          label: "North Dakota",
+          slug: "substitute-teacher-staffing-north-dakota",
+        },
+        {
+          label: "South Dakota",
+          slug: "substitute-teacher-staffing-south-dakota",
+        },
+        {
+          label: "New Hampshire",
+          slug: "substitute-teacher-staffing-new-hampshire",
+        },
+        {
+          label: "Vermont",
+          slug: "substitute-teacher-staffing-vermont",
+        },
+        {
+          label: "Maine",
+          slug: "substitute-teacher-staffing-maine",
+        },
+        {
+          label: "Rhode Island",
+          slug: "substitute-teacher-staffing-rhode-island",
+        },
+        {
+          label: "West Virginia",
+          slug: "substitute-teacher-staffing-west-virginia",
+        },
+        {
+          label: "Mississippi",
+          slug: "substitute-teacher-staffing-mississippi",
+        },
+        {
+          label: "Hawaii",
+          slug: "substitute-teacher-staffing-hawaii",
+        },
+        {
+          label: "Alaska",
+          slug: "substitute-teacher-staffing-alaska",
+        },
       ],
     },
     faqs: [
@@ -2990,6 +3053,9 @@ export const servicePages: ServicePage[] = [
   ...substituteStatePagesNationalD,
   ...substituteStatePagesNationalE,
   ...substituteStatePagesNationalF,
+  ...substituteStatePagesNationalG,
+  ...substituteStatePagesNationalH,
+  ...substituteStatePagesNationalI,
   ...spedParaStatePages,
 ];
 

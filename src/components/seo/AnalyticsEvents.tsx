@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { gtag } from "@/lib/gtag";
+import { rememberFirstVisit } from "@/lib/leadSource";
 
 /**
  * Conversion event instrumentation (GA4):
@@ -14,6 +15,8 @@ import { gtag } from "@/lib/gtag";
  */
 export function AnalyticsEvents() {
   useEffect(() => {
+    // The visit's landing page and referrer, for the lead forms (sessionStorage, no cookie).
+    rememberFirstVisit();
     const onClick = (e: MouseEvent) => {
       const a = (e.target as HTMLElement | null)?.closest("a");
       const href = a?.href ?? "";

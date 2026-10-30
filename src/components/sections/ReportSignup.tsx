@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Download, CheckCircle2 } from "lucide-react";
+import { sourceLines } from "@/lib/leadSource";
 
 /**
  * Lead-capture form for a gated report download. No backend yet: on submit it
@@ -26,7 +27,7 @@ export function ReportSignup({
     e.preventDefault();
     const subject = encodeURIComponent(`Report download — ${reportTitle}`);
     const body = encodeURIComponent(
-      `New report download:\n\nName: ${form.name}\nEmail: ${form.email}\nRole: ${form.role}\nOrganization: ${form.org}\nReport: ${reportTitle}`
+      `New report download:\n\nName: ${form.name}\nEmail: ${form.email}\nRole: ${form.role}\nOrganization: ${form.org}\nReport: ${reportTitle}\n\n${sourceLines().join("\n")}`
     );
     // Notify the team of the lead.
     window.open(`mailto:${recipientEmail}?subject=${subject}&body=${body}`, "_blank");

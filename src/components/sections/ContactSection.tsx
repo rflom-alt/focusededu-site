@@ -5,6 +5,8 @@ import { Phone, Mail, MapPin, Calendar } from "lucide-react";
 import { Facebook, Instagram, Linkedin } from "@/components/ui/SocialIcons";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import type { SiteContent } from "@/lib/content";
+import { heardFromAnswer, sourceLines } from "@/lib/leadSource";
+import { HeardFrom } from "@/components/forms/HeardFrom";
 
 export function ContactSection({
   contact,
@@ -22,13 +24,14 @@ export function ContactSection({
     message: "",
   });
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const source = sourceLines(heardFromAnswer(new FormData(e.currentTarget))).join("\n");
     const subject = encodeURIComponent(
       `Website inquiry — ${form.name || "FocusedEDU"}`,
     );
     const body = encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\nOrganization: ${form.org}\n\n${form.message}`,
+      `Name: ${form.name}\nEmail: ${form.email}\nOrganization: ${form.org}\n\n${form.message}\n\n${source}`,
     );
     // Functional with no backend: opens the visitor's mail client.
     // TODO(before launch): wire to an email service (e.g. Resend) via a route handler.
@@ -154,6 +157,7 @@ export function ContactSection({
               onChange={(e) => setForm({ ...form, message: e.target.value })}
               className={field}
             />
+            <HeardFrom field={field} />
             <button
               type="submit"
               className="mt-1 inline-flex h-12 items-center justify-center rounded-full bg-teal-500 px-7 font-semibold text-navy-950 transition hover:bg-teal-400"

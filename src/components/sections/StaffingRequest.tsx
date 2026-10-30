@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
 import { edu } from "@/lib/content";
+import { heardFromAnswer, heardFromChoice, sourceLines } from "@/lib/leadSource";
+import { HeardFrom } from "@/components/forms/HeardFrom";
 export function StaffingRequest() {
   const [opened, setOpened] = useState(false);
   const field =
@@ -13,6 +15,8 @@ export function StaffingRequest() {
       "Role: " + f.get("role"),
       "Location: " + f.get("location"),
       "Schedule and requirements: " + f.get("notes"),
+      "",
+      ...sourceLines(heardFromAnswer(f)),
     ].join("\n");
     // The request leaves as an email the visitor sends, so GA4 never sees a form
     // submission — only enhanced measurement's form_start. Record the moment the
@@ -20,7 +24,8 @@ export function StaffingRequest() {
     (window as unknown as { gtag?: (...a: unknown[]) => void }).gtag?.(
       "event",
       "staffing_request_sent",
-      { method: "email" },
+      // heard_from is only the option picked, never the "Other" text.
+      { method: "email", heard_from: heardFromChoice(f) || "not answered" },
     );
     window.location.href =
       "mailto:" +
@@ -75,6 +80,7 @@ export function StaffingRequest() {
           <span className="text-sm font-normal text-slate-ink">(optional)</span>
           <textarea name="notes" rows={4} maxLength={1200} className={field} />
         </label>
+        <HeardFrom field={field} labelled />
         <button
           type="submit"
           className="min-h-12 rounded-full bg-teal-500 px-6 py-3 font-semibold text-navy-950 hover:bg-teal-400 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-teal-700"

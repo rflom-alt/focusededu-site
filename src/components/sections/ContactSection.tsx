@@ -5,6 +5,15 @@ import { Phone, Mail, MapPin, Calendar } from "lucide-react";
 import { Facebook, Instagram, Linkedin } from "@/components/ui/SocialIcons";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import type { SiteContent } from "@/lib/content";
+import {
+  BookAfterSubmit,
+  EmailInstead,
+  FormError,
+  Honeypot,
+  NoScriptMail,
+  Turnstile,
+} from "@/components/forms/FormParts";
+import { isUnreachable, mailHref, newSubmissionId, submitSiteForm } from "@/lib/siteForm";
 import { heardFromAnswer, sourceLines } from "@/lib/leadSource";
 import { HeardFrom } from "@/components/forms/HeardFrom";
 
@@ -24,18 +33,67 @@ export function ContactSection({
     message: "",
   });
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const source = sourceLines(heardFromAnswer(new FormData(e.currentTarget))).join("\n");
-    const subject = encodeURIComponent(
+  const [hp, setHp] = useState("");
+  const [token, setToken] = useState("");
+  const [resetKey, setResetKey] = useState(0);
+  const [submissionId, setSubmissionId] = useState(newSubmissionId);
+  const [state, setState] = useState<"idle" | "sending" | "sent">("idle");
+  const [error, setError] = useState("");
+  const [checkFailed, setCheckFailed] = useState(false);
+  const [mail, setMail] = useState({ href: "", opened: false });
+
+  // The email path: the fallback when the CRM or the security check is out of reach.
+  const emailOf = (f: FormData) =>
+    mailHref(
+      contact.email,
       `Website inquiry — ${form.name || "FocusedEDU"}`,
+      `Name: ${form.name}\nEmail: ${form.email}\nOrganization: ${form.org}\n\n${form.message}\n\n${sourceLines(heardFromAnswer(f)).join("\n")}`,
     );
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\nOrganization: ${form.org}\n\n${form.message}\n\n${source}`,
-    );
-    // Functional with no backend: opens the visitor's mail client.
-    // TODO(before launch): wire to an email service (e.g. Resend) via a route handler.
-    window.location.href = `mailto:${contact.email}?subject=${subject}&body=${body}`;
+  const sendByEmail = (f: FormData) => {
+    const href = emailOf(f);
+    setMail({ href, opened: true });
+    window.location.href = href;
+  };
+
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const f = new FormData(e.currentTarget);
+    if (state === "sending") return;
+    setError("");
+    if (!token) {
+      if (checkFailed) {
+        sendByEmail(f);
+        return;
+      }
+      setError("Please wait a moment for the security check below to finish, then send again.");
+      setMail({ href: emailOf(f), opened: false });
+      return;
+    }
+    setMail({ href: "", opened: false });
+    setState("sending");
+    try {
+      await submitSiteForm(
+        submissionId,
+        {
+          form: "contact",
+          name: form.name,
+          email: form.email,
+          organization: form.org,
+          message: form.message,
+          website: hp,
+          "cf-turnstile-response": token,
+        },
+        heardFromAnswer(f),
+      );
+      setState("sent");
+    } catch (err) {
+      setError((err as Error).message);
+      if (isUnreachable(err)) sendByEmail(f);
+      else setMail({ href: emailOf(f), opened: false });
+      setState("idle");
+      setSubmissionId(newSubmissionId());
+      setResetKey((k) => k + 1);
+    }
   };
 
   const field =
@@ -57,9 +115,9 @@ export function ContactSection({
             Let&apos;s talk about your team.
           </h2>
           <p className="mt-5 max-w-md text-lg leading-relaxed text-slate-ink">
-            Tell us about your staffing challenge and a member of our team will
-            reach out within 48 hours. Prefer to talk now? Book a 30-minute
-            discovery call.
+            Tell us about your staffing challenge, then pick a time for a
+            30-minute Google Meet with our team. We reply to every message
+            within 48 hours.
           </p>
 
           <ul className="mt-9 space-y-4 text-navy-900">
@@ -116,17 +174,27 @@ export function ContactSection({
           </div>
         </div>
 
-        {/* Form */}
+        {/* Form — on success the calendar takes its place */}
+        {state === "sent" ? (
+          <BookAfterSubmit
+            name={form.name}
+            email={form.email}
+            lead="Thanks — your message is with our team."
+          />
+        ) : (
         <form
           onSubmit={onSubmit}
-          className="rounded-2xl border border-cloud bg-white p-7 shadow-[0_30px_60px_-40px_rgba(6,10,31,0.25)] lg:p-9"
+          className="relative rounded-2xl border border-cloud bg-white p-7 shadow-[0_30px_60px_-40px_rgba(6,10,31,0.25)] lg:p-9"
         >
+          <Honeypot value={hp} onChange={setHp} />
           <div className="grid gap-4">
             <div className="grid gap-4 sm:grid-cols-2">
               <input
                 required
                 aria-label="Full name"
                 placeholder="Full name"
+                autoComplete="name"
+                maxLength={180}
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 className={field}
@@ -134,8 +202,10 @@ export function ContactSection({
               <input
                 required
                 type="email"
-                aria-label="Email"
-                placeholder="Email"
+                aria-label="Work email"
+                placeholder="Work email"
+                autoComplete="email"
+                maxLength={250}
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 className={field}
@@ -144,6 +214,8 @@ export function ContactSection({
             <input
               aria-label="School / organization"
               placeholder="School / organization"
+              autoComplete="organization"
+              maxLength={250}
               value={form.org}
               onChange={(e) => setForm({ ...form, org: e.target.value })}
               className={field}
@@ -153,23 +225,35 @@ export function ContactSection({
               rows={5}
               aria-label="How can we help?"
               placeholder="How can we help?"
+              maxLength={4000}
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
               className={field}
             />
             <HeardFrom field={field} />
+            <Turnstile onToken={setToken} onFail={setCheckFailed} resetKey={resetKey} />
+            {error && <FormError message={error} />}
+            {mail.href && <EmailInstead href={mail.href} opened={mail.opened} />}
             <button
               type="submit"
-              className="mt-1 inline-flex h-12 items-center justify-center rounded-full bg-teal-500 px-7 font-semibold text-navy-950 transition hover:bg-teal-400"
+              disabled={state === "sending"}
+              className="mt-1 inline-flex h-12 items-center justify-center rounded-full bg-teal-500 px-7 font-semibold text-navy-950 transition hover:bg-teal-400 disabled:opacity-60"
             >
-              Open email message
+              {state === "sending"
+                ? "Sending…"
+                : checkFailed
+                  ? "Open email message"
+                  : "Send and pick a time"}
             </button>
             <p className="text-center text-xs text-slate-ink">
-              Review and send the message in your email app. We&apos;ll respond
-              within 48 hours.
+              {checkFailed
+                ? "Review and send the message in your email app. We'll respond within 48 hours."
+                : "Next, you'll choose a time for a 30-minute Google Meet."}
             </p>
+            <NoScriptMail subject="Website inquiry" />
           </div>
         </form>
+        )}
       </div>
     </section>
   );

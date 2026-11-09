@@ -7,12 +7,12 @@ import { StaffingRequest } from "@/components/sections/StaffingRequest";
 export const metadata: Metadata = {
   title: "Request School Staff",
   description:
-    "Share your open role, location, and schedule with FocusedEDU. Email the staffing team or book a 30-minute call.",
+    "Share your open role, location, and schedule with FocusedEDU, then book a 30-minute Google Meet with our staffing team.",
   alternates: { canonical: "/request-staff" },
   openGraph: {
     title: "Request School Staff",
     description:
-      "Share your open role, location, and schedule with FocusedEDU. Email the staffing team or book a 30-minute call.",
+      "Share your open role, location, and schedule with FocusedEDU, then book a 30-minute Google Meet with our staffing team.",
     url: "/request-staff",
     type: "website",
     // Declaring openGraph replaces the inherited object, which drops the
@@ -38,7 +38,8 @@ export default function RequestStaffPage() {
             </h2>
             <p className="mt-4 leading-relaxed text-slate-ink">
               We will review your opening with you, clarify the requirements,
-              and discuss the staffing model before moving into a search.
+              and discuss the staffing model before moving into a search. Send
+              the form and you&apos;ll pick a time on our calendar right away.
             </p>
             <a
               href={"mailto:" + edu.contact.email}

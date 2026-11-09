@@ -259,10 +259,10 @@ function toJob(p: RawPosting, now: number): Job | null {
   };
 }
 
-async function fetchBoard<T>(path: string): Promise<T> {
+async function fetchBoard<T>(path: string, fresh = false): Promise<T> {
   const res = await fetch(`${BOARD}${path}`, {
     headers: { accept: "application/json" },
-    next: { revalidate: REVALIDATE_SECONDS },
+    ...(fresh ? { cache: "no-store" as const } : { next: { revalidate: REVALIDATE_SECONDS } }),
   });
   if (!res.ok) throw new Error(`job board ${path} responded ${res.status}`);
   const body = (await res.json()) as { json?: T };
@@ -310,6 +310,23 @@ export async function getOpenSchoolJobs(): Promise<Job[]> {
     .map((p) => toJob(p, now))
     .filter((j): j is Job => j !== null)
     .sort((a, b) => b.datePosted.localeCompare(a.datePosted));
+}
+
+/**
+ * The same openings read straight from the board, without the detail calls, for
+ * the sitemap. It has to match what /jobs/[slug] will answer today: a filled role
+ * left in the sitemap is reported by Google as a 404 in a sitemap.
+ */
+export async function getOpenSchoolJobsFresh(): Promise<Job[]> {
+  const { jobPostings } = await fetchBoard<{ jobPostings: RawPosting[] }>(
+    "/_api/public/job-postings",
+    true,
+  );
+  const now = Date.now();
+  return jobPostings
+    .filter(isK12School)
+    .map((p) => toJob(p, now))
+    .filter((j): j is Job => j !== null);
 }
 
 export async function getOpenSchoolJob(slug: string): Promise<Job | null> {

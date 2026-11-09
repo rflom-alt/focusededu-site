@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { posts } from "@/lib/posts";
 import { caseStudies } from "@/lib/case-studies";
 import { servicePages } from "@/lib/service-pages";
-import { getOpenSchoolJobs } from "@/app/jobs/jobs-feed";
+import { getOpenSchoolJobsFresh } from "@/app/jobs/jobs-feed";
 import {
   CROSS_DOMAIN_CANONICAL_POSTS,
   CROSS_DOMAIN_CANONICAL_ROUTES,
@@ -10,9 +10,10 @@ import {
 
 const BASE = "https://www.focusedu-staffing.com";
 
-// Job listings come from the live job board, so the sitemap refreshes on the
-// same 6-hour cycle as /jobs: filled or expired roles leave, new ones arrive.
-export const revalidate = 21600;
+// Job listings come from the live job board, so the sitemap is built per request.
+// With `revalidate` here Vercel kept serving one copy for days (it listed roles
+// filled 4 days earlier, which Google reported as 404s in a sitemap).
+export const dynamic = "force-dynamic";
 
 /** Case studies carry no date of their own; this is when their copy last changed. */
 const CASE_STUDIES_UPDATED = "2026-07-21";
@@ -102,7 +103,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // A detail page is never older than the day /jobs launched, and a role
   // posted after that carries its own posting date.
-  const jobs = (await getOpenSchoolJobs()).map((j) => {
+  // If the board is down, publish the sitemap without job URLs rather than failing it.
+  const jobs = (await getOpenSchoolJobsFresh().catch(() => [])).map((j) => {
     const posted = j.datePosted.slice(0, 10);
     return {
       url: `${BASE}/jobs/${j.slug}`,

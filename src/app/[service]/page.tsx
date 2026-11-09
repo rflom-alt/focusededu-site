@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/AppLink";
 import { notFound } from "next/navigation";
 import { ArrowRight, Check, Quote } from "lucide-react";
 import { servicePages, getServicePage } from "@/lib/service-pages";

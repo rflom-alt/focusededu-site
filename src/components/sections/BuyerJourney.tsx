@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/AppLink";
 import { ArrowRight } from "lucide-react";
 import { buyerContent as b } from "@/lib/buyer-content";
 import { edu } from "@/lib/content";

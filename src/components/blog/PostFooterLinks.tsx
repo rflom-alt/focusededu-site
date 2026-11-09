@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/AppLink";
 import { MapPin, FileText } from "lucide-react";
 
 const REGIONS = [

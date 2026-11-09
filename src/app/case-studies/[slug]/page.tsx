@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/components/AppLink";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Check } from "lucide-react";
 import { caseStudies, getCaseStudy } from "@/lib/case-studies";

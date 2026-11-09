@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/components/AppLink";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { Facebook, Instagram, Linkedin } from "@/components/ui/SocialIcons";
 import type { SiteContent } from "@/lib/content";

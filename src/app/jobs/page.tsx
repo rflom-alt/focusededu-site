@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/AppLink";
 import { ArrowRight, Briefcase, CalendarDays, Clock, DollarSign, MapPin } from "lucide-react";
 import { edu } from "@/lib/content";
 import { PageHero } from "@/components/ui/PageHero";

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/AppLink";
 import { PageHero } from "@/components/ui/PageHero";
 import { Button } from "@/components/ui/Button";
 import { LocationLinks, BuyerCta } from "@/components/sections/BuyerJourney";

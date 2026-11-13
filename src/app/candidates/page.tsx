@@ -25,8 +25,8 @@ const journey: Step[] = [
   },
   {
     n: "02",
-    title: "Talk with a recruiter",
-    body: "Tell us about your experience, your professional goals, and where you see yourself in your next role.",
+    title: "A recruiter reviews your profile",
+    body: "Our recruiters review every profile. When your experience and location line up with an open role, one of them reaches out to set up an interview.",
   },
   {
     n: "03",
@@ -97,14 +97,6 @@ export default function CandidatesPage() {
           className="border border-white/25 hover:bg-white/5"
         >
           Submit your résumé
-        </Button>
-        <Button
-          href="https://crm.focused-staffing.com/book/talk-with-a-recruiter"
-          variant="ghost"
-          size="lg"
-          className="border border-white/25 hover:bg-white/5"
-        >
-          Talk with a recruiter
         </Button>
       </PageHero>
 

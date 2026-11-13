@@ -1,4 +1,4 @@
-import type { Step } from "@/lib/content";
+import type { Stat, Step } from "@/lib/content";
 import type { Feature } from "@/components/sections/FeatureGrid";
 import type { QA } from "@/components/sections/FAQ";
 
@@ -81,19 +81,28 @@ export type PlatformProduct = {
   question: string;
   metaTitle: string;
   metaDescription: string;
-  h1: string;
+  /** What the client gets, as one short line. The product name is the page's H1. */
+  tagline: string;
+  /** The definition: what kind of platform it is and what it does. */
   lede: string;
-  /** One sentence for the suite overview, llms.txt and structured data. */
+  /** One line for the suite overview, llms.txt and structured data. */
   summary: string;
+  /** Three figures under the hero: from the product itself or this site's published results. */
+  stats: Stat[];
   problem: { title: string; body: string[] };
   visual: PlatformVisual;
   /** A real screen, shown at full width where one exists on this site's own demo data. */
   screen?: { eyebrow: string; title: string; body: string; visual: PlatformVisual };
   /** Three short lines for the suite overview. */
   highlights: string[];
-  sees: { title: string; intro: string; items: Feature[] };
+  /** What the platform does, as named capabilities. */
+  inside: { title: string; intro: string; items: Feature[] };
+  /** What the client experiences. */
+  expect: { title: string; intro: string; items: Feature[] };
   week?: { title: string; intro: string; steps: Step[] };
   proof: {
+    /** A headline figure, set large beside the title when there is no visual. */
+    value?: string;
     title: string;
     body: string;
     attribution?: string;
@@ -101,6 +110,15 @@ export type PlatformProduct = {
     visual?: PlatformVisual;
   };
   faqs: QA[];
+};
+
+/** One client result: a figure or a quotation, always with its source. */
+export type PlatformResult = {
+  value?: string;
+  headline: string;
+  body: string;
+  source: string;
+  href?: string;
 };
 
 export type PlatformSuite = {
@@ -118,7 +136,19 @@ export type PlatformSuite = {
   eyebrow: string;
   h1: string;
   lede: string;
+  /** Four figures under the hero. */
+  stats: Stat[];
   intro: { eyebrow: string; title: string; body: string };
+  /** Why the platform is ours: the four things a rented system cannot say. */
+  difference: { eyebrow: string; title: string; intro: string; pillars: Feature[] };
+  /** Named client results, each from this site's published proof. */
+  results: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    items: PlatformResult[];
+    link?: { label: string; href: string };
+  };
   cta: { label: string; href: string };
   secondaryCta: { label: string; href: string };
   faqs: QA[];

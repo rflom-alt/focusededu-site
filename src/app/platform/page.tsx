@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
 import { platform } from "@/lib/platform";
-import { PageHero } from "@/components/ui/PageHero";
 import { Button } from "@/components/ui/Button";
+import { FeatureGrid } from "@/components/sections/FeatureGrid";
 import { FAQ } from "@/components/sections/FAQ";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { StageIndex, StageRow } from "@/components/platform/Sections";
+import {
+  PlatformHero,
+  ResultsBand,
+  StageIndex,
+  StageRow,
+} from "@/components/platform/Sections";
 import { breadcrumbSchema, faqSchema, suiteSchema } from "@/components/platform/schema";
 
 export const metadata: Metadata = {
@@ -30,7 +35,12 @@ export default function PlatformPage() {
       <JsonLd data={faqSchema(platform.faqs)} />
       <JsonLd data={breadcrumbSchema(platform)} />
 
-      <PageHero eyebrow={platform.eyebrow} title={platform.h1} subtitle={platform.lede}>
+      <PlatformHero
+        eyebrow={platform.eyebrow}
+        title={platform.h1}
+        lede={platform.lede}
+        stats={platform.stats}
+      >
         <Button href={platform.cta.href}>{platform.cta.label}</Button>
         <Button
           href={platform.secondaryCta.href}
@@ -39,12 +49,26 @@ export default function PlatformPage() {
         >
           {platform.secondaryCta.label}
         </Button>
-      </PageHero>
+      </PlatformHero>
 
       <StageIndex suite={platform} />
       {platform.products.map((p, i) => (
         <StageRow key={p.slug} product={p} index={i} cta={platform.cta} />
       ))}
+
+      <FeatureGrid
+        eyebrow={platform.difference.eyebrow}
+        eyebrowTone="light"
+        title={platform.difference.title}
+        intro={platform.difference.intro}
+        items={platform.difference.pillars}
+        columns={4}
+        dark
+        ctaLabel={platform.cta.label}
+        ctaHref={platform.cta.href}
+      />
+
+      <ResultsBand results={platform.results} cta={platform.cta} />
 
       <FAQ title="Questions about the platform." items={platform.faqs} />
       <CtaBand

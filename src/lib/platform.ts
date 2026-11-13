@@ -1,36 +1,46 @@
 import type { PlatformProduct, PlatformSuite, ProductSlug } from "@/components/platform/types";
 
 /*
- * The FSG Platform: the software that runs every FocusedEDU placement.
+ * The FSG Platform: the proprietary, AI-native technology behind every FocusedEDU placement.
  *
  * The suite name and the three product names live here and nowhere else, so a
  * rename is one edit. Every line below describes something we can show on a
- * call with sample data. Keep it that way: no feature goes on these pages until
- * it can be opened in a demo.
+ * call with sample data, including what the AI does. Keep it that way: no feature
+ * goes on these pages until it can be opened in a demo.
+ *
+ * Voice: the way a consultancy presents its own platforms. Product name as the
+ * headline, one definition sentence, numbers large, short verb-led lines, and
+ * every result attributed to a named client. Stats come from this site's
+ * published figures or from the product itself; none are written here first.
  */
 
 const SUITE_NAME = "The FSG Platform";
 const SITE = "https://www.focusedu-staffing.com";
-const BOOK = { label: "See it on a call", href: "/book-a-call" };
+const BOOK = { label: "Request a demo", href: "/book-a-call" };
 
 const fsgMatch: PlatformProduct = {
   slug: "fsg-match",
   name: "FSG Match",
   stage: "Find",
-  covers: "Recruiting and openings",
+  covers: "AI-enabled recruiting",
   question: "How do I know a staffing agency is actually working my opening?",
-  metaTitle: "FSG Match: Recruiting Tracked by Opening",
+  metaTitle: "FSG Match: AI-Enabled Recruiting for Schools",
   metaDescription:
-    "FSG Match gives every school opening one named recruiter, a running record of activity, and an automatic flag when it goes quiet for two business days.",
-  h1: "Every opening has one recruiter who owns it, and a clock that keeps it moving.",
-  lede: "FSG Match is where our recruiters work your openings. Each one has a named owner, a running record of activity, and an automatic flag the moment it goes quiet.",
+    "FSG Match is FocusedEDU's proprietary, AI-enabled recruiting platform. Every school opening gets one named recruiter, a daily risk review, and AI-prepared next steps.",
+  tagline: "Know who owns every opening.",
+  lede: "FSG Match is our AI-enabled recruiting platform. It turns each request into a tracked opening, reviews every active search for risk, and prepares the next step for the named recruiter who owns it.",
   summary:
-    "Recruiting and openings: one named recruiter per opening, logged activity, and an automatic flag after two quiet business days.",
+    "AI-enabled recruiting platform that turns every request into a tracked opening with one named recruiter, a daily risk review, and AI-prepared next steps.",
+  stats: [
+    { value: "1", label: "Named recruiter accountable for every opening" },
+    { value: "2 days", label: "Business days of quiet before a search is escalated" },
+    { value: "4", label: "Qualified candidates per opening at a partner school" },
+  ],
   problem: {
     title: "The opening that goes quiet.",
     body: [
       "You send a role to an agency and hear nothing for a week. Nobody is sure who has it, and the first update comes when you ask for one.",
-      "FSG Match is built so that cannot happen. An opening cannot sit without an owner, and it cannot go two business days without recruiting activity before the system puts a task in front of its recruiter.",
+      "FSG Match removes that failure. No opening sits without an owner. Every active search is reviewed for risk each weekday morning, and two business days of quiet puts a task in front of its recruiter.",
     ],
   },
   visual: {
@@ -50,49 +60,77 @@ const fsgMatch: PlatformProduct = {
   },
   highlights: [
     "One named recruiter on every opening",
-    "Last activity and days quiet on the record",
-    "Two quiet business days files a task automatically",
+    "Every active search reviewed for risk each weekday",
+    "AI-prepared next steps, directed by your recruiter",
   ],
-  sees: {
-    title: "What you see with FSG Match.",
-    intro: "You do not log in to anything. You see it in how your openings are handled.",
+  inside: {
+    title: "Inside FSG Match.",
+    intro: "AI works inside the recruiter's day, so nothing waits on memory or an inbox.",
     items: [
       {
-        icon: "UserCheck",
-        title: "One named recruiter",
-        body: "Every opening you send is assigned to one recruiter. You know who to call, and so do we.",
+        icon: "Phone",
+        title: "Call to opening",
+        body: "Transcribes the recorded call when you phone in a need, extracts the role, building, and dates, and drafts the opening.",
       },
       {
-        icon: "Clock",
-        title: "A clock on every opening",
-        body: "Each opening shows its last recruiting activity and how many days it has been quiet. Two business days without activity files a task to its recruiter.",
+        icon: "Target",
+        title: "Daily risk review",
+        body: "Reviews every active search each weekday morning and surfaces the ones at risk: no debrief, no answer, lost momentum.",
       },
       {
         icon: "ClipboardList",
-        title: "A record of every hand-off",
-        body: "Who assigned the opening, who picked it up, and what changed are kept on the opening itself. When you ask where a role stands, the answer comes from the record.",
+        title: "Next-step drafting",
+        body: "Drafts the next step for each search at risk and turns every promised follow-up into a dated task.",
+      },
+      {
+        icon: "Sparkles",
+        title: "Record intelligence",
+        body: "Summarizes the full history of any opening or candidate on demand, so whoever takes your call knows where it stands.",
+      },
+      {
+        icon: "Search",
+        title: "Personalized outreach",
+        body: "Writes the first line of each candidate outreach from that person's own record.",
+      },
+      {
+        icon: "UserCheck",
+        title: "Recruiter-directed",
+        body: "Routes every draft to the named recruiter who owns your opening. Their judgment decides what goes out.",
+      },
+    ],
+  },
+  expect: {
+    title: "What to expect.",
+    intro: "Nothing to log in to. You see it in how your openings are handled.",
+    items: [
+      {
+        icon: "UserCheck",
+        title: "Named ownership",
+        body: "Assigns every opening to one recruiter. You know who to call, and so do we.",
+      },
+      {
+        icon: "Clock",
+        title: "Live status",
+        body: "Keeps the last recruiting activity, the days since, and every hand-off on the opening, so the answer comes from the record.",
       },
       {
         icon: "FileText",
-        title: "Candidates presented in writing",
-        body: "Each candidate arrives as a written presentation: the position, your recruiter's summary, and the list of approved documents and clearances.",
+        title: "Written presentations",
+        body: "Presents each candidate in writing: the position, your recruiter's summary, and the list of approved documents and clearances.",
       },
       {
         icon: "Mail",
-        title: "Requests that land in the system",
-        body: "The staffing request form on this site files straight into FSG Match, with no inbox in between.",
-      },
-      {
-        icon: "CalendarCheck",
-        title: "A calendar link, not phone tag",
-        body: "Book time with our team from one link. Pick a slot and it is on both calendars.",
+        title: "No new software",
+        body: "Takes your request by form, email, or call. The request form on this site files straight into FSG Match.",
       },
     ],
   },
   proof: {
-    title: "An average of four qualified candidates per opening.",
-    body: "At Cesar Chavez Public Charter School in Washington, DC, school leaders interview fully credentialed candidates for each role — a choice, not a scramble.",
-    link: { label: "Read the case studies", href: "/case-studies" },
+    value: "4",
+    title: "Qualified candidates per opening.",
+    body: "At Cesar Chavez Public Charter School in Washington, DC, school leaders choose from an average of four qualified candidates for every open position.",
+    attribution: "Cesar Chavez Public Charter School · Partner since 2022",
+    link: { label: "Read the case study", href: "/case-studies/cesar-chavez-public-charter-school" },
   },
   faqs: [
     {
@@ -100,8 +138,12 @@ const fsgMatch: PlatformProduct = {
       a: "With FocusedEDU, every opening has one named recruiter and a record of its last recruiting activity. If an active opening goes two business days without activity, FSG Match files a task to that recruiter automatically.",
     },
     {
+      q: "How does FSG Match use AI?",
+      a: "AI transcribes recorded calls, drafts openings and follow-up tasks, summarizes the history of any record, and writes candidate outreach. Each draft goes to the recruiter who owns the opening, and their judgment directs what goes out.",
+    },
+    {
       q: "Does my team have to learn new software to use FSG Match?",
-      a: "No. FSG Match is the system our recruiters work in. You send openings the way you do today, through the request form, by email, or on a call, and your recruiter keeps the record.",
+      a: "No. FSG Match is the platform our recruiters work in. You send openings the way you do today, through the request form, by email, or on a call, and your recruiter keeps the record.",
     },
     {
       q: "How do I find out where an opening stands?",
@@ -118,20 +160,25 @@ const verifai: PlatformProduct = {
   slug: "verifai",
   name: "VerifAI",
   stage: "Clear",
-  covers: "Credentialing",
+  covers: "AI-powered credentialing",
   question: "Is there a staffing agency with credential tracking for schools?",
-  metaTitle: "VerifAI: Credential Tracking for Schools",
+  metaTitle: "VerifAI: AI Credential Tracking for Schools",
   metaDescription:
-    "VerifAI is FocusedEDU's credentialing system. Every clearance and certificate is reviewed, approved, and tracked to its expiration date before a candidate is presented to your school.",
-  h1: "Every clearance approved and current before anyone is presented to your school.",
-  lede: "VerifAI is our credentialing system. It collects each professional's documents, tracks every expiration date, and the candidate presentation goes out once every required credential is approved and current.",
+    "VerifAI is FocusedEDU's proprietary, AI-powered credentialing platform. It reads every clearance and certificate on upload, flags exceptions, and tracks each expiration date before a candidate is presented to your school.",
+  tagline: "Know they are cleared before they start.",
+  lede: "VerifAI is our AI-powered credentialing platform. It reads every clearance and certificate on upload, checks it, and tracks it to its expiration date, so each candidate reaches you with a complete, current file.",
   summary:
-    "Credentialing: every clearance and certificate reviewed, approved, and tracked to its expiration date, with the approved file listed on each candidate presentation.",
+    "AI-powered credentialing platform that reads every clearance and certificate on upload, flags exceptions, and tracks each expiration date before a candidate is presented.",
+  stats: [
+    { value: "100%", label: "Of documents read by AI the moment they are uploaded" },
+    { value: "4", label: "AI checks on every document: expiry, signature, name, authenticity" },
+    { value: "½", label: "The hiring time, with automated credentialing" },
+  ],
   problem: {
     title: "Finding out about a clearance after the start date.",
     body: [
       "A missing or lapsed clearance usually surfaces at the worst moment: the morning someone is due in a classroom, or in the middle of an audit.",
-      "VerifAI moves that check to the front. Each professional uploads their documents in one place, our team reviews and approves each one, and the system tracks every expiration date from then on.",
+      "VerifAI moves that check to the front. Each professional uploads documents in one place. AI reads every one on arrival, our credentialing team approves it, and the platform tracks every expiration date from then on.",
     ],
   },
   visual: {
@@ -152,45 +199,82 @@ const verifai: PlatformProduct = {
     caption: "The candidate presentation a school receives. The names and dates are demo data.",
   },
   highlights: [
-    "Approved documents and clearances listed on every presentation",
+    "Every document read and checked by AI on upload",
     "Presented once every required credential is approved and current",
     "Expiration dates tracked, renewals chased by us",
   ],
-  sees: {
-    title: "What you see with VerifAI.",
-    intro: "A complete file in front of you before the interview, and nothing to chase afterward.",
+  inside: {
+    title: "Inside VerifAI.",
+    intro: "AI is applied where credentialing usually breaks: the moment a document arrives.",
     items: [
       {
         icon: "FileText",
-        title: "A presentation that lists the file",
-        body: "Each candidate is presented in writing with a list of approved documents and clearances, and the date each one was approved.",
+        title: "Document reading",
+        body: "Reads each uploaded scan, photo, or PDF and extracts the dates that matter: when it was issued and when it expires.",
       },
       {
         icon: "ShieldCheck",
-        title: "Complete before presented",
-        body: "The presentation goes out once every required credential is approved and unexpired, and the start date is confirmed.",
+        title: "Exception flagging",
+        body: "Flags an expired document, a missing signature, a name mismatch, or a file that is not what it claims to be.",
       },
       {
-        icon: "Clock",
-        title: "Expirations tracked",
-        body: "Every clearance, certificate, and test carries its expiration date in the system, so a renewal is handled before it lapses.",
+        icon: "Target",
+        title: "Stall prediction",
+        body: "Predicts which candidates are at risk of stalling in credentialing, so our team steps in before a start date slips.",
       },
       {
         icon: "Mail",
-        title: "The chasing is ours",
-        body: "Reminders go to the professional automatically until each missing document is in. Your office is not the one following up.",
+        title: "Personalized reminders",
+        body: "Writes each reminder around exactly what that professional still owes, so every follow-up is specific.",
+      },
+      {
+        icon: "Clock",
+        title: "Expiration tracking",
+        body: "Carries the expiration date of every approved document and starts renewal reminders before it lapses.",
+      },
+      {
+        icon: "BadgeCheck",
+        title: "Expert approval",
+        body: "Sends every document to our credentialing team for approval. Only approved documents appear on a presentation.",
+      },
+    ],
+  },
+  expect: {
+    title: "What to expect.",
+    intro: "A complete file before the interview, and nothing to chase afterward.",
+    items: [
+      {
+        icon: "ShieldCheck",
+        title: "Complete files",
+        body: "Presents each candidate once every required credential is approved and unexpired, and the start date is confirmed.",
+      },
+      {
+        icon: "FileText",
+        title: "Listed approvals",
+        body: "Lists every approved document and clearance on the presentation, with the date each one was approved.",
+      },
+      {
+        icon: "Clock",
+        title: "Tracked expirations",
+        body: "Tracks every clearance, certificate, and test to its expiration date, so a renewal is handled before it lapses.",
+      },
+      {
+        icon: "Mail",
+        title: "No chasing",
+        body: "Reminds the professional automatically until each missing document is in. Your office is not the one following up.",
       },
     ],
   },
   proof: {
-    title: "Hiring time cut in half.",
+    value: "½",
+    title: "The hiring time, with automated credentialing.",
     body: "Automated credentialing cuts hiring time in half while weeding out unqualified candidates before they ever reach your desk.",
     link: { label: "Read what school leaders say", href: "/references" },
   },
   faqs: [
     {
       q: "Is there a staffing agency with credential tracking for schools?",
-      a: "Yes. FocusedEDU runs every placement through VerifAI, its own credentialing system. Each required document is reviewed and approved, each expiration date is tracked, and the approved list comes with the candidate presentation.",
+      a: "Yes. FocusedEDU runs every placement through VerifAI, its own AI-powered credentialing platform. AI reads each document on upload, our credentialing team approves it, each expiration date is tracked, and the approved list comes with the candidate presentation.",
     },
     {
       q: "Which credentials does VerifAI track for school staff?",
@@ -205,8 +289,12 @@ const verifai: PlatformProduct = {
       a: "VerifAI tracks the expiration date and reminds the professional to renew and upload the new document before it lapses.",
     },
     {
+      q: "How does VerifAI use AI?",
+      a: "AI reads every uploaded document, extracts the issue and expiration dates, and flags an expired document, a missing signature, or a name that does not match. It also writes reminders and predicts which candidates are at risk of stalling. Our credentialing team approves each document.",
+    },
+    {
       q: "Who reviews the documents?",
-      a: "Our credentialing team reviews each upload and either approves it or sends it back. Only approved documents appear on a presentation.",
+      a: "Our credentialing team. AI reads each upload first and flags exceptions, then a team member approves the document or sends it back. Only approved documents appear on a presentation.",
     },
   ],
 };
@@ -215,15 +303,20 @@ const fsgGo: PlatformProduct = {
   slug: "fsg-go",
   name: "FSG Go",
   stage: "Work",
-  covers: "Scheduling, time, and invoicing",
+  covers: "Automated scheduling, time, and invoicing",
   question: "How do schools approve agency timesheets and check the invoice?",
   metaTitle: "FSG Go: Timesheets, Sub Requests, Invoices",
   metaDescription:
-    "FSG Go is FocusedEDU's platform for substitute requests, timesheet approval, and invoicing. Approvers confirm hours from one emailed link and every invoice carries its approval record.",
-  h1: "Approve the week's hours from one email. See the proof on every invoice.",
-  lede: "FSG Go is our platform for scheduling, time, and invoicing. Your approvers confirm hours from a link, your buildings request substitutes online, and every invoice arrives with its approval record.",
+    "FSG Go is FocusedEDU's proprietary platform for substitute requests, timesheet approval, and invoicing. Approvers confirm hours from one emailed link and every invoice carries its approval record.",
+  tagline: "Know what you are paying for.",
+  lede: "FSG Go is our automated platform for scheduling, time, and invoicing. It takes substitute requests by building, sends each approver the week in one email, and attaches the approval record to every invoice.",
   summary:
-    "Scheduling, time, and invoicing: substitute requests by building, timesheet approval from one emailed link, and an approval record with every invoice.",
+    "Automated scheduling, time, and invoicing platform that takes substitute requests by building, collects timesheet approval from one emailed link, and attaches an approval record to every invoice.",
+  stats: [
+    { value: "1", label: "Email to approve the week's hours" },
+    { value: "0", label: "Passwords for your approvers" },
+    { value: "100%", label: "Of billed days carry a name and a time" },
+  ],
   problem: {
     title: "Paying for hours nobody at the school confirmed.",
     body: [
@@ -267,9 +360,35 @@ const fsgGo: PlatformProduct = {
     "A name and a time on every approved day",
     "Substitute requests by building, filled and confirmed",
   ],
+  inside: {
+    title: "Inside FSG Go.",
+    intro: "Automation runs the hand-offs where time and billing usually go wrong.",
+    items: [
+      {
+        icon: "MessageCircle",
+        title: "Request reading",
+        body: "Reads a pasted list of absences into individual requests by date, building, and position, and holds anything ambiguous for a person.",
+      },
+      {
+        icon: "Smartphone",
+        title: "Self-filling timesheets",
+        body: "Fills each professional's week from the schedule and texts it to them on Friday to confirm or correct.",
+      },
+      {
+        icon: "Zap",
+        title: "Scheduled approvals",
+        body: "Sends the approval email Monday at 1 PM and a reminder Wednesday. Nobody at your school has to remember to ask.",
+      },
+      {
+        icon: "BadgeCheck",
+        title: "Automatic proof",
+        body: "Stamps every approval with a name and a time and compiles the record that travels with the invoice.",
+      },
+    ],
+  },
   week: {
-    title: "How a week runs in FSG Go.",
-    intro: "Four steps, and your approver is in only one of them.",
+    title: "How a week runs.",
+    intro: "Four steps. Your approver is in one of them.",
     steps: [
       {
         n: "01",
@@ -293,39 +412,39 @@ const fsgGo: PlatformProduct = {
       },
     ],
   },
-  sees: {
-    title: "What you see with FSG Go.",
+  expect: {
+    title: "What to expect.",
     intro: "Each person at your school sees only the part that is theirs.",
     items: [
       {
         icon: "CalendarCheck",
-        title: "Substitute requests by building",
-        body: "Request a sub by building, position, full or half day, room, and who is being covered: one at a time, repeating, or pasted in as a batch. You see who is coming, and fills are emailed and texted to your school contacts.",
+        title: "Substitute requests",
+        body: "Takes requests by building, position, full or half day, room, and who is being covered: single, repeating, or pasted as a batch. Fills are emailed and texted to your school contacts.",
       },
       {
         icon: "Mail",
-        title: "One email, one link",
-        body: "Approvers get their timesheets Monday at 1 PM with a reminder Wednesday. The link works until Thursday at 1 PM and can be opened as many times as needed.",
+        title: "One link",
+        body: "Delivers timesheets Monday at 1 PM with a reminder Wednesday. The link works until Thursday at 1 PM and opens as many times as needed.",
       },
       {
         icon: "BadgeCheck",
-        title: "A name on every decision",
-        body: "Approve, Needs adjustment, or Reject. Approving takes a typed name; the other two take a note that comes straight back to us.",
+        title: "Named decisions",
+        body: "Records Approve, Needs adjustment, or Reject. Approving takes a typed name; the other two take a note that comes straight back to us.",
       },
       {
         icon: "FileText",
-        title: "The approval record with the invoice",
-        body: "A Timesheet approvals PDF goes with each invoice, listing every day, who approved it, and when.",
+        title: "Approval record",
+        body: "Attaches a Timesheet approvals PDF to each invoice, listing every day, who approved it, and when.",
       },
       {
         icon: "DollarSign",
-        title: "Invoices your business office can post",
-        body: "Itemized, with sections and subtotals. Where your district needs it: your vendor number, fund and account codes, a row per person or per day, and a timesheet backup page.",
+        title: "Postable invoices",
+        body: "Itemizes each invoice with sections and subtotals. Where your district needs it: vendor number, fund and account codes, a row per person or per day, and a timesheet backup page.",
       },
       {
         icon: "Users",
-        title: "The right contact for each job",
-        body: "Separate contacts for approving time, requesting staff, and billing, so each message reaches the person who handles it. Messages keeps one thread with our scheduling team.",
+        title: "Right contacts",
+        body: "Keeps separate contacts for approving time, requesting staff, and billing, so each message reaches the person who handles it. Messages keeps one thread with our scheduling team.",
       },
     ],
   },
@@ -405,23 +524,93 @@ export const platform: PlatformSuite = {
   brand: "FocusedEDU",
   providerId: `${SITE}/#organization`,
   audience: "K-12 schools and districts",
-  metaTitle: "Staffing Software for K-12 Schools",
+  metaTitle: "AI-Native Staffing Platform for K-12 Schools",
   metaDescription:
-    "The FSG Platform is the software behind every FocusedEDU placement: a named recruiter on each opening, credentials tracked to the expiration date, and timesheets approved from one email.",
-  eyebrow: SUITE_NAME,
-  h1: "Know who is coming, that they are cleared, and what you are paying for.",
-  lede: `${SUITE_NAME} is the proprietary software behind every FocusedEDU placement: recruiting, credentialing, scheduling, time, and invoicing. It is included with every engagement.`,
+    "The FSG Platform is FocusedEDU's proprietary, AI-native staffing technology: AI-enabled recruiting, AI-powered credentialing, and automated timesheets and invoicing. Included with every engagement.",
+  eyebrow: `${SUITE_NAME} · Proprietary technology`,
+  h1: "AI-native staffing. Built in-house.",
+  lede: `Most school staffing still runs on inboxes, spreadsheets, and rented software. We built our own. ${SUITE_NAME} finds your people, clears them, and runs the working week, and it comes with every engagement.`,
+  stats: [
+    { value: "3", label: "Proprietary platforms, from the opening to the invoice" },
+    { value: "12 yrs", label: "Partnering with K-12 schools" },
+    { value: "95%", label: "Day-to-day substitute fill rate at a partner school" },
+    { value: "½", label: "The hiring time, with automated credentialing" },
+  ],
   intro: {
     eyebrow: "Find. Clear. Work.",
-    title: "One platform follows every hire, from the opening to the invoice.",
-    body: "Most staffing runs on inboxes and spreadsheets, which is why schools end up chasing updates, clearances, and timesheets. Ours runs on one platform, so the answer is already on record when you ask.",
+    title: "Three platforms. End to end.",
+    body: "One connected system follows every hire from the opening to the invoice. Each stage has its own platform, and each hands the next a complete record.",
+  },
+  difference: {
+    eyebrow: "Our technology",
+    title: "Built, not bought.",
+    intro: "Most agencies rent generic software and fit their service around it. We engineered our own for school staffing and put AI to work inside it.",
+    pillars: [
+      {
+        icon: "Award",
+        title: "Proprietary",
+        body: "Designed and built by Focused Staffing Group. No other agency runs on it, and we own the roadmap.",
+      },
+      {
+        icon: "Sparkles",
+        title: "AI-native",
+        body: "AI works inside the workflow. It reads credential documents on upload, turns calls into drafted openings, and prepares each recruiter's next step.",
+      },
+      {
+        icon: "GraduationCap",
+        title: "Expert-built",
+        body: "Founded by a former K-12 educator and shaped by twelve years of school staffing. Our recruiters and credentialing team direct the work.",
+      },
+      {
+        icon: "Handshake",
+        title: "Included",
+        body: "Comes with every engagement. Nothing to license, nothing to install, and no implementation project.",
+      },
+    ],
+  },
+  results: {
+    eyebrow: "In production",
+    title: "Proven in partner schools.",
+    intro: "The platform runs behind every FocusedEDU placement. These are results from schools we staff.",
+    items: [
+      {
+        value: "95%",
+        headline: "Day-to-day substitute fill rate",
+        body: "Odyssey fills 95% of its day-to-day substitute requests, a 40% improvement over its previous provider.",
+        source: "Odyssey Public Charter School · Wilmington, DE",
+        href: "/case-studies/odyssey-charter-school",
+      },
+      {
+        value: "2 wks",
+        headline: "From request to filled",
+        body: "IDEA filled 100% of its certified special education teacher roles, two weeks from request to filled.",
+        source: "IDEA Public Charter School · Washington, DC",
+        href: "/case-studies/idea-public-charter-school",
+      },
+      {
+        value: "4",
+        headline: "Qualified candidates per opening",
+        body: "Cesar Chavez leaders choose from an average of four qualified candidates for every open position.",
+        source: "Cesar Chavez Public Charter School · Washington, DC",
+        href: "/case-studies/cesar-chavez-public-charter-school",
+      },
+    ],
+    link: { label: "All case studies", href: "/case-studies" },
   },
   cta: BOOK,
   secondaryCta: { label: "Send a staffing request", href: "/request-staff" },
   faqs: [
     {
       q: "What software does FocusedEDU use to staff our school?",
-      a: "The FSG Platform, which has three parts: FSG Match for recruiting and openings, VerifAI for credentialing, and FSG Go for substitute requests, timesheets, and invoicing. FocusedEDU is the K-12 division of Focused Staffing Group, which built all three.",
+      a: "The FSG Platform, proprietary AI-native technology with three parts: FSG Match for AI-enabled recruiting, VerifAI for AI-powered credentialing, and FSG Go for substitute requests, timesheets, and invoicing. FocusedEDU is the K-12 division of Focused Staffing Group, which designed and built all three.",
+    },
+    {
+      q: "How does FocusedEDU use AI in staffing?",
+      a: "AI works inside The FSG Platform. In recruiting, it transcribes recorded calls, drafts openings and follow-up tasks, and summarizes each record. In credentialing, it reads every uploaded document, extracts the issue and expiration dates, and flags exceptions. Our recruiters and credentialing team direct the work and approve what reaches your school.",
+    },
+    {
+      q: "What does the platform cost?",
+      a: "Nothing. The FSG Platform is included with every FocusedEDU engagement. There is no license, no software fee, and no implementation project.",
     },
     {
       q: "Does our school have to install or learn anything?",
@@ -429,7 +618,7 @@ export const platform: PlatformSuite = {
     },
     {
       q: "Can we see the platform before we commit?",
-      a: "Yes. Book a call and we will walk through each part on sample data: an opening, a candidate presentation, a timesheet approval, and an invoice.",
+      a: "Yes. Request a demo and we will walk through each part on sample data: an opening, a candidate presentation, a timesheet approval, and an invoice.",
     },
     {
       q: "Can other schools see our information?",
@@ -442,8 +631,8 @@ export const platform: PlatformSuite = {
   },
   teaser: {
     eyebrow: SUITE_NAME,
-    title: "The software behind every placement.",
-    body: "A named recruiter on each opening, every clearance tracked to its expiration date, and timesheets your approvers confirm from one email.",
+    title: "AI-native staffing. Built in-house.",
+    body: "Three proprietary platforms behind every placement: AI-enabled recruiting with a named owner on each opening, AI-powered credentialing tracked to the expiration date, and timesheets your approvers confirm from one email.",
   },
   products: [fsgMatch, verifai, fsgGo],
 };

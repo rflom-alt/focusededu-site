@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { platform, getPlatformProduct } from "@/lib/platform";
-import { PageHero } from "@/components/ui/PageHero";
 import { Button } from "@/components/ui/Button";
 import { FeatureGrid } from "@/components/sections/FeatureGrid";
 import { Steps } from "@/components/sections/Steps";
@@ -9,6 +8,7 @@ import { FAQ } from "@/components/sections/FAQ";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { JsonLd } from "@/components/seo/JsonLd";
 import {
+  PlatformHero,
   PlatformLinks,
   ProblemSplit,
   ProofBand,
@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     description: product.metaDescription,
     alternates: { canonical: `/platform/${product.slug}` },
     openGraph: {
-      title: product.h1,
+      title: product.metaTitle,
       description: product.metaDescription,
       url: `${platform.site}/platform/${product.slug}`,
       type: "website",
@@ -55,18 +55,32 @@ export default async function PlatformProductPage({ params }: Params) {
       <JsonLd data={faqSchema(product.faqs)} />
       <JsonLd data={breadcrumbSchema(platform, product)} />
 
-      <PageHero
-        eyebrow={`${platform.name} · ${product.stage}`}
-        title={product.h1}
-        subtitle={product.lede}
+      <PlatformHero
+        eyebrow={`${platform.name} · ${product.covers}`}
+        title={product.name}
+        tagline={product.tagline}
+        lede={product.lede}
+        stats={product.stats}
       >
         <Button href={cta.href}>{cta.label}</Button>
         <Button href={secondaryCta.href} variant="ghost" className="border border-white/25">
           {secondaryCta.label}
         </Button>
-      </PageHero>
+      </PlatformHero>
 
       <ProblemSplit product={product} cta={cta} />
+
+      <FeatureGrid
+        eyebrow="Capabilities"
+        eyebrowTone="light"
+        title={product.inside.title}
+        intro={product.inside.intro}
+        items={product.inside.items}
+        columns={product.inside.items.length === 4 ? 4 : 3}
+        dark
+        ctaLabel={cta.label}
+        ctaHref={cta.href}
+      />
 
       {product.week && (
         <Steps
@@ -82,11 +96,11 @@ export default async function PlatformProductPage({ params }: Params) {
       {product.screen && <ScreenSection screen={product.screen} cta={cta} />}
 
       <FeatureGrid
-        eyebrow="What you see"
-        title={product.sees.title}
-        intro={product.sees.intro}
-        items={product.sees.items}
-        columns={product.sees.items.length === 4 ? 2 : 3}
+        eyebrow={product.name}
+        title={product.expect.title}
+        intro={product.expect.intro}
+        items={product.expect.items}
+        columns={product.expect.items.length === 4 ? 2 : 3}
         ctaLabel={cta.label}
         ctaHref={cta.href}
       />

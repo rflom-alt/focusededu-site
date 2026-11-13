@@ -57,7 +57,7 @@ export function Header({
     >
       <div className="container-x flex h-18 items-center justify-between lg:h-20">
         {/* Logo */}
-        <Link href="/" className="relative flex items-center" aria-label={brandName}>
+        <Link href="/" className="relative flex shrink-0 items-center" aria-label={brandName}>
           <Image
             src={logo}
             alt={brandName}
@@ -69,7 +69,7 @@ export function Header({
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-9 lg:flex">
+        <nav className="hidden items-center gap-5 whitespace-nowrap lg:flex xl:gap-9">
           {nav.map((item) => (
             <Link
               key={item.label}
@@ -83,9 +83,17 @@ export function Header({
 
         {/* Desktop CTA */}
         <div className="hidden items-center gap-3 lg:flex">
-          <Button href={activeCta.href} variant="primary" size="md">
-            {activeCta.label}
-          </Button>
+          {/* Seven nav items leave room for the full label only from 1280 up. */}
+          <span className="hidden xl:inline-flex">
+            <Button href={activeCta.href} variant="primary" size="md" className="whitespace-nowrap">
+              {activeCta.label}
+            </Button>
+          </span>
+          <span className="xl:hidden">
+            <Button href={activeCta.href} variant="primary" size="md" className="whitespace-nowrap">
+              {isCandidateContext ? "Open roles" : "Book a call"}
+            </Button>
+          </span>
         </div>
 
         {/* Mobile actions: persistent CTA + toggle */}

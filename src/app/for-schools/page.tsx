@@ -16,6 +16,8 @@ import {
   LocationLinks,
   BuyerCta,
 } from "@/components/sections/BuyerJourney";
+import { PlatformTeaser } from "@/components/platform/Sections";
+import { platform } from "@/lib/platform";
 
 const DESCRIPTION =
   "Hire the right K-12 education staff with speed and precision. A dedicated, exclusive talent pipeline, automated credentialing, and temp-to-perm at no cost.";
@@ -58,6 +60,7 @@ export default function BuyerPage() {
       <RoleRoutes />
       <StatBand stats={edu.stats} />
       <HiringProcess />
+      <PlatformTeaser suite={platform} />
       <StaffingOptions />
       <RegionScarcity />
       <CaseStudyProof />

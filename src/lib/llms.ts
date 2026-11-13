@@ -7,6 +7,7 @@
  */
 import { posts } from "./posts";
 import { caseStudies } from "./case-studies";
+import { platform } from "./platform";
 
 export const SITE = "https://www.focusedu-staffing.com";
 
@@ -47,6 +48,10 @@ const PROFILE = `# FocusedEDU
 - Cesar Chavez Public Charter School (Washington, DC): four qualified candidates presented per opening; 414 students, grades 6–12.
 - 8 published letters of recommendation from named school leaders (superintendents, principals, and HR directors across NJ, PA, DE, and CO): ${SITE}/references
 
+## Software: ${platform.name}
+${platform.lede}
+${platform.products.map((p) => `- [${p.name}](${SITE}/platform/${p.slug}): ${p.summary}`).join("\n")}
+
 ## How staffing works
 Share your role, location, schedule, and required qualifications. Our team recruits and screens candidates, coordinates interviews, and handles credentialing and documentation. You make the hiring decision.
 
@@ -55,6 +60,7 @@ Share your role, location, schedule, and required qualifications. Our team recru
 - Staffing request: ${SITE}/request-staff
 - Book a 30-minute discovery call: ${SITE}/book-a-call
 - Services: ${SITE}/services
+- ${platform.name}: ${SITE}/platform
 - Resources: ${SITE}/resources
 - About: ${SITE}/about
 - For professionals: ${SITE}/candidates

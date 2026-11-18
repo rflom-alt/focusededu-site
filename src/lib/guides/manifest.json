@@ -18,6 +18,48 @@
         "title": "K-12 Staffing Results: What Four School Partners Measured",
         "body": "Published results from 4 FocusedEDU school partners: 120+ placements, a 95% substitute fill rate, special education roles filled in 2 weeks, signed letters."
       }
+    },
+    {
+      "slug": "k12-hiring-timeline",
+      "published": "2026-11-18",
+      "updated": "2026-11-18",
+      "card": {
+        "title": "The District Hiring Timeline: When to Lock In Fall Special Education Staff",
+        "body": "A month-by-month K-12 hiring timeline, February to September: when to make offers, when resignations land and how to cover special education seats by day 1."
+      },
+      "download": {
+        "title": "K-12 Hiring and Coverage Planning Calendar",
+        "pdf": "/downloads/k-12-hiring-and-coverage-planning-calendar.pdf",
+        "heading": "Take the planning calendar with you",
+        "sub": "A printable checklist of what to finish in each period, February through September, so every special education seat is covered on the first day of school.",
+        "button": "Get the planning calendar",
+        "points": [
+          "Six periods, 36 lines to tick off",
+          "State notice and resignation dates for PA, NJ, DE, OH and IL",
+          "The IDEA rules that apply on day 1, with section numbers"
+        ]
+      }
+    },
+    {
+      "slug": "paraprofessional-turnover",
+      "published": "2026-11-18",
+      "updated": "2026-11-18",
+      "card": {
+        "title": "Why Paraprofessionals Leave Mid-Year and How to Keep Classrooms Covered",
+        "body": "Why aides leave mid-year, sourced turnover figures, what an open IEP aide seat costs, and the onboarding and contracted aides that keep seats filled."
+      },
+      "download": {
+        "title": "First 30 Days: Paraprofessional Onboarding Checklist",
+        "pdf": "/downloads/first-30-days-paraprofessional-onboarding-checklist.pdf",
+        "heading": "Take the 30-day onboarding checklist",
+        "sub": "A printable checklist that takes a new paraprofessional or 1:1 aide from the week before day one through the first month.",
+        "button": "Get the onboarding checklist",
+        "points": [
+          "32 lines across 5 sections, in the order you use them",
+          "Built on the IEP access rule in 34 CFR 300.323(d)",
+          "Check-in questions for weeks 1, 2 and 4"
+        ]
+      }
     }
   ],
   "hub": [
@@ -32,6 +74,8 @@
       "title": "7 Questions That Reveal a Great K-12 Staffing Partner — in One Call",
       "body": "The 7 questions to ask a K-12 staffing agency on one call, what a strong answer sounds like, the clearance rules behind them, and a scorecard to compare.",
       "href": "/blog/7-questions-that-reveal-a-great-k12-staffing-partner"
-    }
+    },
+    "k12-hiring-timeline",
+    "paraprofessional-turnover"
   ]
 }

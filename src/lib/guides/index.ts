@@ -4,10 +4,14 @@ import type { Guide, GuideData, HubLink } from "@/lib/guides/types";
 import manifest from "./manifest.json";
 import g_cost_of_an_unfilled_classroom from "./cost-of-an-unfilled-classroom.json";
 import g_k12_staffing_results from "./k12-staffing-results.json";
+import g_k12_hiring_timeline from "./k12-hiring-timeline.json";
+import g_paraprofessional_turnover from "./paraprofessional-turnover.json";
 
 const data: Record<string, GuideData> = {
   "cost-of-an-unfilled-classroom": g_cost_of_an_unfilled_classroom as GuideData,
   "k12-staffing-results": g_k12_staffing_results as GuideData,
+  "k12-hiring-timeline": g_k12_hiring_timeline as GuideData,
+  "paraprofessional-turnover": g_paraprofessional_turnover as GuideData,
 };
 
 // The leadership guides on this site. The page, the hub, the sitemap and the llms files all read this list.

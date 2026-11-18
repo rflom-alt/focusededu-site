@@ -81,6 +81,27 @@
           "Covers teachers, related service providers, school nurses and counselors"
         ]
       }
+    },
+    {
+      "slug": "funding-contract-staff-idea-title-i-medicaid",
+      "published": "2026-11-18",
+      "updated": "2026-11-18",
+      "card": {
+        "title": "Funding Contract Staff with IDEA, Title I and Medicaid",
+        "body": "Which federal funds can pay for contracted special education, related services and support roles, with IDEA, Title I, Medicaid and procurement rules cited."
+      },
+      "download": {
+        "title": "School Board Proposal Outline for Contracted Staffing",
+        "pdf": "/downloads/school-board-proposal-outline-for-contracted-staffing.pdf",
+        "heading": "Take the board proposal outline",
+        "sub": "A fill-in outline for the board item that approves a contracted staffing agreement paid with federal or state funds.",
+        "button": "Get the proposal outline",
+        "points": [
+          "Five sections in the order a board reads them",
+          "Each line names the rule it answers",
+          "No figures to replace, only your facts"
+        ]
+      }
     }
   ],
   "hub": [
@@ -98,6 +119,12 @@
     },
     "k12-hiring-timeline",
     "paraprofessional-turnover",
-    "emergency-credentials-and-licensure-compacts"
+    "emergency-credentials-and-licensure-compacts",
+    {
+      "title": "Teletherapy vs. Onsite K-12 Services: A Comparison Guide",
+      "body": "On-site, virtual or hybrid related services? A decision table, the IDEA rules on who decides, what virtual sessions need on site, and how to start a hybrid.",
+      "href": "/blog/teletherapy-vs-onsite-k-12-services-a-comparison-guide"
+    },
+    "funding-contract-staff-idea-title-i-medicaid"
   ]
 }

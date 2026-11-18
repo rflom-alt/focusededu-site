@@ -20,7 +20,13 @@ export const guides: Guide[] = [
 export const getGuide = (slug: string) => guides.find((g) => g.data.slug === slug);
 
 // The hub: these guides, plus articles elsewhere on the site rebuilt to the same standard.
-const elsewhere: HubLink[] = [];
+const elsewhere: HubLink[] = [
+  {
+    title: "Staying IDEA-compliant through a vacancy",
+    body: "What the law requires when an open seat means missed IEP minutes, the first four steps, and a printable compliance checklist.",
+    href: "/blog/managing-iep-backlogs-and-compensatory-services-guide",
+  },
+];
 
 export const leadershipLinks: HubLink[] = [
   ...guides.map((g) => ({ title: g.card.title, body: g.card.body, href: `/resources/${g.data.slug}` })),

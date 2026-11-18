@@ -102,6 +102,15 @@
           "No figures to replace, only your facts"
         ]
       }
+    },
+    {
+      "slug": "k12-special-education-pay-benchmarks",
+      "published": "2026-11-18",
+      "updated": "2026-11-18",
+      "card": {
+        "title": "K-12 Special Education and Related Services Pay Benchmarks",
+        "body": "BLS pay for special education teachers, school SLPs, OTs, PTs, school psychologists and paraprofessionals: national medians, ranges and pay by state."
+      }
     }
   ],
   "hub": [
@@ -125,6 +134,7 @@
       "body": "On-site, virtual or hybrid related services? A decision table, the IDEA rules on who decides, what virtual sessions need on site, and how to start a hybrid.",
       "href": "/blog/teletherapy-vs-onsite-k-12-services-a-comparison-guide"
     },
-    "funding-contract-staff-idea-title-i-medicaid"
+    "funding-contract-staff-idea-title-i-medicaid",
+    "k12-special-education-pay-benchmarks"
   ]
 }

@@ -8,6 +8,7 @@ import g_k12_hiring_timeline from "./k12-hiring-timeline.json";
 import g_paraprofessional_turnover from "./paraprofessional-turnover.json";
 import g_emergency_credentials_and_licensure_compacts from "./emergency-credentials-and-licensure-compacts.json";
 import g_funding_contract_staff_idea_title_i_medicaid from "./funding-contract-staff-idea-title-i-medicaid.json";
+import g_k12_special_education_pay_benchmarks from "./k12-special-education-pay-benchmarks.json";
 
 const data: Record<string, GuideData> = {
   "cost-of-an-unfilled-classroom": g_cost_of_an_unfilled_classroom as GuideData,
@@ -16,6 +17,7 @@ const data: Record<string, GuideData> = {
   "paraprofessional-turnover": g_paraprofessional_turnover as GuideData,
   "emergency-credentials-and-licensure-compacts": g_emergency_credentials_and_licensure_compacts as GuideData,
   "funding-contract-staff-idea-title-i-medicaid": g_funding_contract_staff_idea_title_i_medicaid as GuideData,
+  "k12-special-education-pay-benchmarks": g_k12_special_education_pay_benchmarks as GuideData,
 };
 
 // The leadership guides on this site. The page, the hub, the sitemap and the llms files all read this list.

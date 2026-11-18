@@ -60,6 +60,27 @@
           "Check-in questions for weeks 1, 2 and 4"
         ]
       }
+    },
+    {
+      "slug": "emergency-credentials-and-licensure-compacts",
+      "published": "2026-11-18",
+      "updated": "2026-11-18",
+      "card": {
+        "title": "Emergency Credentials and Licensure Compacts: How Districts Hire Faster",
+        "body": "Emergency permits, provisional licenses, reciprocity and the interstate compacts for teachers, SLPs, OTs, PTs and school psychologists, cited to each board."
+      },
+      "download": {
+        "title": "Out-of-State Hire Credentialing Checklist",
+        "pdf": "/downloads/out-of-state-hire-credentialing-checklist.pdf",
+        "heading": "Clear your next out-of-state hire",
+        "sub": "A checklist that takes one out-of-state or not-yet-certified educator from route choice to day one.",
+        "button": "Get the checklist",
+        "points": [
+          "Thirty-two items in 5 sections",
+          "Built around the 34 CFR 300.156 limits",
+          "Covers teachers, related service providers, school nurses and counselors"
+        ]
+      }
     }
   ],
   "hub": [
@@ -76,6 +97,7 @@
       "href": "/blog/7-questions-that-reveal-a-great-k12-staffing-partner"
     },
     "k12-hiring-timeline",
-    "paraprofessional-turnover"
+    "paraprofessional-turnover",
+    "emergency-credentials-and-licensure-compacts"
   ]
 }

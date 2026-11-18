@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { posts } from "@/lib/posts";
+import { guides } from "@/lib/guides";
 import { caseStudies } from "@/lib/case-studies";
 import { servicePages } from "@/lib/service-pages";
 import { getOpenSchoolJobsFresh } from "@/app/jobs/jobs-feed";
@@ -53,7 +54,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: "/about", updated: "2026-10-29" },
     { path: "/about/robert-flom", updated: "2026-09-07" },
     { path: "/our-impact", updated: "2026-10-18" },
-    { path: "/resources", updated: "2026-10-18" },
+    { path: "/resources", updated: "2026-11-18" },
     { path: "/case-studies", updated: "2026-07-21" },
     { path: "/references", updated: "2026-08-12" },
     { path: "/services", updated: "2026-10-30" },
@@ -118,5 +119,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     };
   });
 
-  return [...staticRoutes, ...services, ...cases, ...blog, ...jobs];
+  // The leadership guides (src/lib/guides): each carries its own date.
+  const guidePages = guides.map((g) => ({
+    url: `${BASE}/resources/${g.data.slug}`,
+    lastModified: g.updated,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  return [...staticRoutes, ...guidePages, ...services, ...cases, ...blog, ...jobs];
 }

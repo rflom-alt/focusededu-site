@@ -19,6 +19,8 @@ import { ComparisonTable } from "@/components/blog/ComparisonTable";
 import { FAQ } from "@/components/sections/FAQ";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { GuideDownload } from "@/components/guides/GuideDownload";
+import { guideSite } from "@/lib/guides/site";
 
 const SITE = "https://www.focusedu-staffing.com";
 
@@ -272,6 +274,8 @@ export default async function BlogPostPage({ params }: Params) {
           </div>
         </div>
       </article>
+
+      {post.download && <GuideDownload spec={post.download} orgLabel={guideSite.orgLabel} />}
 
       {post.faqs && post.faqs.length > 0 && (
         <FAQ eyebrow="FAQ" title="Frequently asked questions." items={post.faqs} />

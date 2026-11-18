@@ -203,6 +203,134 @@ section[id] {
   margin: 1.75rem 0;
   height: auto;
 }
+/* Inline tables.
+   Two sources feed these: the CMS `table` block (wrapped in .article-table by
+   src/lib/portable-text.ts) and raw <table> markup inside legacy migrated HTML,
+   which previously rendered completely unstyled. Both are covered here.
+   Deliberately matched to src/components/blog/ComparisonTable.tsx so an inline
+   table and the article-level "At a glance" table read as the same object. */
+/* .table-scroll is the wrapper the /resources guides emit around their tables;
+   it was never styled, so on a phone those tables pushed the page sideways. */
+.article-prose .article-table,
+.article-prose .table-scroll {
+  margin: 2rem 0;
+  overflow-x: auto;
+  border: 1px solid var(--color-cloud);
+  border-radius: 1rem;
+  overscroll-behavior-x: contain;
+  /* Scroll affordance. The two `local` gradients are painted in page
+     coordinates and the two `scroll` shadows in viewport coordinates, so each
+     shadow is covered by its white mask at that end of the scroll range and
+     revealed only when there is actually more table in that direction. On iOS,
+     where scrollbars stay hidden until you touch, this is the only cue that a
+     wide table can be scrolled at all. */
+  background:
+    linear-gradient(to right, #fff 30%, rgba(255, 255, 255, 0)) left center /
+      2.5rem 100% no-repeat local,
+    linear-gradient(to left, #fff 30%, rgba(255, 255, 255, 0)) right center /
+      2.5rem 100% no-repeat local,
+    radial-gradient(
+        farthest-side at 0 50%,
+        rgba(6, 10, 31, 0.14),
+        rgba(6, 10, 31, 0)
+      )
+      left center / 0.875rem 100% no-repeat scroll,
+    radial-gradient(
+        farthest-side at 100% 50%,
+        rgba(6, 10, 31, 0.14),
+        rgba(6, 10, 31, 0)
+      )
+      right center / 0.875rem 100% no-repeat scroll;
+}
+/* The box is focusable so it can be scrolled from the keyboard — make that
+   visible rather than a silent focus stop. */
+.article-prose .article-table:focus-visible {
+  outline: 2px solid var(--color-teal-600);
+  outline-offset: 2px;
+}
+/* Inline formatting inside cells (**bold**, *italic*, `code`, links). */
+.article-prose td a,
+.article-prose th a {
+  color: var(--color-teal-700);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.article-prose td strong {
+  color: var(--color-navy-950);
+  font-weight: 600;
+}
+.article-prose td code,
+.article-prose th code {
+  font-size: 0.9em;
+  padding: 0.1em 0.35em;
+  border-radius: 0.25rem;
+  background: var(--color-mist);
+}
+.article-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: left;
+}
+/* A bare legacy <table> has no .article-table wrapper, so it carries its own frame. */
+.article-prose > table {
+  display: block;
+  overflow-x: auto;
+  margin: 2rem 0;
+  border: 1px solid var(--color-cloud);
+  border-radius: 1rem;
+}
+.article-prose caption {
+  caption-side: top;
+  padding: 0.875rem 0.875rem 0;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-navy-950);
+  text-align: left;
+}
+.article-prose thead tr {
+  background: var(--color-mist);
+}
+/* A per-cell floor rather than a min-width on the table: it scales with the
+   number of columns, so a 2-column table still fits a phone while a 5-column one
+   scrolls. Without it, `width: 100%` compresses columns until prose wraps one
+   word per line, which is far worse to read than scrolling. */
+.article-prose th,
+.article-prose td {
+  padding: 0.75rem;
+  vertical-align: top;
+  min-width: 9rem;
+}
+.article-prose th {
+  font-weight: 600;
+  color: var(--color-navy-950);
+}
+.article-prose td {
+  color: var(--color-slate-ink);
+}
+.article-prose tbody tr {
+  border-top: 1px solid var(--color-cloud);
+}
+/* Vertical rules between columns, but never before the first column. */
+.article-prose th + th,
+.article-prose th + td,
+.article-prose td + td,
+.article-prose td + th {
+  border-left: 1px solid var(--color-cloud);
+}
+.article-prose table > * + * {
+  margin-top: 0;
+}
+/* A source named right after the fact it supports (the /resources guides). */
+.article-prose .cite {
+  font-size: 0.875em;
+  color: color-mix(in srgb, var(--color-slate-ink) 82%, white);
+}
+.article-prose .cite a {
+  overflow-wrap: anywhere;
+}
 .article-prose h2:first-child,
 .article-prose h3:first-child,
 .article-prose p:first-child {

@@ -6,6 +6,7 @@
  * post updates them with no extra step.
  */
 import { posts } from "./posts";
+import { guides } from "@/lib/guides";
 import { caseStudies } from "./case-studies";
 import { platform } from "./platform";
 
@@ -198,6 +199,15 @@ export function buildLlmsTxt(): string {
         `- [${c.school} — ${c.location}](${SITE}/case-studies/${c.slug}): ${statLine(c.stats)}. Partner since ${c.partnerSince}.`,
     ),
     "",
+    ...(guides.length
+      ? [
+          "## Leadership guides (long, sourced answers for decision makers)",
+          ...guides.map(
+            (g) => `- [${g.data.title}](${SITE}/resources/${g.data.slug}): ${g.data.answer}`,
+          ),
+          "",
+        ]
+      : []),
     `## All articles (${posts.length})`,
     ...rest.map((p) => `- [${p.title}](${SITE}/blog/${p.slug}): ${p.excerpt}`),
     "",
@@ -283,6 +293,26 @@ export function buildLlmsFullTxt(): string {
       out.push("", "## Frequently asked questions");
       for (const f of p.faqs) out.push("", `Q: ${f.q}`, `A: ${f.a}`);
     }
+  }
+
+  for (const g of guides) {
+    out.push(
+      "",
+      "---",
+      "",
+      `# ${g.data.title}`,
+      `URL: ${SITE}/resources/${g.data.slug}`,
+      `Published: ${g.published} · Updated: ${g.updated}`,
+      `Summary: ${g.data.answer}`,
+      "",
+      "Key takeaways:",
+      ...g.data.keyTakeaways.map((k) => `- ${k}`),
+      "",
+      htmlToText(g.data.bodyHtml),
+      "",
+      "## Frequently asked questions",
+    );
+    for (const q of g.data.faqs) out.push("", `Q: ${q.q}`, `A: ${q.a}`);
   }
 
   return out.join("\n") + "\n";

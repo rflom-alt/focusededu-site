@@ -23,6 +23,8 @@ export type BlogPost = {
   howto?: boolean; // step-structured guide → emit HowTo schema
   /** Ranked list ("best of") posts → emit ItemList schema, in rank order. */
   itemList?: { name: string; url: string; description?: string }[];
+  // A printable file that goes with the article (components/guides/GuideDownload.tsx).
+  download?: import("@/lib/guides/types").GuideDownload;
 };
 
 export const posts: BlogPost[] = data as BlogPost[];

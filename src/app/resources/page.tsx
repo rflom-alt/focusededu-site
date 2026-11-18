@@ -4,6 +4,8 @@ import { PageHero } from "@/components/ui/PageHero";
 import { Button } from "@/components/ui/Button";
 import { LocationLinks, BuyerCta } from "@/components/sections/BuyerJourney";
 import { edu } from "@/lib/content";
+import { leadershipLinks } from "@/lib/guides";
+import { guideSite } from "@/lib/guides/site";
 export const metadata: Metadata = {
   title: "School Staffing Guides & Resources",
   description:
@@ -60,11 +62,37 @@ export default function ResourcesPage() {
         title="Make your next staffing decision with better information."
         subtitle="Explore the questions to ask, the details to prepare, and the staffing approaches available to your team."
       >
-        <Button href="#hiring-teams">For hiring teams</Button>
+        <Button href="#leadership">Leadership guides</Button>
+        <Button href="#hiring-teams" variant="ghost">
+          For hiring teams
+        </Button>
         <Button href="#professionals" variant="ghost">
           For professionals
         </Button>
       </PageHero>
+      <section id="leadership" className="scroll-mt-24 bg-white py-16">
+        <div className="container-x">
+          <h2 className="max-w-3xl text-3xl font-semibold text-navy-950">
+            {guideSite.hubHeading}
+          </h2>
+          <p className="mt-4 max-w-2xl text-lg text-slate-ink">{guideSite.hubSub}</p>
+          <div className="mt-8 grid gap-5 sm:grid-cols-2">
+            {leadershipLinks.map((g) => (
+              <Link
+                key={g.href}
+                href={g.href}
+                className="rounded-2xl border border-cloud bg-mist p-7 transition hover:border-teal-600"
+              >
+                <h3 className="text-xl font-semibold text-navy-950">{g.title}</h3>
+                <p className="mt-3 text-slate-ink">{g.body}</p>
+                <span className="mt-5 block font-semibold text-teal-700">
+                  Read the guide →
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
       <section id="hiring-teams" className="bg-mist py-16">
         <div className="container-x">
           <h2 className="text-3xl font-semibold text-navy-950">

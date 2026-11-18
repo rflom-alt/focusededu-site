@@ -1,0 +1,37 @@
+{
+  "guides": [
+    {
+      "slug": "cost-of-an-unfilled-classroom",
+      "published": "2026-11-18",
+      "updated": "2026-11-18",
+      "card": {
+        "title": "What an unfilled classroom costs",
+        "body": "Put a dollar figure on one open seat with your own numbers, and see what waiting for a direct hire puts at risk."
+      },
+      "calculator": "unfilled-classroom"
+    },
+    {
+      "slug": "k12-staffing-results",
+      "published": "2026-11-18",
+      "updated": "2026-11-18",
+      "card": {
+        "title": "K-12 Staffing Results: What Four School Partners Measured",
+        "body": "Published results from 4 FocusedEDU school partners: 120+ placements, a 95% substitute fill rate, special education roles filled in 2 weeks, signed letters."
+      }
+    }
+  ],
+  "hub": [
+    "cost-of-an-unfilled-classroom",
+    {
+      "title": "Staying IDEA-compliant through a vacancy",
+      "body": "What the law requires when an open seat means missed IEP minutes, the first four steps, and a printable compliance checklist.",
+      "href": "/blog/managing-iep-backlogs-and-compensatory-services-guide"
+    },
+    "k12-staffing-results",
+    {
+      "title": "7 Questions That Reveal a Great K-12 Staffing Partner — in One Call",
+      "body": "The 7 questions to ask a K-12 staffing agency on one call, what a strong answer sounds like, the clearance rules behind them, and a scorecard to compare.",
+      "href": "/blog/7-questions-that-reveal-a-great-k12-staffing-partner"
+    }
+  ]
+}

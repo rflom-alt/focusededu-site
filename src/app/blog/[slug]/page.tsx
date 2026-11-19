@@ -108,7 +108,12 @@ export default async function BlogPostPage({ params }: Params) {
     image: `${SITE}${post.img}`,
     datePublished: post.iso,
     dateModified: post.updated ? new Date(post.updated).toISOString() : post.iso,
-    author: { "@id": "https://www.focused-staffing.com/about/robert-flom#person" },
+    author: {
+      "@type": "Person",
+      "@id": "https://www.focused-staffing.com/about/robert-flom#person",
+      name: author.name,
+      url: author.profileUrl,
+    },
     // FocusedEDU (the EDU sub-org) publishes this content, not the parent group.
     publisher: { "@id": "https://www.focusedu-staffing.com/#organization" },
     mainEntityOfPage: `${SITE}/blog/${post.slug}`,

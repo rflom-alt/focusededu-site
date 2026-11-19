@@ -17,8 +17,11 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const guide = getGuide(slug);
   if (!guide) return { title: "Guide" };
   const g = guide.data;
+  // The layout adds the brand after every title. Past 60 characters Google cuts
+  // the title, so a long one goes out whole, without the brand.
+  const title = g.metaTitle.length + 13 > 60 ? { absolute: g.metaTitle } : g.metaTitle;
   return {
-    title: g.metaTitle,
+    title,
     description: g.description,
     alternates: { canonical: `/resources/${g.slug}` },
     openGraph: {
@@ -26,9 +29,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       description: g.description,
       url: `/resources/${g.slug}`,
       type: "article",
-      // Declaring openGraph replaces the inherited object, which drops the
-      // root file-based image unless it is named here.
-      images: ["/opengraph-image"],
+      // The share image is this guide's own: opengraph-image.tsx beside this file.
     },
   };
 }

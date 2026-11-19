@@ -15,7 +15,7 @@
       "published": "2026-11-18",
       "updated": "2026-11-18",
       "card": {
-        "title": "K-12 Staffing Results: What Four School Partners Measured",
+        "title": "K-12 Staffing Agency Case Studies: What 4 School Partners Measured",
         "body": "Published results from 4 FocusedEDU school partners: 120+ placements, a 95% substitute fill rate, special education roles filled in 2 weeks, signed letters."
       }
     },
@@ -24,19 +24,23 @@
       "published": "2026-11-18",
       "updated": "2026-11-18",
       "card": {
-        "title": "The District Hiring Timeline: When to Lock In Fall Special Education Staff",
+        "title": "The K-12 Hiring Timeline: When to Lock In Fall Special Education Staff",
         "body": "A month-by-month K-12 hiring timeline, February to September: when to make offers, when resignations land and how to cover special education seats by day 1."
       },
       "download": {
         "title": "K-12 Hiring and Coverage Planning Calendar",
         "pdf": "/downloads/k-12-hiring-and-coverage-planning-calendar.pdf",
-        "heading": "Take the planning calendar with you",
-        "sub": "A printable checklist of what to finish in each period, February through September, so every special education seat is covered on the first day of school.",
-        "button": "Get the planning calendar",
+        "file": {
+          "href": "/downloads/k-12-hiring-and-coverage-planning-calendar.xlsx",
+          "label": "Excel workbook"
+        },
+        "heading": "Take the planning calendar with you.",
+        "sub": "36 things to finish, period by period from February to September, each with a line for the owner and the due date, so fall special education seats are settled before buildings close.",
+        "button": "Get the calendar",
         "points": [
-          "Six periods, 36 lines to tick off",
-          "State notice and resignation dates for PA, NJ, DE, OH and IL",
-          "The IDEA rules that apply on day 1, with section numbers"
+          "A PDF to print: 6 periods, an owner and a due date on every line",
+          "An Excel workbook that tracks what is done and how long each seat stayed open",
+          "State notice and resignation dates noted where they move your deadlines"
         ]
       }
     },
@@ -51,13 +55,17 @@
       "download": {
         "title": "First 30 Days: Paraprofessional Onboarding Checklist",
         "pdf": "/downloads/first-30-days-paraprofessional-onboarding-checklist.pdf",
-        "heading": "Take the 30-day onboarding checklist",
-        "sub": "A printable checklist that takes a new paraprofessional or 1:1 aide from the week before day one through the first month.",
-        "button": "Get the onboarding checklist",
+        "file": {
+          "href": "/downloads/first-30-days-paraprofessional-onboarding-checklist.docx",
+          "label": "Word file"
+        },
+        "heading": "Take the 30-day onboarding checklist.",
+        "sub": "The first month laid out for the supervising teacher: what to have ready before day one, what week one covers, the safety basics, and 3 check-ins with room to write what you heard.",
+        "button": "Get the checklist",
         "points": [
-          "32 lines across 5 sections, in the order you use them",
-          "Built on the IEP access rule in 34 CFR 300.323(d)",
-          "Check-in questions for weeks 1, 2 and 4"
+          "A PDF to print: 1 copy per aide, kept by the supervising teacher",
+          "An editable Word file to fit your district's own training and forms",
+          "IEP access, Title I qualifications and training hours cited to the rule"
         ]
       }
     },
@@ -70,15 +78,19 @@
         "body": "Emergency permits, provisional licenses, reciprocity and the interstate compacts for teachers, SLPs, OTs, PTs and school psychologists, cited to each board."
       },
       "download": {
-        "title": "Out-of-State Hire Credentialing Checklist",
-        "pdf": "/downloads/out-of-state-hire-credentialing-checklist.pdf",
-        "heading": "Clear your next out-of-state hire",
-        "sub": "A checklist that takes one out-of-state or not-yet-certified educator from route choice to day one.",
-        "button": "Get the checklist",
+        "title": "Licensure Compact Quick Reference and Out-of-State Hire Checklist",
+        "pdf": "/downloads/licensure-compact-quick-reference.pdf",
+        "file": {
+          "href": "/downloads/licensure-compact-quick-reference.xlsx",
+          "label": "Excel workbook"
+        },
+        "heading": "Clear your next out-of-state hire.",
+        "sub": "A 1-page table of where every state stands on the teacher, speech-language, OT, PT, school psychologist and nurse compacts, as of November 18, 2026, with the 32-step checklist for clearing the hire before day one.",
+        "button": "Get the quick reference",
         "points": [
-          "Thirty-two items in 5 sections",
-          "Built around the 34 CFR 300.156 limits",
-          "Covers teachers, related service providers, school nurses and counselors"
+          "A PDF to print: 6 compacts by state, and which are issuing today",
+          "An Excel workbook you can filter by state or compact, with the 32-step checklist",
+          "Each status taken from the compact commission's own member map"
         ]
       }
     },
@@ -91,15 +103,19 @@
         "body": "Which federal funds can pay for contracted special education, related services and support roles, with IDEA, Title I, Medicaid and procurement rules cited."
       },
       "download": {
-        "title": "School Board Proposal Outline for Contracted Staffing",
-        "pdf": "/downloads/school-board-proposal-outline-for-contracted-staffing.pdf",
-        "heading": "Take the board proposal outline",
-        "sub": "A fill-in outline for the board item that approves a contracted staffing agreement paid with federal or state funds.",
-        "button": "Get the proposal outline",
+        "title": "School Board Proposal Template for Contracted Staffing",
+        "pdf": "/downloads/school-board-proposal-template-for-contracted-staffing.pdf",
+        "file": {
+          "href": "/downloads/school-board-proposal-template-for-contracted-staffing.docx",
+          "label": "Word file"
+        },
+        "heading": "Take the board proposal template.",
+        "sub": "The agenda item already laid out: sample justification language with your facts in the brackets, then the need, the roles, the fund and its rule, the procurement method and the reporting plan.",
+        "button": "Get the template",
         "points": [
-          "Five sections in the order a board reads them",
-          "Each line names the rule it answers",
-          "No figures to replace, only your facts"
+          "An editable Word file: replace each highlighted bracket and paste it into your agenda",
+          "A PDF to print for the cabinet review",
+          "Every line carries the CFR section a board member or auditor will ask for"
         ]
       }
     },
@@ -110,6 +126,30 @@
       "card": {
         "title": "K-12 Special Education and Related Services Pay Benchmarks",
         "body": "BLS pay for special education teachers, school SLPs, OTs, PTs, school psychologists and paraprofessionals: national medians, ranges and pay by state."
+      },
+      "download": {
+        "title": "K-12 Special Education and Related Services Pay by State",
+        "pdf": "/downloads/k12-special-education-pay-by-state.pdf",
+        "file": {
+          "href": "/downloads/k12-special-education-pay-by-state.xlsx",
+          "label": "Excel workbook"
+        },
+        "heading": "Take the state pay tables with you.",
+        "sub": "Every state and the District of Columbia, 9 school roles, in 1 printable table: the BLS May 2025 medians to hold against your salary schedule, with the percentiles in a workbook you can sort.",
+        "button": "Get the pay tables",
+        "points": [
+          "A PDF to print: national school pay and a 51-row state table for 9 roles",
+          "An Excel workbook with the 10th percentile, median and 90th percentile for every state and role",
+          "An offer check that sets your starting salary against your state's median"
+        ]
+      },
+      "dataset": {
+        "name": "K-12 special education and related services pay by state, May 2025",
+        "description": "Median, 10th percentile and 90th percentile pay for special education teachers, speech-language pathologists, occupational therapists, physical therapists, school psychologists, teaching assistants and substitute teachers, nationally in elementary and secondary schools and by state, compiled from the U.S. Bureau of Labor Statistics Occupational Employment and Wage Statistics survey, May 2025.",
+        "temporalCoverage": "2025-05",
+        "isBasedOn": [
+          "https://www.bls.gov/oes/tables.htm"
+        ]
       }
     }
   ],

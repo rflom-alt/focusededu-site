@@ -21,6 +21,8 @@ export type GuideDownload = {
   /** Filed with the lead, so the team knows which file was taken. */
   title: string;
   pdf: string;
+  /** The same tool as an editable Word or Excel file, handed over with the PDF. */
+  file?: { href: string; label: string };
   heading: string;
   sub: string;
   button: string;
@@ -36,6 +38,8 @@ export type Guide = {
   card: { title: string; body: string };
   calculator?: string;
   download?: GuideDownload;
+  /** Set on a guide whose tables are public data: emitted as Dataset markup. */
+  dataset?: { name: string; description: string; temporalCoverage: string; isBasedOn: string[] };
 };
 
 /** A hub card that points at a guide living elsewhere on the site (an upgraded article). */

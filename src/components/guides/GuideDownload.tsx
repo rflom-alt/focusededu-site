@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Check, Download } from "lucide-react";
+import { Check, Download, FileDown } from "lucide-react";
 import { BookAfterSubmit, FormError, Honeypot, Turnstile } from "@/components/forms/FormParts";
 import { newSubmissionId, submitSiteForm } from "@/lib/siteForm";
 import type { GuideDownload as Spec } from "@/lib/guides/types";
@@ -94,11 +94,28 @@ export function GuideDownload({ spec, orgLabel }: { spec: Spec; orgLabel: string
             email={form.email}
             lead={
               <>
-                Your download is starting.{" "}
-                <a href={spec.pdf} download className="underline">
-                  Download it again
-                </a>
-                . Want to talk through it for your team?
+                Your PDF is downloading.
+                <span className="mt-4 flex flex-wrap gap-3">
+                  <a
+                    href={spec.pdf}
+                    download
+                    className="inline-flex h-11 items-center gap-2 rounded-full border border-navy-950/15 bg-white px-5 text-sm font-semibold text-navy-950 transition hover:border-teal-600"
+                  >
+                    <FileDown className="size-4" strokeWidth={2} />
+                    PDF to print
+                  </a>
+                  {spec.file && (
+                    <a
+                      href={spec.file.href}
+                      download
+                      className="inline-flex h-11 items-center gap-2 rounded-full bg-teal-500 px-5 text-sm font-semibold text-navy-950 transition hover:bg-teal-400"
+                    >
+                      <FileDown className="size-4" strokeWidth={2} />
+                      {spec.file.label}
+                    </a>
+                  )}
+                </span>
+                <span className="mt-5 block">Want to talk through it for your team?</span>
               </>
             }
           />
@@ -110,7 +127,9 @@ export function GuideDownload({ spec, orgLabel }: { spec: Spec; orgLabel: string
             <Honeypot value={hp} onChange={setHp} />
             <p className="font-display text-xl font-semibold text-navy-950">{spec.button}</p>
             <p className="mt-2 text-sm leading-relaxed text-slate-ink">
-              Tell us who you are and the PDF is yours right away.
+              {spec.file
+                ? `Tell us who you are and both files are yours right away: the PDF to print and the ${spec.file.label} to edit.`
+                : "Tell us who you are and the PDF is yours right away."}
             </p>
             <div className="mt-6 grid gap-4">
               <div className="grid gap-4 sm:grid-cols-2">
@@ -134,6 +153,15 @@ export function GuideDownload({ spec, orgLabel }: { spec: Spec; orgLabel: string
                     <a href={spec.pdf} download className="font-semibold text-teal-700 underline">
                       download the PDF
                     </a>
+                    {spec.file && (
+                      <>
+                        {" "}
+                        or{" "}
+                        <a href={spec.file.href} download className="font-semibold text-teal-700 underline">
+                          the {spec.file.label}
+                        </a>
+                      </>
+                    )}
                     .
                   </p>
                 </>
@@ -144,7 +172,7 @@ export function GuideDownload({ spec, orgLabel }: { spec: Spec; orgLabel: string
                 className="mt-1 inline-flex h-12 items-center justify-center gap-2 rounded-full bg-teal-500 px-7 font-semibold text-navy-950 transition hover:bg-teal-400 disabled:opacity-60"
               >
                 <Download className="size-5" strokeWidth={2} />
-                {state === "sending" ? "Preparing…" : "Download the PDF"}
+                {state === "sending" ? "Preparing…" : spec.file ? "Get both files" : "Download the PDF"}
               </button>
             </div>
           </form>

@@ -25,6 +25,7 @@ export function GuideLayout({ guide, more }: { guide: Guide; more: HubLink[] }) 
     "@type": "Article",
     headline: g.title,
     description: g.description,
+    image: `${url}/opengraph-image`,
     url,
     mainEntityOfPage: url,
     datePublished: guide.published,
@@ -34,6 +35,7 @@ export function GuideLayout({ guide, more }: { guide: Guide; more: HubLink[] }) 
     author: guideSite.author,
     publisher: guideSite.publisher,
     abstract: g.answer,
+    wordCount: g.bodyHtml.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length,
     ...(g.citations.length ? { citation: g.citations } : {}),
   };
   const faq = {
@@ -45,6 +47,22 @@ export function GuideLayout({ guide, more }: { guide: Guide; more: HubLink[] }) 
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   };
+  // A guide that publishes a table of public figures says so as a Dataset.
+  const dataset = guide.dataset
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        name: guide.dataset.name,
+        description: guide.dataset.description,
+        url,
+        temporalCoverage: guide.dataset.temporalCoverage,
+        spatialCoverage: "United States",
+        isAccessibleForFree: true,
+        creator: guideSite.publisher,
+        isBasedOn: guide.dataset.isBasedOn,
+        dateModified: guide.updated,
+      }
+    : null;
   const crumbs = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -60,6 +78,7 @@ export function GuideLayout({ guide, more }: { guide: Guide; more: HubLink[] }) 
       <JsonLd data={article} />
       <JsonLd data={faq} />
       <JsonLd data={crumbs} />
+      {dataset && <JsonLd data={dataset} />}
 
       <section className="relative overflow-hidden bg-navy-950 pt-32 pb-14 lg:pt-40 lg:pb-20">
         <div

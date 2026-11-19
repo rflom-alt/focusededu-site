@@ -34,7 +34,10 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 604800,
   },
   async headers() {
-    return [{ source: "/:path*", headers: securityHeaders }];
+    return [{ source: "/:path*", headers: securityHeaders },
+      // The guides' printable and editable files are handed over by the form on
+      // each guide. Keep them out of search so the guide page is what ranks.
+      { source: "/downloads/:path*", headers: [{ key: "X-Robots-Tag", value: "noindex" }] }];
   },
   // Legacy URLs from the WordPress migration that carried the numeric post ID
   // as the slug. Permanent so any accumulated link equity transfers.

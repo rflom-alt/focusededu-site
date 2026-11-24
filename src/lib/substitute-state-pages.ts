@@ -15,7 +15,7 @@
  */
 import type { ServicePage } from "./service-pages";
 
-const UPDATED = "2026-10-18";
+const UPDATED = "2026-11-23";
 export const HUB = { label: "Substitute Teacher Staffing", slug: "substitute-teacher-staffing" };
 
 const SUB_ROLES = [
@@ -66,9 +66,14 @@ export const odysseyProof = (lead: string) => `<h2 id="proof-odyssey">Proof: a 9
 <p>Odyssey Public Charter School in Wilmington, Delaware serves more than 1,000 K-8 students drawn from five districts and protects a 12:1 student-teacher ratio. When the agencies already under contract could not fill its open roles, Odyssey brought in FocusedEDU in 2021. Since then we have made 120+ placements across 13+ distinct role types — substitute and certified teachers, SLPs, OTs, PTs, psychologists, reading specialists, one-on-one aides, paraprofessionals, bus drivers, and support staff — and day-to-day substitute coverage runs at a 95% fill rate, a 40%+ improvement over the previous provider.</p>
 <p>The mechanics behind that number are the same ones we bring to every substitute program: weekly Friday pay by direct deposit or Cash App, a mobile app where vetted subs pick up and swap shifts the moment an absence posts, and a pool recruited for one client's buildings instead of rented to every school in the county. Read the full <a href="/case-studies/odyssey-charter-school">Odyssey Public Charter School case study</a>.</p>`;
 
-export const forSubs = (state: string, extra: string) => `<h2 id="for-substitutes">For substitutes looking for work in ${state}</h2>
-<p class="answer-lead">Substitutes who work with FocusedEDU in ${state} are paid weekly, every Friday, by direct deposit or Cash App, and choose their own shifts in a mobile app. One application puts you in front of the partner schools we staff, and our team walks you through every clearance and credential step.</p>
-<p>${extra} Browse current openings and apply on our <a href="/candidates">candidates page</a>. Long-term substitutes who prove out in a building can be hired permanently by the school with no conversion fee, which is why a FocusedEDU leave coverage is often the best teaching interview a substitute ever gets.</p>`;
+/**
+ * The substitute-facing block. Its heading answers the teacher-side query
+ * ("how to become a substitute teacher in <state>") and `extra`, the page's own
+ * short summary of the state rules, is the answer lead.
+ */
+export const forSubs = (state: string, extra: string) => `<h2 id="for-substitutes">How to become a substitute teacher in ${state}</h2>
+<p class="answer-lead">${extra}</p>
+<p>Substitutes who work with FocusedEDU in ${state} are paid weekly, every Friday, by direct deposit or Cash App, and choose their own shifts in a mobile app. One application puts you in front of the partner schools we staff, and our team walks you through every clearance and credential step. Browse current openings and apply on our <a href="/candidates">candidates page</a>. Long-term substitutes who prove out in a building can be hired permanently by the school with no conversion fee, which is why a FocusedEDU leave coverage is often the best teaching interview a substitute ever gets.</p>`;
 
 export const cta = (state: string) => `<h2 id="next-step">Need substitute teachers in ${state}?</h2>
 <p class="answer-lead">Start with a free 30-minute discovery call or send your openings by email. Either way we map your absence volume, buildings, and requirements first, then build a substitute pool that serves your schools alone — one client per region, temp-to-perm at no cost.</p>
@@ -82,7 +87,7 @@ export const substituteStatePages: ServicePage[] = [
     h1: "Substitute Teacher Staffing in Pennsylvania",
     metaTitle: "Substitute Teacher Staffing Agency in Pennsylvania",
     metaDescription:
-      "Day-to-day, long-term, and special education substitutes for Pennsylvania schools — Act 34/151/114-cleared, paid weekly, one client per region. Wayne, PA HQ.",
+      "Pennsylvania substitutes need a PA certificate or Type 06/04 permit and Act 34, 151, 114 clearances. FocusedEDU staffs substitute, SPED and K-12 roles.",
     hero: "FocusedEDU is a Pennsylvania substitute teacher staffing agency headquartered in Wayne, PA. We recruit, clear, and place day-to-day, long-term, and special education substitutes and substitute paraprofessionals for districts, charters, and Intermediate Units, with Act 34, 151, and 114 clearances tracked before any sub sees your shifts.",
     photo: "/photography/schools-teaching.jpg",
     photoAlt: "A substitute teacher leading a lesson in a Pennsylvania classroom",
@@ -114,7 +119,7 @@ export const substituteStatePages: ServicePage[] = [
       },
       {
         heading: "How FocusedEDU staffs Pennsylvania substitute programs",
-        body: "We are a Pennsylvania firm. FocusedEDU is headquartered at 175 Strafford Avenue in Wayne, on the Main Line, and has staffed K-12 schools for 12 years under a screening standard built by our founder, Robert Flom, a former K-12 teacher. Our substitutes are paid weekly, every Friday, by direct deposit or Cash App, and they pick up and swap shifts through a mobile app, so your absence reaches the whole vetted pool the moment it posts instead of traveling down a phone chain one voicemail at a time.\n\nThree commitments set the model apart. One client per region: sign with us for your area and the substitute pool we build there serves your buildings alone, never a competing district down the road. Credentialing in half the time: our automated credentialing tracks every clearance, permit, and expiration, and cuts typical time-to-hire roughly in half. And temp-to-perm at no cost: a long-term substitute who proves out over a semester can become your permanent teacher with no conversion fee and no buyout.\n\nFor Pennsylvania schools beyond substitutes, see our [Pennsylvania substitute, special education, and K-12 staffing](/pennsylvania-education-staffing) page; Philadelphia schools can go straight to [substitute teacher staffing in Philadelphia](/substitute-teacher-staffing-philadelphia).",
+        body: "We are a Pennsylvania firm. FocusedEDU is headquartered at 175 Strafford Avenue in Wayne, on the Main Line, and has staffed K-12 schools for 12 years under a screening standard built by our founder, Robert Flom, a former K-12 teacher. Our substitutes are paid weekly, every Friday, by direct deposit or Cash App, and they pick up and swap shifts through a mobile app, so your absence reaches the whole vetted pool the moment it posts instead of traveling down a phone chain one voicemail at a time.\n\nThree commitments set the model apart. One client per region: sign with us for your area and the substitute pool we build there serves your buildings alone, never a competing district down the road. Credentialing in half the time: our automated credentialing tracks every clearance, permit, and expiration, and cuts typical time-to-hire roughly in half. And temp-to-perm at no cost: a long-term substitute who proves out over a semester can become your permanent teacher with no conversion fee and no buyout.\n\nFor Pennsylvania schools beyond substitutes, see our [Pennsylvania substitute, special education, and K-12 staffing](/pennsylvania-education-staffing) page; Philadelphia schools can go straight to [substitute teacher staffing in Philadelphia](/substitute-teacher-staffing-philadelphia). For roles beyond substitutes in any state, see [special education staffing for school districts](/special-education-staffing) and our [K-12 staffing agency](/k12-education-staffing) overview.",
       },
     ],
     richHtml: `<h2 id="pa-substitute-requirements">Pennsylvania substitute teacher requirements</h2>
@@ -176,7 +181,7 @@ ${cta("Pennsylvania")}`,
     h1: "Substitute Teacher Staffing in Philadelphia",
     metaTitle: "Substitute Teacher Staffing in Philadelphia",
     metaDescription:
-      "Substitute teachers, SPED subs, and paras for Philadelphia district, charter, and independent schools — PA-cleared, paid weekly, from our Main Line HQ.",
+      "Philadelphia subs need a PA certificate or emergency permit plus Act 34, 151 and 114 clearances. FocusedEDU staffs substitute, SPED and K-12 roles.",
     hero: "FocusedEDU staffs substitute teachers for Philadelphia schools from our headquarters in Wayne, on the Main Line. We place day-to-day, long-term, and special education substitutes and substitute paraprofessionals for charter networks, district schools, and approved private schools, each one carrying current Act 34, 151, and 114 clearances before a first assignment.",
     photo: "/photography/hero-classroom.jpg",
     photoAlt: "Students working with a substitute teacher in a Philadelphia classroom",
@@ -213,7 +218,7 @@ ${cta("Pennsylvania")}`,
       },
       {
         heading: "How FocusedEDU staffs Philadelphia substitute programs",
-        body: "We are a local firm: FocusedEDU is headquartered in Wayne, on the Main Line, and has staffed Philadelphia-area schools for 12 years. Our founder, Robert Flom, is a former K-12 teacher, and the substitute screen he built asks what a candidate did the last time a room started to slide — not what a handbook says.\n\nThe model is built for a competitive market. Substitutes are paid weekly, every Friday, by direct deposit or Cash App, so they stay in our pool instead of drifting to whichever agency pays fastest. They pick up and swap shifts in a mobile app, so your absence reaches every vetted sub the moment it posts. And because we work with one client per region, the substitutes we recruit around your campuses are not presented to the competing school two blocks away. Automated credentialing cuts typical time-to-hire roughly in half, and every placement is temp-to-perm at no cost.\n\nFor the statewide picture, see [substitute teacher staffing in Pennsylvania](/substitute-teacher-staffing-pennsylvania) and our [Philadelphia education staffing](/philadelphia-education-staffing) page.",
+        body: "We are a local firm: FocusedEDU is headquartered in Wayne, on the Main Line, and has staffed Philadelphia-area schools for 12 years. Our founder, Robert Flom, is a former K-12 teacher, and the substitute screen he built asks what a candidate did the last time a room started to slide — not what a handbook says.\n\nThe model is built for a competitive market. Substitutes are paid weekly, every Friday, by direct deposit or Cash App, so they stay in our pool instead of drifting to whichever agency pays fastest. They pick up and swap shifts in a mobile app, so your absence reaches every vetted sub the moment it posts. And because we work with one client per region, the substitutes we recruit around your campuses are not presented to the competing school two blocks away. Automated credentialing cuts typical time-to-hire roughly in half, and every placement is temp-to-perm at no cost.\n\nFor the statewide picture, see [substitute teacher staffing in Pennsylvania](/substitute-teacher-staffing-pennsylvania) and our [Philadelphia education staffing](/philadelphia-education-staffing) page. For roles beyond substitutes in any state, see [special education staffing for school districts](/special-education-staffing) and our [K-12 staffing agency](/k12-education-staffing) overview.",
       },
     ],
     richHtml: `<h2 id="philadelphia-substitute-requirements">Substitute requirements for Philadelphia schools</h2>
@@ -272,7 +277,7 @@ ${cta("Philadelphia")}`,
     h1: "Substitute Teacher Staffing in New Jersey",
     metaTitle: "Substitute Teacher Staffing Agency in New Jersey",
     metaDescription:
-      "Substitute teachers, SPED subs, and paras for New Jersey schools — credential and CHRC handled, paid weekly, one client per region. Free 30-minute call.",
+      "New Jersey subs need a substitute credential (30 college credits, not 60) and a criminal history check. FocusedEDU staffs substitute, SPED and K-12 roles.",
     hero: "FocusedEDU is a substitute teacher staffing agency for New Jersey districts and charter schools. We recruit and place day-to-day, long-term, and special education substitutes and substitute paraprofessionals, and we walk every candidate through the county substitute credential and the criminal history record check before a first assignment.",
     photo: "/photography/about-classroom.jpg",
     photoAlt: "A substitute teacher working with students in a New Jersey classroom",
@@ -304,7 +309,7 @@ ${cta("Philadelphia")}`,
       },
       {
         heading: "How FocusedEDU staffs New Jersey substitute programs",
-        body: "We serve New Jersey from just across the river in Wayne, Pennsylvania, and New Jersey schools are part of our track record — Bridgeton Public Schools, The Barack Obama Green Charter Schools in Plainfield, and Hope Community Charter School in Camden have each put their recommendation in writing (see /references).\n\nOur substitutes are paid weekly, every Friday, by direct deposit or Cash App, and they pick up and swap shifts through a mobile app, so your morning absence is visible to the whole vetted pool at once. We work with one client per region, so the subs we recruit for your district are not presented to the district next door. Our automated credentialing tracks each sub's credential, criminal history approval, and days served per classroom, and cuts typical time-to-hire roughly in half. And every placement is temp-to-perm at no cost: a long-term sub who proves out can become your teacher with no conversion fee.\n\nFor special education, paraprofessional, and related-services staffing beyond substitutes, see our [New Jersey substitute, special education, and K-12 staffing](/new-jersey-education-staffing) page.",
+        body: "We serve New Jersey from just across the river in Wayne, Pennsylvania, and New Jersey schools are part of our track record — Bridgeton Public Schools, The Barack Obama Green Charter Schools in Plainfield, and Hope Community Charter School in Camden have each put their recommendation in writing (see /references).\n\nOur substitutes are paid weekly, every Friday, by direct deposit or Cash App, and they pick up and swap shifts through a mobile app, so your morning absence is visible to the whole vetted pool at once. We work with one client per region, so the subs we recruit for your district are not presented to the district next door. Our automated credentialing tracks each sub's credential, criminal history approval, and days served per classroom, and cuts typical time-to-hire roughly in half. And every placement is temp-to-perm at no cost: a long-term sub who proves out can become your teacher with no conversion fee.\n\nFor special education, paraprofessional, and related-services staffing beyond substitutes, see our [New Jersey substitute, special education, and K-12 staffing](/new-jersey-education-staffing) page. For roles beyond substitutes in any state, see [special education staffing for school districts](/special-education-staffing) and our [K-12 staffing agency](/k12-education-staffing) overview.",
       },
     ],
     richHtml: `<h2 id="nj-substitute-requirements">New Jersey substitute teacher requirements</h2>
@@ -365,7 +370,7 @@ ${cta("New Jersey")}`,
     h1: "Substitute Teacher Staffing in Delaware and Wilmington",
     metaTitle: "Substitute Teacher Staffing in Delaware & Wilmington",
     metaDescription:
-      "Substitute teachers for Delaware and Wilmington schools: a 95% day-to-day fill rate at Odyssey Charter, 40% better than the prior provider. SBI/FBI-cleared.",
+      "Delaware has no state sub license; subs need SBI/FBI fingerprints and a Child Protection Registry check. FocusedEDU staffs substitute, SPED and K-12 roles.",
     hero: "FocusedEDU staffs substitute teachers for Delaware districts and charter schools, and Wilmington is where our record is strongest: at Odyssey Public Charter School our substitutes hold a 95% day-to-day fill rate, 40% better than the previous provider. We place daily, long-term, and special education subs and substitute paraprofessionals, fully SBI, FBI, and registry cleared.",
     photo: "/photography/educator-portrait.jpg",
     photoAlt: "An educator ready to substitute in a Wilmington, Delaware school",
@@ -405,7 +410,7 @@ ${cta("New Jersey")}`,
       },
       {
         heading: "How FocusedEDU staffs Delaware substitute programs",
-        body: "Our substitutes are paid weekly, every Friday, by direct deposit or Cash App, and they pick up and swap shifts in a mobile app — the logistics that keep a pool active in January, not just September. We work with one client per region, so the substitutes we recruit for your schools are not rented to a competing school down Route 202. Automated credentialing tracks every SBI, FBI, and registry check and cuts typical time-to-hire roughly in half. And every placement is temp-to-perm at no cost, which is exactly what Odyssey's CEO, Elias Pappas, put in writing.\n\nWe have staffed K-12 schools for 12 years from Wayne, Pennsylvania, under a screening standard built by our founder, Robert Flom, a former K-12 teacher. Christina School District, Brandywine School District, and Odyssey Charter School are on our client list. For Delaware special education and related services, see our [Delaware substitute, special education, and K-12 staffing](/delaware-education-staffing) page.",
+        body: "Our substitutes are paid weekly, every Friday, by direct deposit or Cash App, and they pick up and swap shifts in a mobile app — the logistics that keep a pool active in January, not just September. We work with one client per region, so the substitutes we recruit for your schools are not rented to a competing school down Route 202. Automated credentialing tracks every SBI, FBI, and registry check and cuts typical time-to-hire roughly in half. And every placement is temp-to-perm at no cost, which is exactly what Odyssey's CEO, Elias Pappas, put in writing.\n\nWe have staffed K-12 schools for 12 years from Wayne, Pennsylvania, under a screening standard built by our founder, Robert Flom, a former K-12 teacher. Christina School District, Brandywine School District, and Odyssey Charter School are on our client list. For Delaware special education and related services, see our [Delaware substitute, special education, and K-12 staffing](/delaware-education-staffing) page. For roles beyond substitutes in any state, see [special education staffing for school districts](/special-education-staffing) and our [K-12 staffing agency](/k12-education-staffing) overview.",
       },
     ],
     richHtml: `<h2 id="de-substitute-requirements">Delaware substitute teacher requirements</h2>
@@ -466,7 +471,7 @@ ${cta("Delaware")}`,
     h1: "Substitute Teacher Staffing in Washington, DC",
     metaTitle: "Substitute Teacher Staffing in Washington, DC",
     metaDescription:
-      "Substitute teachers, long-term subs, and SPED subs for DC charter LEAs and DCPS — the partner behind IDEA PCS and Cesar Chavez PCS. Cleared before day one.",
+      "DC stopped licensing subs in 2016; DCPS requires a bachelor's degree and a background check. FocusedEDU staffs substitute, SPED and K-12 roles for schools.",
     hero: "FocusedEDU provides substitute teachers to Washington, DC public charter schools and DCPS campuses. We place day-to-day substitutes, subject-certified long-term substitutes, special education subs, and one-on-one aides, and we have partnered with IDEA Public Charter School and Cesar Chavez Public Charter School since 2022, presenting an average of four qualified candidates per opening.",
     photo: "/photography/schools-teaching.jpg",
     photoAlt: "A substitute teacher with middle school students in Washington, DC",
@@ -505,7 +510,7 @@ ${cta("Delaware")}`,
       },
       {
         heading: "How FocusedEDU staffs DC substitute programs",
-        body: "We build a dedicated pipeline for each DC partner and source deep enough that the school chooses rather than settles — at Cesar Chavez Public Charter School that means an average of four qualified candidates for every open position. Our substitutes are paid weekly, every Friday, by direct deposit or Cash App, and pick up and swap shifts in a mobile app, so daily absences reach the whole vetted pool at once.\n\nWe work with one client per region, so the candidates we recruit for your campuses are not shopped to a competing charter across the river. Automated credentialing tracks every clearance and its expiration and cuts typical time-to-hire roughly in half, and every placement is temp-to-perm at no cost. For DC special education and paraprofessional staffing beyond substitutes, see our [Washington, DC substitute, special education, and K-12 staffing](/washington-dc-education-staffing) page.",
+        body: "We build a dedicated pipeline for each DC partner and source deep enough that the school chooses rather than settles — at Cesar Chavez Public Charter School that means an average of four qualified candidates for every open position. Our substitutes are paid weekly, every Friday, by direct deposit or Cash App, and pick up and swap shifts in a mobile app, so daily absences reach the whole vetted pool at once.\n\nWe work with one client per region, so the candidates we recruit for your campuses are not shopped to a competing charter across the river. Automated credentialing tracks every clearance and its expiration and cuts typical time-to-hire roughly in half, and every placement is temp-to-perm at no cost. For DC special education and paraprofessional staffing beyond substitutes, see our [Washington, DC substitute, special education, and K-12 staffing](/washington-dc-education-staffing) page. For roles beyond substitutes in any state, see [special education staffing for school districts](/special-education-staffing) and our [K-12 staffing agency](/k12-education-staffing) overview.",
       },
     ],
     richHtml: `<h2 id="dc-substitute-requirements">DC substitute teacher requirements</h2>
@@ -565,7 +570,7 @@ ${cta("Washington, DC")}`,
     h1: "Substitute Teacher Staffing in Maryland",
     metaTitle: "Substitute Teacher Staffing Agency in Maryland",
     metaDescription:
-      "Substitute teachers, SPED subs, and paras for Maryland school systems and charters — COMAR-screened, employment-history reviewed, one client per region.",
+      "Maryland subs need no state certificate; each county sets its rules and checks MSDE's disqualified list. FocusedEDU staffs substitute, SPED and K-12 roles.",
     hero: "FocusedEDU is a substitute teacher staffing agency for Maryland's local school systems and charter schools. We place day-to-day, long-term, and special education substitutes and substitute paraprofessionals, screened against Maryland's statewide disqualified-substitute database and run through the employment-history review state law requires for anyone working with minors.",
     photo: "/photography/about-classroom.jpg",
     photoAlt: "A substitute teacher supporting students in a Maryland classroom",
@@ -597,7 +602,7 @@ ${cta("Washington, DC")}`,
       },
       {
         heading: "How FocusedEDU staffs Maryland substitute programs",
-        body: "We build each Maryland substitute program around the hiring school system's own qualifications, then add the screening the state requires everywhere: the disqualified-substitute database check and the employment-history review. Frederick County Public Schools is on our client list.\n\nOur substitutes are paid weekly, every Friday, by direct deposit or Cash App, and they pick up and swap shifts through a mobile app, so your absence reaches the whole vetted pool the moment it posts. We work with one client per region, so the substitutes we recruit for your system are not presented to the neighboring county. Automated credentialing cuts typical time-to-hire roughly in half, and every placement is temp-to-perm at no cost. Our founder, Robert Flom, is a former K-12 teacher, and our screen reflects it. For Maryland special education and related services beyond substitutes, see our [Maryland substitute, special education, and K-12 staffing](/maryland-special-education-staffing) page.",
+        body: "We build each Maryland substitute program around the hiring school system's own qualifications, then add the screening the state requires everywhere: the disqualified-substitute database check and the employment-history review. Frederick County Public Schools is on our client list.\n\nOur substitutes are paid weekly, every Friday, by direct deposit or Cash App, and they pick up and swap shifts through a mobile app, so your absence reaches the whole vetted pool the moment it posts. We work with one client per region, so the substitutes we recruit for your system are not presented to the neighboring county. Automated credentialing cuts typical time-to-hire roughly in half, and every placement is temp-to-perm at no cost. Our founder, Robert Flom, is a former K-12 teacher, and our screen reflects it. For Maryland special education and related services beyond substitutes, see our [Maryland substitute, special education, and K-12 staffing](/maryland-special-education-staffing) page. For roles beyond substitutes in any state, see [special education staffing for school districts](/special-education-staffing) and our [K-12 staffing agency](/k12-education-staffing) overview.",
       },
     ],
     richHtml: `<h2 id="md-substitute-requirements">Maryland substitute teacher requirements</h2>
@@ -656,7 +661,7 @@ ${cta("Maryland")}`,
     h1: "Substitute Teacher Staffing in New York",
     metaTitle: "Substitute Teacher Staffing Agency in New York",
     metaDescription:
-      "Substitute teachers, SPED subs, and paras for New York districts, BOCES, and charters — SAVE Law fingerprint clearance and 40/90-day limits tracked.",
+      "New York subs need SAVE fingerprint clearance; uncertified subs not seeking certification cap at 40 days. FocusedEDU staffs substitute, SPED and K-12 roles.",
     hero: "FocusedEDU is a substitute teacher staffing agency for New York school districts, BOCES, and charter networks. We place day-to-day, long-term, and special education substitutes and substitute paraprofessionals, with SAVE Law fingerprint clearance completed and New York's 40-day and 90-day substitute limits tracked for every uncertified sub.",
     photo: "/photography/hero-classroom.jpg",
     photoAlt: "A substitute teacher leading a lesson in a New York classroom",
@@ -688,7 +693,7 @@ ${cta("Maryland")}`,
       },
       {
         heading: "How FocusedEDU staffs New York substitute programs",
-        body: "Every FocusedEDU substitute in New York is fingerprint-cleared through TEACH before a first assignment, and our credentialing system records each sub's certification category and days served per school, so an uncertified sub is never scheduled past the limit by accident. Automated credentialing cuts typical time-to-hire roughly in half.\n\nOur substitutes are paid weekly, every Friday, by direct deposit or Cash App, and they pick up and swap shifts in a mobile app, so your absence reaches the whole vetted pool at once. We work with one client per region, so the subs we recruit for your district or BOCES component are not presented to the district next door. Every placement is temp-to-perm at no cost. For New York special education and related services beyond substitutes, see our [New York substitute, special education, and K-12 staffing](/new-york-education-staffing) page.",
+        body: "Every FocusedEDU substitute in New York is fingerprint-cleared through TEACH before a first assignment, and our credentialing system records each sub's certification category and days served per school, so an uncertified sub is never scheduled past the limit by accident. Automated credentialing cuts typical time-to-hire roughly in half.\n\nOur substitutes are paid weekly, every Friday, by direct deposit or Cash App, and they pick up and swap shifts in a mobile app, so your absence reaches the whole vetted pool at once. We work with one client per region, so the subs we recruit for your district or BOCES component are not presented to the district next door. Every placement is temp-to-perm at no cost. For New York special education and related services beyond substitutes, see our [New York substitute, special education, and K-12 staffing](/new-york-education-staffing) page. For roles beyond substitutes in any state, see [special education staffing for school districts](/special-education-staffing) and our [K-12 staffing agency](/k12-education-staffing) overview.",
       },
     ],
     richHtml: `<h2 id="ny-substitute-requirements">New York substitute teacher requirements</h2>

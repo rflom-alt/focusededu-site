@@ -22,7 +22,7 @@
  */
 import type { ServicePage } from "./service-pages";
 
-const UPDATED = "2026-10-18";
+const UPDATED = "2026-11-23";
 const SPED_HUB = { label: "Special Education Staffing", slug: "special-education-staffing" };
 const PARA_HUB = { label: "Paraprofessional Staffing", slug: "paraprofessional-staffing" };
 
@@ -243,7 +243,7 @@ ${firstPhillyProof(
 ${cta(
   "Need special education teachers in Pennsylvania?",
   "Start with a free 30-minute discovery call or send your openings by email. We map your caseloads, buildings, and certification needs first, then recruit a special education pipeline that serves your schools alone — one client per region, temp-to-perm at no cost.",
-  "Comparing partners first? Read our guide to <a href=\"/blog/best-k12-staffing-agencies-for-schools-2026\">the best K-12 staffing agencies for schools</a>, see <a href=\"/special-education-staffing-new-jersey\">special education staffing in New Jersey</a>, or go back to <a href=\"/special-education-staffing\">special education staffing for school districts</a>.",
+  "Comparing partners first? Read our guide to <a href=\"/blog/best-k12-staffing-agencies-for-schools-2026\">the best K-12 staffing agencies for schools</a>, see <a href=\"/special-education-staffing-new-jersey\">special education staffing in New Jersey</a>, or go back to <a href=\"/special-education-staffing\">special education staffing for school districts</a>. For every other open role in the building, see our <a href=\"/k12-education-staffing\">K-12 staffing agency</a> page.",
 )}`,
     faqs: [
       {
@@ -357,7 +357,7 @@ ${firstPhillyProof(
 ${cta(
   "Need special education teachers in New Jersey?",
   "Start with a free 30-minute discovery call or send your openings by email. We map your programs, group sizes, and endorsement needs first, then recruit a special education pipeline for your schools alone — one client per region, temp-to-perm at no cost.",
-  "Comparing partners first? Read our guide to <a href=\"/blog/best-k12-staffing-agencies-for-schools-2026\">the best K-12 staffing agencies for schools</a>, see <a href=\"/special-education-staffing-pennsylvania\">special education staffing in Pennsylvania</a>, or go back to <a href=\"/special-education-staffing\">special education staffing for school districts</a>.",
+  "Comparing partners first? Read our guide to <a href=\"/blog/best-k12-staffing-agencies-for-schools-2026\">the best K-12 staffing agencies for schools</a>, see <a href=\"/special-education-staffing-pennsylvania\">special education staffing in Pennsylvania</a>, or go back to <a href=\"/special-education-staffing\">special education staffing for school districts</a>. For every other open role in the building, see our <a href=\"/k12-education-staffing\">K-12 staffing agency</a> page.",
 )}`,
     faqs: [
       {
@@ -467,7 +467,7 @@ ${cta(
 ${cta(
   "Need special education teachers in Washington, DC?",
   "Start with a free 30-minute discovery call or send your openings by email. We map your campuses, caseloads, and credential needs first, then recruit a special education pipeline for your LEA alone — one client per region, temp-to-perm at no cost.",
-  "Comparing partners first? Read our guide to <a href=\"/blog/best-k12-staffing-agencies-for-schools-2026\">the best K-12 staffing agencies for schools</a>, see <a href=\"/special-education-staffing-new-york\">special education staffing in New York</a>, or go back to <a href=\"/special-education-staffing\">special education staffing for school districts</a>.",
+  "Comparing partners first? Read our guide to <a href=\"/blog/best-k12-staffing-agencies-for-schools-2026\">the best K-12 staffing agencies for schools</a>, see <a href=\"/special-education-staffing-new-york\">special education staffing in New York</a>, or go back to <a href=\"/special-education-staffing\">special education staffing for school districts</a>. For every other open role in the building, see our <a href=\"/k12-education-staffing\">K-12 staffing agency</a> page.",
 )}`,
     faqs: [
       {
@@ -581,7 +581,7 @@ ${cta(
 ${cta(
   "Need special education teachers in New York?",
   "Start with a free 30-minute discovery call or send your openings by email. We map your Part 200 settings, caseloads, and certification needs first, then recruit a special education pipeline for your schools alone — one client per region, temp-to-perm at no cost.",
-  "Comparing partners first? Read our guide to <a href=\"/blog/best-k12-staffing-agencies-for-schools-2026\">the best K-12 staffing agencies for schools</a>, see <a href=\"/special-education-staffing-new-jersey\">special education staffing in New Jersey</a>, or go back to <a href=\"/special-education-staffing\">special education staffing for school districts</a>.",
+  "Comparing partners first? Read our guide to <a href=\"/blog/best-k12-staffing-agencies-for-schools-2026\">the best K-12 staffing agencies for schools</a>, see <a href=\"/special-education-staffing-new-jersey\">special education staffing in New Jersey</a>, or go back to <a href=\"/special-education-staffing\">special education staffing for school districts</a>. For every other open role in the building, see our <a href=\"/k12-education-staffing\">K-12 staffing agency</a> page.",
 )}`,
     faqs: [
       {

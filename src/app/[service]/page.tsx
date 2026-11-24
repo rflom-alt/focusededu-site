@@ -75,12 +75,14 @@ export default async function ServicePageRoute({ params }: Params) {
       : {}),
   };
 
+  // A state page sits directly under its national hub (Home › Special Education
+  // Staffing › Pennsylvania), so the hub is the crumb search engines attach it to.
+  // Hubs and other top-level pages sit under Services.
   const crumbs = [
     { name: "Home", item: "https://www.focusedu-staffing.com/" },
-    { name: "Services", item: "https://www.focusedu-staffing.com/services" },
-    ...(page.parent
-      ? [{ name: page.parent.label, item: `https://www.focusedu-staffing.com/${page.parent.slug}` }]
-      : []),
+    page.parent
+      ? { name: page.parent.label, item: `https://www.focusedu-staffing.com/${page.parent.slug}` }
+      : { name: "Services", item: "https://www.focusedu-staffing.com/services" },
     { name: page.h1, item: `https://www.focusedu-staffing.com/${page.slug}` },
   ];
 

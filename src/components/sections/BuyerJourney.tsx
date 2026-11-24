@@ -151,7 +151,21 @@ export function LocationLinks() {
           Explore staffing in your area
         </h2>
         <p className="mt-3 text-slate-ink">
-          We staff K-12 schools nationwide. Pennsylvania, New Jersey, Delaware,
+          FocusedEDU is a{" "}
+          <Link
+            href="/k12-education-staffing"
+            className="font-semibold text-teal-700 underline underline-offset-4"
+          >
+            K-12 staffing agency
+          </Link>{" "}
+          for schools nationwide, including{" "}
+          <Link
+            href="/special-education-staffing"
+            className="font-semibold text-teal-700 underline underline-offset-4"
+          >
+            special education staffing for school districts
+          </Link>
+          . Pennsylvania, New Jersey, Delaware,
           Maryland, Washington, DC, and New York are our home markets; review the
           page for your state, then talk with our team about your role and
           location.

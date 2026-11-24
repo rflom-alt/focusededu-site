@@ -8,7 +8,7 @@ export const buyerContent = {
     "Special education teachers, paraprofessionals, substitutes, and related-service providers. Recruiting and screening built around your school, your students, and your open roles.",
   roles: [
     [
-      "Special education",
+      "Special education staffing",
       "Teachers matched to grade level, setting, and caseload.",
       "/special-education-staffing",
     ],
@@ -33,7 +33,7 @@ export const buyerContent = {
       "/school-based-behavioral-health-staffing",
     ],
     [
-      "School staffing options",
+      "K-12 staffing agency",
       "Explore roles, engagement models, and services for schools nationwide.",
       "/k12-education-staffing",
     ],

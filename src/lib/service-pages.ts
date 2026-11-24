@@ -420,7 +420,7 @@ const corePages: ServicePage[] = [
     metaDescription: "The education staffing vendor schools call when the incumbent can't fill: 120+ roles filled at one school, 13+ role types, one client per region.",
     hero: "When Odyssey Public Charter School's contracted agencies couldn't fill their openings, FSG stepped in and filled 120+ roles across 13+ role types. That is the standard we are hired against.",
     photo: "/photography/schools-teaching.jpg",
-    updated: "2026-10-18",
+    updated: "2026-11-23",
     stats: [
       {
         value: "120+",
@@ -2481,7 +2481,7 @@ const corePages: ServicePage[] = [
     metaDescription: "How education staffing pricing works — what a bill rate covers, where fees hide, and what FSG attests: $0 temp-to-perm conversion, free discovery call.",
     hero: "An honest answer instead of a rate card: how education staffing pricing actually works, which contract terms quietly move the total, and the parts of our own model we can state flatly — $0 to convert a temp to your permanent hire, and candidates are never charged.",
     photo: "/photography/about-classroom.jpg",
-    updated: "2026-10-18",
+    updated: "2026-11-23",
     stats: [
       {
         value: "$0",

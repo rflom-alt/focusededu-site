@@ -28,7 +28,7 @@ export function Header({
 
   // Show the candidate-facing CTA on job-seeker pages; employer CTA everywhere else.
   const isCandidateContext =
-    pathname?.startsWith("/candidates");
+    pathname?.startsWith("/candidates") || pathname?.startsWith("/refer");
   const activeCta = isCandidateContext ? ctaCandidate : cta;
 
   useEffect(() => {
